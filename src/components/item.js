@@ -2,13 +2,13 @@ import React from "react";
 
 class Item extends React.Component {
     render() {
-      const { home, host, path} = this.props
+      const { home, owner, path} = this.props
       return (
-        <div className="mb-11">
-          <div className=" relative rounded-xl overflow-hidden mb-6  ">
+        <div >
+          <div className=" aspect-square  relative rounded-xl overflow-hidden mb-6    ">
           <img
             src= {path}
-            className=" object-cover w-full h-calc-vw48  m-0  "
+            className="  h-full w-full h-calc-vw48  m-0  "
           />
           {/* 9-ô */}
           <div className=" grid-in-item p-c14 box-border         w-full h-full flex-wrap absolute top-0  ">
@@ -42,8 +42,8 @@ class Item extends React.Component {
                   <div className="w-c6 h-full border-r-2 border-solid border-gray-300 border-l-1   "></div>
                   <div className="flex items-center justify-center w-full  ">
                     <div className="w-10 h-10   shadow-md first-letter:border-1 border-solid border-gray-400 rounded-full overflow-hidden ">
-                      <img src="https://a0.muscache.com/im/pictures/user/08586a25-5872-4b47-97b4-5d74678b9877.jpg?im_w=240" />
-                    </div>
+                      <img src={owner.avatar}/>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -60,11 +60,12 @@ class Item extends React.Component {
             <div className="opacity-0">9</div>
           </div>
         </div>
+
         <div className="grid-in-detail-item text-c15 mt-4 unknown-leading-15 gap-c2 ">
             <div className="manrope-700">{home.city}, {home.country}</div>
             <div className="text-gray7">
-              <span>Stay with {host.name}</span><span className="m-c4">.</span>
-               <span>{host.more_info.work}</span> <span></span>
+              <span>Stay with {owner.name}</span><span className="m-c4">.</span>
+               <span>{owner.more_info.work}</span> <span></span>
             </div>
             <div className="text-gray7">Jul 22 - 27</div> 
             <div className="mt-c6">
@@ -89,7 +90,7 @@ class Item extends React.Component {
                 ></path>
               </svg>
             </span>
-            <span className="font-normal">{host.rating}</span>
+            <span className="font-normal">{owner.account.rating}</span>
           </div>
         </div>
       </div>

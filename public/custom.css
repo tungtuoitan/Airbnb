@@ -1,3 +1,15 @@
+
+
+
+.color-pink-main{
+  background:linear-gradient(to right,#E61E4D 0%,#E31C5F 50%,#D70466 100%)
+
+}
+.main-color{
+  color:#FF385C;
+}
+/* ---------------------------------------------- */
+
 .w-350c {
   width: 350px;
 }
@@ -105,24 +117,239 @@
   ); /* Tạo 3 cột với kích thước bằng nhau */
   grid-auto-rows: 1fr; /* Đặt chiều cao tỷ lệ cho mỗi hàng là 2fr */
 }
-.border-l-1{
-    border-left-width: 2px;
+.border-l-1 {
+  border-left-width: 2px;
 }
-.border-b-1{
-    border-bottom-width: 1px;
+.border-b-1 {
+  border-bottom-width: 1px;
 }
-.star-letter{
-     height: 12px; width: 12px; fill: currentcolor;
-
+.star-letter {
+  height: 12px;
+  width: 12px;
+  fill: currentcolor;
 }
-.grid-in-detail-item{
-    display: grid;
+.grid-in-detail-item {
+  display: grid;
   grid-template-columns: auto 1fr; /* Tạo 2 cột với kích thước bằng nhau */
   grid-template-rows: repeat(4, 1fr); /* Tạo 4 hàng với kích thước bằng nhau */
-  grid-auto-flow:column;
+  grid-auto-flow: column;
   grid-gap: 2px; /* Khoảng cách giữa các ô */
-  text-align:left;
+  text-align: left;
 }
-.unknown-leading-15{
-    line-height:13px
+.unknown-leading-15 {
+  line-height: 13px;
+}
+/* ------------------ */
+.left-arrow-icon {
+  display: block;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentcolor;
+  stroke-width: 4;
+  overflow: visible;
+}
+.unknown-icon-2 {
+  display: block;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentcolor;
+  stroke-width: 2;
+  overflow: visible;
+}
+.heart-icon-2 {
+  display: block;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentcolor;
+  stroke-width: 2;
+  overflow: visible;
+}
+.font-size26 {
+  font-size: 26px;
+}
+.leading30 {
+  line-height: 30px;
+}
+.good-price-icon {
+  display: block;
+  height: 32px;
+  width: 32px;
+  fill: rgb(227, 28, 95);
+  stroke: currentcolor;
+
+}
+.border-y-1 {
+  border-top: 1px solid rgb(195, 195, 195);
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+.super-host-icon{
+ display: block; height: 24px; width: 24px;
+
+}
+.font-size22{
+  font-size: 22px;
+
+}
+.font-size12{
+  font-size:12px;
+}
+.font-size14{
+  font-size:14px;
+}
+.font-size10{
+  font-size:10px;
+}
+.square-104{
+  width:104px;
+  height:104px;
+}
+.bg-unknown-gray {
+  background-color: #EDECE6   ;
+}
+.rounded-unknown{
+  border-radius: 24px;
+}
+.mt--5{
+  margin-top:-5px;
+}
+.max-w-96{
+  max-width:96px;
+}
+.max-w-210{
+  max-width: 210px;
+}
+.max-w-380{
+  max-width: 380px;
+}
+.shadow-unknown{
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.weight-800{
+  font-weight: 800;
+}
+.bg222{
+  background-color: #222;
+}
+.colorb0{
+  color:#b0b0b0;
+}
+.w-calc-7{
+  width: calc((100% - 12px) / 7);
+}
+.border-t-1{
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+.font-size18{
+  font-size: 18px;
+}
+.bg-f7{
+  background:#f7f7f7;
+}
+.border1{
+  border:1px solid red;
+}
+.border2{
+  border:1px solid blue;
+}
+.border3{
+  border:1px solid black;
+}
+.border1-gray{
+  border:1px solid rgb(223, 223, 223);
+}
+.left--24{
+  left:-24px;
+}
+.right--24{
+  right:-24px;
+}
+.color-gray7{
+  color:#717171;
+}
+.gradient-gray{
+  background: linear-gradient(to right, #f7f7f7 80% , #f7f7f700 100%);
+}
+.gradient-gray-toleft{
+  background: linear-gradient(to left, #f7f7f7 80% , #f7f7f700 100%);
+}
+.gradient-white{
+  background: linear-gradient(to right, #ffffff 80% , #f7f7f700 100%);
+}
+.gradient-white-toleft{
+  background: linear-gradient(to left, #ffffff 80% , #f7f7f700 100%);
+}
+.bg-grayf7{
+  background:#f7f7f7;
+}
+
+
+.scrollable-element::-webkit-scrollbar { display: none; }
+
+
+.scrollable-element::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  width:none;
+ 
+} 
+
+.w-min-285{
+  min-width: 285px;
+}
+.top--16{
+  top:-16px;
+}
+.pt-1px{
+  padding-top:1px;
+}
+.pr-1px{
+  padding-right:1px;
+}
+.grid-homepage{
+  display:grid;
+  column-gap:24px;
+  row-gap:40px;
+}
+.grid-homepage{
+  grid-template-columns: 1fr;
+  grid-template-rows: 56px ;
+}
+.total-price-container{
+  /* display: grid; */
+}
+@media (min-width:550px) {
+  .grid-homepage{
+    grid-template-columns: 1fr 1fr;
+  }
+  .total-price-container{
+    grid-area: 1/1/2/3;
+  }
+  
+}
+@media(min-width:950px){
+  .grid-homepage{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .total-price-container{
+    grid-area: 1/1/2/4;
+  }
+  
+}
+@media(min-width:1130px){
+  .grid-homepage{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .total-price-container{
+    grid-area: 1/1/2/5;
+  }
+  .totalprice{
+    grid-area: 1/2/2/4;
+  }
+  
+}
+.border44{
+  border:4px solid red;
 }
