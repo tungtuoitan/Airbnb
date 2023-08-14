@@ -56,10 +56,87 @@ let hometypeArr = [
     id: uuidv4(),
   },
   {
-    name: "Towers",
-    path: "./images/hometype-icons/towers.jpg",
+    name: "Design",
+    path: "./images/hometype-icons/design.jpg",
     id: uuidv4(),
   },
+  {
+    name: "OMG!",
+    path: "./images/hometype-icons/OMG!.jpg",
+    id: uuidv4(),
+  },{
+    name: "trending",
+    path: "./images/hometype-icons/trending.jpg",
+    id: uuidv4(),
+  },{
+    name: "Windmills",
+    path: "./images/hometype-icons/windmills.jpg",
+    id: uuidv4(),
+  },{
+    name: "Lake",
+    path: "./images/hometype-icons/lake.jpg",
+    id: uuidv4(),
+  },{
+    name: "Trulli",
+    path: "./images/hometype-icons/trulli.jpg",
+    id: uuidv4(),
+  },{
+    name: "Luxe",
+    path: "./images/hometype-icons/luxe.jpg",
+    id: uuidv4(),
+  },{
+    name: "Shepherd's huts",
+    path: "./images/hometype-icons/shepherd's-huts.jpg",
+    id: uuidv4(),
+  },{
+    name: "Boats",
+    path: "./images/hometype-icons/boat.jpg",
+    id: uuidv4(),
+  },{
+    name: "Casas particulares",
+    path: "./images/hometype-icons/casas-particulares.jpg",
+    id: uuidv4(),
+  },{
+    name: "Farms",
+    path: "./images/hometype-icons/farms.jpg",
+    id: uuidv4(),
+  },
+  ,{
+    name: "Skiing",
+    path: "./images/hometype-icons/skiing.jpg",
+    id: uuidv4(),
+  },
+  ,{
+    name: "National parks",
+    path: "./images/hometype-icons/national-parks.jpg",
+    id: uuidv4(),
+  },
+  ,{
+    name: "Houseboats",
+    path: "./images/hometype-icons/houseboats.jpg",
+    id: uuidv4(),
+  },
+  ,{
+    name: "Caves",
+    path: "./images/hometype-icons/caves.jpg",
+    id: uuidv4(),
+  },
+  ,{
+    name: "Treehouses",
+    path: "./images/hometype-icons/treehouses.jpg",
+    id: uuidv4(),
+  },
+  ,{
+    name: "Arctic",
+    path: "./images/hometype-icons/arctic.jpg",
+    id: uuidv4(),
+  },
+  ,{
+    name: "Golfing",
+    path: "./images/hometype-icons/golfing.jpg",
+    id: uuidv4(),
+  },
+  
 ];
 
 export default hometypeArr;

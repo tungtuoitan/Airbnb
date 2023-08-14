@@ -1,18 +1,16 @@
-import React from "react";
-
+import React, { useRef, useState } from "react";
+import ItemSlider from "./casoural";
+import Slider from './slider2'
 class Item extends React.Component {
-    render() {
-      const { home, owner, path} = this.props
-      return (
-        <div >
-          <div className=" aspect-square  relative rounded-xl overflow-hidden mb-6    ">
-          <img
-            src= {path}
-            className="  h-full w-full h-calc-vw48  m-0  "
-          />
-          {/* 9-ô */}
-          <div className=" grid-in-item p-c14 box-border         w-full h-full flex-wrap absolute top-0  ">
-            {/* row 1 */}
+  render() {
+    const { home, owner, path } = this.props;
+    return (
+      <div className="ITEM max-w-full    ">
+        <div className="SLIDER_CONTAINER     aspect-square  relative rounded-xl overflow-hidden mb-c14    ">
+          <Slider path={path}/>
+        
+
+          <div className="INVISIBLE_LAYER       pointer-events-none grid-in-item p-c14 box-border         w-full h-full flex-wrap absolute top-0  ">
             <div className="opacity-0">1</div>
             <div className="opacity-0">2</div>
             <div className="flex justify-self-end">
@@ -28,13 +26,11 @@ class Item extends React.Component {
               </svg>
             </div>
 
-            {/* row 2 */}
-            <div>4</div>
+            
+            <div className="opacity-0">4</div>
             <div className="opacity-0">5</div>
-            <div>6</div>
+            <div className="opacity-0">6</div>
 
-            {/* row 3 */}
-            {/* book-icon */}
             <div className="flex items-end">
               <div className=" relative ">
                 <div className=" w-16         h-c72 bg-gray-EA   rounded-book-icon book-shadow   "></div>
@@ -42,40 +38,43 @@ class Item extends React.Component {
                   <div className="w-c6 h-full border-r-2 border-solid border-gray-300 border-l-1   "></div>
                   <div className="flex items-center justify-center w-full  ">
                     <div className="w-10 h-10   shadow-md first-letter:border-1 border-solid border-gray-400 rounded-full overflow-hidden ">
-                      <img src={owner.avatar}/>
-                      </div>
+                      <img src={owner.avatar} />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-end">
-              <div className=" flex gap-c6   justify-center">
-                <div className="w-c6 h-c6 bg-white rounded-full "></div>
-                <div className="w-c6 h-c6 bg-gray-unknown rounded-full "></div>
-                <div className="w-c6 h-c6 bg-gray-unknown rounded-full "></div>
-                <div className="w-c6 h-c6 bg-gray-unknown rounded-full "></div>
-                <div className="w-c6 h-c6 bg-gray-unknown rounded-full "></div>
-              </div>
-            </div>
+            
+            <div className="opacity-0">8</div>
+
             <div className="opacity-0">9</div>
           </div>
         </div>
 
-        <div className="grid-in-detail-item text-c15 mt-4 unknown-leading-15 gap-c2 ">
-            <div className="manrope-700">{home.city}, {home.country}</div>
-            <div className="text-gray7">
-              <span>Stay with {owner.name}</span><span className="m-c4">.</span>
-               <span>{owner.more_info.work}</span> <span></span>
-            </div>
-            <div className="text-gray7">Jul 22 - 27</div> 
-            <div className="mt-c6">
-              <span className="manrope-700 mr-c4">${home.price} 
 
-              </span>
-               <span>night</span>
-            </div>
-          <div className="text-right flex justify-end manrope-700">
-            <span className="mr-c4">
+
+
+
+
+
+
+
+        <div className="TEXT_CONTAINER   set-row-height grid-in-detail-item text-c15  unknown-leading-15 gap-c2 ">
+          <div className="manrope-700 line">
+            {home.city}, {home.country}
+          </div>
+          <div className="text-gray7 leading-5">
+            <span>Stay with {owner.name}</span>
+            <span className="m-c4">.</span>
+            <span>{owner.more_info.work}</span> <span></span>
+          </div>
+          <div className="text-gray7">Jul 22 - 27</div>
+          <div className="mt-c6">
+            <span className="manrope-700 mr-c4">${home.price}</span>
+            <span>night</span>
+          </div>
+          <div className="text-right flex justify-end items-center manrope-700">
+            <span className="mr-c4 set-mt--c2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -90,7 +89,7 @@ class Item extends React.Component {
                 ></path>
               </svg>
             </span>
-            <span className="font-normal">{owner.account.rating}</span>
+            <p className="font-normal ">{owner.account.rating}</p>
           </div>
         </div>
       </div>

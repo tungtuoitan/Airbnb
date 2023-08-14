@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  important:true,
+  // important:true,
 
   content: [
     "./src/**/*.{html,js}",
@@ -19,6 +19,8 @@ module.exports = {
 
 
         'c250':'250px',
+        'c82':'82px',
+
         
 
         'c31': '31px',
@@ -70,6 +72,8 @@ module.exports = {
         'c77': '77px',
         'c78': '78px',
         'c79': '79px',
+        'c80': '80px',
+
 
 
 

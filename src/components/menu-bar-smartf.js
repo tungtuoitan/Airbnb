@@ -4,7 +4,7 @@ class MenuBarSmartf extends React.Component {
   render() {
     return (
       <div className="text-gray7 flex justify-center text-c10 fixed bottom-0 w-full border-t-1-menubar bg-white "  >
-          <div className=" flex items-center flex-col gap-c5 my-4 w-1/5">
+          <div className=" flex items-center flex-col gap-c5 my-c10 w-1/5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
@@ -20,7 +20,7 @@ class MenuBarSmartf extends React.Component {
             </svg>
             <span>Explore</span>
           </div>
-          <div className=" flex items-center flex-col gap-c5  my-4 w-1/5">
+          <div className=" flex items-center flex-col gap-c5  my-c10 w-1/5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
@@ -33,7 +33,7 @@ class MenuBarSmartf extends React.Component {
             </svg>
             <span>Whistlists</span>
           </div>
-          <div className=" flex items-center flex-col gap-c5  my-4 w-1/5">
+          <div className=" flex items-center flex-col gap-c5  my-c10 w-1/5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
