@@ -1,32 +1,50 @@
 import { useEffect } from "react";
 import { useState, useRef } from "react";
 import homeImageArr from "../datas/home-images";
+import PrevButton from "./prev-button";
+import NextButton from "./next-button";
+import DotsSlide from "./dots-slide";
+import listenWindowScroll from "./listen-window-scroll";
 
 function Slider({ path }) {
   const [left, setLeft] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+
+  let [isPrevBtnDisplay, setIsPrevBtnDisplay] = useState(false);
+  let [isNextBtnDisplay, setIsNextBtnDisplay] = useState(true);
+
+  useEffect(() => {
+    if (currentIndex === 0) {
+      setIsPrevBtnDisplay(false);
+    } else {
+      setIsPrevBtnDisplay(true);
+    }
+    if (currentIndex === homeImageArr[0].length - 1) {
+      setIsNextBtnDisplay(false);
+    } else {
+      setIsNextBtnDisplay(true);
+    }
+  }, [currentIndex]);
+  let onMouseEnter = () => {
+    setIsHovering(true);
+  };
+  let onMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   const containerRef = useRef(null);
   const sliderRef = useRef(null);
-  let leftCopyForTemporary;
+  let isEnableSwipe = true;
+  let isWindowScrolling = [false];
 
-  let isEnableSwipe = true
-  let isWindowScrolling = false;
-  let timeoutId = null
+  listenWindowScroll(isWindowScrolling);
 
-  window.addEventListener('scroll',()=>{
-    isWindowScrolling = true
-    if(timeoutId){
-      clearTimeout(timeoutId)
-    }
-    timeoutId = setTimeout(()=>{
-      isWindowScrolling = false
-    },200)
-  })
-  const goTemporary = ()=>{
+  const goTemporary = () => {
     // chịu chết
-  }
+  };
   const goPrev = (e) => {
-    if (isEnableSwipe === false || isWindowScrolling=== true) {
+    if (isEnableSwipe === false || isWindowScrolling[0] === true) {
       return;
     }
     isEnableSwipe = false;
@@ -35,13 +53,14 @@ function Slider({ path }) {
 
       return;
     }
+
     let imgWidth = containerRef.current.offsetWidth;
     let leftCopy = left + imgWidth;
     setLeft(leftCopy);
     setCurrentIndex(currentIndex - 1);
   };
   const goNext = (e) => {
-    if (isEnableSwipe === false || isWindowScrolling===true) {
+    if (isEnableSwipe === false || isWindowScrolling[0] === true) {
       return;
     }
     isEnableSwipe = false;
@@ -64,27 +83,23 @@ function Slider({ path }) {
 
     startX = event.touches[0].clientX;
     dist = 0;
-    leftCopyForTemporary = left
   }
-
   useEffect(() => {
     setTimeout(() => {
       isEnableSwipe = true;
     }, 100);
   }, [left]);
-
   function handleTouchMove(event) {
     if (isEnableSwipe === false) {
       return;
     }
-    
-    // if (dist !== 0) {
-      //   return;
-      // }
-      const currentX = event.touches[0].clientX;
-      dist = currentX - startX;
-      goTemporary()
 
+    // if (dist !== 0) {
+    //   return;
+    // }
+    const currentX = event.touches[0].clientX;
+    dist = currentX - startX;
+    goTemporary();
   }
   function handleTouchEnd() {
     if (isEnableSwipe === false) {
@@ -109,62 +124,48 @@ function Slider({ path }) {
     });
   });
 
-
-
   return (
-    <div className="SLIDER_CONTAINER   relative  " ref={sliderRef}>
-      <button
-        className="PREV_BTN absolute  bg-white w-8 h-8 rounded-full pl-c2 left-2 y-center"
+    <div
+      className="SLIDER_CONTAINER   relative    "
+      ref={sliderRef}
+      onMouseEnter={() => {
+        onMouseEnter();
+      }}
+      onMouseLeave={() => {
+        onMouseLeave();
+      }}
+    >
+      <PrevButton
         onClick={(e) => {
           goPrev(e);
         }}
-      >
-        <i
-          class="fa-solid fa-angle-left"
-          style={{ color: "#878787", marginRight: "2px" }}
-        ></i>
-      </button>
-
-      <div className="DOTS_CONTAINTER dots-container absolute bottom-c10 x-center flex flex-col justify-end">
-        <div className={`flex gap-c6   justify-center `}>
-          {homeImageArr[0].map((item, index) => {
-            return (
-              <div
-                className={`w-c6 h-c6  rounded-full ${
-                  index === currentIndex ? "bg-white" : "bg-gray-unknown"
-                } `}
-              ></div>
-            );
-          })}
-        </div>
-      </div>
-
-      <button
-        className="NEXT_BTN absolute  bg-white w-8 h-8 rounded-full  right-c8 y-center"
+        isHovering={isHovering}
+        isPrevBtnDisplay={isPrevBtnDisplay}
+      />
+      <DotsSlide imgArr={homeImageArr} currentIndex={currentIndex} />
+      <NextButton
         onClick={(e) => {
           goNext(e);
         }}
-      >
-        <i
-          class="fa-solid fa-angle-right"
-          style={{ color: "#878787", marginLeft: "2px" }}
-        ></i>
-      </button>
-
-      <div
-        className="IMGS_CONTAINTER     flex      w-full transition-margin "
-        ref={containerRef}
-        style={{ marginLeft: `${left}px` }}
-      >
-        {homeImageArr[0].map((item, index) => {
-          return (
-            <img
-              src={item}
-              id={index}
-              className="   h-calc-vw48  m-0 max-w-full max-h-full  "
-            />
-          );
-        })}
+        isHovering={isHovering}
+        isNextBtnDisplay={isNextBtnDisplay}
+      />
+      <div className="IMG__CONTAINER__2 special-width special-height  ">
+        <div
+          className="IMGS_CONTAINTER     flex      w-full h-full transition-margin "
+          ref={containerRef}
+          style={{ marginLeft: `${left}px` }}
+        >
+          {homeImageArr[0].map((item, index) => {
+            return (
+              <img
+                src={item}
+                id={index}
+                className="m-0   h-calc-vw48   max-w-full max-h-full special-width  special-height "
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

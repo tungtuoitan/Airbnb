@@ -1,0 +1,22 @@
+
+function DotsSlide ({imgArr,currentIndex}){
+
+    return(
+        <div className="DOTS_CONTAINTER        dots-container absolute bottom-c13 x-center flex flex-col justify-end">
+        <div className={`flex gap-c6   justify-center `}>
+          {imgArr[0].map((item, index) => {
+            return (
+              <div
+                className={`w-c6 h-c6  rounded-full ${
+                  index === currentIndex ? "bg-white" : "bg-gray-unknown"
+                } `}
+              ></div>
+            );
+          })}
+        </div>
+      </div>
+
+    )
+}
+
+export default DotsSlide

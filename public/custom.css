@@ -473,3 +473,15 @@
   left:50%;
   transform: translateX(-50%);
 }
+.box-shadow-u2{
+  box-shadow:  0 0 0 1px transparent,0 0 0 4px transparent,0 2px 4px rgba(0,0,0,0.18);
+}
+.bg-white-u1{
+  background:#ffffffab;
+}
+.box-shadow-u2:hover{
+  box-shadow: 0 0 1px transparent,0 0 0 4px transparent,0 6px 16px rgba(0,0,0,0.12)
+}
+.top-98{
+  top:calc(100% *288px)
+}

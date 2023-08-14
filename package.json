@@ -35,9 +35,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-    
-    ]
+    "extends": []
   },
   "browserslist": {
     "production": [
@@ -55,6 +53,8 @@
     "@mui/lab": "^5.0.0-alpha.138",
     "@mui/x-date-pickers": "^6.11.0",
     "autoprefixer": "^10.4.14",
+    "eslint": "^8.47.0",
+    "eslint-plugin-react": "^7.33.1",
     "faker": "^6.6.6",
     "jquery": "^3.7.0",
     "postcss": "^8.4.27",

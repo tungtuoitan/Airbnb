@@ -24,7 +24,6 @@ function Header2() {
       let widthOfEndScroll = widthofChild - e.target.clientWidth
       
       let scrollLeft = e.target.scrollLeft
-      console.log('scrollLeft: ',scrollLeft)
 
       if(scrollLeft===0){
         setArrowLeftDisplay(false)

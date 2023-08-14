@@ -58,7 +58,6 @@ class Item extends React.Component {
 
 
 
-
         <div className="TEXT_CONTAINER   set-row-height grid-in-detail-item text-c15  unknown-leading-15 gap-c2 ">
           <div className="manrope-700 line">
             {home.city}, {home.country}
