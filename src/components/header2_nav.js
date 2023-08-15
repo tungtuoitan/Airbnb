@@ -7,8 +7,8 @@ class Header2Nav extends React.Component{
             <div className=" NAVIGATION  flex justify-between 7:px-10 14:px-20  absolute top-0 left-0 w-full h-full">
             <div
               className={`ARROW_LEFT    hidden  z-10  7:flex 7:opacity-0   h-full    w-10 mt-c7 gradient-white   items-center  color222 ${
-                arrowLeftDisplay === true ? "7:opacity-100" : "7:opacity-0"
-              } `}
+                arrowLeftDisplay === true ? "7:opacity-100" : "7:opacity-0" 
+              } ${arrowLeftDisplay===true ? 'pointer-events-auto': 'pointer-events-none'} `}
             >
               <div
                 onClick={() => {
@@ -20,8 +20,9 @@ class Header2Nav extends React.Component{
               </div>
             </div>
     
-            <div className={`RIGHT   hidden 7:flex    z-10 h-full mt-c7      justify-center items-center  `}>
-              <div className={`ARROW_RIGHT    hidden 7:flex  w-16 h-20 ml-8  gradient-white-toleft           justify-end items-center   top-0   color222 ${arrowRightDisplay===true ? '7:opacity-100': '7:opacity-0'}`}>
+            <div className={`RIGHT   hidden 7:flex    z-10 h-full mt-c7      justify-center items-center  ${arrowRightDisplay===true ? 'pointer-events-auto': 'pointer-events-none'}`}>
+              <div className={`ARROW_RIGHT    hidden 7:flex  w-16 h-20 ml-8  gradient-white-toleft           justify-end items-center   top-0   color222 ${arrowRightDisplay===true ? '7:opacity-100': '7:opacity-0'}
+              ${arrowRightDisplay===true ? 'pointer-events-auto': 'pointer-events-none'}`}>
                 <div 
                   onClick={() => {
                     onClickRightArrow();
@@ -31,9 +32,9 @@ class Header2Nav extends React.Component{
                   <i class="fa-solid fa-angle-right fa-sm"></i>
                 </div>
               </div>
-              <div className="h-full bg-white pl-4 flex items-center">
+              <div className="FILTER_CONTAINER  pointer-events-auto h-full bg-white pl-4 flex items-center">
 
-              <button className="-------- bg-white   flex justify-center items-center gap-2 p-4 pr-c18 w-22 h-12 border-1 rounded-xl        ">
+              <button className="FILTER bg-white   flex justify-center items-center gap-2 p-4 pr-c18 w-22 h-12 border-1 rounded-xl        ">
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

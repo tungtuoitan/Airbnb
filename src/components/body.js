@@ -15,7 +15,7 @@ function Body (){
               let owner = owners.find((x) => x.id === item.owner);
 
               return (
-                <div className="ITEM_CONTAINERR  max-w-full   " key={item.id} >
+                <div className="ITEM_CONTAINERR  max-w-full  " key={item.id} >
                   <Item path={item.imgarr[0]} owner={owner} home={item} />
                 </div>
               );

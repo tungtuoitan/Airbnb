@@ -2,7 +2,7 @@
 function DotsSlide ({imgArr,currentIndex}){
 
     return(
-        <div className="DOTS_CONTAINTER        dots-container absolute bottom-c13 x-center flex flex-col justify-end">
+        <div className="DOTS_CONTAINTER        dots-container absolute bottom-c13 x-center flex flex-col justify-end z100">
         <div className={`flex gap-c6   justify-center `}>
           {imgArr[0].map((item, index) => {
             return (

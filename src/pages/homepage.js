@@ -9,7 +9,7 @@ import Body from "../components/body";
 function HomePage() {
   return (
     <div>
-      <div className="TWO_HEADERS     sticky top-0 fixed w-full z-10 bg-white top-0  overflow-hidden shadow-header-smartf      ">
+      <div className="TWO_HEADERS     sticky top-0 fixed w-full zmax bg-white top-0  overflow-hidden shadow-header-smartf      ">
         <Header1 />
         <Header2 />
       </div>

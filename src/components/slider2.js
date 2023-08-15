@@ -4,7 +4,6 @@ import homeImageArr from "../datas/home-images";
 import PrevButton from "./prev-button";
 import NextButton from "./next-button";
 import DotsSlide from "./dots-slide";
-import listenWindowScroll from "./listen-window-scroll";
 
 function Slider({ path }) {
   const [left, setLeft] = useState(0);
@@ -38,7 +37,17 @@ function Slider({ path }) {
   let isEnableSwipe = true;
   let isWindowScrolling = [false];
 
-  listenWindowScroll(isWindowScrolling);
+let timeoutId = null
+  window.addEventListener("scroll", () => {
+      isWindowScrolling[0]= true
+
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(() => {
+        isWindowScrolling[0] = false
+      }, 200);
+    });
 
   const goTemporary = () => {
     // chịu chết
@@ -126,7 +135,7 @@ function Slider({ path }) {
 
   return (
     <div
-      className="SLIDER_CONTAINER   relative    "
+      className="SLIDER_CONTAINER   relative h-full    "
       ref={sliderRef}
       onMouseEnter={() => {
         onMouseEnter();
@@ -150,23 +159,22 @@ function Slider({ path }) {
         isHovering={isHovering}
         isNextBtnDisplay={isNextBtnDisplay}
       />
-      <div className="IMG__CONTAINER__2 special-width special-height  ">
         <div
-          className="IMGS_CONTAINTER     flex      w-full h-full transition-margin "
+          className="IMGS_CONTAINTER     flex      w-full h-full transition-margin relative"
           ref={containerRef}
           style={{ marginLeft: `${left}px` }}
         >
+          
           {homeImageArr[0].map((item, index) => {
             return (
               <img
                 src={item}
                 id={index}
-                className="m-0   h-calc-vw48   max-w-full max-h-full special-width  special-height "
+                className="m-0     max-w-full max-h-full object-cover w-full h-full "
               />
             );
           })}
         </div>
-      </div>
     </div>
   );
 }

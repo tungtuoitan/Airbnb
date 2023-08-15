@@ -6,10 +6,8 @@ class Item extends React.Component {
     const { home, owner, path } = this.props;
     return (
       <div className="ITEM max-w-full    ">
-        <div className="SLIDER_CONTAINER     aspect-square  relative rounded-xl overflow-hidden mb-c14    ">
+        <div className="SLIDER_CONTAINER        aspect-square  relative rounded-xl overflow-hidden mb-c14    ">
           <Slider path={path}/>
-        
-
           <div className="INVISIBLE_LAYER       pointer-events-none grid-in-item p-c14 box-border         w-full h-full flex-wrap absolute top-0  ">
             <div className="opacity-0">1</div>
             <div className="opacity-0">2</div>
@@ -50,13 +48,6 @@ class Item extends React.Component {
             <div className="opacity-0">9</div>
           </div>
         </div>
-
-
-
-
-
-
-
 
         <div className="TEXT_CONTAINER   set-row-height grid-in-detail-item text-c15  unknown-leading-15 gap-c2 ">
           <div className="manrope-700 line">

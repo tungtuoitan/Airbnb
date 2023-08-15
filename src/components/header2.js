@@ -36,15 +36,10 @@ function Header2() {
         setArrowRightDisplay(true)
       }
     })
-
-
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }}
-
-
-
   }, []);
 
   return (
