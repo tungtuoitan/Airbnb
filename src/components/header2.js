@@ -3,7 +3,7 @@ import HometypeBar from "../components/hometype-bar";
 import Header2Nav from "./header2_nav";
 import $ from "jquery";
 
-function Header2() {
+function Header2({isScrollTop0}) { 
   const [arrowLeftDisplay, setArrowLeftDisplay] = useState(false);
   const [arrowRightDisplay, setArrowRightDisplay] = useState(true);
 
@@ -43,15 +43,16 @@ function Header2() {
   }, []);
 
   return (
-    <div className="HEADER_2       relative  7:pr-10 pl-6 7:pl-10 14:px-20 box-border  ">
+    <div className="HEADER_2       relative  7:pr-10 pl-6 7:pl-10 14:px-20 box-border    ">
       <Header2Nav
         onClickLeftArrow={onClickLeftArrow}
         onClickRightArrow={onClickRightArrow}
         arrowLeftDisplay={arrowLeftDisplay}
         arrowRightDisplay={arrowRightDisplay}
+        isScrollTop0={isScrollTop0}
       />
 
-      <HometypeBar ref={homeTypeBarRef} />
+      <HometypeBar ref={homeTypeBarRef} isScrollTop0={isScrollTop0} />
     </div>
   );
 }

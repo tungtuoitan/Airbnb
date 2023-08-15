@@ -2,7 +2,7 @@ import React from "react";
 
 class Header2Nav extends React.Component{
     render(){
-        const {onClickLeftArrow,onClickRightArrow,arrowLeftDisplay,arrowRightDisplay}=this.props
+        const {onClickLeftArrow,onClickRightArrow,arrowLeftDisplay,arrowRightDisplay,isScrollTop0}=this.props
         return(
             <div className=" NAVIGATION  flex justify-between 7:px-10 14:px-20  absolute top-0 left-0 w-full h-full">
             <div
@@ -20,7 +20,7 @@ class Header2Nav extends React.Component{
               </div>
             </div>
     
-            <div className={`RIGHT   hidden 7:flex    z-10 h-full mt-c7      justify-center items-center  ${arrowRightDisplay===true ? 'pointer-events-auto': 'pointer-events-none'}`}>
+            <div className={`RIGHT   hidden 7:flex    z-10 h-full  ${isScrollTop0===true ? 'mtc7' : ''}  transition-all    justify-center items-center  ${arrowRightDisplay===true ? 'pointer-events-auto': 'pointer-events-none'}`}>
               <div className={`ARROW_RIGHT    hidden 7:flex  w-16 h-20 ml-8  gradient-white-toleft           justify-end items-center   top-0   color222 ${arrowRightDisplay===true ? '7:opacity-100': '7:opacity-0'}
               ${arrowRightDisplay===true ? 'pointer-events-auto': 'pointer-events-none'}`}>
                 <div 

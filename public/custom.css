@@ -512,3 +512,6 @@
 .zmax{
   z-index: 10000000000000;
 }
+.box-shadow-header2{
+  box-shadow: rgb(0 0 0 / 16%) 0 0 6px;
+}
