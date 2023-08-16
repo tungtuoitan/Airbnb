@@ -66,12 +66,13 @@ const HometypeBar = React.forwardRef((props, ref) => {
   return (
     <div 
     ref={ref}
-    className={`HOME_TYPE_BAR   header2    relative   overflow-x-scroll  hometypebar-container ${props.isScrollTop0===true ? '7:pt-5 ' : '7:pt-c4'} transition-all`}>
+    className={`HOME_TYPE_BAR   header2    relative   overflow-x-scroll  hometypebar-container 
+    7:pt-5
+    `}>
       <div
         
         className="FULL_WIDTH_CONTAINER    inline-flex gap-5   7:gap-10   relative hometypebar   "
       >
-        {console.log('props: ',props.isScrollTop0)}
         {hometypeArr.map((item, index) => {
           return (
             <div

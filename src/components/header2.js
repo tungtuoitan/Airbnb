@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import HometypeBar from "../components/hometype-bar";
 import Header2Nav from "./header2_nav";
 import $ from "jquery";
+import Header1Mobile from "../datas/header1-mobile";
 
 function Header2({isScrollTop0}) { 
   const [arrowLeftDisplay, setArrowLeftDisplay] = useState(false);
@@ -43,7 +44,14 @@ function Header2({isScrollTop0}) {
   }, []);
 
   return (
-    <div className="HEADER_2       relative  7:pr-10 pl-6 7:pl-10 14:px-20 box-border    ">
+    <div className={
+      `HEADER_2     fixed top-0     bg-white z-10    7:pr-10 pl-6 7:pl-10 14:px-20 box-border
+      
+      ${isScrollTop0===true ? '' : 'box-shadow-header2' } 
+      `
+    }>
+        <Header1Mobile/>
+     
       <Header2Nav
         onClickLeftArrow={onClickLeftArrow}
         onClickRightArrow={onClickRightArrow}

@@ -515,3 +515,19 @@
 .box-shadow-header2{
   box-shadow: rgb(0 0 0 / 16%) 0 0 6px;
 }
+.opacity-inherit{
+  opacity:inherit
+}
+.gray-opacity{
+  background:rgba(0, 0, 0, 0.095)
+}
+.transition-padding{
+  transition: padding 0.1s linear, margin 0.1s linear, height 0.1s linear;
+
+}
+.webkit-sticky{
+  position: -webkit-sticky;
+}
+.w-calc-headermobile{
+  width: calc(100vw - 48px)
+}
