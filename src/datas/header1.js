@@ -12,7 +12,7 @@ function Header1({currentState,handleOnClickSearchBox}) {
       >
           <div
             className={`CONTAINER_2 
-        ${currentState === "normal" ? "" : "h-40"} 
+        ${currentState === "normal" ? "" : "h-40"}
         `}
           >
             <div
