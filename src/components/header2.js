@@ -20,8 +20,9 @@ function Header2({isScrollTop0}) {
   useEffect(() => {
 
     homeTypeBarRef.current.addEventListener('scroll',(e)=>{
-      let widthofChild = e.target.children[0].clientWidth
-      let widthOfEndScroll = widthofChild - e.target.clientWidth
+      let widthofChild = e.target.children[0].offsetWidth
+      let paddingOfChild = e.target.children[0].offsetLeft
+      let widthOfEndScroll = widthofChild - e.target.clientWidth + paddingOfChild 
       
       let scrollLeft = e.target.scrollLeft
 
@@ -30,7 +31,8 @@ function Header2({isScrollTop0}) {
       }else{
         setArrowLeftDisplay(true)
       }
-      if(scrollLeft=== widthOfEndScroll){
+      console.log('>>>>: ',scrollLeft,e.target.clientWidth,widthofChild,e.target.children[0].offsetLeft)
+      if(scrollLeft === widthOfEndScroll){
         setArrowRightDisplay(false)
       }else{
         setArrowRightDisplay(true)
@@ -43,10 +45,10 @@ function Header2({isScrollTop0}) {
   }, []);
 
   return (
-    <div className="HEADER_2     sticky top-0  bg-white z100 box-shadow-header2">
+    <div className="HEADER_2        sticky top-0  bg-white z100 box-shadow-header2">
       <div className="w-full h-c70 7:h-20"></div>
 
-    <div className="     relative  7:pr-10 pl-6 7:pl-10 14:px-20 box-border    ">
+    <div className="CONTAINER_ROOT   border2  relative  7:pr-10  14:px-20 box-border    ">
       <Header2Nav
         onClickLeftArrow={onClickLeftArrow}
         onClickRightArrow={onClickRightArrow}
