@@ -6,9 +6,10 @@ class Header2Nav extends React.Component{
         return(
             <div className=" NAVIGATION  flex justify-between 7:px-10 14:px-20  absolute top-0 left-0 w-full h-full">
             <div
-              className={`ARROW_LEFT    hidden  z-10  7:flex 7:opacity-0   h-full    w-10 mt-c7 gradient-white   items-center  color222 ${
+              className={`ARROW_LEFT    hidden  z-10  7:flex 7:opacity-0   h-full    w-10 gradient-white   items-center  color222 ${
                 arrowLeftDisplay === true ? "7:opacity-100" : "7:opacity-0" 
-              } ${arrowLeftDisplay===true ? 'pointer-events-auto': 'pointer-events-none'} `}
+              } ${arrowLeftDisplay===true ? 'pointer-events-auto': 'pointer-events-none'}
+              `}
             >
               <div
                 onClick={() => {
@@ -20,7 +21,8 @@ class Header2Nav extends React.Component{
               </div>
             </div>
     
-            <div className={`RIGHT   hidden 7:flex    z-10 h-full  ${isScrollTop0===true ? 'mtc7' : ''}  transition-all    justify-center items-center  ${arrowRightDisplay===true ? 'pointer-events-auto': 'pointer-events-none'}`}>
+            <div className={`RIGHT   hidden 7:flex    z-10 h-full  justify-center items-center    
+              ${arrowRightDisplay===true ? 'pointer-events-auto': 'pointer-events-none'}`}>
               <div className={`ARROW_RIGHT    hidden 7:flex  w-16 h-20 ml-8  gradient-white-toleft           justify-end items-center   top-0   color222 ${arrowRightDisplay===true ? '7:opacity-100': '7:opacity-0'}
               ${arrowRightDisplay===true ? 'pointer-events-auto': 'pointer-events-none'}`}>
                 <div 

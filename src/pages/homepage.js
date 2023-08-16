@@ -21,6 +21,7 @@ function HomePage() {
   return (
     <div>
         <Header1 />
+        <div className="w-full h-0 7:h-c16 bg-black "></div>
         <Header2 isScrollTop0={isScrollTop0} />
 
       <div className="">

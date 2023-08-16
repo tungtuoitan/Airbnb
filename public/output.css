@@ -912,6 +912,10 @@ video {
   top: 16px;
 }
 
+.top-c21 {
+  top: 21px;
+}
+
 .top-c26 {
   top: 26px;
 }
@@ -926,6 +930,10 @@ video {
 
 .top-c70 {
   top: 70px;
+}
+
+.top-c10 {
+  top: 10px;
 }
 
 .z-10 {
@@ -1376,6 +1384,10 @@ video {
   height: 1.5rem;
 }
 
+.h-60 {
+  height: 15rem;
+}
+
 .h-7 {
   height: 1.75rem;
 }
@@ -1402,6 +1414,10 @@ video {
 
 .h-c20 {
   height: 20px;
+}
+
+.h-c21 {
+  height: 21px;
 }
 
 .h-c24 {
@@ -1458,6 +1474,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-c16 {
+  height: 16px;
 }
 
 .max-h-full {
@@ -2462,8 +2482,16 @@ video {
   padding-bottom: 7px;
 }
 
+.pl-0 {
+  padding-left: 0px;
+}
+
 .pl-10 {
   padding-left: 2.5rem;
+}
+
+.pl-20 {
+  padding-left: 5rem;
 }
 
 .pl-3 {
@@ -2586,12 +2614,36 @@ video {
   padding-top: 2rem;
 }
 
+.pt-c15 {
+  padding-top: 15px;
+}
+
+.pt-c16 {
+  padding-top: 16px;
+}
+
+.pt-c18 {
+  padding-top: 18px;
+}
+
 .pt-c4 {
   padding-top: 4px;
 }
 
 .pt-c7 {
   padding-top: 7px;
+}
+
+.pt-c17 {
+  padding-top: 17px;
+}
+
+.pt-c5 {
+  padding-top: 5px;
+}
+
+.pb-c11 {
+  padding-bottom: 11px;
 }
 
 .text-left {
@@ -2836,6 +2888,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-none {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline {
   outline-style: solid;
 }
@@ -2948,6 +3006,14 @@ video {
     height: 5rem;
   }
 
+  .\37\:h-c21 {
+    height: 21px;
+  }
+
+  .\37\:h-c16 {
+    height: 16px;
+  }
+
   .\37\:w-c82 {
     width: 82px;
   }
@@ -2974,6 +3040,10 @@ video {
     padding-bottom: 16px;
   }
 
+  .\37\:pl-0 {
+    padding-left: 0px;
+  }
+
   .\37\:pl-10 {
     padding-left: 2.5rem;
   }
@@ -2988,6 +3058,14 @@ video {
 
   .\37\:pt-c4 {
     padding-top: 4px;
+  }
+
+  .\37\:pb-c14 {
+    padding-bottom: 14px;
+  }
+
+  .\37\:pt-c18 {
+    padding-top: 18px;
   }
 
   .\37\:opacity-0 {
@@ -3039,5 +3117,9 @@ video {
   .\31 4\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .\31 4\:pl-20 {
+    padding-left: 5rem;
   }
 }
