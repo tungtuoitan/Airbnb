@@ -43,7 +43,10 @@ function Header2({isScrollTop0}) {
   }, []);
 
   return (
-    <div className="HEADER_2       relative  7:pr-10 pl-6 7:pl-10 14:px-20 box-border    ">
+    <div className="HEADER_2     sticky top-0  bg-white z100 box-shadow-header2">
+      <div className="w-full h-c70 7:h-20"></div>
+
+    <div className="     relative  7:pr-10 pl-6 7:pl-10 14:px-20 box-border    ">
       <Header2Nav
         onClickLeftArrow={onClickLeftArrow}
         onClickRightArrow={onClickRightArrow}
@@ -53,6 +56,7 @@ function Header2({isScrollTop0}) {
       />
 
       <HometypeBar ref={homeTypeBarRef} isScrollTop0={isScrollTop0} />
+    </div>
     </div>
   );
 }

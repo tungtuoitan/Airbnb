@@ -20,11 +20,8 @@ function HomePage() {
   })
   return (
     <div>
-      <div className={`TWO_HEADERS     sticky top-0 fixed w-full zmax bg-white top-0  overflow-hidden shadow-header-smartf      
-      ${isScrollTop0===true ? '' : 'box-shadow-header2' } `}>
         <Header1 />
         <Header2 isScrollTop0={isScrollTop0} />
-      </div>
 
       <div className="">
         <Body />

@@ -1,6 +1,6 @@
 function Header1() {
   return (
-    <div>
+    <div className=" fixed top-0  zmax bg-white w-full">
       <div className="HEADER_1_LAPTOP_CONTAINER     px-10 border-b-1 14:px-20 ">
         <div className="header_cho_destop w-    h-20 items-center  hidden 7:flex  justify-between ">
           <svg
