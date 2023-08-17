@@ -568,3 +568,6 @@
 .bg-eb{
   background:#ebebeb;
 }
+.h-calc-w{
+  height:calc((100% - 6*3px)/7)
+}

@@ -1537,6 +1537,10 @@ video {
   height: 100vh;
 }
 
+.h-c40 {
+  height: 40px;
+}
+
 .max-h-full {
   max-height: 100%;
 }

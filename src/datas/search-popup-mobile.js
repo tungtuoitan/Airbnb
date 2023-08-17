@@ -15,7 +15,7 @@ export default function SearchPopUpMoblie() {
         <WhenYourTrip/>
       </div>
 
-      <BottomBar />
+      {/* <BottomBar /> */}
     </div>
   );
 }

@@ -242,10 +242,26 @@ const addressArr = [
     v4(),
     v4(),
   ]
+  var monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   export default {
     addressArr: addressArr,
     getUni:getUni,
     homeIdArr:homeIdArr,
-    ownerIdArr:ownerIdArr
+    ownerIdArr:ownerIdArr,
+    monthNames:monthNames
+    
   }
