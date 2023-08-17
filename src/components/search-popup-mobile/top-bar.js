@@ -3,8 +3,9 @@
 export default function TopBar (){
 
     return(
-        <div className="TOP_BAR      w-full h-c60 flex justify-center relative pt-c18 pb-2 pl-c12">
-        <div
+        <div className="TOP_BAR      w-full h-c60 
+        flex justify-center items-center relative pt-c25 pb-c11 pl-c12">
+        <button
           className="ICON     w-8 h-8 rounded-full border-1 border-solid border-gray-400
         flex justify-center items-center absolute left-c20"
         >
@@ -26,12 +27,11 @@ export default function TopBar (){
           >
             <path d="m6 6 20 20M26 6 6 26"></path>
           </svg>
-        </div>
+        </button>
         <div className="2_OPTIONS     flex items-center gap-4 font-base font-bold color222">
-          <div className=" pb-c2 border-b-2 border-solid border-black">
-            Stays
+          <div className=" pb-c2 mainrope-700 font-size22 text-gray-500">
+            Find airbnb place
           </div>
-          <div>Experiences</div>
         </div>
       </div>
     )

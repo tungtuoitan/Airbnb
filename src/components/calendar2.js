@@ -1,31 +1,12 @@
 import React, { state, useState } from "react";
 import WeekRow from "./week-row";
 import DatesRow from "./dates-row";
-import fakeData from '../datas/fake-data'
-
-// let changeFocusedDate =
-// {
-//   blackCircle:0,
-//   increase: ()=>{
-//     if(this.blackCircle>1){
-//       return
-//     }else{
-//       this.blackCircle+=1
-//       console.log('blackCircle: ',this.blackCircle)
-//     }
-
-//   },
-//   decrease: ()=>{
-//     this.blackCircle-=1
-//     console.log('blackCircle: ',this.blackCircle)
-//   },
-// }
+import fakeData from "../datas/fake-data";
 
 // calendar Object
 const today = new Date();
 let year = today.getFullYear();
 let month = today.getMonth();
-
 
 function getWeekOfDay1(year, month) {
   const date = new Date(year, month, 1).getDay();
@@ -53,7 +34,7 @@ let get5ArrOfMonth = (y, m) => {
   ];
 };
 
-class Calendar extends React.Component {
+class Calendar2 extends React.Component {
   state = { month: month, year: year };
 
   prev = () => {
@@ -95,9 +76,9 @@ class Calendar extends React.Component {
     const fiveArrs = get5ArrOfMonth(year, month);
 
     return (
-      <div>
-        <div className="mt-8">
-          <div className="flex justify-between mb-4 ">
+      <div className="CONTAINER     ">
+        <div className="mt-4 ">
+          <div className="NAVBAR  flex justify-between mb-4 ">
             <button onClick={() => prev()}>
               <i class="fa-solid fa-angle-right fa-rotate-180"></i>
             </button>
@@ -114,24 +95,26 @@ class Calendar extends React.Component {
             </button>
           </div>
 
-          <div className="">
-            <WeekRow/>
+          <div className="CALENDAR ">
+            <WeekRow />
 
-            <table className="w-full">
-              <tbody className="w-full">
-                <DatesRow fiveArrs={fiveArrs} index1={0} />
-                <DatesRow fiveArrs={fiveArrs} index1={1} />
-                <DatesRow fiveArrs={fiveArrs} index1={2} />
-                <DatesRow fiveArrs={fiveArrs} index1={3} />
-                <DatesRow fiveArrs={fiveArrs} index1={4} />
+            <div className="overflow-y-scroll  h-40   ">
+              <table className="w-full">
+                <tbody className="w-full">
+                  <DatesRow fiveArrs={fiveArrs} index1={0} />
+                  <DatesRow fiveArrs={fiveArrs} index1={1} />
+                  <DatesRow fiveArrs={fiveArrs} index1={2} />
+                  <DatesRow fiveArrs={fiveArrs} index1={3} />
+                  <DatesRow fiveArrs={fiveArrs} index1={4} />
 
-                {fiveArrs[5][0] !== "." ? (
-                  <DatesRow fiveArrs={fiveArrs} index1={5} />
-                ) : (
-                  <></>
-                )}
-              </tbody>
-            </table>
+                  {fiveArrs[5][0] !== "." ? (
+                    <DatesRow fiveArrs={fiveArrs} index1={5} />
+                  ) : (
+                    <></>
+                  )}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -139,4 +122,4 @@ class Calendar extends React.Component {
   }
 }
 
-export default Calendar;
+export default Calendar2;

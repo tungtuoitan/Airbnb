@@ -3,8 +3,8 @@
 
 .color-pink-main{
   background:linear-gradient(to right,#E61E4D 0%,#E31C5F 50%,#D70466 100%)
-  
 }
+
 .main-gradient{
   background: 
   linear-gradient(to right,#E61E4D 0%,#E31C5F 50%,#D70466 100%)
@@ -569,5 +569,8 @@
   background:#ebebeb;
 }
 .h-calc-w{
-  height:calc((100% - 6*3px)/7)
+  height:calc((100vw - 6*3px)/7)
+}
+.h-calc-133{
+  height:calc(100vh - 133px)
 }

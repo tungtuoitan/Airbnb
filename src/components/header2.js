@@ -44,7 +44,7 @@ function Header2({ isScrollTop0 }) {
   }, []);
 
   return (
-    <div className={`HEADER_2     sticky top-0  bg-white z100 
+    <div className={`HEADER_2     sticky top-0  bg-white z1000 
     ${isScrollTop0 === true && window.innerWidth >=745  ? '': 'box-shadow-header2'} 
     `}>
       <div className="w-full h-c70 7:h-20"></div>
