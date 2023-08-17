@@ -3,7 +3,7 @@ import React from "react";
 class MenuBarSmartf extends React.Component {
   render() {
     return (
-      <div className="text-gray7 flex justify-center text-c10 zmax fixed bottom-0 w-full border-t-1-menubar bg-white "  >
+      <div className="text-gray7 flex justify-center text-c10 z10000 fixed bottom-0 w-full border-t-1-menubar bg-white "  >
           <div className=" flex items-center flex-col gap-c5 my-c10 w-1/5">
             <svg
               xmlns="http://www.w3.org/2000/svg"

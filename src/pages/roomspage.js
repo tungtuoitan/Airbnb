@@ -13,7 +13,7 @@ class RoomPage extends React.Component {
   render() {
     return (
       <>
-        {/* <div className="px-6 h-16 flex items-center">
+        <div className="px-6 h-16 flex items-center">
           <div className="flex justify-between items-center w-full ">
             <div className="flex justify-center items-center gap-2 ">
               <svg
@@ -58,10 +58,10 @@ class RoomPage extends React.Component {
               </svg>
             </div>
           </div>
-        </div> */}
+        </div>
 
 
-        {/* <div className='mb-6'>
+        <div className='mb-6'>
           <div className="max-h-xs ">
             <img src="./images/homes/a1.jpg" />
           </div>
@@ -117,15 +117,15 @@ class RoomPage extends React.Component {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <GoodPrice/> */}
-        {/* <RoomInABarn feature={homeFeatureIcons}/> */}
-        {/* <HomeFeatures2 feature={homeFeatureIcons}/> */}
-        {/* <MeetYourHost owner ={owners[2]}/> */}
-        {/* <AboutThisPlace/> */}
-        {/* <WhatOffers/> */}
-        {/* <XNightsInX/> */}
+        <GoodPrice/>
+        <RoomInABarn feature={homeFeatureIcons}/>
+        <HomeFeatures2 feature={homeFeatureIcons}/>
+        <MeetYourHost owner ={owners[2]}/>
+        <AboutThisPlace/>
+        <WhatOffers/>
+        <XNightsInX/>
       </>
     );
   }

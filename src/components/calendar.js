@@ -158,11 +158,8 @@ class Calendar extends React.Component {
                   })}
                 </tr>
 
-
-
                 <tr className="flex justify-around   w-full">
                   {fiveArrs[1].map((item, index) => {
-                    
                     return (
                       <DateItem item={item} available={true}  />
                     );

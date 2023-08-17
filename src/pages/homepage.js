@@ -5,6 +5,7 @@ import Footer from "../components/footer.js";
 import Header2 from "../components/header2";
 import Header1 from "../datas/header1";
 import Body from "../components/body";
+import SearchPopUpMoblie from "../datas/search-popup-mobile";
 
 function HomePage() {
   const [isScrollTop0,setIsScrollTop0]= useState(true)
@@ -20,15 +21,16 @@ function HomePage() {
   })
   return (
     <div>
-        <Header1 />
+        {/* <Header1 />
         <div className="w-full h-0 7:h-c16 bg-black "></div>
-        <Header2 isScrollTop0={isScrollTop0} />
+        <Header2 isScrollTop0={isScrollTop0} /> */}
 
       <div className="">
-        <Body />
-        <Footer />
-        <div className="w-full h-10  "></div>
-        <MenuBarSmartf />
+        {/* <Body />
+        <Footer /> */}
+        <div className="DIV_LÓT  w-full h-10  "></div>
+        <SearchPopUpMoblie/>
+        {/* <MenuBarSmartf /> */}
       </div>
     </div>
   );
