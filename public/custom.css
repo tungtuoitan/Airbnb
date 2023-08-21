@@ -574,3 +574,46 @@
 .h-calc-133{
   height:calc(100vh - 133px)
 }
+.top--200{
+  top:-200px;
+}
+.transition-u2{
+  transition: top 0.5s linear,opacity 0.5s linear,display 0.5s linear;
+}
+.box-shadow-u4{
+  box-shadow:  0 1px 2px rgba(0,0,0,0.05), 0 4px 6px rgba(0,0,0,0.03);
+}
+.border-gray176{
+  border-color:  0 1px 2px rgba(0,0,0,0.05), 0 4px 6px rgba(0,0,0,0.03);
+  
+}
+.h-calc-u2{
+  height:calc(100% - 70px)
+}
+.zmax3{
+  z-index: 10000000000002;
+
+
+}
+.left--12{
+  left:-12px;
+}
+.rounded-4xl{
+  border-radius: 26px 26px 0 0;
+}
+.box-shadow-u5{
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 6px 20px rgb(0 0 0 / 20%);
+}
+.bg-grayf7{
+  background-color: #f7f7f7;
+}
+.bg-gray235{
+  background-color: rgb(235,235,235);
+}
+.c-placeholder-u4::placeholder{
+  font-weight: bold;
+  color: #222;
+}
+.ml--u4{
+  margin-left:-10px;
+}

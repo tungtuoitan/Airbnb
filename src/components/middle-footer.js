@@ -12,7 +12,7 @@ function MiddleFooter (){
               <ul className="grid gap-y-c12">
                 {titleAndLink.support.map((item, index) => {
                   return (
-                    <li className="font-size14 color222 text-left ">
+                    <li className="font-size14 color222 text-left " key={index}>
                       <a href={item[1]}>{item[0]} </a>
                     </li>
                   );

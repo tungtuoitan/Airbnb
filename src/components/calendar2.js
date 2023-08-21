@@ -76,7 +76,7 @@ class Calendar2 extends React.Component {
     const fiveArrs = get5ArrOfMonth(year, month);
 
     return (
-      <div className="CONTAINER     ">
+      <div className="CONTAINER   border1  ">
         <div className="mt-4 ">
           <div className="NAVBAR  flex justify-between mb-4 ">
             <button onClick={() => prev()}>

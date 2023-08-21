@@ -168,8 +168,9 @@ let timeoutId = null
           {homeImageArr[0].map((item, index) => {
             return (
               <img
+              
                 src={item}
-                id={index}
+                key={index}
                 className="m-0     max-w-full max-h-full object-cover w-full h-full "
               />
             );

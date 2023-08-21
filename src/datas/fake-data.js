@@ -256,12 +256,41 @@ const addressArr = [
     "November",
     "December",
   ];
+  const citiesByLetter = {
+    a: ['Amsterdam', 'Australia', 'Atlanta', 'Auckland', 'Austin'],
+    b: ['Berlin', 'Barcelona', 'Bangkok', 'Beijing', 'Brisbane'],
+    c: ['Chicago', 'Cairo', 'Copenhagen', 'Cape Town', 'Calgary'],
+    d: ['Dublin', 'Delhi', 'Denver', 'Dresden', 'Dubai'],
+    e: ['Europe', 'Eindhoven', 'El Paso', 'Edmonton', 'Exeter'],
+    f: ['Florence', 'Frankfurt', 'Fukuoka', 'Fuzhou', 'Fortaleza'],
+    g: ['Geneva', 'Guangzhou', 'Gothenburg', 'Galway', 'Glasgow'],
+    h: ['Helsinki', 'Hamburg', 'Hanoi', 'Havana', 'Houston'],
+    i: ['Istanbul', 'Italy', 'Indianapolis', 'Irvine', 'Ibiza'],
+    j: ['Jerusalem', 'Johannesburg', 'Jakarta', 'Jeddah', 'Juneau'],
+    k: ['Kyoto', 'Kuala Lumpur', 'Kansas City', 'Krakow', 'Kingston'],
+    l: ['London', 'Los Angeles', 'Lisbon', 'Lima', 'Lyon'],
+    m: ['Madrid', 'Mumbai', 'Moscow', 'Munich', 'Manila'],
+    n: ['New York', 'Nairobi', 'Naples', 'Nantes', 'Nashville'],
+    o: ['Oslo', 'Ottawa', 'Orlando', 'Osaka', 'Odessa'],
+    p: ['Paris', 'Prague', 'Perth', 'Portland', 'Phuket'],
+    q: ['Quebec City', 'Quito', 'Qingdao', 'Queenstown', 'Quanzhou'],
+    r: ['Rome', 'Rio de Janeiro', 'Reykjavik', 'Rotterdam', 'Riga'],
+    s: ['Sydney', 'South Korea', 'Shanghai', 'South America', 'San Francisco'],
+    t: ['Tokyo', 'Thailand', 'Taipei', 'Tehran', 'Toulouse'],
+    u: ['United States', 'United Kingdom', 'Udine', 'Uppsala', 'Ushuaia'],
+    v: ['Venice', 'Vienna', 'Vancouver', 'Valencia', 'Verona'],
+    w: ['Warsaw', 'Wellington', 'Washington D.C.', 'Wuhan', 'Wroclaw'],
+    x: ['Xiamen', 'Xi\'an', 'Xianyang', 'Xining', 'Xalapa'],
+    y: ['York', 'Yogyakarta', 'Yokohama', 'Yerevan', 'Yinchuan'],
+    z: ['Zurich', 'Zagreb', 'Zhanjiang', 'Zamboanga', 'Zhengzhou']
+  };
 
   export default {
     addressArr: addressArr,
     getUni:getUni,
     homeIdArr:homeIdArr,
     ownerIdArr:ownerIdArr,
-    monthNames:monthNames
+    monthNames:monthNames,
+    citiesByLetter:citiesByLetter
     
   }

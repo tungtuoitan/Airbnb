@@ -95,6 +95,7 @@ class LocationGrid extends React.Component {
                           onClick={() => {
                             onClickLocationType(index);
                           }}
+                          key={index}
                           className={`flex pr-6 py-c7 whitespace-nowrap         relative ${
                             index === displayingIndex
                               ? "color222     after-w-calc  after:h-c2 after:absolute bg222-after after:top-c43  "

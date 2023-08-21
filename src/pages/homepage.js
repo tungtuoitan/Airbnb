@@ -6,9 +6,12 @@ import Header2 from "../components/header2";
 import Header1 from "../datas/header1";
 import Body from "../components/body";
 import SearchPopUpMoblie from "../datas/search-popup-mobile";
+import { useSelector } from "react-redux";
+
 
 function HomePage() {
   const [isScrollTop0,setIsScrollTop0]= useState(true)
+  const isSearchPopUpOpen = useSelector(state => state.isSearchPopUpOpen)
 
   useEffect(()=>{
     window.addEventListener('scroll',()=>{
@@ -20,16 +23,16 @@ function HomePage() {
     })
   })
   return (
-    <div>
+    <div className=''>
         <Header1 />
         <div className="DIV_LÓT    w-full h-0 7:h-c16 bg-black "></div>
         <Header2 isScrollTop0={isScrollTop0} />
 
-      <div className="">
+      <div  className=''>
         <Body />
-        {/* <Footer /> */}
+        <Footer />
         <div className="DIV_LÓT  w-full h-10  "></div>
-        {/* <SearchPopUpMoblie/> */}
+        <SearchPopUpMoblie/>
         <MenuBarSmartf />
       </div>
     </div>

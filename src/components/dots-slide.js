@@ -6,7 +6,7 @@ function DotsSlide ({imgArr,currentIndex}){
         <div className={`flex gap-c6   justify-center `}>
           {imgArr[0].map((item, index) => {
             return (
-              <div
+              <div key={index}
                 className={`w-c6 h-c6  rounded-full ${
                   index === currentIndex ? "bg-white" : "bg-gray-unknown"
                 } `}

@@ -1,6 +1,10 @@
-
+import {useSelector,useDispatch} from 'react-redux'
+import {actionSearchPopUp} from '../../actions/action'
 
 export default function TopBar (){
+  const isSearchPopUpOpen = useSelector(state => state.isSearchPopUpOpen)
+  const dispatch = useDispatch()
+  const toggleIsSearchPopUpOpen = ()=>{use} 
 
     return(
         <div className="TOP_BAR      w-full h-c60 
@@ -8,6 +12,7 @@ export default function TopBar (){
         <button
           className="ICON     w-8 h-8 rounded-full border-1 border-solid border-gray-400
         flex justify-center items-center absolute left-c20"
+        onClick={()=>{dispatch(actionSearchPopUp())}}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

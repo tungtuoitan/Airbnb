@@ -34,7 +34,7 @@ function Header1() {
               </span>
             </div>
             <div className=" bg-main-color w-8 h-8 rounded-2xl text-white flex justify-center align items-center m-c7   ">
-              <i class="fa-solid fa-magnifying-glass fa-xs"></i>
+              <i class="fa-solid fa-magnifying-glass fa-xs "></i>
             </div>
           </div>
 

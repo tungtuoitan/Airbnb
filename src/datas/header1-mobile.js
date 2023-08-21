@@ -1,12 +1,13 @@
-export default function Header1Mobile() {
-  const handleOnClick = ()=>{
+import { useDispatch,useSelector } from "react-redux";
+import {actionSearchPopUp} from "../actions/action";
 
-  }
+export default function Header1Mobile() {
+  const dispatch = useDispatch()
   return (
     <div className="HEADER_1_MOBILE    flex 7:hidden w-min-285   justify-center">
-      <div className="search_bar          flex justify-between items-center  w-calc-48 h-14 mt-c14 rounded-full border-gray-200 border-1  shadow-searchbox-smartf text-sm font-semibold color222">
-        <div className="w-max--48  "
-        onClick={handleOnClick}
+      <div className="SEARCH_BAR          flex justify-between items-center  w-calc-48 h-14 mt-c14 rounded-full border-gray-200 border-1  shadow-searchbox-smartf text-sm font-semibold color222">
+        <div className="w-max--48   "
+        onClick={()=>{dispatch(actionSearchPopUp()); }}
         >
           <div className=" flex items-center">
             <div className=" w-8 h-8 rounded-2xl flex justify-center align items-center m-c7   ">

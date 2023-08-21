@@ -5,7 +5,8 @@ class Item extends React.Component {
   render() {
     const { home, owner, path } = this.props;
     return (
-      <div className="ITEM max-w-full    ">
+      <div className="ITEM max-w-full    "
+      >
         <div className="SLIDER_CONTAINER        aspect-square  relative rounded-xl overflow-hidden mb-c14    ">
           <Slider path={path}/>
           <InvisibleLayer owner={owner}/>
@@ -36,7 +37,7 @@ class Item extends React.Component {
                 className="star-letter"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"
                 ></path>
               </svg>

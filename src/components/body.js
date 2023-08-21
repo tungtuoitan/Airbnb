@@ -3,6 +3,9 @@ import TotalPrice from "../components/total-price";
 import Item from "../components/item";
 import homeList from "../datas/home-list.js";
 import owners from "../datas/owners";
+import { Link } from "react-router-dom";
+import {useSelector} from 'react-redux'
+
 
 function Body (){
   const [displayItemsNumber,setDisplayItemNumber] = useState(20)
@@ -11,8 +14,10 @@ function Body (){
       setDisplayItemNumber(displayItemsNumber + 20)
     }
   }
+  const isSearchPopUpOpen = useSelector(state=> state.isSearchPopUpOpen)
     return( 
-        <div className="   px-6 pb-10 7:px-10 14:px-20    h-full mt-6  7:mt-c20       ">
+        <div className={`px-6 pb-10 7:px-10 14:px-20    h-full mt-6  7:mt-c20
+        `}>
           <div className="GRID-CONTAINER      grid-homepage   w-full   h-auto   7:grid-cols-2  overflow-x-hidden       ">
             <div className="total-price-container  grid 11:grid-cols-4 gap-x-6    ">
               <TotalPrice />
@@ -22,7 +27,10 @@ function Body (){
 
               return (
                 <div className="ITEM_CONTAINERR  max-w-full  " key={item.id} >
+                  <Link to='/rooms' target=''>
+                  
                   <Item path={item.imgarr[0]} owner={owner} home={item} />
+                  </Link>
                 </div>
               );
             })}
