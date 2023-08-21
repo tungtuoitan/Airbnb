@@ -5,8 +5,8 @@ import { actionClickWhen,actionClickWho,actionClickWhere } from "../../actions/a
 
 
 export default function () {
-  const isWhosComingOpen = useSelector(state=>state.isWhosComingOpen)
-  const who = useSelector(state=>state.who)
+  const isWhosComingOpen = useSelector(state=>state.root.isWhosComingOpen)
+  const who = useSelector(state=>state.root.who)
   const dispatch = useDispatch()
   const handleOnClick = ()=> dispatch(actionClickWho())
 

@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { actionPickLocation,actionClickWhen } from "../../actions/action";
 
 export default function DestinationItem2() {
-  const fiveCitiesArr = useSelector((state) => state.fiveCitiesArr);
+  const fiveCitiesArr = useSelector((state) => state.root.fiveCitiesArr);
   const dispatch = useDispatch()
   const handleOnClick =(item)=>{
     dispatch(actionPickLocation(item))

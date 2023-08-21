@@ -6,7 +6,7 @@ import fakeData from "../../datas/fake-data";
 
 export default function TypingSearchPopup() {
   const dispatch = useDispatch(); 
-  const isTypingSearchPopUpOpen = useSelector(state=>state.isTypingSearchPopUpOpen)
+  const isTypingSearchPopUpOpen = useSelector(state=>state.root.isTypingSearchPopUpOpen)
   const handleOnChange = (e) => {
     dispatch(whereToInputChange(e.target.value));
 

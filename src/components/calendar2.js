@@ -5,8 +5,8 @@ import fakeData from "../datas/fake-data";
 
 // calendar Object
 const today = new Date();
-let year = today.getFullYear();
-let month = today.getMonth();
+let year0 = today.getFullYear();
+let month0 = today.getMonth();
 
 function getWeekOfDay1(year, month) {
   const date = new Date(year, month, 1).getDay();
@@ -34,12 +34,12 @@ let get5ArrOfMonth = (y, m) => {
   ];
 };
 
-class Calendar2 extends React.Component {
-  state = { month: month, year: year };
+function Calendar2() {
+  const [month,setMonth] = useState(month0)
+  const [year,setYear] = useState(year0)
 
-  prev = () => {
-    let month = this.state.month;
-    let year = this.state.year;
+
+  const prev = () => {
 
     let monthCopy;
     let yearCopy;
@@ -50,12 +50,10 @@ class Calendar2 extends React.Component {
       monthCopy = month - 1;
       yearCopy = year;
     }
-    this.setState({ year: yearCopy });
-    this.setState({ month: monthCopy });
+    setMonth(monthCopy)
+    setYear(yearCopy)
   };
-  next = () => {
-    let month = this.state.month;
-    let year = this.state.year;
+  const next = () => {
 
     let monthCopy;
     let yearCopy;
@@ -66,60 +64,56 @@ class Calendar2 extends React.Component {
       monthCopy = month + 1;
       yearCopy = year;
     }
-    this.setState({ year: yearCopy });
-    this.setState({ month: monthCopy });
+    setMonth(monthCopy)
+    setYear(yearCopy  )
   };
 
-  render() {
-    const { prev, next } = this;
-    const { month, year } = this.state;
-    const fiveArrs = get5ArrOfMonth(year, month);
+  const fiveArrs = get5ArrOfMonth(year, month);
 
-    return (
-      <div className="CONTAINER   border1  ">
-        <div className="mt-4 ">
-          <div className="NAVBAR  flex justify-between mb-4 ">
-            <button onClick={() => prev()}>
-              <i class="fa-solid fa-angle-right fa-rotate-180"></i>
-            </button>
-            <div className="font-base font-bold color222">
-              <span>{fakeData.monthNames[month]}</span>
-              <span> {year}</span>
-            </div>
-            <button
-              onClick={() => {
-                next();
-              }}
-            >
-              <i class="fa-solid fa-angle-right"></i>
-            </button>
+  return (
+    <div className="CONTAINER     ">
+      <div className="mt-4 ">
+        <div className="NAVBAR  flex justify-between mb-4 ">
+          <button onClick={() => prev()}>
+            <i class="fa-solid fa-angle-right fa-rotate-180"></i>
+          </button>
+          <div className="font-base font-bold color222">
+            <span>{fakeData.monthNames[month]}</span>
+            <span> {year}</span>
           </div>
+          <button
+            onClick={() => {
+              next();
+            }}
+          >
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
 
-          <div className="CALENDAR ">
-            <WeekRow />
+        <div className="CALENDAR ">
+          <WeekRow />
 
-            <div className="overflow-y-scroll  h-40   ">
-              <table className="w-full">
-                <tbody className="w-full">
-                  <DatesRow fiveArrs={fiveArrs} index1={0} />
-                  <DatesRow fiveArrs={fiveArrs} index1={1} />
-                  <DatesRow fiveArrs={fiveArrs} index1={2} />
-                  <DatesRow fiveArrs={fiveArrs} index1={3} />
-                  <DatesRow fiveArrs={fiveArrs} index1={4} />
+          <div className="overflow-y-scroll  h-40   ">
+            <table className="w-full">
+              <tbody className="w-full">
+                <DatesRow fiveArrs={fiveArrs} index1={0} />
+                <DatesRow fiveArrs={fiveArrs} index1={1} />
+                <DatesRow fiveArrs={fiveArrs} index1={2} />
+                <DatesRow fiveArrs={fiveArrs} index1={3} />
+                <DatesRow fiveArrs={fiveArrs} index1={4} />
 
-                  {fiveArrs[5][0] !== "." ? (
-                    <DatesRow fiveArrs={fiveArrs} index1={5} />
-                  ) : (
-                    <></>
-                  )}
-                </tbody>
-              </table>
-            </div>
+                {fiveArrs[5][0] !== "." ? (
+                  <DatesRow fiveArrs={fiveArrs} index1={5} />
+                ) : (
+                  <></>
+                )}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Calendar2;

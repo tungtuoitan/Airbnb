@@ -2,7 +2,7 @@ import {useSelector,useDispatch} from 'react-redux'
 import {actionSearchPopUp} from '../../actions/action'
 
 export default function TopBar (){
-  const isSearchPopUpOpen = useSelector(state => state.isSearchPopUpOpen)
+  const isSearchPopUpOpen = useSelector(state => state.root.isSearchPopUpOpen)
   const dispatch = useDispatch()
   const toggleIsSearchPopUpOpen = ()=>{use} 
 

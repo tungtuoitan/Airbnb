@@ -7,7 +7,7 @@ import LocationGrid from "./location-grid";
 import {useSelector} from 'react-redux'
 
   function Footer(){
-    const isSearchPopUpOpen = useSelector(state=>state.isSearchPopUpOpen)
+    const isSearchPopUpOpen = useSelector(state=>state.root.isSearchPopUpOpen)
   
     return (
       <div className={`FOOTER_CONTAINER bg-grayf7 w-full px-6 py-12 7:px-10 14:px-20

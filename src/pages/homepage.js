@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 
 function HomePage() {
   const [isScrollTop0,setIsScrollTop0]= useState(true)
-  const isSearchPopUpOpen = useSelector(state => state.isSearchPopUpOpen)
+  const isSearchPopUpOpen = useSelector(state => state.root.isSearchPopUpOpen)
 
   useEffect(()=>{
     window.addEventListener('scroll',()=>{

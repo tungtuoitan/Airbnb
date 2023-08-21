@@ -5,16 +5,16 @@ import WhereTo from "../components/search-popup-mobile/where-to";
 import WhosComing from "../components/search-popup-mobile/whos-coming";
 import { useDispatch, useSelector } from "react-redux";
 export default function SearchPopUpMoblie() {
-  const isSearchPopUpOpen = useSelector((state) => state.isSearchPopUpOpen);
+  const isSearchPopUpOpen = useSelector((state) => state.root.isSearchPopUpOpen);
 
   return (
     <div
       className={`CONTAINER    7:hidden  w-full h-screen bg-f7 
-     zmax2 overflow-hidden transition-u2
+     zmax2 overflow-hidden transition-u2 
     ${
       isSearchPopUpOpen === true
         ? " opacity-100 top-0 fixed"
-        : "hidden opacity-0 top--200 "
+        : " opacity-0 hidden top--200 "
     }`}
     >
       <TopBar />

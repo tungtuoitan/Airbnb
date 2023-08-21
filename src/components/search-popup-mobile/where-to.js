@@ -9,14 +9,14 @@ import InputWhereTo from "./input-where-to";
 
 
 export default function WhereTo (){
-  const whereToInput = useSelector((state) => state.whereToInput);
+  const whereToInput = useSelector((state) => state.root.whereToInput);
   const dispatch = useDispatch()
   const handleOnChange = (e)=>{
     dispatch(whereToInputChange(e.target.value))
 
   }
-  const where = useSelector(state=>state.where)
-  const isWhereToOpen = useSelector(state=>state.isWhereToOpen)
+  const where = useSelector(state=>state.root.where)
+  const isWhereToOpen = useSelector(state=>state.root.isWhereToOpen)
   const handleOnClick = ()=>{
     dispatch(actionClickWhere())
     

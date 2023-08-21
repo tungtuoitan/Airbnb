@@ -7,8 +7,8 @@ import { actionClickWhen,actionClickWho,actionClickWhere } from "../../actions/a
 
 
 export default function WhenYourTrip() {
-  let isWhenYourTripOpen = useSelector((state) => state.isWhenYourTripOpen);
-  let when = useSelector((state) => state.when);
+  let isWhenYourTripOpen = useSelector((state) => state.root.isWhenYourTripOpen);
+  let when = useSelector((state) => state.root.when);
   const dispatch = useDispatch()
   const handleOnClick = ()=>{
     dispatch(actionClickWhen())

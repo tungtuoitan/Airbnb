@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function InputWhereTo({ handleOnChange }) {
   const placeholderOnSearchInput = useSelector(
-    (state) => state.placeholderOnSearchInput
+    (state) => state.root.placeholderOnSearchInput
   );
   const dispatch = useDispatch();
   const handleOnClick = () => {

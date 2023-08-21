@@ -1,4 +1,5 @@
 import fakeData from "../datas/fake-data"
+
 export const  actionSearchPopUp = ()=>{
     return {
         type: 'TOGGLE_SEARCH_POPUP'
@@ -55,4 +56,3 @@ export const actionIsTypingSearchPopUpOpen = (item)=>{
         payload:item
     }
 }
-
