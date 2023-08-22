@@ -3,10 +3,12 @@ import { useDispatch,useSelector } from "react-redux";
 import { whereToInputChange, actionFiveCitiesArr } from "../../actions/action";
 import DestinationItem2 from "./destination-item2";
 import fakeData from "../../datas/fake-data";
+import {useEffect,useRef} from 'react'
 
 export default function TypingSearchPopup() {
   const dispatch = useDispatch(); 
   const isTypingSearchPopUpOpen = useSelector(state=>state.root.isTypingSearchPopUpOpen)
+
   const handleOnChange = (e) => {
     dispatch(whereToInputChange(e.target.value));
 
@@ -22,6 +24,10 @@ export default function TypingSearchPopup() {
       dispatch(actionFiveCitiesArr([]));
     }
   };
+  const inputRef = useRef(null)
+  useEffect(()=>{
+    inputRef.current.focus()
+  },[isTypingSearchPopUpOpen])
 
   return (
     <div
@@ -60,8 +66,9 @@ export default function TypingSearchPopup() {
         <input
           className="INPUT      w-full h-full pr-c20 pl-12 text-light 
           placeholder:text-sm text-sm focus:outline-0
-      placeholder:text-gray-600 font-medium rounded-3xl bg-grayf7"
+      placeholder:text-gray-600 font-medium rounded-3xl bg-grayf7 "
           placeholder="Search destinations"
+          ref={inputRef}
           onChange={(e) => {
             handleOnChange(e);
           }}

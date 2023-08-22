@@ -43,16 +43,16 @@ export const actionPickLocation = (item)=>{
         payload: item
     }
 }
-export const actionPickDate = (item)=>{
-    return{
-        type:'PICK_DATE',
-        payload:item
-    }
-}
+
 
 export const actionIsTypingSearchPopUpOpen = (item)=>{
     return{
         type:'CLICK_SEARCH_POPUP',
         payload:item
+    }
+}
+export const actionCloseTypingSearchPopUp = ()=>{
+    return{
+        type:'CLOSE_TYPING_SEARCH_POPUP',
     }
 }

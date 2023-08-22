@@ -61,6 +61,11 @@ export default function rootReducer(state = initState, action) {
         ...state,
         isTypingSearchPopUpOpen: true,
       };
+      case "CLOSE_TYPING_SEARCH_POPUP":
+      return {
+        ...state,
+        isTypingSearchPopUpOpen: false,
+      };
 
     default:
       return state;

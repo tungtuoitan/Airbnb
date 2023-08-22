@@ -8,6 +8,7 @@ export default function InputWhereTo({ handleOnChange }) {
   const dispatch = useDispatch();
   const handleOnClick = () => {
     dispatch(actionIsTypingSearchPopUpOpen());
+    
   };
 
   return (

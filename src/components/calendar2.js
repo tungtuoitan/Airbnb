@@ -1,9 +1,13 @@
-import React, { state, useState } from "react";
+import React, { state, useState, createContext } from "react";
 import WeekRow from "./week-row";
 import DatesRow from "./dates-row";
 import fakeData from "../datas/fake-data";
+import {monthYearContext} from './monthYearContext'
+import {useSelector,useDispatch} from 'react-redux'
 
 // calendar Object
+const today2 = useSelector(state=>state.dateItemSlice.today)
+console.log(today2)
 const today = new Date();
 let year0 = today.getFullYear();
 let month0 = today.getMonth();
@@ -35,12 +39,10 @@ let get5ArrOfMonth = (y, m) => {
 };
 
 function Calendar2() {
-  const [month,setMonth] = useState(month0)
-  const [year,setYear] = useState(year0)
-
+  const [month, setMonth] = useState(month0);
+  const [year, setYear] = useState(year0);
 
   const prev = () => {
-
     let monthCopy;
     let yearCopy;
     if (month === 0) {
@@ -50,11 +52,10 @@ function Calendar2() {
       monthCopy = month - 1;
       yearCopy = year;
     }
-    setMonth(monthCopy)
-    setYear(yearCopy)
+    setMonth(monthCopy);
+    setYear(yearCopy);
   };
   const next = () => {
-
     let monthCopy;
     let yearCopy;
     if (month === 11) {
@@ -64,11 +65,11 @@ function Calendar2() {
       monthCopy = month + 1;
       yearCopy = year;
     }
-    setMonth(monthCopy)
-    setYear(yearCopy  )
+    setMonth(monthCopy);
+    setYear(yearCopy);
   };
-
   const fiveArrs = get5ArrOfMonth(year, month);
+
 
   return (
     <div className="CONTAINER     ">
@@ -96,17 +97,21 @@ function Calendar2() {
           <div className="overflow-y-scroll  h-40   ">
             <table className="w-full">
               <tbody className="w-full">
-                <DatesRow fiveArrs={fiveArrs} index1={0} />
-                <DatesRow fiveArrs={fiveArrs} index1={1} />
-                <DatesRow fiveArrs={fiveArrs} index1={2} />
-                <DatesRow fiveArrs={fiveArrs} index1={3} />
-                <DatesRow fiveArrs={fiveArrs} index1={4} />
+                <monthYearContext.Provider
+                  value={{ month: month, year: year }}
+                >
+                  <DatesRow fiveArrs={fiveArrs} index1={0} />
+                  <DatesRow fiveArrs={fiveArrs} index1={1} />
+                  <DatesRow fiveArrs={fiveArrs} index1={2} />
+                  <DatesRow fiveArrs={fiveArrs} index1={3} />
+                  <DatesRow fiveArrs={fiveArrs} index1={4} />
 
-                {fiveArrs[5][0] !== "." ? (
-                  <DatesRow fiveArrs={fiveArrs} index1={5} />
-                ) : (
-                  <></>
-                )}
+                  {fiveArrs[5][0] !== "." ? (
+                    <DatesRow fiveArrs={fiveArrs} index1={5} />
+                  ) : (
+                    <></>
+                  )}
+                </monthYearContext.Provider>
               </tbody>
             </table>
           </div>
@@ -115,5 +120,4 @@ function Calendar2() {
     </div>
   );
 }
-
 export default Calendar2;
