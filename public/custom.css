@@ -556,6 +556,9 @@
 .x-mandatory{
   scroll-snap-type: x mandatory;
 }
+.y-mandatory{
+  scroll-snap-type: y mandatory;
+}
 .scroll-snap-align-start{
   scroll-snap-align: start;
 }
@@ -616,4 +619,22 @@
 }
 .ml--u4{
   margin-left:-10px;
+}
+.scale-plus-2{
+  position:absolute;
+  top:0;
+  left:-1px;
+  width: calc(100% + 2px);
+  height: calc((100%));
+}
+.first-gradient{
+  background:linear-gradient(to right,white 50% , rgb(247,247,247) )
+}
+.last-gradient{
+  background:linear-gradient(to left,white 50% , rgb(247,247,247) )
+
+
+}
+.bg-gray247{
+  background:rgb(247,247,247)
 }

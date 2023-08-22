@@ -1,36 +1,97 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
+import { today } from "../function/timeForCalendar";
+import { STATE_BEGAN } from "hammerjs";
 
 const dateItemSlice = createSlice({
   name: "dateItemSlice",
   initialState: {
     firstDate: [],
     lastDate: [],
-    today:[]
+    currentMonth: {
+      month: today.month,
+      year: today.year,
+    }, // là cái date khi user nhấn prev / next, chứ k phải time trực tuyến
   },
   reducers: {
     pickDate: (state, action) => {
-        // nếu pickDate bé hơn firstDate thì reset firstDate
-      if (
-        state.firstDate.length === 0 || // cái click đầu tiên
-
-        action.payload[2] < state.firstDate[2] || // năm bé hơn là ok
-
-        action.payload[1] < state.firstDate[1] && 
-        action.payload[2] === state.firstDate[2] ||  // năm bằng nhau và tháng bé hơn
-
-        action.payload[0] < state.firstDate[0]  &&  // năm, tháng bằng nhau thì ngày phải bé hơn
-        action.payload[1] === state.firstDate[1]  &&
-        action.payload[2] === state.firstDate[2]   
-      ) {
-        return { ...state, firstDate: action.payload };
-
-        // nếu không thì reset lastDate
+      let { firstDate, lastDate } = state;
+      let { payload } = action;
+      if (firstDate.length === 0 && lastDate.length === 0) {
+        state.firstDate = [...payload];
+      } else if (firstDate.length === 0 && lastDate.length !== 0) {
+        // nếu click vào last
+        if (JSON.stringify(lastDate) === JSON.stringify(payload)) {
+          state.lastDate = [];
+        } else {
+          state.firstDate = [...payload];
+        }
+      } else if (firstDate.length !== 0 && lastDate.length === 0) {
+        // nếu click vào first
+        if (JSON.stringify(firstDate) === JSON.stringify(payload)) {
+          state.firstDate = [];
+        } else {
+          state.lastDate = [...payload];
+        }
       } else {
-        return { ...state, lastDate: action.payload };
+        if (JSON.stringify(firstDate) === JSON.stringify(payload)) {
+          // nếu click vào first
+          state.firstDate = [];
+        } else if (JSON.stringify(lastDate) === JSON.stringify(payload)) {
+          // nếu click vào last
+          state.lastDate = [];
+        } else {
+          state.lastDate = [...payload];
+        }
+      }
+
+      // nếu first > last thì đảo ngược
+      if (
+        state.firstDate[2] > state.lastDate[2] ||
+        (state.firstDate[2] === state.lastDate[2] &&
+          state.firstDate[1] > state.lastDate[1]) ||
+        (state.firstDate[2] === state.lastDate[2] &&
+          state.firstDate[1] === state.lastDate[1] &&
+          state.firstDate[0] > state.lastDate[0])
+      ) {
+        let firstDateCopy = [...state.firstDate];
+        state.firstDate = [...state.lastDate];
+        state.lastDate = [...firstDateCopy];
+      }
+    },
+    goPrevMonth: (state, action) => {
+      if (state.currentMonth.month === today.month) {
+        return;
+      }
+      if (state.currentMonth.month === 0) {
+        return {
+          ...state,
+          currentMonth: { month: 11, year: state.currentMonth.year - 1 },
+        };
+      } else {
+        state.currentMonth = {
+          month: state.currentMonth.month - 1,
+          year: state.currentMonth.year,
+        };
+      }
+    },
+    goNextMonth: (state, action) => {
+      if (state.currentMonth.month === 11) {
+        return {
+          ...state,
+          currentMonth: { month: 0, year: state.currentMonth.year + 1 },
+        };
+      } else {
+        return {
+          ...state,
+          currentMonth: {
+            month: state.currentMonth.month + 1,
+            year: state.currentMonth.year,
+          },
+        };
       }
     },
   },
 });
-export const { pickDate } = dateItemSlice.actions;
+export const { pickDate, goPrevMonth, goNextMonth } = dateItemSlice.actions;
 const dateItemSliceReducer = dateItemSlice.reducer;
 export default dateItemSliceReducer;

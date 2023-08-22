@@ -256,6 +256,24 @@ const addressArr = [
     "November",
     "December",
   ];
+  var monthShortNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  var dateInString =  Array.from({ length: 31 }, (_, index) => {
+    const day = index + 1;
+    return day < 10 ? `0${day}` : `${day}`;
+  });
   const citiesByLetter = {
     a: ['Amsterdam', 'Australia', 'Atlanta', 'Auckland', 'Austin'],
     b: ['Berlin', 'Barcelona', 'Bangkok', 'Beijing', 'Brisbane'],
@@ -291,6 +309,8 @@ const addressArr = [
     homeIdArr:homeIdArr,
     ownerIdArr:ownerIdArr,
     monthNames:monthNames,
-    citiesByLetter:citiesByLetter
+    monthShortNames:monthShortNames,
+    citiesByLetter:citiesByLetter,
+    dateInString:dateInString
     
   }

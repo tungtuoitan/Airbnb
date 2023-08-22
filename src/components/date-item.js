@@ -17,7 +17,6 @@ function DateItem({ item, available }) {
   const dateArr = [item,monthYear.month,monthYear.year] 
 
   const handleOnClick = (item) => {
-    // console.log(dateArr,monthYear)
   dispatch(pickDate(dateArr));
   };
   useEffect(() => {
@@ -25,30 +24,62 @@ function DateItem({ item, available }) {
 
     setHeightDataItem(x.offsetWidth);
   }, [isSearchPopUpOpen]);
+  const firstDays = firstDate[0] + firstDate[1]*40 + firstDate[2]*365
+  const lastDays = lastDate[0] + lastDate[1]*40 + lastDate[2]*365
+  const currentDays = item + dateArr[1]*40 + dateArr[2]*365
+
 
   return (
     <>
       {item !== "." ? (
+
         <td
           onClick={() => handleOnClick(item)}
           ref={xRef}
           onMouseEnter={() => onMouseEnter()}
-          className={`ITEMM     w-full  gap-c4 font-size14 font-medium  flex justify-center items-center
+          className={`ITEMM    relative w-full z1000  gap-c4 font-size14 font-medium  flex justify-center items-center
           ${
             available === true
               ? `rounded-full border-1  border-white box-border 
           ${
             item===firstDate[0] && monthYear.month ===firstDate[1] && monthYear.year ===firstDate[2] || 
             item===lastDate[0] && monthYear.month ===lastDate[1] && monthYear.year ===lastDate[2]
-              ? "bg-black text-white"
-              : "bg-white text-black"
+              ? " text-white relative"
+              : "text-black"
           }   `
               : "w-full  gap-c4 colorb0"
           }`}
           style={{ height: `${heightDataItem}px` }}
           key={uuidv4()}
         >
+          <span className="relative z100000">
           {item}
+          </span>
+          <div className={`BLACKK absolute top-0 left-0 w-full h-full z10000  
+          ${
+            available === true
+              ? `rounded-full 
+          ${
+            item===firstDate[0] && monthYear.month ===firstDate[1] && monthYear.year ===firstDate[2] || 
+            item===lastDate[0] && monthYear.month ===lastDate[1] && monthYear.year ===lastDate[2]
+              ? "bg-222  "
+              : "transparent "
+          }   `
+              : "w-full  colorb0"
+          } `}></div>
+
+          <div className={
+            `GRAYY    scale-plus-2
+            ${firstDate.length===0 || lastDate.length===0 ? '1'
+            : currentDays > firstDays && currentDays <lastDays ? 'bg-gray247 z1000'
+            : currentDays === firstDays ? 'first-gradient z1000' 
+            : currentDays === lastDays ? 'last-gradient z1000': '4' 
+
+        }   
+            
+              `
+          }>
+          </div>
         </td>
       ) : (
         <td
