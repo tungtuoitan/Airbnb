@@ -1,7 +1,7 @@
 import {v4 as uuidv4} from 'uuid'
 import { faker } from "@faker-js/faker";
 import fakeData from './fake-data.js'
-import avatarArr from './avatarArr';
+import avatarArr from './avatarArr.js';
 
 let i = -1
 let increaseAndGetI = ()=>{
