@@ -7,4 +7,4 @@ const goPrev = (e) => {
       isEnableSwipe = true;
 
       return;
-    }
+    }}
