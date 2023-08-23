@@ -1,4 +1,12 @@
-export default function WhoComingItem({ personType, age, haveBottomLine }) {
+import XCreaseBtn, { dPathIncreaseIcon, dPathDecreaseIcon } from "./xCreaseBtn";
+import {  useSelector } from "react-redux";
+
+export default function WhoComingItem({ item,handleDecrease,handleIncrease,  haveBottomLine }) {
+
+  const childrenAmount = useSelector(state=>state.whoComing.children.amount)
+  const infantsAmount = useSelector(state=>state.whoComing.infants.amount)
+  const petsAmount = useSelector(state=>state.whoComing.pets.amount)
+
   return (
     <div
       className={`WHOCOMING_ITEM    flex justify-between items-center py-c14 
@@ -9,57 +17,26 @@ export default function WhoComingItem({ personType, age, haveBottomLine }) {
          }`}
     >
       <div className="LEFT   ">
-        <p className="text-base color222 font-bold text-left">{personType}</p>
-        <p className="text-sm color-gray7 font-medium text-left mt-c2">{age}</p>
+        <p className="text-base color222 font-bold text-left">{item.type}</p>
+        <p className="text-sm color-gray7 font-medium text-left mt-c2">{item.note}</p>
       </div>
       <div className="RIGHT   flex items-center gap-c14">
-        <button
-          className="border-1 border-solid border-gray-400 w-8 h-8 rounded-full 
-            flex justify-center items-center opacity-30"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            aria-hidden="true"
-            role="presentation"
-            focusable="false"
-            style={{
-              display: "block",
-              fill: "none",
-              height: "12px",
-              width: "12px",
-              stroke: "gray",
-              strokeWidth: " 5.33333",
-              overflow: "visible",
-            }}
-          >
-            <path d="M2 16h28"></path>
-          </svg>
-        </button>
-        <span>0</span>
-        <button
-          className="border-1 border-solid border-gray-400 w-8 h-8 rounded-full 
-            flex justify-center items-center"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            aria-hidden="true"
-            role="presentation"
-            focusable="false"
-            style={{
-              display: "block",
-              fill: "none",
-              height: "12px",
-              width: "12px",
-              stroke: "gray",
-              strokeWidth: " 5.33333",
-              overflow: "visible",
-            }}
-          >
-            <path d="M2 16h28M16 2v28"></path>
-          </svg>
-        </button>
+        <XCreaseBtn
+          dPath={dPathDecreaseIcon}
+          cantClick={item.amount <= 0 || 
+            item.amount===1 && childrenAmount !==0 || 
+            item.amount===1 && infantsAmount !==0 ||  
+            item.amount===1 && petsAmount !==0 
+
+          }
+          onClick={handleDecrease}
+        />
+        <span>{item.amount}</span>
+        <XCreaseBtn
+          dPath={dPathIncreaseIcon}
+          cantClick={item.amount >= item.limit}
+          onClick={handleIncrease}
+        />
       </div>
     </div>
   );

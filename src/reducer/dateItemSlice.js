@@ -1,6 +1,5 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 import { today } from "../function/timeForCalendar";
-import { STATE_BEGAN } from "hammerjs";
 
 const dateItemSlice = createSlice({
   name: "dateItemSlice",
@@ -11,6 +10,7 @@ const dateItemSlice = createSlice({
       month: today.month,
       year: today.year,
     }, // là cái date khi user nhấn prev / next, chứ k phải time trực tuyến
+    whereText: 'Add dates'
   },
   reducers: {
     pickDate: (state, action) => {
@@ -90,8 +90,12 @@ const dateItemSlice = createSlice({
         };
       }
     },
+    resetDate : (state,action)=>{
+      state.firstDate = [],
+      state.lastDate = []
+    }
   },
 });
-export const { pickDate, goPrevMonth, goNextMonth } = dateItemSlice.actions;
+export const { pickDate, goPrevMonth, goNextMonth,resetDate } = dateItemSlice.actions;
 const dateItemSliceReducer = dateItemSlice.reducer;
 export default dateItemSliceReducer;

@@ -3,9 +3,7 @@ const initState = {
   isWhereToOpen: true,
   where: "I'm flexible",
   isWhenYourTripOpen: false,
-  when: "Add dates",
   isWhosComingOpen: false,
-  who: "Add guests",
 
   fiveCitiesArr: [],
 
@@ -66,6 +64,17 @@ export default function rootReducer(state = initState, action) {
         ...state,
         isTypingSearchPopUpOpen: false,
       };
+      case 'PICK_WHERE':
+        return {
+          ...state,
+          where:action.payload,
+          placeholderOnSearchInput:action.payload
+        }
+      case 'RESET_WHERE':
+        return {
+          ...state,
+          where:'I\'m flexible'
+        }
 
     default:
       return state;

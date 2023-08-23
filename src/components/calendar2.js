@@ -6,7 +6,7 @@ import { monthYearContext } from "./monthYearContext";
 import { useSelector, useDispatch } from "react-redux";
 import { time } from "../function/timeForCalendar";
 import { goPrevMonth, goNextMonth } from "../reducer/dateItemSlice";
-import {today} from '../function/timeForCalendar'
+import { today } from "../function/timeForCalendar";
 
 function Calendar2() {
   const currentMonth = useSelector((state) => state.dateItemSlice.currentMonth);
@@ -19,8 +19,10 @@ function Calendar2() {
       <div className="mt-4 ">
         <div className="NAVBAR  flex justify-between mb-4 ">
           <button onClick={() => dispatch(goPrevMonth())}>
-            <i className={`fa-solid fa-angle-right fa-rotate-180
-            ${currentMonth.month===today.month ? 'opacity-30':''}`} ></i>
+            <i
+              className={`fa-solid fa-angle-right fa-rotate-180
+            ${currentMonth.month === today.month ? "opacity-30" : ""}`}
+            ></i>
           </button>
           <div className="font-base font-bold color222">
             <span>{fakeData.monthNames[currentMonth.month]}</span>
@@ -38,7 +40,7 @@ function Calendar2() {
         <div className="CALENDAR ">
           <WeekRow />
 
-          <div className=" h-40  overflow-y-scroll   y-mandatory snap-start ">
+          <div className=" h-40  overflow-y-scroll   y-mandatory snap-start pb-c4 ">
             <table className="w-full ">
               <tbody className="w-full  ">
                 <monthYearContext.Provider

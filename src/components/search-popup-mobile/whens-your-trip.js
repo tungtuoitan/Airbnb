@@ -21,12 +21,18 @@ export default function WhenYourTrip() {
   const firstDate = useSelector((state) => state.dateItemSlice.firstDate);
   const lastDate = useSelector((state) => state.dateItemSlice.lastDate);
 
+  const whenText = firstDate.length === 0 || lastDate.length === 0
+    ? `Add Dates`
+    : `${fakeData.dateInString[firstDate[0]-1]}.${fakeData.monthShortNames[firstDate[1]]} - ${
+      fakeData.dateInString[lastDate[0]-1]
+      }.${fakeData.monthShortNames[lastDate[1]]}`
+
   return isWhenYourTripOpen === true ? (
     <div className="WHEN_YOUR-TRIP  relative overflow-hidden w-full bg-white px-6 pt-6 pb-c72 rounded-3xl box-shadow-whereto">
       <div className="font-size22 color222 font-bold text-left mb-c2">
         When's your trip?
       </div>
-      <div className="text-left text-sm color222">
+      <div className="PICK_YOUR_CALLENDAR    text-left text-sm color222">
         {firstDate.length === 0 || lastDate.length === 0
           ? `Pick your callendar`
           : `${fakeData.dateInString[firstDate[0]-1]}.${fakeData.monthShortNames[firstDate[1]]} - ${
@@ -40,6 +46,6 @@ export default function WhenYourTrip() {
       <WhenBottomBar />
     </div>
   ) : (
-    <SmallPanel content={"When"} value={when} handleOnClick={handleOnClick} />
+    <SmallPanel content={"When"} value={whenText} handleOnClick={handleOnClick} />
   );
 }

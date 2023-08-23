@@ -56,3 +56,14 @@ export const actionCloseTypingSearchPopUp = ()=>{
         type:'CLOSE_TYPING_SEARCH_POPUP',
     }
 }
+export const actionChangeWhere = (name)=>{
+    return{
+        type:'PICK_WHERE',
+        payload:name
+    }
+}
+export const actionResetWhere = ()=>{
+    return{
+        type:'RESET_WHERE'
+    }
+}

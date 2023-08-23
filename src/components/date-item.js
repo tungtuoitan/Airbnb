@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useSelector, useDispatch } from "react-redux";
 import { pickDate} from "../reducer/dateItemSlice";
 import {monthYearContext} from './monthYearContext'
+import { today } from "../function/timeForCalendar";
 
 function DateItem({ item, available }) {
   let isSearchPopUpOpen = useSelector((state) => state.isSearchPopUpOpen);
@@ -16,17 +17,26 @@ function DateItem({ item, available }) {
   const monthYear = useContext(monthYearContext)
   const dateArr = [item,monthYear.month,monthYear.year] 
 
+  // logic of callendar
+  const firstDays = firstDate[0] + firstDate[1]*40 + firstDate[2]*365
+  const lastDays = lastDate[0] + lastDate[1]*40 + lastDate[2]*365
+  const currentDays = item + dateArr[1]*40 + dateArr[2]*365
+  const todayDays = today.date + today.month*40 + today.year*365
+
   const handleOnClick = (item) => {
-  dispatch(pickDate(dateArr));
+    if(currentDays >todayDays){
+      dispatch(pickDate(dateArr));
+    }
   };
   useEffect(() => {
     const x = xRef.current;
 
     setHeightDataItem(x.offsetWidth);
   }, [isSearchPopUpOpen]);
-  const firstDays = firstDate[0] + firstDate[1]*40 + firstDate[2]*365
-  const lastDays = lastDate[0] + lastDate[1]*40 + lastDate[2]*365
-  const currentDays = item + dateArr[1]*40 + dateArr[2]*365
+
+  
+
+
 
 
   return (
@@ -52,7 +62,12 @@ function DateItem({ item, available }) {
           style={{ height: `${heightDataItem}px` }}
           key={uuidv4()}
         >
-          <span className="relative z100000">
+          <span className={
+            `relative z100000 
+            ${currentDays > todayDays ? '': 'opacity-30'}
+            `
+          }>
+            
           {item}
           </span>
           <div className={`BLACKK absolute top-0 left-0 w-full h-full z10000  

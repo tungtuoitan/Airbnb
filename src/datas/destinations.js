@@ -3,7 +3,7 @@ const  destinations = [
     {
         id: v4(),
         imgSrc: './images/destinations/flexible.jpg',
-        name:'flexible',
+        name:'Flexible',
     },
     {
         id: v4(),

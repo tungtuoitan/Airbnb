@@ -56,6 +56,6 @@ export default function WhereTo (){
         
         </div>)
         :
-        (<SmallPanel content={'where'} value={where} handleOnClick={handleOnClick}/>)
+        (<SmallPanel content={'Where'} value={where} handleOnClick={handleOnClick}/>)
     )
 }
