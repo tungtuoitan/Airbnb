@@ -103,7 +103,7 @@ class RoomPage extends React.Component {
                   <div>
                     <div className="text-right flex justify-end manrope-700">
                       <span className="mr-c6">
-                        <i class="fa-solid fa-medal fa-xs"></i>
+                        <i className="fa-solid fa-medal fa-xs"></i>
                       </span>
                       <span className="font-normal">Super host</span>
                     </div>

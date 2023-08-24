@@ -6,6 +6,7 @@ import whoComingReducer from "../reducer/whoComingSlice";
 import header2NavReducer from "../reducer/header2NavSlice";
 import header2Reducer from "../reducer/header2Slice";
 import bodySliceReducer from "../reducer/bodySlice";
+import footerSliceReducer from "../reducer/footerSlice";
 
 const rooooootReducer = combineReducers({
   root: rootReducer,
@@ -14,7 +15,8 @@ const rooooootReducer = combineReducers({
   whoComing:whoComingReducer,
   header2Nav:header2NavReducer,
   header2:header2Reducer,
-  bodySlice:bodySliceReducer
+  bodySlice:bodySliceReducer,
+  footerSlice:footerSliceReducer
 });
 const store = configureStore({
   reducer: rooooootReducer,

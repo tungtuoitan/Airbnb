@@ -99,7 +99,7 @@ class Calendar extends React.Component {
         <div className="mt-8">
           <div className="flex justify-between mb-4 ">
             <button onClick={() => prev()}>
-              <i class="fa-solid fa-angle-right fa-rotate-180"></i>
+              <i className="fa-solid fa-angle-right fa-rotate-180"></i>
             </button>
             <div className="font-base font-bold color222">
               <span>{fakeData.monthNames[month]}</span>
@@ -110,7 +110,7 @@ class Calendar extends React.Component {
                 next();
               }}
             >
-              <i class="fa-solid fa-angle-right"></i>
+              <i className="fa-solid fa-angle-right"></i>
             </button>
           </div>
 

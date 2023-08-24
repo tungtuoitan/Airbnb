@@ -33,7 +33,7 @@ function Calendar2() {
               dispatch(goNextMonth());
             }}
           >
-            <i class="fa-solid fa-angle-right"></i>
+            <i className="fa-solid fa-angle-right"></i>
           </button>
         </div>
 

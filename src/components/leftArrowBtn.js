@@ -17,7 +17,7 @@ export default function LeftArrowBtn() {
           : "pointer-events-none"
       }`}
     >
-      <i class="fa-solid fa-angle-left fa-sm"></i>
+      <i className="fa-solid fa-angle-left fa-sm"></i>
     </div>
   );
 }

@@ -1,13 +1,14 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { actionChangeWhere } from "../../actions/action";
 import { actionClickWhen } from "../../actions/action";
+import DestinationImg from "./destinationImg";
+
 export default function DestinationItem({ imgSrc, name }) {
   const dispatch = useDispatch();
   const handleOnClick = () => {
     dispatch(actionChangeWhere(name));
     dispatch(actionClickWhen());
   };
-  const where = useSelector((state) => state.root.where);
 
   return (
     <div
@@ -16,16 +17,7 @@ export default function DestinationItem({ imgSrc, name }) {
     `}
       onClick={handleOnClick}
     >
-      <img
-        src={imgSrc}
-        className={`w-c122 h-c122 rounded-lg
-        ${
-          where === name
-            ? "border-2 border-solid border-gray-600"
-            : "border-1 border-solid border-gray-300"
-        } 
-        `}
-      />
+      <DestinationImg imgSrc={imgSrc} name={name} />
       <p className="text-sm font-medium color222">{name}</p>
     </div>
   );

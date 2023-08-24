@@ -1,15 +1,18 @@
 import React, { useRef, useState } from "react";
-import Slider from './slider2'
+import Slider from "./slider2";
 import InvisibleLayer from "./invisible-layer";
+import { OwnerContext } from "../context/ownerContext";
 class Item extends React.Component {
+  
   render() {
     const { home, owner, path } = this.props;
     return (
-      <div className="ITEM max-w-full    "
-      >
-        <div className="SLIDER_CONTAINER        aspect-square  relative rounded-xl overflow-hidden mb-c14    ">
-          <Slider path={path}/>
-          <InvisibleLayer owner={owner}/>
+      <div className="ITEM max-w-full    ">
+        <div className="SLIDER_CONTAINER  border1       aspect-square  relative rounded-xl overflow-hidden mb-c14    ">
+          <Slider path={path} />
+          <OwnerContext.Provider value={owner}>
+            <InvisibleLayer />
+          </OwnerContext.Provider>
         </div>
 
         <div className="TEXT_CONTAINER   set-row-height grid-in-detail-item text-c15  unknown-leading-15 gap-c2 ">

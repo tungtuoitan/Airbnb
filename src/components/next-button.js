@@ -7,7 +7,7 @@ function NextButton({ onClick, isHovering,isNextBtnDisplay }) {
       onClick={onClick}
     >
       <i
-        class="fa-solid fa-angle-right fa-sm"
+        className="fa-solid fa-angle-right fa-sm"
         style={{ color: "#222222", marginLeft: "0px" }}
       ></i>
     </button>

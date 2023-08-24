@@ -16,7 +16,7 @@ export default function RightArrowBtn() {
           : "pointer-events-none"
       }`}
     >
-      <i class="fa-solid fa-angle-right fa-sm"></i>
+      <i className="fa-solid fa-angle-right fa-sm"></i>
     </div>
   );
 }

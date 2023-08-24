@@ -26,7 +26,7 @@ function MiddleFooter (){
               <ul className="grid gap-y-c12">
                 {titleAndLink.hosting.map((item, index) => {
                   return (
-                    <li className="font-size14 color222 text-left ">
+                    <li className="font-size14 color222 text-left " key={index}>
                       <a href={item[1]}>{item[0]} </a>
                     </li>
                   );
@@ -40,7 +40,7 @@ function MiddleFooter (){
               <ul className="grid gap-y-c12">
                 {titleAndLink.airbnb.map((item, index) => {
                   return (
-                    <li className="font-size14 color222 text-left ">
+                    <li className="font-size14 color222 text-left " key={index}>
                       <a href={item[1]}>{item[0]} </a>
                     </li>
                   );
