@@ -1,4 +1,5 @@
 import React from "react";
+import Switch from "./switch";
 
 class TotalPrice extends React.Component {
   render() {
@@ -13,9 +14,8 @@ class TotalPrice extends React.Component {
           </div>
           <p className="text-gray7 text-left leading-5 mt-c2 ">Incude all fees, before taxes</p>
         </div>
-        <div className="bg-gray-B0 w-12 h-8 rounded-2xl flex justify-start ">
-          <div className="bg-white w-7 h-7 rounded-full m-c2  "></div>
-        </div>
+        <Switch/>
+        
       </div>
 
     );
