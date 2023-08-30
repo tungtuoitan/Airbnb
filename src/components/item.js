@@ -2,13 +2,12 @@ import React, { useRef, useState } from "react";
 import Slider from "./slider2";
 import InvisibleLayer from "./invisible-layer";
 import { OwnerContext } from "../context/ownerContext";
-class Item extends React.Component {
-  
-  render() {
-    const { home, owner, path } = this.props;
+import StarIcon from "./starIcon";
+  export default function Item({home,owner,path}){
+
     return (
       <div className="ITEM max-w-full    ">
-        <div className="SLIDER_CONTAINER  border1       aspect-square  relative rounded-xl overflow-hidden mb-c14    ">
+        <div className="SLIDER_CONTAINER        aspect-square  relative rounded-xl overflow-hidden mb-c14    ">
           <Slider path={path} />
           <OwnerContext.Provider value={owner}>
             <InvisibleLayer />
@@ -30,27 +29,12 @@ class Item extends React.Component {
             <span>night</span>
           </div>
           <div className="text-right flex justify-end items-center manrope-700">
-            <span className="mr-c4 set-mt--c2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 32 32"
-                aria-hidden="true"
-                role="presentation"
-                focusable="false"
-                className="star-letter"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"
-                ></path>
-              </svg>
-            </span>
+            <StarIcon/>
             <p className="font-normal ">{owner.account.rating}</p>
           </div>
         </div>
       </div>
     );
   }
-}
 
-export default Item;
+

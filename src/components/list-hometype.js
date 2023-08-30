@@ -27,7 +27,7 @@ export default function ListHomeType() {
               }`}
             />
             <span
-              className={`    text-c12 text-gray7 text-12 font-semibold mt-c5 whitespace-nowrap  ${
+              className={`    text-c12 text-gray7 text-c12 font-semibold mt-c5 whitespace-nowrap  ${
                 index === displayingIndex ? "color222 " : ""
               }   `}
             >

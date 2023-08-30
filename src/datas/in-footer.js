@@ -7,6 +7,10 @@ const titleAndLink = {
     ["Cancellation options", ""],
     ["Report neighborhood concern", ""],
   ],
+  community: [
+    ["Airbnb.org: disaster relief housing", ""],
+    ["Combating discrimination", ""],
+  ],
   hosting: [
     ['Airbnb your home',''],
     ['AirCover for Hosts',''],

@@ -7,6 +7,8 @@ import header2NavReducer from "../reducer/header2NavSlice";
 import header2Reducer from "../reducer/header2Slice";
 import bodySliceReducer from "../reducer/bodySlice";
 import footerSliceReducer from "../reducer/footerSlice";
+import loginSliceReducer from "../reducer/loginSlice";
+import accSliceReducer from "../reducer/accSlice";
 
 const rooooootReducer = combineReducers({
   root: rootReducer,
@@ -16,7 +18,9 @@ const rooooootReducer = combineReducers({
   header2Nav:header2NavReducer,
   header2:header2Reducer,
   bodySlice:bodySliceReducer,
-  footerSlice:footerSliceReducer
+  footerSlice:footerSliceReducer,
+  loginSlice:loginSliceReducer,
+  accSlice:accSliceReducer,
 });
 const store = configureStore({
   reducer: rooooootReducer,

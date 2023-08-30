@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import {showLeftArrow,hideLeftArrow,showRightArrow,hideRightArrow} from '../reducer/header2NavSlice'
+
 export default function useListenScroll() {
   const ref = useRef(null);
   const dispatch = useDispatch()
@@ -26,7 +27,9 @@ export default function useListenScroll() {
     };
     ref.current.addEventListener("scroll", handleScroll);
     return () => {
-      ref.current.removeEventListener("scroll", handleScroll);
+      if(ref.current){
+        ref.current.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
 
