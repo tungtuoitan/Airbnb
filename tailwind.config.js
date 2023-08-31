@@ -251,6 +251,8 @@ module.exports = {
         maxWidth:{
           'c568': '568px' ,
           'c388': '388px' ,
+          'c388': '388px' ,
+
 
 
           },

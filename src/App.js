@@ -3,12 +3,14 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/homepage";
 import RoomPage from "./pages/roomspage";
 import Login from "./pages/login";
-import Wishlists from "./components/wishlists";
+import Wishlists from "./pages/wishlists";
 import WishPage from "./components/wishPage";
 import NoMatch from "./components/noMatch";
 import Confirm from "./components/confirm";
 import { useSelector } from "react-redux";
-import Trips from "./components/trips";
+import Trips from "./pages/trips";
+import Inbox from "./pages/inbox";
+import AccountSettings from "./pages/accountSettings";
 
 function App() {
   const isConfirmOpen = useSelector((state) => state.loginSlice.isConfirmOpen);
@@ -24,8 +26,10 @@ function App() {
         <Route path="/" index element={<HomePage />} />
         <Route path="/trips" element={<Trips />} />
         <Route path="/wishlists" element={<Wishlists />} />
-        <Route path="/inbox" element={<Wishlists />} />
+        <Route path="/inbox" element={<Inbox />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/account-settings" element={<AccountSettings />} />
+
 
         {/* <Route path='/rooms' element={<RoomPage/>}/> */}
         <Route path="*" element={<NoMatch />} />

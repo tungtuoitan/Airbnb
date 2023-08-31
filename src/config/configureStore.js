@@ -9,6 +9,8 @@ import bodySliceReducer from "../reducer/bodySlice";
 import footerSliceReducer from "../reducer/footerSlice";
 import loginSliceReducer from "../reducer/loginSlice";
 import accSliceReducer from "../reducer/accSlice";
+import inboxSlice from '../reducer/inboxSlice'
+import inboxSliceReducer from "../reducer/inboxSlice";
 
 const rooooootReducer = combineReducers({
   root: rootReducer,
@@ -21,6 +23,7 @@ const rooooootReducer = combineReducers({
   footerSlice:footerSliceReducer,
   loginSlice:loginSliceReducer,
   accSlice:accSliceReducer,
+  inboxSlice:inboxSliceReducer
 });
 const store = configureStore({
   reducer: rooooootReducer,

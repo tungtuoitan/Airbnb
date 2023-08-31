@@ -7,9 +7,6 @@ import { useSelector } from "react-redux";
 import FormLoginContainer from "../components/formLoginContainer";
 import FbBtn from "../components/fbBtn";
 export default function Login() {
-  const isConfirmOpen = useSelector((state) => state.loginSlice.isConfirmOpen);
-  if (isConfirmOpen) {
-  }
   return (
     <div className=" w-full h-screen ">
       <div className="XXX relative   ">
