@@ -343,6 +343,9 @@ const regexCheckDate =
   const regexCheckEmailChar =
   /[^a-zA-Z0-9_\-+.@]/
 
+
+
+
 export default {
   addressArr: addressArr,
   getUni: getUni,
@@ -357,5 +360,5 @@ export default {
   regexCheckName: regexCheckName,
   regexCheckSlash:regexCheckSlash,
   regexCheckEmail:regexCheckEmail,
-  regexCheckEmailChar:regexCheckEmailChar
+  regexCheckEmailChar:regexCheckEmailChar,
 };

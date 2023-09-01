@@ -8,6 +8,7 @@ import Body from "../components/body";
 import SearchPopUpMoblie from "../components/search-popup-mobile";
 import DivBonus1 from "../components/divBonus1";
 import DivBonus2 from "../components/divBonus2";
+import Filter from "../components/filter";
 
 function HomePage() {
   
@@ -18,11 +19,13 @@ function HomePage() {
       <Header2  />
 
       <div>
-        <Body />
+        {/* <Body />
         <Footer />
         <DivBonus2/>
         <SearchPopUpMoblie />
-        <MenuBarSmartf />
+        <MenuBarSmartf /> */}
+        <Filter/>
+
       </div>
     </div>
   );
