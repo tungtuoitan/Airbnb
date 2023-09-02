@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 
 export default function GraphCol({height}) {
-  const homeByPrice = useSelector((state) => state.filterSlice.homeByPrice);
+  const homeAmountByPrice = useSelector((state) => state.filterSlice.homeAmountByPrice);
   return (
     <>
-      {homeByPrice.map((item, index) => {
-        const width = `calc( 100% / ${homeByPrice.length} )`;
-        const top = `${((item / 80) * height) / 4.5}px`;
+      {homeAmountByPrice.map((item, index) => {
+        const width = `calc( 100% / ${homeAmountByPrice.length} )`;
+        const top = `${((item / 80) * height)}px`;
         const style = {
           width: width,
           background: "#222",

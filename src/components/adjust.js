@@ -1,15 +1,17 @@
 import Graph from "./graph";
-import ControlLeft from "./controlLeft";
-import ControlRight from "./controlRight";
+import LeftSlider from "./leftSlider";
+import RightSlider from "./rightSlider";
 import useListenResizeForPriceRange from "../hooks/useListenResizeForPriceRange";
 
 export default function Adjust() {
   const contRef = useListenResizeForPriceRange();
   return (
-    <div className="CONTAINER relative 7:mx-4  " ref={contRef}>
+    <div className="CONTAINER relative 7:mx-4  " ref={contRef} 
+    >
       <Graph />
-      <ControlLeft />
-      <ControlRight />
+      <LeftSlider />
+      <RightSlider />
     </div>
+    
   );
 }

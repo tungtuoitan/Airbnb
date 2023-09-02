@@ -1,12 +1,14 @@
 import { useState, useRef, useEffect } from "react";
+import { useDispatch,useSelector } from "react-redux";
+import { setGraphHeight } from "../reducer/filterSlice";
 
 export default function useResizeForGraph() {
-    const [height, setHeight] = useState(0);
     const ulRef = useRef(null);
+    const dispatch = useDispatch()
   useEffect(() => {
     const handleResize = () => {
       if (ulRef && ulRef.current) {
-        setHeight(ulRef.current.offsetWidth);
+        dispatch(setGraphHeight(ulRef.current.offsetWidth / 4.5))
       }
     };
     handleResize();
@@ -15,5 +17,5 @@ export default function useResizeForGraph() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  return { height, ulRef };
+  return  ulRef 
 }

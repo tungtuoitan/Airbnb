@@ -8,7 +8,7 @@ const filterSlice = createSlice({
   name: " filterSlice",
   initialState: {
     // # 1
-    homeByPrice: [
+    homeAmountByPrice: [
       77 + random5(),
       74 + random5(),
       71 + random5(),
@@ -65,10 +65,11 @@ const filterSlice = createSlice({
       80 + random5(),
     ],
     // ## 2
-    controlValueLeft: 0,
-    controlValueRight: 100,
+    leftSliderValue: 0,
+    rightSliderValue:100,
     displacement: 0,
-    widthContainer: 0,
+    graphWidth: 0,
+    graphHeight:0,
 
     // # beds and bedrooms
     placeType: "Any type",
@@ -81,43 +82,46 @@ const filterSlice = createSlice({
   },
   reducers: {
     // # place type
-    pickPlaceType: (state, action) => {
+    setPlaceType: (state, action) => {
       state.placeType = action.payload;
     },
     // # Beds and bedrooms
-    pickAmountBeds: (state, action) => {
+    setAmountBeds: (state, action) => {
       state.amountBeds = action.payload;
     },
-    pickAmountBedrooms: (state, action) => {
+    setAmountBedrooms: (state, action) => {
       state.amountBedrooms = action.payload;
     },
-    pickAmountBathrooms: (state, action) => {
+    setAmountBathrooms: (state, action) => {
       state.amountBathrooms = action.payload;
     },
     // ## Price range
-    setControlValueLeft: (state, action) => {
+    setLeftSlider: (state, action) => {
       if (action.payload < 0) {
-        state.controlValueLeft = 0;
-      } else if (action.payload > state.widthContainer - 55) {
-        state.controlValueLeft = state.widthContainer - 55;
+        state.leftSliderValue = 0;
+      } else if (action.payload > state.rightSliderValue - 24 ) {
+        state.leftSliderValue = state.rightSliderValue - 24;
       } else {
-        state.controlValueLeft = action.payload;
+        state.leftSliderValue = action.payload;
       }
     },
-    setControlValueRight: (state, action) => {
-      if (action.payload < 20) {  // minimum
-        state.controlValueRight = 20;
-      } else if (action.payload > state.widthContainer - 32 ) {
-        state.controlValueRight = state.widthContainer - 32;
+    setRightSlider: (state, action) => {
+      if (action.payload < state.leftSliderValue + 24) {  // minimum
+        state.rightSliderValue = state.leftSliderValue + 24;
+      } else if (action.payload > state.graphWidth - 32 ) {
+        state.rightSliderValue = state.graphWidth - 32;
       } else {
-        state.controlValueRight = action.payload;
+        state.rightSliderValue = action.payload;
       }
     },
     setDisplacement :(state,action)=>{
       state.displacement = action.payload
     },
-    setWidthContainer :(state,action)=>{
-      state.widthContainer = action.payload
+    setGraphWidth :(state,action)=>{
+      state.graphWidth = action.payload
+    },
+    setGraphHeight :(state,action)=>{
+      state.graphHeight = action.payload
     },
     // ##
     setCurrentHomeList: (state, action) => {
@@ -135,15 +139,16 @@ const filterSlice = createSlice({
   },
 });
 export const {
-  pickPlaceType,
-  setControlValueLeft,
-  setControlValueRight,
-  pickAmountBeds,
-  pickAmountBathrooms,
-  pickAmountBedrooms,
+  setPlaceType,
+  setLeftSlider,
+  setRightSlider,
+  setAmountBeds,
+  setAmountBathrooms,
+  setAmountBedrooms,
   setDisplacement,
   setCurrentHomeList,
-  setWidthContainer
+  setGraphWidth,
+  setGraphHeight
 } = filterSlice.actions;
 const filterSliceReducer = filterSlice.reducer;
 export default filterSliceReducer;

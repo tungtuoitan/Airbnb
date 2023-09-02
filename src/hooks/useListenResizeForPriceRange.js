@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setDisplacement, setWidthContainer } from "../reducer/filterSlice";
+import { setDisplacement, setGraphWidth } from "../reducer/filterSlice";
 
 
 export default function useListenResizeForPriceRange (){
@@ -10,10 +10,10 @@ export default function useListenResizeForPriceRange (){
       const handleResize = () => {
         if (contRef.current) {
           const displacement = contRef.current.getBoundingClientRect().x;
-          const widthContainer = contRef.current.offsetWidth;
+          const graphWidth = contRef.current.offsetWidth;
     
           dispatch(setDisplacement(displacement));
-          dispatch(setWidthContainer(widthContainer));
+          dispatch(setGraphWidth(graphWidth));
         }
       };
       handleResize();

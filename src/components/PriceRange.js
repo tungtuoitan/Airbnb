@@ -12,6 +12,7 @@ export default function PriceRange() {
         <TitleOnFilter title="Price range" />
         <Adjust />
         <ControlByNumber />
+
       </div>
     </div>
   );
