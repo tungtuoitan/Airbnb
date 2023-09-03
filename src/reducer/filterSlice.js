@@ -67,6 +67,8 @@ const filterSlice = createSlice({
     // ## 2
     leftSliderValue: 0,
     rightSliderValue:100,
+    // isPress:[false,false],
+    isPress:false,
     displacement: 0,
     graphWidth: 0,
     graphHeight:0,
@@ -114,6 +116,10 @@ const filterSlice = createSlice({
         state.rightSliderValue = action.payload;
       }
     },
+    setIsPress:(state,action)=>{
+      state.isPress= action.payload
+    },
+   
     setDisplacement :(state,action)=>{
       state.displacement = action.payload
     },
@@ -142,13 +148,14 @@ export const {
   setPlaceType,
   setLeftSlider,
   setRightSlider,
+  setIsPress,
   setAmountBeds,
   setAmountBathrooms,
   setAmountBedrooms,
   setDisplacement,
   setCurrentHomeList,
   setGraphWidth,
-  setGraphHeight
+  setGraphHeight,
 } = filterSlice.actions;
 const filterSliceReducer = filterSlice.reducer;
 export default filterSliceReducer;

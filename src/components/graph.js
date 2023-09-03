@@ -12,15 +12,15 @@ export default function Graph() {
     <div className=" px-4 mt-6 overflow-hidden  relative " >
       <ul
         className="relative flex gap-c1 bg-white || w-full  
-    || border-b-c1 border-solid border-black222 
+    || border-b-c1 7:border-b-c2 border-solid border-black222 
     || overflow-hidden "
         style={{ height: `${graphHeight }px` }}
         ref={ulRef}
       >
         {<GraphColItem height={(graphHeight)} />}
       </ul>
-      <LeftLayer/>
-      <RightLayer/>
+      {/* <LeftLayer/>
+      <RightLayer/> */}
       
     </div>
   );

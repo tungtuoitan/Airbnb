@@ -1,34 +1,37 @@
-import {useSelector,useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
 import { useSpring, animated } from "@react-spring/web";
-import useCreateHandleTouchMoveRight from '../hooks/useCreateTouchMoveRight';
-import useSetRightSliderFirstTime from '../hooks/useSetSliderRightFirstTime';
-import useCreateHandleDragRight from '../hooks/useCreateHandleDragRight';
+import useCreateHandleTouchMoveRight from "../hooks/useCreateTouchMoveRight";
+import useSetRightSliderFirstTime from "../hooks/useSetSliderRightFirstTime";
+import useCreateHandleDragRight from "../hooks/useCreateHandleDragRight";
+import { handleOnDragStart } from "../function/handleOnDragStart";
 
+export default function RightSlider() {
+  const handleOnTouchMove = useCreateHandleTouchMoveRight();
+  const handleOnDrag = useCreateHandleDragRight();
+  const rightSliderValue = useSelector(
+    (state) => state.filterSlice.rightSliderValue
+  );
+  const graphWidth = useSelector((state) => state.filterSlice.graphWidth);
 
-export default function RightSlider (){
-    const handleOnTouchMove = useCreateHandleTouchMoveRight()
-    const handleOnDrag = useCreateHandleDragRight()
-    const rightSliderValue = useSelector(state=>state.filterSlice.rightSliderValue)
-    const graphWidth = useSelector(state=>state.filterSlice.graphWidth)
-    
-    const springs = useSpring({
-        from: { x: graphWidth },
-        to: { x: rightSliderValue },
-    });
-     useSetRightSliderFirstTime()
-     
-    
-    return(
-        <animated.div className={`w-c32 h-c32 || rounded-full bg-white ||
+  const springs = useSpring({
+    from: { x: graphWidth },
+    to: { x: rightSliderValue },
+    immediate: true,
+  });
+  useSetRightSliderFirstTime();
+
+  return (
+    <animated.div
+      className={`w-c32 h-c32 || rounded-full bg-white ||
         || border-c1 border-solid border-gray-300 cursor-pointer
-        || box-shadow-u11
+        || box-shadow-u11 z1000
         || relative top-c-48
         `}
-        style={{...springs}}
-        onTouchMove = {(e)=> handleOnTouchMove(e)}
-        onDrag={(e)=> handleOnDrag(e)}
-
-        >
-        </animated.div>
-    )
+      draggable
+      style={{ ...springs }}
+      onTouchMove={(e) => handleOnTouchMove(e)}
+      onDrag={(e) => handleOnDrag(e)}
+      onDragStart={(e) => handleOnDragStart(e)}
+    ></animated.div>
+  );
 }

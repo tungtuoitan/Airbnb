@@ -4,10 +4,11 @@ export default function LeftLayer () {
   const graphWidth = useSelector((state) => state.filterSlice.graphWidth);
   const graphHeight = useSelector((state) => state.filterSlice.graphHeight);
   const leftSliderValue = useSelector((state) => state.filterSlice.leftSliderValue);
-  const left = leftSliderValue - graphWidth 
+  const left = leftSliderValue - graphWidth + 6
   const springs = useSpring({
     from: { x: graphWidth },
     to: { x: left },
+    immediate:true
 });
 
 
