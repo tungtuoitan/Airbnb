@@ -785,9 +785,15 @@ input[type="checkbox"]:checked::before {
 .box-shadow-u11{
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
-.set-cursor,
-.set-cursor:focus,
-.set-cursor:active,
-.set-cursor:hover{
-  cursor:pointer !important ;
+
+.set-cursor:active{
+  cursor: url('https://www.google.com/intl/en_ALL/mapfiles/closedhand.cur'), all-scroll;
+  cursor: -webkit-pointer !important;
+  cursor: -moz-pointer !important;
+  cursor: -o-pointer !important;
+  cursor: -ms-pointer !important;
+  cursor: grapbbing !important;
 }
+
+
+
