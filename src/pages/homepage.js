@@ -9,6 +9,8 @@ import SearchPopUpMoblie from "../components/search-popup-mobile";
 import DivBonus1 from "../components/divBonus1";
 import DivBonus2 from "../components/divBonus2";
 import Filter from "../components/filter";
+import Test1 from "../components/test1";
+
 
 function HomePage() {
   
@@ -25,6 +27,7 @@ function HomePage() {
         <SearchPopUpMoblie />
         <MenuBarSmartf /> */}
         <Filter/>
+        {/* <Test1/> */}
 
       </div>
     </div>
