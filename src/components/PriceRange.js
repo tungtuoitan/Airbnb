@@ -6,8 +6,9 @@ export default function PriceRange() {
   return (
     <div className="px-6 ">
       <div
-        className="py-8 7:px-10  || border-b-c1 border-solid border-gray-400
-      "
+        className="py-8 7:px-10  || border-b-c1 border-solid border-gray-400"
+      // onDrag={(e)=> console.log('onDrag')}
+
       >
         <TitleOnFilter title="Price range" />
         <Adjust />

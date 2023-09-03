@@ -9,10 +9,11 @@ export default function LeftSlider() {
   const leftSliderValue = useSelector(
     (state) => state.filterSlice.leftSliderValue
   );
-  
+
   const springs = useSpring({
     from: { x: 0 },
     to: { x: leftSliderValue },
+    immediate: true,
   });
 
   return (
@@ -20,15 +21,11 @@ export default function LeftSlider() {
       className={`w-c32 h-c32 || rounded-full bg-white ||
         || border-c1 border-solid border-gray-300  cursor-pointer set-cursor
         || box-shadow-u11
-        || relative top-c-16
+        || relative top-c-16 zmax3 
         `}
-      style={{ ...springs }}
-      onTouchMove={(e) => handleOnTouchMove(e)}
-      onDrag={(e)=> handleOnDrag(e)}
-   
-
-
-    />
-   
+      draggable
+      style={{ ...springs ,cursor:'pointer'}}
+      onDrag={(e) => console.log("onDrag")}
+    ></animated.div>
   );
 }
