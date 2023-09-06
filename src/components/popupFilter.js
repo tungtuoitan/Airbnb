@@ -11,7 +11,7 @@ export default function PopUpFilter() {
         || rounded-t-xl 7:rounded-xl overflow-hidden   "
     >
       <div
-        className="w-full max-w-c780 h-calc-u2 
+        className="w-full max-w-c780 h-calc-u2 overflow-x-hidden
             overflow-y-scroll relative "
       >
         <HeaderFilter title="Filters" />

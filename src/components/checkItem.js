@@ -1,13 +1,12 @@
-import CheckContainer from "./checkContainer";
+import CheckContainer2 from "./checkContainer2";
+import CheckContent from "./checkContent";
 
-export default function CheckItem({ content }) {
+export default function CheckItem({ content, index,type }) {
+
   return (
-    <label className="c-template grid gap-c14 cursor-pointer || py-c10   ">
-      <CheckContainer />
-      <div className="flex items-center pb-c2 justify-start 
-      || text-base text-black222 || pb-c2">
-        {content}
-      </div>
-    </label>
+      <label className="c-template grid gap-c14 cursor-pointer || py-c10   ">
+        <CheckContainer2 index={index} type={type} />
+        <CheckContent content={content}/>
+      </label>
   );
 }

@@ -1,12 +1,37 @@
+import { setPropertyType } from "../reducer/filterSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import PropertyTypeItemUI from "./propertyTypeItemUI";
 
+export default function PropertyTypeItem({ icon, name }) {
+  const [isMouseDown, setIsMouseDown] = useState(false);
+  const currentPropertyType = useSelector(
+    (s) => s.filterSlice.filter.propertyType
+  );
+  const dispatch = useDispatch();
 
+  const handleOnClick = () => {
+    if (name === currentPropertyType) {
+      dispatch(setPropertyType(""));
+    } else {
+      dispatch(setPropertyType(name));
+    }
+  };
+  const handleOnMouseDown = () => {
+    setIsMouseDown(true);
+  };
+  const handleOnMouseUp = () => {
+    setIsMouseDown(false);
+  };
 
-export default function PropertyTypeItem ({icon,name}){
-    return(
-        <div className="p-4 rounded-xl border-c1 border-gray-300 border-solid 
-        || flex flex-col gap-2 7:gap-4   ">
-            {icon}
-            <span className="text-left text-black222 font-bold">{name}</span>
-        </div>
-    )
+  return (
+    <PropertyTypeItemUI
+      handleOnMouseDown={handleOnMouseDown}
+      handleOnMouseUp={handleOnMouseUp}
+      handleOnClick={handleOnClick}
+      isMouseDown={isMouseDown}
+      icon={icon}
+      name={name}
+    />
+  );
 }

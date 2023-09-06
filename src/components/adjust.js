@@ -6,7 +6,7 @@ import useListenResizeForPriceRange from "../hooks/useListenResizeForPriceRange"
 export default function Adjust() {
   const contRef = useListenResizeForPriceRange();
   return (
-    <div className="CONTAINER relative   " ref={contRef} 
+    <div className="CONTAINER relative  " ref={contRef} 
     >
       <Graph />
       <LeftSlider />

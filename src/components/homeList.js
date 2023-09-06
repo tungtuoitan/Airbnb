@@ -1,13 +1,12 @@
 import React from "react";
 import Item from "../components/item";
-import homeList from "../datas/home-list.js";
 import owners from "../datas/owners";
 import { Link } from "react-router-dom";
-import { useSelector } from 'react-redux';
-
+import { useSelector } from "react-redux";
+import { homeList } from "../datas/homeListOriginal";
 
 export default function HomeList() {
-  const displayItems = useSelector(state=>state.bodySlice.displayItems)
+  const displayItems = useSelector((state) => state.bodySlice.displayItems);
 
   return (
     <>

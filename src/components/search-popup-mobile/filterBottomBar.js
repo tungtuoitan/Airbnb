@@ -1,4 +1,5 @@
 
+import ClearAll2 from "./clearAll2";
 import ClearAllBtn from "./clearAllBtn";
 import SearchBtn from "./searchBtn";
 import ShowXPlace from "./showXPlace";
@@ -11,7 +12,7 @@ export default function FilterBottomBar () {
          border-top-05px border-solid border-gray-200
          px-6 py-c12 || flex justify-between items-center"
     >
-      <ClearAllBtn />
+      <ClearAll2 />
       <ShowXPlace/>
     </div>
   );

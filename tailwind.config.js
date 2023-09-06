@@ -537,7 +537,9 @@ module.exports = {
         'mdgray': 'rgb(176,176,176)',
         'black222':'#222222',
         'gray162':'rgb(162,162,162)',
-        'main':'#ff385c'
+        'main':'#ff385c',
+        'white1':'#f7f7f7',
+
 
       },
 

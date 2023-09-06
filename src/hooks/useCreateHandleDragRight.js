@@ -7,7 +7,6 @@ export default function useCreateHandleDragRight() {
   return (e) => {
     if (e.clientX !== 0) {
       const currentRight = e.clientX - displacement - 16;
-      console.log(e.clientX);
       dispatch(setRightSlider(currentRight));
     }
   };

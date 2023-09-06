@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function AmountBathRoomItem({ amount,isFinal }) {
   const dispatch = useDispatch();
-  const amountBathrooms = useSelector((state) => state.filterSlice.amountBathrooms);
+  const amountBathrooms = useSelector((state) => state.filterSlice.filter.amountBathrooms);
   return (
     <div className={`${isFinal ? 'pr-c28':'pr-2'}`}>
       <div

@@ -4,7 +4,7 @@ import AmountBathRoomItem from "./amountBathroomsItem";
 
 export default function AmountBathroomGroup() {
   const dispatch = useDispatch()
-  const amountBeds = useSelector(state=>state.filterSlice.amountBeds)
+  const amountBeds = useSelector(state=>state.filterSlice.filter.amountBeds)
   return (
     <div className=" relative left-c-24 w-screen px-c20 pr-c20
     || overflow-x-scroll scrollable-element">

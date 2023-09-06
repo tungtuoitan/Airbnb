@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setPlaceType,setCurrentHomeList } from "../reducer/filterSlice";
+import { setPlaceType } from "../reducer/filterSlice";
 
 export default function PlaceTypeItem({ type, price, isMid }) {
-  const placeType = useSelector((state) => state.filterSlice.placeType);
+  const placeType = useSelector((state) => state.filterSlice.filter.placeType);
+
   const dispatch = useDispatch();
   const handleOnClick = () => {
     dispatch(setPlaceType(type));
-    dispatch(setCurrentHomeList())
   };
   return (
     <div

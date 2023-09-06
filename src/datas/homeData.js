@@ -1,3 +1,34 @@
+const random5 = () => {
+  return Math.floor(Math.random() * 30);
+};
+
+//# tạo ra array chứa 50 khúc giá ,
+const amountPriceType = [];
+for (let i = 0; i <= 50; i++) {
+  amountPriceType.push(i * 5);
+}
+//# tạo ra array chứa SỐ LƯỢNG HOME của mỗi khúc giá
+const rateSoLuong = [1];
+for (let i = 0; i < 50; i++) {
+  let soluongChenhlech = Math.floor(Math.random() * 6) - 4;
+  if (rateSoLuong[i] + soluongChenhlech > 0) {
+    rateSoLuong.push(rateSoLuong[i] + soluongChenhlech);
+  } else {
+    rateSoLuong.push(rateSoLuong[i] );
+  }
+}
+//# allPrice = loại giá * số lượng của loại giá
+function pushX(amount, price) {
+  for (let i = 0; i <= amount; i++) {
+    allPriceRateAndAmount.push(price);
+  }
+}
+//# array này có 655 item, gồm 80 khúc giá, và đã tính toán tỉ lệ giữa các khúc giá
+const allPriceRateAndAmount = [];
+for (let i = 0; i < amountPriceType.length; i++) {
+  pushX(rateSoLuong[i], amountPriceType[i]);
+}
+
 const homeData = {
   name: [
     "Ruby House",
@@ -106,7 +137,8 @@ const homeData = {
   ],
 
   placeType: ["Room", "Entire home"],
-  priceOneNight: Math.floor(Math.random() * 590) + 10,
+  priceOneNight: allPriceRateAndAmount,
+
   bedrooms: [1, 2, 3, 4, 5, 6, 7, 8],
   beds: [1, 2, 3, 4, 5, 6, 7, 8],
   bathrooms: [1, 2, 3, 4, 5, 6, 7, 8],

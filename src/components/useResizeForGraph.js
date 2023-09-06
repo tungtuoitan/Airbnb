@@ -1,14 +1,19 @@
 import { useState, useRef, useEffect } from "react";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setGraphHeight } from "../reducer/filterSlice";
 
 export default function useResizeForGraph() {
-    const ulRef = useRef(null);
-    const dispatch = useDispatch()
+  const ulRef = useRef(null);
+  const dispatch = useDispatch();
   useEffect(() => {
     const handleResize = () => {
       if (ulRef && ulRef.current) {
-        dispatch(setGraphHeight(ulRef.current.offsetWidth / 4.5))
+        // tương đương với > screen 745
+        if (ulRef.current.offsetWidth > 550) {
+          dispatch(setGraphHeight(ulRef.current.offsetWidth / 9));
+        } else {
+          dispatch(setGraphHeight(ulRef.current.offsetWidth / 5));
+        }
       }
     };
     handleResize();
@@ -17,5 +22,5 @@ export default function useResizeForGraph() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  return  ulRef 
+  return ulRef;
 }

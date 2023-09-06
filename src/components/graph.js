@@ -1,8 +1,6 @@
 import useResizeForGraph from "./useResizeForGraph";
 import GraphColItem from "./graphColItem";
 import { useDispatch,useSelector } from "react-redux";
-import LeftLayer from "./leftLayer";
-import RightLayer from "./rightLayer";
 
 export default function Graph() {
   const ulRef  = useResizeForGraph();
@@ -19,8 +17,6 @@ export default function Graph() {
       >
         {<GraphColItem height={(graphHeight)} />}
       </ul>
-      {/* <LeftLayer/>
-      <RightLayer/> */}
       
     </div>
   );

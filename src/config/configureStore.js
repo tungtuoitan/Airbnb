@@ -1,4 +1,4 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore, combineReducers, getDefaultMiddleware } from "@reduxjs/toolkit";
 import rootReducer from "../reducer/reducer";
 import firstReducer from "../actions/first-slice";
 import dateItemSliceReducer from "../reducer/dateItemSlice";
@@ -27,8 +27,23 @@ const rooooootReducer = combineReducers({
   inboxSlice:inboxSliceReducer,
   filterSlice:filterSliceReducer
 });
+const actionSanitizer = (action) => (
+  action.type === 'FILE_DOWNLOAD_SUCCESS' && action.data ?
+  { ...action, data: '<<LONG_BLOB>>' } : action
+);
 const store = configureStore({
   reducer: rooooootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    immutableCheck: false,
+    serializableCheck: false,
+  }),
+  
+  devTools:({
+    actionSanitizer,
+    stateSanitizer: (state) => state.data ? { ...state, data: '<<LONG_BLOB>>' } : state,
+    maxAge:10
+  })
+
 });
 
 export default store;

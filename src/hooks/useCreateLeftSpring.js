@@ -8,7 +8,7 @@ export default function useCreateLeftSpring (){
         (state) => state.filterSlice.leftSliderValue
       );
       const springs = useSpring({
-        from: { x: 0 },
+        // from: { x: 0 },
         to: { x: leftSliderValue },
         immediate: true,
       });
