@@ -19,8 +19,8 @@ function HomePage() {
       <Header2  />
 
       <div>
-        {/* <Body />
-        <Footer />
+        <Body />
+        {/* <Footer />
         <DivBonus2/>
         <SearchPopUpMoblie />
         <MenuBarSmartf /> */}

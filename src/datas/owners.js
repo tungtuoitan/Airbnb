@@ -1,3147 +1,827 @@
-import {v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4 } from "uuid";
 import { faker } from "@faker-js/faker";
-import fakeData from './fake-data.js'
-import avatarArr from './avatarArr.js';
+import fakeData from "./fake-data.js";
+import avatarArr from "./avatarArr.js";
 
-let i = -1
-let increaseAndGetI = ()=>{
-  i= i+1
-  return i
-}
 function getRandomBirthYear() {
   const minYear = 1960;
   const maxYear = 1995;
   return Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear;
 }
-
-
-
-
-const owners = [
-  
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    {
-      id: uuidv4(),
-      name: faker.person.lastName(),
-      property: [fakeData.homeIdArr[increaseAndGetI()]],
-      avatar: avatarArr[i],
-  
-      more_info: {
-        birth: getRandomBirthYear(),
-        school: fakeData.getUni(),
-        live_in: 'Italy',
-        speak: ["english", "italian"],
-        pet: "i love dogs, i have three",
-        work: "Interior Designer",
-        good_at: ["art", "design", "museums", "reading"],
-        past_trips: [
-          "Chademeni, Greece",
-          "Lesina, Italy",
-          "London, United Kingdom",
-        ],
-      },
-  
-      account: {
-        hosting_years: "5",
-        rating: "4",
-        reviews: ["r1", "r3", "r9"],
-        level:'Superhost'
-  
-      },
-      identify: {
-        identity: "4325_5654_7652_445",
-        email: "valentina54k@gmail.com",
-      },
-    },
-    
-  
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  {
-    id: uuidv4(),
-    name: faker.person.lastName(),
-    property: [fakeData.homeIdArr[increaseAndGetI()]],
-    avatar: avatarArr[i],
-
-    more_info: {
-      birth: getRandomBirthYear(),
-      school: fakeData.getUni(),
-      live_in: 'Italy',
-      speak: ["english", "italian"],
-      pet: "i love dogs, i have three",
-      work: "Interior Designer",
-      good_at: ["art", "design", "museums", "reading"],
-      past_trips: [
-        "Chademeni, Greece",
-        "Lesina, Italy",
-        "London, United Kingdom",
-      ],
-    },
-
-    account: {
-      hosting_years: "5",
-      rating: "4",
-      reviews: ["r1", "r3", "r9"],
-      level:'Superhost'
-
-    },
-    identify: {
-      identity: "4325_5654_7652_445",
-      email: "valentina54k@gmail.com",
-    },
-  },
-  
+const jobArray = [
+  "Graphic Designer",
+  "Teacher",
+  "Software Engineer",
+  "Nurse",
+  "Marketing Manager",
+  "Accountant",
+  "Web Developer",
+  "Doctor",
+  "Sales Representative",
+  "Data Analyst",
+  "Architect",
+  "Human Resources Manager",
+  "Financial Analyst",
+  "Chef",
+  "Mechanical Engineer",
+  "Social Media Manager",
+  "Event Planner",
+  "Lawyer",
+  "Photographer",
+  "Electrician",
 ];
+const countryArray = [
+  "England",
+  "United States",
+  "Canada",
+  "Australia",
+  "Germany",
+  "France",
+  "Italy",
+  "Spain",
+  "Japan",
+  "China",
+  "Brazil",
+  "Mexico",
+  "India",
+  "Russia",
+  "South Korea",
+  "Netherlands",
+  "Switzerland",
+  "Sweden",
+  "Norway",
+  "South Africa",
+  "England",
+  "United States",
+  "Canada",
+  "Australia",
+  "Germany",
+  "France",
+  "Italy",
+  "Spain",
+  "Japan",
+  "China",
+  "Brazil",
+  "Mexico",
+  "India",
+  "Russia",
+  "South Korea",
+  "Netherlands",
+  "Switzerland",
+  "Sweden",
+  "Norway",
+  "South Africa",
+  "England",
+  "United States",
+  "Canada",
+  "Australia",
+  "Germany",
+  "France",
+  "Italy",
+  "Spain",
+  "Japan",
+  "China",
+  "Brazil",
+  "Mexico",
+  "India",
+  "Russia",
+  "South Korea",
+  "Netherlands",
+  "Switzerland",
+  "Sweden",
+  "Norway",
+  "South Africa",
+  "England",
+  "United States",
+  "Canada",
+  "Australia",
+  "Germany",
+  "France",
+  "Italy",
+  "Spain",
+  "Japan",
+  "China",
+  "Brazil",
+  "Mexico",
+  "India",
+  "Russia",
+  "South Korea",
+  "Netherlands",
+  "Switzerland",
+  "Sweden",
+  "Norway",
+  "South Africa",
+];
+const languageArray = [
+  "English",
+  "Chinese",
+  "Spanish",
+  "French",
+  "German",
+  "Japanese",
+  "Russian",
+  "Portuguese",
+  "Arabic",
+  "Hindi",
+  "Bengali",
+  "Punjabi",
+  "Indonesian",
+  "Urdu",
+  "Italian",
+  "Dutch",
+  "Swedish",
+  "Turkish",
+  "Korean",
+  "Polish",
+  "English",
+  "Chinese",
+  "Spanish",
+  "French",
+  "German",
+  "Japanese",
+  "Russian",
+  "Portuguese",
+  "Arabic",
+  "Hindi",
+  "Bengali",
+  "Punjabi",
+  "Indonesian",
+  "Urdu",
+  "Italian",
+  "Dutch",
+  "Swedish",
+  "Turkish",
+  "Korean",
+  "Polish",
+  "English",
+  "Chinese",
+  "Spanish",
+  "French",
+  "German",
+  "Japanese",
+  "Russian",
+  "Portuguese",
+  "Arabic",
+  "Hindi",
+  "Bengali",
+  "Punjabi",
+  "Indonesian",
+  "Urdu",
+  "Italian",
+  "Dutch",
+  "Swedish",
+  "Turkish",
+  "Korean",
+  "Polish",
+  "English",
+  "Chinese",
+  "Spanish",
+  "French",
+  "German",
+  "Japanese",
+  "Russian",
+  "Portuguese",
+  "Arabic",
+  "Hindi",
+  "Bengali",
+  "Punjabi",
+  "Indonesian",
+  "Urdu",
+  "Italian",
+  "Dutch",
+  "Swedish",
+  "Turkish",
+  "Korean",
+  "Polish",
+];
+const petSentences = [
+  "I have a cat named Max.",
+  "My dog loves to play fetch in the park.",
+  "I adopted a rescue dog last year.",
+  "Our family has two rabbits as pets.",
+  "I take my hamster out for a walk in a small ball.",
+  "My parrot can mimic human speech.",
+  "I enjoy cuddling with my guinea pig.",
+  "My fish tank is filled with colorful tropical fish.",
+  "I trained my dog to do tricks like sit and shake hands.",
+  "My pet snake sheds its skin regularly.",
+  "I love watching my pet turtle swim in its tank.",
+  "My bird sings beautiful melodies.",
+  "I spoil my pet ferret with lots of toys.",
+  "My pet horse enjoys long rides in the countryside.",
+  "I have a pet tarantula in a terrarium.",
+  "My pet iguana likes basking under a heat lamp.",
+  "I take my pet hedgehog out for supervised playtime.",
+  "My pet chinchilla loves to run on its exercise wheel.",
+  "I have a pair of lovebirds that are inseparable.",
+  "My pet rabbit enjoys munching on fresh vegetables.",
+  "I have a cat named Max.",
+  "My dog loves to play fetch in the park.",
+  "I adopted a rescue dog last year.",
+  "Our family has two rabbits as pets.",
+  "I take my hamster out for a walk in a small ball.",
+  "My parrot can mimic human speech.",
+  "I enjoy cuddling with my guinea pig.",
+  "My fish tank is filled with colorful tropical fish.",
+  "I trained my dog to do tricks like sit and shake hands.",
+  "My pet snake sheds its skin regularly.",
+  "I love watching my pet turtle swim in its tank.",
+  "My bird sings beautiful melodies.",
+  "I spoil my pet ferret with lots of toys.",
+  "My pet horse enjoys long rides in the countryside.",
+  "I have a pet tarantula in a terrarium.",
+  "My pet iguana likes basking under a heat lamp.",
+  "I take my pet hedgehog out for supervised playtime.",
+  "My pet chinchilla loves to run on its exercise wheel.",
+  "I have a pair of lovebirds that are inseparable.",
+  "My pet rabbit enjoys munching on fresh vegetables.",
+  "I have a cat named Max.",
+  "My dog loves to play fetch in the park.",
+  "I adopted a rescue dog last year.",
+  "Our family has two rabbits as pets.",
+  "I take my hamster out for a walk in a small ball.",
+  "My parrot can mimic human speech.",
+  "I enjoy cuddling with my guinea pig.",
+  "My fish tank is filled with colorful tropical fish.",
+  "I trained my dog to do tricks like sit and shake hands.",
+  "My pet snake sheds its skin regularly.",
+  "I love watching my pet turtle swim in its tank.",
+  "My bird sings beautiful melodies.",
+  "I spoil my pet ferret with lots of toys.",
+  "My pet horse enjoys long rides in the countryside.",
+  "I have a pet tarantula in a terrarium.",
+  "My pet iguana likes basking under a heat lamp.",
+  "I take my pet hedgehog out for supervised playtime.",
+  "My pet chinchilla loves to run on its exercise wheel.",
+  "I have a pair of lovebirds that are inseparable.",
+  "My pet rabbit enjoys munching on fresh vegetables.",
+  "I have a cat named Max.",
+  "My dog loves to play fetch in the park.",
+  "I adopted a rescue dog last year.",
+  "Our family has two rabbits as pets.",
+  "I take my hamster out for a walk in a small ball.",
+  "My parrot can mimic human speech.",
+  "I enjoy cuddling with my guinea pig.",
+  "My fish tank is filled with colorful tropical fish.",
+  "I trained my dog to do tricks like sit and shake hands.",
+  "My pet snake sheds its skin regularly.",
+  "I love watching my pet turtle swim in its tank.",
+  "My bird sings beautiful melodies.",
+  "I spoil my pet ferret with lots of toys.",
+  "My pet horse enjoys long rides in the countryside.",
+  "I have a pet tarantula in a terrarium.",
+  "My pet iguana likes basking under a heat lamp.",
+  "I take my pet hedgehog out for supervised playtime.",
+  "My pet chinchilla loves to run on its exercise wheel.",
+  "I have a pair of lovebirds that are inseparable.",
+  "My pet rabbit enjoys munching on fresh vegetables.",
+];
+const topicArray = [
+  "Art",
+  "Design",
+  "Football",
+  "Travel",
+  "Music",
+  "Food",
+  "Technology",
+  "Fashion",
+  "Books",
+  "Fitness",
+  "Photography",
+  "Nature",
+  "Film",
+  "Science",
+  "Gaming",
+  "Cooking",
+  "Business",
+  "Health",
+  "History",
+  "Education",
+  "Art",
+  "Design",
+  "Football",
+  "Travel",
+  "Music",
+  "Food",
+  "Technology",
+  "Fashion",
+  "Books",
+  "Fitness",
+  "Photography",
+  "Nature",
+  "Film",
+  "Science",
+  "Gaming",
+  "Cooking",
+  "Business",
+  "Health",
+  "History",
+  "Education",
+  "Art",
+  "Design",
+  "Football",
+  "Travel",
+  "Music",
+  "Food",
+  "Technology",
+  "Fashion",
+  "Books",
+  "Fitness",
+  "Photography",
+  "Nature",
+  "Film",
+  "Science",
+  "Gaming",
+  "Cooking",
+  "Business",
+  "Health",
+  "History",
+  "Education",
+  "Art",
+  "Design",
+  "Football",
+  "Travel",
+  "Music",
+  "Food",
+  "Technology",
+  "Fashion",
+  "Books",
+  "Fitness",
+  "Photography",
+  "Nature",
+  "Film",
+  "Science",
+  "Gaming",
+  "Cooking",
+  "Business",
+  "Health",
+  "History",
+  "Education",
+];
+const locationArray = [
+  ["Chademeni, Greece"],
+  ["Lesina, Italy"],
+  ["London, United Kingdom"],
+  ["New York City, United States", "Los Angeles, United States"],
+  ["Paris, France", "Nice, France"],
+  ["Tokyo, Japan", "Osaka, Japan", "Kyoto, Japan"],
+  ["Moscow, Russia"],
+  ["Sydney, Australia", "Melbourne, Australia"],
+  ["Rio de Janeiro, Brazil"],
+  ["Cancun, Mexico", "Mexico City, Mexico"],
+  ["Cairo, Egypt"],
+  ["Dubai, United Arab Emirates"],
+  ["Barcelona, Spain", "Madrid, Spain"],
+  ["Berlin, Germany"],
+  ["Toronto, Canada", "Vancouver, Canada"],
+  ["Amsterdam, Netherlands"],
+  ["Stockholm, Sweden"],
+  ["Istanbul, Turkey"],
+  ["Seoul, South Korea"],
+  ["Warsaw, Poland"],
+  ["Chademeni, Greece"],
+  ["Lesina, Italy"],
+  ["London, United Kingdom"],
+  ["New York City, United States", "Los Angeles, United States"],
+  ["Paris, France", "Nice, France"],
+  ["Tokyo, Japan", "Osaka, Japan", "Kyoto, Japan"],
+  ["Moscow, Russia"],
+  ["Sydney, Australia", "Melbourne, Australia"],
+  ["Rio de Janeiro, Brazil"],
+  ["Cancun, Mexico", "Mexico City, Mexico"],
+  ["Cairo, Egypt"],
+  ["Dubai, United Arab Emirates"],
+  ["Barcelona, Spain", "Madrid, Spain"],
+  ["Berlin, Germany"],
+  ["Toronto, Canada", "Vancouver, Canada"],
+  ["Amsterdam, Netherlands"],
+  ["Stockholm, Sweden"],
+  ["Istanbul, Turkey"],
+  ["Seoul, South Korea"],
+  ["Warsaw, Poland"],
+  ["Chademeni, Greece"],
+  ["Lesina, Italy"],
+  ["London, United Kingdom"],
+  ["New York City, United States", "Los Angeles, United States"],
+  ["Paris, France", "Nice, France"],
+  ["Tokyo, Japan", "Osaka, Japan", "Kyoto, Japan"],
+  ["Moscow, Russia"],
+  ["Sydney, Australia", "Melbourne, Australia"],
+  ["Rio de Janeiro, Brazil"],
+  ["Cancun, Mexico", "Mexico City, Mexico"],
+  ["Cairo, Egypt"],
+  ["Dubai, United Arab Emirates"],
+  ["Barcelona, Spain", "Madrid, Spain"],
+  ["Berlin, Germany"],
+  ["Toronto, Canada", "Vancouver, Canada"],
+  ["Amsterdam, Netherlands"],
+  ["Stockholm, Sweden"],
+  ["Istanbul, Turkey"],
+  ["Seoul, South Korea"],
+  ["Warsaw, Poland"],
+  ["Chademeni, Greece"],
+  ["Lesina, Italy"],
+  ["London, United Kingdom"],
+  ["New York City, United States", "Los Angeles, United States"],
+  ["Paris, France", "Nice, France"],
+  ["Tokyo, Japan", "Osaka, Japan", "Kyoto, Japan"],
+  ["Moscow, Russia"],
+  ["Sydney, Australia", "Melbourne, Australia"],
+  ["Rio de Janeiro, Brazil"],
+  ["Cancun, Mexico", "Mexico City, Mexico"],
+  ["Cairo, Egypt"],
+  ["Dubai, United Arab Emirates"],
+  ["Barcelona, Spain", "Madrid, Spain"],
+  ["Berlin, Germany"],
+  ["Toronto, Canada", "Vancouver, Canada"],
+  ["Amsterdam, Netherlands"],
+  ["Stockholm, Sweden"],
+  ["Istanbul, Turkey"],
+  ["Seoul, South Korea"],
+  ["Warsaw, Poland"],
+];
+const yearArr = [
+  7, 2, 9, 3, 8, 5, 1, 6, 4, 10, 3, 6, 2, 9, 1, 8, 5, 4, 7, 10, 7, 2, 9, 3, 8,
+  5, 1, 6, 4, 10, 3, 6, 2, 9, 1, 8, 5, 4, 7, 10, 7, 2, 9, 3, 8, 5, 1, 6, 4, 10,
+  3, 6, 2, 9, 1, 8, 5, 4, 7, 10, 7, 2, 9, 3, 8, 5, 1, 6, 4, 10, 3, 6, 2, 9, 1,
+  8, 5, 4, 7, 10,
+];
+const ratingArr = [
+  "4.8",
+  "4.2",
+  "4.7",
+  "4.5",
+  "5",
+  "4.9",
+  "4.5",
+  "4.7",
+  "4",
+  "4.2",
+  "4.8",
+  "4.5",
+  "4.7",
+  "4.2",
+  "4.9",
+  "5",
+  "4",
+  "4.8",
+  "4.5",
+  "4.7",
+  "4.8",
+  "4.2",
+  "4.7",
+  "4.5",
+  "5",
+  "4.9",
+  "4.5",
+  "4.7",
+  "4",
+  "4.2",
+  "4.8",
+  "4.5",
+  "4.7",
+  "4.2",
+  "4.9",
+  "5",
+  "4",
+  "4.8",
+  "4.5",
+  "4.7",
+  "4.8",
+  "4.2",
+  "4.7",
+  "4.5",
+  "5",
+  "4.9",
+  "4.5",
+  "4.7",
+  "4",
+  "4.2",
+  "4.8",
+  "4.5",
+  "4.7",
+  "4.2",
+  "4.9",
+  "5",
+  "4",
+  "4.8",
+  "4.5",
+  "4.7",
+  "4.8",
+  "4.2",
+  "4.7",
+  "4.5",
+  "5",
+  "4.9",
+  "4.5",
+  "4.7",
+  "4",
+  "4.2",
+  "4.8",
+  "4.5",
+  "4.7",
+  "4.2",
+  "4.9",
+  "5",
+  "4",
+  "4.8",
+  "4.5",
+  "4.7",
+];
+const levelArr = [
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+  "Host",
+  "Super host",
+];
+const emailArr = [
+  "johnwick@gmail.com",
+  "tungle@yahoo.com",
+  "lisasmith@hotmail.com",
+  "michaelbrown@gmail.com",
+  "emilyjones@yahoo.com",
+  "davidwilson@hotmail.com",
+  "sarahdavis@gmail.com",
+  "robertthomas@yahoo.com",
+  "jenniferlee@hotmail.com",
+  "williamjackson@gmail.com",
+  "sophiamartinez@yahoo.com",
+  "jamesrodriguez@hotmail.com",
+  "olivialopez@gmail.com",
+  "ethanadams@yahoo.com",
+  "avawalker@hotmail.com",
+  "matthewhill@gmail.com",
+  "charlotteyoung@yahoo.com",
+  "danielturner@hotmail.com",
+  "ameliarobinson@gmail.com",
+  "alexanderharris@yahoo.com",
+  "johnwick@gmail.com",
+  "tungle@yahoo.com",
+  "lisasmith@hotmail.com",
+  "michaelbrown@gmail.com",
+  "emilyjones@yahoo.com",
+  "davidwilson@hotmail.com",
+  "sarahdavis@gmail.com",
+  "robertthomas@yahoo.com",
+  "jenniferlee@hotmail.com",
+  "williamjackson@gmail.com",
+  "sophiamartinez@yahoo.com",
+  "jamesrodriguez@hotmail.com",
+  "olivialopez@gmail.com",
+  "ethanadams@yahoo.com",
+  "avawalker@hotmail.com",
+  "matthewhill@gmail.com",
+  "charlotteyoung@yahoo.com",
+  "danielturner@hotmail.com",
+  "ameliarobinson@gmail.com",
+  "alexanderharris@yahoo.com",
+  "johnwick@gmail.com",
+  "tungle@yahoo.com",
+  "lisasmith@hotmail.com",
+  "michaelbrown@gmail.com",
+  "emilyjones@yahoo.com",
+  "davidwilson@hotmail.com",
+  "sarahdavis@gmail.com",
+  "robertthomas@yahoo.com",
+  "jenniferlee@hotmail.com",
+  "williamjackson@gmail.com",
+  "sophiamartinez@yahoo.com",
+  "jamesrodriguez@hotmail.com",
+  "olivialopez@gmail.com",
+  "ethanadams@yahoo.com",
+  "avawalker@hotmail.com",
+  "matthewhill@gmail.com",
+  "charlotteyoung@yahoo.com",
+  "danielturner@hotmail.com",
+  "ameliarobinson@gmail.com",
+  "alexanderharris@yahoo.com",
+  "johnwick@gmail.com",
+  "tungle@yahoo.com",
+  "lisasmith@hotmail.com",
+  "michaelbrown@gmail.com",
+  "emilyjones@yahoo.com",
+  "davidwilson@hotmail.com",
+  "sarahdavis@gmail.com",
+  "robertthomas@yahoo.com",
+  "jenniferlee@hotmail.com",
+  "williamjackson@gmail.com",
+  "sophiamartinez@yahoo.com",
+  "jamesrodriguez@hotmail.com",
+  "olivialopez@gmail.com",
+  "ethanadams@yahoo.com",
+  "avawalker@hotmail.com",
+  "matthewhill@gmail.com",
+  "charlotteyoung@yahoo.com",
+  "danielturner@hotmail.com",
+  "ameliarobinson@gmail.com",
+  "alexanderharris@yahoo.com",
+];
+const identifyArr = [
+  "4325.5654.7652.445",
+  "9876.5432.1234.5678",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "1234.5678.9012.3456",
+  "5555.6666.7777.8888",
+  "2468.1357.8642.9753",
+  "7777.8888.9999.0000",
+  "9876.5432.1010.2020",
+  "1234.5678.4321.8765",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "1234.5678.9012.3456",
+  "5555.6666.7777.8888",
+  "2468.1357.8642.9753",
+  "7777.8888.9999.0000",
+  "9876.5432.1010.2020",
+  "1234.5678.4321.8765",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "4325.5654.7652.445",
+  "9876.5432.1234.5678",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "1234.5678.9012.3456",
+  "5555.6666.7777.8888",
+  "2468.1357.8642.9753",
+  "7777.8888.9999.0000",
+  "9876.5432.1010.2020",
+  "1234.5678.4321.8765",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "1234.5678.9012.3456",
+  "5555.6666.7777.8888",
+  "2468.1357.8642.9753",
+  "7777.8888.9999.0000",
+  "9876.5432.1010.2020",
+  "1234.5678.4321.8765",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "4325.5654.7652.445",
+  "9876.5432.1234.5678",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "1234.5678.9012.3456",
+  "5555.6666.7777.8888",
+  "2468.1357.8642.9753",
+  "7777.8888.9999.0000",
+  "9876.5432.1010.2020",
+  "1234.5678.4321.8765",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "1234.5678.9012.3456",
+  "5555.6666.7777.8888",
+  "2468.1357.8642.9753",
+  "7777.8888.9999.0000",
+  "9876.5432.1010.2020",
+  "1234.5678.4321.8765",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "4325.5654.7652.445",
+  "9876.5432.1234.5678",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "1234.5678.9012.3456",
+  "5555.6666.7777.8888",
+  "2468.1357.8642.9753",
+  "7777.8888.9999.0000",
+  "9876.5432.1010.2020",
+  "1234.5678.4321.8765",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+  "1234.5678.9012.3456",
+  "5555.6666.7777.8888",
+  "2468.1357.8642.9753",
+  "7777.8888.9999.0000",
+  "9876.5432.1010.2020",
+  "1234.5678.4321.8765",
+  "1111.2222.3333.4444",
+  "9999.8888.7777.6666",
+];
+
+const createOwner = (i) => {
+  return {
+    id: uuidv4(),
+    name: faker.person.lastName(),
+    avatar: avatarArr[i],
+
+    more_info: {
+      birth: getRandomBirthYear(),
+      school: fakeData.getUni(),
+      live_in: countryArray[i],
+      speak: languageArray[i],
+      pet: petSentences[i],
+      work: jobArray[i],
+      good_at: topicArray[i],
+      past_trips: locationArray[i],
+    },
+
+    account: {
+      hosting_years: yearArr[i],
+      rating: ratingArr[i],
+      reviews: [],
+      level: levelArr[i],
+    },
+    identify: {
+      identity: identifyArr[i],
+      email: emailArr[i],
+    },
+  };
+};
+function createOwners() {
+  const owners = [];
+  for (let i = 0; i <= 80; i++) {
+    owners.push(createOwner(i));
+  }
+  return owners;
+}
+// const owners = createOwners();
+const owners =  [{"id":"7f30aa5a-1146-4147-81fb-2e99cfa2e9ee","name":"Bosco","avatar":"./images/avatar/1.jpg","more_info":{"birth":1987,"school":"University of California, Berkeley","live_in":"England","speak":"English","pet":"I have a cat named Max.","work":"Graphic Designer","good_at":"Art","past_trips":["Chademeni, Greece"]},"account":{"hosting_years":7,"rating":"4.8","reviews":[],"level":"Host"},"identify":{"identity":"4325.5654.7652.445","email":"johnwick@gmail.com"}},{"id":"bd6e5a83-6c85-4085-87df-b4fe36c5a07f","name":"Casper","avatar":"./images/avatar/2.jpg","more_info":{"birth":1960,"school":"University of California, Berkeley","live_in":"United States","speak":"Chinese","pet":"My dog loves to play fetch in the park.","work":"Teacher","good_at":"Design","past_trips":["Lesina, Italy"]},"account":{"hosting_years":2,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"9876.5432.1234.5678","email":"tungle@yahoo.com"}},{"id":"9b8cd52d-d5b2-4f98-985f-896cb28f9ea3","name":"Lowe","avatar":"./images/avatar/3.jpg","more_info":{"birth":1969,"school":"University of Chicago","live_in":"Canada","speak":"Spanish","pet":"I adopted a rescue dog last year.","work":"Software Engineer","good_at":"Football","past_trips":["London, United Kingdom"]},"account":{"hosting_years":9,"rating":"4.7","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"lisasmith@hotmail.com"}},{"id":"7f98cdd9-41bd-4051-ac5d-58bb68220b03","name":"Johns","avatar":"./images/avatar/4.jpg","more_info":{"birth":1979,"school":"University of Cambridge","live_in":"Australia","speak":"French","pet":"Our family has two rabbits as pets.","work":"Nurse","good_at":"Travel","past_trips":["New York City, United States","Los Angeles, United States"]},"account":{"hosting_years":3,"rating":"4.5","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"michaelbrown@gmail.com"}},{"id":"923a537f-b09d-4f52-9be4-b983f9a52cef","name":"Haag","avatar":"./images/avatar/5.jpg","more_info":{"birth":1983,"school":"University of Oxford","live_in":"Germany","speak":"German","pet":"I take my hamster out for a walk in a small ball.","work":"Marketing Manager","good_at":"Music","past_trips":["Paris, France","Nice, France"]},"account":{"hosting_years":8,"rating":"5","reviews":[],"level":"Host"},"identify":{"identity":"1234.5678.9012.3456","email":"emilyjones@yahoo.com"}},{"id":"4afeac58-3297-4e63-9bf3-4b4d399843fb","name":"Friesen","avatar":"./images/avatar/6.jpg","more_info":{"birth":1987,"school":"University of Oxford","live_in":"France","speak":"Japanese","pet":"My parrot can mimic human speech.","work":"Accountant","good_at":"Food","past_trips":["Tokyo, Japan","Osaka, Japan","Kyoto, Japan"]},"account":{"hosting_years":5,"rating":"4.9","reviews":[],"level":"Super host"},"identify":{"identity":"5555.6666.7777.8888","email":"davidwilson@hotmail.com"}},{"id":"c6974cfa-dbe9-4b21-b487-28adacdbe3ac","name":"Metz","avatar":"./images/avatar/7.jpg","more_info":{"birth":1981,"school":"University of Toronto","live_in":"Italy","speak":"Russian","pet":"I enjoy cuddling with my guinea pig.","work":"Web Developer","good_at":"Technology","past_trips":["Moscow, Russia"]},"account":{"hosting_years":1,"rating":"4.5","reviews":[],"level":"Host"},"identify":{"identity":"2468.1357.8642.9753","email":"sarahdavis@gmail.com"}},{"id":"abbb348a-d4ef-48a7-be0b-95191c990be9","name":"Kshlerin","avatar":"./images/avatar/8.jpg","more_info":{"birth":1994,"school":"University of Oxford","live_in":"Spain","speak":"Portuguese","pet":"My fish tank is filled with colorful tropical fish.","work":"Doctor","good_at":"Fashion","past_trips":["Sydney, Australia","Melbourne, Australia"]},"account":{"hosting_years":6,"rating":"4.7","reviews":[],"level":"Super host"},"identify":{"identity":"7777.8888.9999.0000","email":"robertthomas@yahoo.com"}},{"id":"7429370c-bda1-4654-bfd6-113929908297","name":"Wuckert-Weimann","avatar":"./images/avatar/1.jpg","more_info":{"birth":1971,"school":"Massachusetts Institute of Technology","live_in":"Japan","speak":"Arabic","pet":"I trained my dog to do tricks like sit and shake hands.","work":"Sales Representative","good_at":"Books","past_trips":["Rio de Janeiro, Brazil"]},"account":{"hosting_years":4,"rating":"4","reviews":[],"level":"Host"},"identify":{"identity":"9876.5432.1010.2020","email":"jenniferlee@hotmail.com"}},{"id":"aea61144-368d-4a2c-bda3-8bd426b4b909","name":"Kreiger-Aufderhar","avatar":"./images/avatar/2.jpg","more_info":{"birth":1985,"school":"Stanford University","live_in":"China","speak":"Hindi","pet":"My pet snake sheds its skin regularly.","work":"Data Analyst","good_at":"Fitness","past_trips":["Cancun, Mexico","Mexico City, Mexico"]},"account":{"hosting_years":10,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"1234.5678.4321.8765","email":"williamjackson@gmail.com"}},{"id":"fa37790c-68d5-40c8-8a83-9cf46c38c97c","name":"Gerhold","avatar":"./images/avatar/3.jpg","more_info":{"birth":1993,"school":"Harvard University","live_in":"Brazil","speak":"Bengali","pet":"I love watching my pet turtle swim in its tank.","work":"Architect","good_at":"Photography","past_trips":["Cairo, Egypt"]},"account":{"hosting_years":3,"rating":"4.8","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"sophiamartinez@yahoo.com"}},{"id":"bd2664f8-0e0a-4588-abfa-191e898a371e","name":"Purdy","avatar":"./images/avatar/4.jpg","more_info":{"birth":1995,"school":"University of Cambridge","live_in":"Mexico","speak":"Punjabi","pet":"My bird sings beautiful melodies.","work":"Human Resources Manager","good_at":"Nature","past_trips":["Dubai, United Arab Emirates"]},"account":{"hosting_years":6,"rating":"4.5","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"jamesrodriguez@hotmail.com"}},{"id":"c8e5ecf4-20b2-4682-9d4e-f48fc57098ea","name":"Halvorson","avatar":"./images/avatar/5.jpg","more_info":{"birth":1966,"school":"Princeton University","live_in":"India","speak":"Indonesian","pet":"I spoil my pet ferret with lots of toys.","work":"Financial Analyst","good_at":"Film","past_trips":["Barcelona, Spain","Madrid, Spain"]},"account":{"hosting_years":2,"rating":"4.7","reviews":[],"level":"Host"},"identify":{"identity":"1234.5678.9012.3456","email":"olivialopez@gmail.com"}},{"id":"7ac411e2-68cd-4742-b401-7ae663e68434","name":"Anderson","avatar":"./images/avatar/6.jpg","more_info":{"birth":1988,"school":"University of California, Berkeley","live_in":"Russia","speak":"Urdu","pet":"My pet horse enjoys long rides in the countryside.","work":"Chef","good_at":"Science","past_trips":["Berlin, Germany"]},"account":{"hosting_years":9,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"5555.6666.7777.8888","email":"ethanadams@yahoo.com"}},{"id":"6563d531-9710-404b-a72d-0c0b7bbadb4b","name":"Koelpin","avatar":"./images/avatar/7.jpg","more_info":{"birth":1968,"school":"Yale University","live_in":"South Korea","speak":"Italian","pet":"I have a pet tarantula in a terrarium.","work":"Mechanical Engineer","good_at":"Gaming","past_trips":["Toronto, Canada","Vancouver, Canada"]},"account":{"hosting_years":1,"rating":"4.9","reviews":[],"level":"Host"},"identify":{"identity":"2468.1357.8642.9753","email":"avawalker@hotmail.com"}},{"id":"400ecc29-bdd1-4fa5-a6a1-6420cf74f2e2","name":"Graham","avatar":"./images/avatar/8.jpg","more_info":{"birth":1973,"school":"Imperial College London","live_in":"Netherlands","speak":"Dutch","pet":"My pet iguana likes basking under a heat lamp.","work":"Social Media Manager","good_at":"Cooking","past_trips":["Amsterdam, Netherlands"]},"account":{"hosting_years":8,"rating":"5","reviews":[],"level":"Super host"},"identify":{"identity":"7777.8888.9999.0000","email":"matthewhill@gmail.com"}},{"id":"f6d614aa-6a5d-40b4-8ab3-7859409d347f","name":"Vandervort","avatar":"./images/avatar/1.jpg","more_info":{"birth":1983,"school":"Massachusetts Institute of Technology","live_in":"Switzerland","speak":"Swedish","pet":"I take my pet hedgehog out for supervised playtime.","work":"Event Planner","good_at":"Business","past_trips":["Stockholm, Sweden"]},"account":{"hosting_years":5,"rating":"4","reviews":[],"level":"Host"},"identify":{"identity":"9876.5432.1010.2020","email":"charlotteyoung@yahoo.com"}},{"id":"715c4162-722c-4247-9a1c-dfe4318f6648","name":"Reynolds","avatar":"./images/avatar/2.jpg","more_info":{"birth":1980,"school":"University of Pennsylvania","live_in":"Sweden","speak":"Turkish","pet":"My pet chinchilla loves to run on its exercise wheel.","work":"Lawyer","good_at":"Health","past_trips":["Istanbul, Turkey"]},"account":{"hosting_years":4,"rating":"4.8","reviews":[],"level":"Super host"},"identify":{"identity":"1234.5678.4321.8765","email":"danielturner@hotmail.com"}},{"id":"9a9ea5fa-ab86-4c09-b7d0-5f4b0de8fdb0","name":"Kuhlman","avatar":"./images/avatar/3.jpg","more_info":{"birth":1969,"school":"Harvard University","live_in":"Norway","speak":"Korean","pet":"I have a pair of lovebirds that are inseparable.","work":"Photographer","good_at":"History","past_trips":["Seoul, South Korea"]},"account":{"hosting_years":7,"rating":"4.5","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"ameliarobinson@gmail.com"}},{"id":"1d5d0cd5-c4e2-48c5-8ce8-93f077187ce2","name":"Cartwright","avatar":"./images/avatar/4.jpg","more_info":{"birth":1983,"school":"University of Toronto","live_in":"South Africa","speak":"Polish","pet":"My pet rabbit enjoys munching on fresh vegetables.","work":"Electrician","good_at":"Education","past_trips":["Warsaw, Poland"]},"account":{"hosting_years":10,"rating":"4.7","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"alexanderharris@yahoo.com"}},{"id":"fecc22ec-7550-4baf-a898-197aee83be52","name":"McCullough","avatar":"./images/avatar/5.jpg","more_info":{"birth":1969,"school":"University of California, Berkeley","live_in":"England","speak":"English","pet":"I have a cat named Max.","good_at":"Art","past_trips":["Chademeni, Greece"]},"account":{"hosting_years":7,"rating":"4.8","reviews":[],"level":"Host"},"identify":{"identity":"4325.5654.7652.445","email":"johnwick@gmail.com"}},{"id":"5a315b9b-17fb-47ee-8aec-afc61f124f7b","name":"Walsh","avatar":"./images/avatar/6.jpg","more_info":{"birth":1976,"school":"Yale University","live_in":"United States","speak":"Chinese","pet":"My dog loves to play fetch in the park.","good_at":"Design","past_trips":["Lesina, Italy"]},"account":{"hosting_years":2,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"9876.5432.1234.5678","email":"tungle@yahoo.com"}},{"id":"bba863cb-0bec-4b5c-a85a-dc946a124d3e","name":"Rodriguez","avatar":"./images/avatar/7.jpg","more_info":{"birth":1992,"school":"Columbia University","live_in":"Canada","speak":"Spanish","pet":"I adopted a rescue dog last year.","good_at":"Football","past_trips":["London, United Kingdom"]},"account":{"hosting_years":9,"rating":"4.7","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"lisasmith@hotmail.com"}},{"id":"3dd40db2-ab1d-476f-b5c0-1f251ff136ad","name":"Walsh","avatar":"./images/avatar/8.jpg","more_info":{"birth":1984,"school":"University of Toronto","live_in":"Australia","speak":"French","pet":"Our family has two rabbits as pets.","good_at":"Travel","past_trips":["New York City, United States","Los Angeles, United States"]},"account":{"hosting_years":3,"rating":"4.5","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"michaelbrown@gmail.com"}},{"id":"0f1e46be-dea5-4e23-ae55-6ac9a51322f3","name":"Kutch","avatar":"./images/avatar/1.jpg","more_info":{"birth":1986,"school":"Cornell University","live_in":"Germany","speak":"German","pet":"I take my hamster out for a walk in a small ball.","good_at":"Music","past_trips":["Paris, France","Nice, France"]},"account":{"hosting_years":8,"rating":"5","reviews":[],"level":"Host"},"identify":{"identity":"1234.5678.9012.3456","email":"emilyjones@yahoo.com"}},{"id":"d008136d-5fd8-4fbb-b352-a47286b18fd6","name":"Langworth","avatar":"./images/avatar/2.jpg","more_info":{"birth":1994,"school":"University of Pennsylvania","live_in":"France","speak":"Japanese","pet":"My parrot can mimic human speech.","good_at":"Food","past_trips":["Tokyo, Japan","Osaka, Japan","Kyoto, Japan"]},"account":{"hosting_years":5,"rating":"4.9","reviews":[],"level":"Super host"},"identify":{"identity":"5555.6666.7777.8888","email":"davidwilson@hotmail.com"}},{"id":"495e2428-e150-48e1-af03-74152234bb5b","name":"Schultz","avatar":"./images/avatar/3.jpg","more_info":{"birth":1978,"school":"Stanford University","live_in":"Italy","speak":"Russian","pet":"I enjoy cuddling with my guinea pig.","good_at":"Technology","past_trips":["Moscow, Russia"]},"account":{"hosting_years":1,"rating":"4.5","reviews":[],"level":"Host"},"identify":{"identity":"2468.1357.8642.9753","email":"sarahdavis@gmail.com"}},{"id":"4920c3b4-aedf-4e9c-bfe0-2be72359d31e","name":"Koepp","avatar":"./images/avatar/4.jpg","more_info":{"birth":1976,"school":"Imperial College London","live_in":"Spain","speak":"Portuguese","pet":"My fish tank is filled with colorful tropical fish.","good_at":"Fashion","past_trips":["Sydney, Australia","Melbourne, Australia"]},"account":{"hosting_years":6,"rating":"4.7","reviews":[],"level":"Super host"},"identify":{"identity":"7777.8888.9999.0000","email":"robertthomas@yahoo.com"}},{"id":"bf49ace3-0e53-4841-bf88-e6b42afd50e1","name":"Cole","avatar":"./images/avatar/5.jpg","more_info":{"birth":1983,"school":"Princeton University","live_in":"Japan","speak":"Arabic","pet":"I trained my dog to do tricks like sit and shake hands.","good_at":"Books","past_trips":["Rio de Janeiro, Brazil"]},"account":{"hosting_years":4,"rating":"4","reviews":[],"level":"Host"},"identify":{"identity":"9876.5432.1010.2020","email":"jenniferlee@hotmail.com"}},{"id":"03a301db-8621-470a-88cd-c0a9eec3e584","name":"Rau","avatar":"./images/avatar/6.jpg","more_info":{"birth":1978,"school":"Cornell University","live_in":"China","speak":"Hindi","pet":"My pet snake sheds its skin regularly.","good_at":"Fitness","past_trips":["Cancun, Mexico","Mexico City, Mexico"]},"account":{"hosting_years":10,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"1234.5678.4321.8765","email":"williamjackson@gmail.com"}},{"id":"652b18b8-6066-4aa3-bb7d-dae1cfe9e816","name":"Carter","avatar":"./images/avatar/7.jpg","more_info":{"birth":1981,"school":"Cornell University","live_in":"Brazil","speak":"Bengali","pet":"I love watching my pet turtle swim in its tank.","good_at":"Photography","past_trips":["Cairo, Egypt"]},"account":{"hosting_years":3,"rating":"4.8","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"sophiamartinez@yahoo.com"}},{"id":"503b3968-7665-4a27-92e7-3aeb46161a10","name":"Doyle","avatar":"./images/avatar/8.jpg","more_info":{"birth":1977,"school":"University of California, Los Angeles","live_in":"Mexico","speak":"Punjabi","pet":"My bird sings beautiful melodies.","good_at":"Nature","past_trips":["Dubai, United Arab Emirates"]},"account":{"hosting_years":6,"rating":"4.5","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"jamesrodriguez@hotmail.com"}},{"id":"52b92606-47e5-405f-81c9-a6bcce1076a9","name":"Hayes","avatar":"./images/avatar/1.jpg","more_info":{"birth":1976,"school":"University of Pennsylvania","live_in":"India","speak":"Indonesian","pet":"I spoil my pet ferret with lots of toys.","good_at":"Film","past_trips":["Barcelona, Spain","Madrid, Spain"]},"account":{"hosting_years":2,"rating":"4.7","reviews":[],"level":"Host"},"identify":{"identity":"1234.5678.9012.3456","email":"olivialopez@gmail.com"}},{"id":"74275724-d28c-44a3-ba57-b83ad01fef09","name":"Senger","avatar":"./images/avatar/2.jpg","more_info":{"birth":1969,"school":"University of Chicago","live_in":"Russia","speak":"Urdu","pet":"My pet horse enjoys long rides in the countryside.","good_at":"Science","past_trips":["Berlin, Germany"]},"account":{"hosting_years":9,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"5555.6666.7777.8888","email":"ethanadams@yahoo.com"}},{"id":"4f8db836-a38b-4960-936e-012e76f61877","name":"Hermiston","avatar":"./images/avatar/3.jpg","more_info":{"birth":1994,"school":"Princeton University","live_in":"South Korea","speak":"Italian","pet":"I have a pet tarantula in a terrarium.","good_at":"Gaming","past_trips":["Toronto, Canada","Vancouver, Canada"]},"account":{"hosting_years":1,"rating":"4.9","reviews":[],"level":"Host"},"identify":{"identity":"2468.1357.8642.9753","email":"avawalker@hotmail.com"}},{"id":"23c67287-e5e0-43db-9b04-d4d5326b5035","name":"Deckow","avatar":"./images/avatar/4.jpg","more_info":{"birth":1982,"school":"University of California, Los Angeles","live_in":"Netherlands","speak":"Dutch","pet":"My pet iguana likes basking under a heat lamp.","good_at":"Cooking","past_trips":["Amsterdam, Netherlands"]},"account":{"hosting_years":8,"rating":"5","reviews":[],"level":"Super host"},"identify":{"identity":"7777.8888.9999.0000","email":"matthewhill@gmail.com"}},{"id":"85b444eb-2fe5-4720-bf42-8baa7310484e","name":"Boyle","avatar":"./images/avatar/5.jpg","more_info":{"birth":1971,"school":"Harvard University","live_in":"Switzerland","speak":"Swedish","pet":"I take my pet hedgehog out for supervised playtime.","good_at":"Business","past_trips":["Stockholm, Sweden"]},"account":{"hosting_years":5,"rating":"4","reviews":[],"level":"Host"},"identify":{"identity":"9876.5432.1010.2020","email":"charlotteyoung@yahoo.com"}},{"id":"7658d4ab-5d5d-4f87-9d63-d9ac353d10f4","name":"Marvin","avatar":"./images/avatar/6.jpg","more_info":{"birth":1984,"school":"Yale University","live_in":"Sweden","speak":"Turkish","pet":"My pet chinchilla loves to run on its exercise wheel.","good_at":"Health","past_trips":["Istanbul, Turkey"]},"account":{"hosting_years":4,"rating":"4.8","reviews":[],"level":"Super host"},"identify":{"identity":"1234.5678.4321.8765","email":"danielturner@hotmail.com"}},{"id":"1660ad38-95eb-44d1-88b9-59971e38e46a","name":"Baumbach","avatar":"./images/avatar/7.jpg","more_info":{"birth":1973,"school":"University of Pennsylvania","live_in":"Norway","speak":"Korean","pet":"I have a pair of lovebirds that are inseparable.","good_at":"History","past_trips":["Seoul, South Korea"]},"account":{"hosting_years":7,"rating":"4.5","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"ameliarobinson@gmail.com"}},{"id":"616bde7c-1993-45bf-92e1-3bd24b1993bf","name":"Jones","avatar":"./images/avatar/8.jpg","more_info":{"birth":1995,"school":"Imperial College London","live_in":"South Africa","speak":"Polish","pet":"My pet rabbit enjoys munching on fresh vegetables.","good_at":"Education","past_trips":["Warsaw, Poland"]},"account":{"hosting_years":10,"rating":"4.7","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"alexanderharris@yahoo.com"}},{"id":"52899359-1a54-4f80-94cf-ec7e5d63a3dd","name":"Nolan","avatar":"./images/avatar/1.jpg","more_info":{"birth":1968,"school":"Massachusetts Institute of Technology","live_in":"England","speak":"English","pet":"I have a cat named Max.","good_at":"Art","past_trips":["Chademeni, Greece"]},"account":{"hosting_years":7,"rating":"4.8","reviews":[],"level":"Host"},"identify":{"identity":"4325.5654.7652.445","email":"johnwick@gmail.com"}},{"id":"030defa2-088e-415b-aab5-bf79dff5c173","name":"Runolfsson","avatar":"./images/avatar/2.jpg","more_info":{"birth":1978,"school":"University of California, Berkeley","live_in":"United States","speak":"Chinese","pet":"My dog loves to play fetch in the park.","good_at":"Design","past_trips":["Lesina, Italy"]},"account":{"hosting_years":2,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"9876.5432.1234.5678","email":"tungle@yahoo.com"}},{"id":"b2909f03-224b-4321-b37e-426de07a5153","name":"Ward","avatar":"./images/avatar/3.jpg","more_info":{"birth":1975,"school":"University College London","live_in":"Canada","speak":"Spanish","pet":"I adopted a rescue dog last year.","good_at":"Football","past_trips":["London, United Kingdom"]},"account":{"hosting_years":9,"rating":"4.7","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"lisasmith@hotmail.com"}},{"id":"ec2cbbaf-f232-4463-86c3-ecf7e78f8662","name":"Ortiz","avatar":"./images/avatar/4.jpg","more_info":{"birth":1989,"school":"California Institute of Technology","live_in":"Australia","speak":"French","pet":"Our family has two rabbits as pets.","good_at":"Travel","past_trips":["New York City, United States","Los Angeles, United States"]},"account":{"hosting_years":3,"rating":"4.5","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"michaelbrown@gmail.com"}},{"id":"521c4ba5-1778-40fd-aa23-5e14c3009775","name":"Weissnat","avatar":"./images/avatar/5.jpg","more_info":{"birth":1970,"school":"University of Oxford","live_in":"Germany","speak":"German","pet":"I take my hamster out for a walk in a small ball.","good_at":"Music","past_trips":["Paris, France","Nice, France"]},"account":{"hosting_years":8,"rating":"5","reviews":[],"level":"Host"},"identify":{"identity":"1234.5678.9012.3456","email":"emilyjones@yahoo.com"}},{"id":"5fa1fc5b-356e-4f02-84fc-c498c9a5a23b","name":"MacGyver","avatar":"./images/avatar/6.jpg","more_info":{"birth":1966,"school":"University of California, Los Angeles","live_in":"France","speak":"Japanese","pet":"My parrot can mimic human speech.","good_at":"Food","past_trips":["Tokyo, Japan","Osaka, Japan","Kyoto, Japan"]},"account":{"hosting_years":5,"rating":"4.9","reviews":[],"level":"Super host"},"identify":{"identity":"5555.6666.7777.8888","email":"davidwilson@hotmail.com"}},{"id":"ca3f6642-8400-4a43-b0be-e5cf94ffe71e","name":"Kub","avatar":"./images/avatar/7.jpg","more_info":{"birth":1980,"school":"Massachusetts Institute of Technology","live_in":"Italy","speak":"Russian","pet":"I enjoy cuddling with my guinea pig.","good_at":"Technology","past_trips":["Moscow, Russia"]},"account":{"hosting_years":1,"rating":"4.5","reviews":[],"level":"Host"},"identify":{"identity":"2468.1357.8642.9753","email":"sarahdavis@gmail.com"}},{"id":"ea68e1dd-18f1-46fc-a141-193c93b4c3a6","name":"Bartoletti","avatar":"./images/avatar/8.jpg","more_info":{"birth":1966,"school":"Massachusetts Institute of Technology","live_in":"Spain","speak":"Portuguese","pet":"My fish tank is filled with colorful tropical fish.","good_at":"Fashion","past_trips":["Sydney, Australia","Melbourne, Australia"]},"account":{"hosting_years":6,"rating":"4.7","reviews":[],"level":"Super host"},"identify":{"identity":"7777.8888.9999.0000","email":"robertthomas@yahoo.com"}},{"id":"f053dddb-c715-4d23-8afa-28e68952ba0e","name":"Harber","avatar":"./images/avatar/1.jpg","more_info":{"birth":1993,"school":"University of Toronto","live_in":"Japan","speak":"Arabic","pet":"I trained my dog to do tricks like sit and shake hands.","good_at":"Books","past_trips":["Rio de Janeiro, Brazil"]},"account":{"hosting_years":4,"rating":"4","reviews":[],"level":"Host"},"identify":{"identity":"9876.5432.1010.2020","email":"jenniferlee@hotmail.com"}},{"id":"e1583a1d-aaf3-43c9-beb4-55c654687974","name":"Muller","avatar":"./images/avatar/2.jpg","more_info":{"birth":1983,"school":"California Institute of Technology","live_in":"China","speak":"Hindi","pet":"My pet snake sheds its skin regularly.","good_at":"Fitness","past_trips":["Cancun, Mexico","Mexico City, Mexico"]},"account":{"hosting_years":10,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"1234.5678.4321.8765","email":"williamjackson@gmail.com"}},{"id":"ec74bc15-555b-4f82-b852-ca8f70872989","name":"Weissnat","avatar":"./images/avatar/3.jpg","more_info":{"birth":1964,"school":"Princeton University","live_in":"Brazil","speak":"Bengali","pet":"I love watching my pet turtle swim in its tank.","good_at":"Photography","past_trips":["Cairo, Egypt"]},"account":{"hosting_years":3,"rating":"4.8","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"sophiamartinez@yahoo.com"}},{"id":"d068287b-a7ba-489c-b783-37e06d314fa8","name":"Emard","avatar":"./images/avatar/4.jpg","more_info":{"birth":1991,"school":"University of California, Los Angeles","live_in":"Mexico","speak":"Punjabi","pet":"My bird sings beautiful melodies.","good_at":"Nature","past_trips":["Dubai, United Arab Emirates"]},"account":{"hosting_years":6,"rating":"4.5","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"jamesrodriguez@hotmail.com"}},{"id":"96fba1c0-15eb-47f5-a892-32ce7c2e394d","name":"Robel","avatar":"./images/avatar/5.jpg","more_info":{"birth":1964,"school":"California Institute of Technology","live_in":"India","speak":"Indonesian","pet":"I spoil my pet ferret with lots of toys.","good_at":"Film","past_trips":["Barcelona, Spain","Madrid, Spain"]},"account":{"hosting_years":2,"rating":"4.7","reviews":[],"level":"Host"},"identify":{"identity":"1234.5678.9012.3456","email":"olivialopez@gmail.com"}},{"id":"fbc9c5e8-2d3e-404c-89da-ab43589b7d97","name":"Ryan","avatar":"./images/avatar/6.jpg","more_info":{"birth":1980,"school":"University of California, Berkeley","live_in":"Russia","speak":"Urdu","pet":"My pet horse enjoys long rides in the countryside.","good_at":"Science","past_trips":["Berlin, Germany"]},"account":{"hosting_years":9,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"5555.6666.7777.8888","email":"ethanadams@yahoo.com"}},{"id":"fa032304-cb88-402a-acbf-98db34b8175a","name":"Bartell","avatar":"./images/avatar/7.jpg","more_info":{"birth":1974,"school":"Columbia University","live_in":"South Korea","speak":"Italian","pet":"I have a pet tarantula in a terrarium.","good_at":"Gaming","past_trips":["Toronto, Canada","Vancouver, Canada"]},"account":{"hosting_years":1,"rating":"4.9","reviews":[],"level":"Host"},"identify":{"identity":"2468.1357.8642.9753","email":"avawalker@hotmail.com"}},{"id":"f0ea7024-bb0f-4b39-a45c-154ddba4fe3d","name":"Ritchie","avatar":"./images/avatar/8.jpg","more_info":{"birth":1965,"school":"University of Oxford","live_in":"Netherlands","speak":"Dutch","pet":"My pet iguana likes basking under a heat lamp.","good_at":"Cooking","past_trips":["Amsterdam, Netherlands"]},"account":{"hosting_years":8,"rating":"5","reviews":[],"level":"Super host"},"identify":{"identity":"7777.8888.9999.0000","email":"matthewhill@gmail.com"}},{"id":"c38ff085-4528-41a8-aefd-153ae1e640bc","name":"Kris","avatar":"./images/avatar/1.jpg","more_info":{"birth":1990,"school":"University of Cambridge","live_in":"Switzerland","speak":"Swedish","pet":"I take my pet hedgehog out for supervised playtime.","good_at":"Business","past_trips":["Stockholm, Sweden"]},"account":{"hosting_years":5,"rating":"4","reviews":[],"level":"Host"},"identify":{"identity":"9876.5432.1010.2020","email":"charlotteyoung@yahoo.com"}},{"id":"03fbed47-2f47-4c48-bcb5-ed587ea41a20","name":"Haag","avatar":"./images/avatar/2.jpg","more_info":{"birth":1987,"school":"Massachusetts Institute of Technology","live_in":"Sweden","speak":"Turkish","pet":"My pet chinchilla loves to run on its exercise wheel.","good_at":"Health","past_trips":["Istanbul, Turkey"]},"account":{"hosting_years":4,"rating":"4.8","reviews":[],"level":"Super host"},"identify":{"identity":"1234.5678.4321.8765","email":"danielturner@hotmail.com"}},{"id":"c04f16f8-eb32-4330-820c-583657d585e0","name":"Kreiger","avatar":"./images/avatar/3.jpg","more_info":{"birth":1984,"school":"University of California, Berkeley","live_in":"Norway","speak":"Korean","pet":"I have a pair of lovebirds that are inseparable.","good_at":"History","past_trips":["Seoul, South Korea"]},"account":{"hosting_years":7,"rating":"4.5","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"ameliarobinson@gmail.com"}},{"id":"8d4cddf4-bc12-43ff-95ce-2a022d8dd3bc","name":"Hessel","avatar":"./images/avatar/4.jpg","more_info":{"birth":1968,"school":"Yale University","live_in":"South Africa","speak":"Polish","pet":"My pet rabbit enjoys munching on fresh vegetables.","good_at":"Education","past_trips":["Warsaw, Poland"]},"account":{"hosting_years":10,"rating":"4.7","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"alexanderharris@yahoo.com"}},{"id":"4e45c6b4-3dac-4634-b4a8-9d70b307612a","name":"Grant","avatar":"./images/avatar/5.jpg","more_info":{"birth":1978,"school":"University of Chicago","live_in":"England","speak":"English","pet":"I have a cat named Max.","good_at":"Art","past_trips":["Chademeni, Greece"]},"account":{"hosting_years":7,"rating":"4.8","reviews":[],"level":"Host"},"identify":{"identity":"4325.5654.7652.445","email":"johnwick@gmail.com"}},{"id":"a244bb8f-db98-4920-bac6-157fea108eac","name":"Barton","avatar":"./images/avatar/6.jpg","more_info":{"birth":1968,"school":"University of California, Berkeley","live_in":"United States","speak":"Chinese","pet":"My dog loves to play fetch in the park.","good_at":"Design","past_trips":["Lesina, Italy"]},"account":{"hosting_years":2,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"9876.5432.1234.5678","email":"tungle@yahoo.com"}},{"id":"b333c5e5-14c1-487a-805b-72df6e0e7d7a","name":"Veum","avatar":"./images/avatar/7.jpg","more_info":{"birth":1966,"school":"University of Pennsylvania","live_in":"Canada","speak":"Spanish","pet":"I adopted a rescue dog last year.","good_at":"Football","past_trips":["London, United Kingdom"]},"account":{"hosting_years":9,"rating":"4.7","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"lisasmith@hotmail.com"}},{"id":"97f92cf3-6089-43cf-98eb-f41855220b00","name":"Bergnaum","avatar":"./images/avatar/8.jpg","more_info":{"birth":1987,"school":"University College London","live_in":"Australia","speak":"French","pet":"Our family has two rabbits as pets.","good_at":"Travel","past_trips":["New York City, United States","Los Angeles, United States"]},"account":{"hosting_years":3,"rating":"4.5","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"michaelbrown@gmail.com"}},{"id":"bb324ab0-6c6a-443c-bd90-bd52688d2ed5","name":"Friesen","avatar":"./images/avatar/1.jpg","more_info":{"birth":1968,"school":"University of Pennsylvania","live_in":"Germany","speak":"German","pet":"I take my hamster out for a walk in a small ball.","good_at":"Music","past_trips":["Paris, France","Nice, France"]},"account":{"hosting_years":8,"rating":"5","reviews":[],"level":"Host"},"identify":{"identity":"1234.5678.9012.3456","email":"emilyjones@yahoo.com"}},{"id":"f31e1f39-d8dd-4185-b7eb-c8843d253078","name":"Rodriguez","avatar":"./images/avatar/2.jpg","more_info":{"birth":1960,"school":"University of Cambridge","live_in":"France","speak":"Japanese","pet":"My parrot can mimic human speech.","good_at":"Food","past_trips":["Tokyo, Japan","Osaka, Japan","Kyoto, Japan"]},"account":{"hosting_years":5,"rating":"4.9","reviews":[],"level":"Super host"},"identify":{"identity":"5555.6666.7777.8888","email":"davidwilson@hotmail.com"}},{"id":"f4367257-dfd2-4a68-baeb-9bf828001484","name":"Wehner","avatar":"./images/avatar/3.jpg","more_info":{"birth":1986,"school":"California Institute of Technology","live_in":"Italy","speak":"Russian","pet":"I enjoy cuddling with my guinea pig.","good_at":"Technology","past_trips":["Moscow, Russia"]},"account":{"hosting_years":1,"rating":"4.5","reviews":[],"level":"Host"},"identify":{"identity":"2468.1357.8642.9753","email":"sarahdavis@gmail.com"}},{"id":"d3854463-89cb-461c-8f36-ae8ea74f48e9","name":"Armstrong","avatar":"./images/avatar/4.jpg","more_info":{"birth":1979,"school":"University of Chicago","live_in":"Spain","speak":"Portuguese","pet":"My fish tank is filled with colorful tropical fish.","good_at":"Fashion","past_trips":["Sydney, Australia","Melbourne, Australia"]},"account":{"hosting_years":6,"rating":"4.7","reviews":[],"level":"Super host"},"identify":{"identity":"7777.8888.9999.0000","email":"robertthomas@yahoo.com"}},{"id":"b8d8ce09-6b25-4e72-8af0-0c12147bdf72","name":"Nicolas","avatar":"./images/avatar/5.jpg","more_info":{"birth":1995,"school":"Harvard University","live_in":"Japan","speak":"Arabic","pet":"I trained my dog to do tricks like sit and shake hands.","good_at":"Books","past_trips":["Rio de Janeiro, Brazil"]},"account":{"hosting_years":4,"rating":"4","reviews":[],"level":"Host"},"identify":{"identity":"9876.5432.1010.2020","email":"jenniferlee@hotmail.com"}},{"id":"91ac65e3-972e-4381-80ec-05857d167003","name":"Brown","avatar":"./images/avatar/6.jpg","more_info":{"birth":1976,"school":"California Institute of Technology","live_in":"China","speak":"Hindi","pet":"My pet snake sheds its skin regularly.","good_at":"Fitness","past_trips":["Cancun, Mexico","Mexico City, Mexico"]},"account":{"hosting_years":10,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"1234.5678.4321.8765","email":"williamjackson@gmail.com"}},{"id":"3a4f43f3-c125-42b7-905e-489ea3fc3faa","name":"Torp","avatar":"./images/avatar/7.jpg","more_info":{"birth":1994,"school":"Stanford University","live_in":"Brazil","speak":"Bengali","pet":"I love watching my pet turtle swim in its tank.","good_at":"Photography","past_trips":["Cairo, Egypt"]},"account":{"hosting_years":3,"rating":"4.8","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"sophiamartinez@yahoo.com"}},{"id":"39343e8b-d3fe-4756-831b-9f820b72afe4","name":"Boyer","avatar":"./images/avatar/8.jpg","more_info":{"birth":1974,"school":"University College London","live_in":"Mexico","speak":"Punjabi","pet":"My bird sings beautiful melodies.","good_at":"Nature","past_trips":["Dubai, United Arab Emirates"]},"account":{"hosting_years":6,"rating":"4.5","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"jamesrodriguez@hotmail.com"}},{"id":"4cd5baff-a68d-47c2-bc42-c1e294a8546c","name":"Barrows","avatar":"./images/avatar/1.jpg","more_info":{"birth":1966,"school":"University of Toronto","live_in":"India","speak":"Indonesian","pet":"I spoil my pet ferret with lots of toys.","good_at":"Film","past_trips":["Barcelona, Spain","Madrid, Spain"]},"account":{"hosting_years":2,"rating":"4.7","reviews":[],"level":"Host"},"identify":{"identity":"1234.5678.9012.3456","email":"olivialopez@gmail.com"}},{"id":"a5cfc98c-63bc-47ed-a4a9-772ef2496cbd","name":"Reynolds","avatar":"./images/avatar/2.jpg","more_info":{"birth":1991,"school":"Cornell University","live_in":"Russia","speak":"Urdu","pet":"My pet horse enjoys long rides in the countryside.","good_at":"Science","past_trips":["Berlin, Germany"]},"account":{"hosting_years":9,"rating":"4.2","reviews":[],"level":"Super host"},"identify":{"identity":"5555.6666.7777.8888","email":"ethanadams@yahoo.com"}},{"id":"7c358631-1970-4b53-ad93-0c4496cadb1a","name":"Frami","avatar":"./images/avatar/3.jpg","more_info":{"birth":1980,"school":"Harvard University","live_in":"South Korea","speak":"Italian","pet":"I have a pet tarantula in a terrarium.","good_at":"Gaming","past_trips":["Toronto, Canada","Vancouver, Canada"]},"account":{"hosting_years":1,"rating":"4.9","reviews":[],"level":"Host"},"identify":{"identity":"2468.1357.8642.9753","email":"avawalker@hotmail.com"}},{"id":"a8ab33e1-891e-4318-9407-582538aa69a3","name":"Pfeffer","avatar":"./images/avatar/4.jpg","more_info":{"birth":1969,"school":"Cornell University","live_in":"Netherlands","speak":"Dutch","pet":"My pet iguana likes basking under a heat lamp.","good_at":"Cooking","past_trips":["Amsterdam, Netherlands"]},"account":{"hosting_years":8,"rating":"5","reviews":[],"level":"Super host"},"identify":{"identity":"7777.8888.9999.0000","email":"matthewhill@gmail.com"}},{"id":"d4b9f7ea-54b2-4d50-95fe-005b5e54b349","name":"Kunde","avatar":"./images/avatar/5.jpg","more_info":{"birth":1974,"school":"University of Pennsylvania","live_in":"Switzerland","speak":"Swedish","pet":"I take my pet hedgehog out for supervised playtime.","good_at":"Business","past_trips":["Stockholm, Sweden"]},"account":{"hosting_years":5,"rating":"4","reviews":[],"level":"Host"},"identify":{"identity":"9876.5432.1010.2020","email":"charlotteyoung@yahoo.com"}},{"id":"7247be22-28e2-4670-8303-bbbfaa75a2df","name":"Watsica","avatar":"./images/avatar/6.jpg","more_info":{"birth":1985,"school":"Imperial College London","live_in":"Sweden","speak":"Turkish","pet":"My pet chinchilla loves to run on its exercise wheel.","good_at":"Health","past_trips":["Istanbul, Turkey"]},"account":{"hosting_years":4,"rating":"4.8","reviews":[],"level":"Super host"},"identify":{"identity":"1234.5678.4321.8765","email":"danielturner@hotmail.com"}},{"id":"82246265-4849-4fc2-aac2-85b269f6e014","name":"Gleichner","avatar":"./images/avatar/7.jpg","more_info":{"birth":1968,"school":"University of California, Berkeley","live_in":"Norway","speak":"Korean","pet":"I have a pair of lovebirds that are inseparable.","good_at":"History","past_trips":["Seoul, South Korea"]},"account":{"hosting_years":7,"rating":"4.5","reviews":[],"level":"Host"},"identify":{"identity":"1111.2222.3333.4444","email":"ameliarobinson@gmail.com"}},{"id":"eb029394-16b4-4ee9-887e-d7bacfab035b","name":"Stanton","avatar":"./images/avatar/8.jpg","more_info":{"birth":1988,"school":"University of Oxford","live_in":"South Africa","speak":"Polish","pet":"My pet rabbit enjoys munching on fresh vegetables.","good_at":"Education","past_trips":["Warsaw, Poland"]},"account":{"hosting_years":10,"rating":"4.7","reviews":[],"level":"Super host"},"identify":{"identity":"9999.8888.7777.6666","email":"alexanderharris@yahoo.com"}},{"id":"7ccbddc0-0b72-46b6-84aa-100eae050173","name":"Lindgren","avatar":"./images/avatar/1.jpg","more_info":{"birth":1968,"school":"University of Chicago"},"account":{"reviews":[],"level":"Host"},"identify":{}}]
 
 export default owners;

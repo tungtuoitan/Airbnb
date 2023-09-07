@@ -182,6 +182,4 @@ function createHomeList() {
   return homeList;
 }
 
-export default () => {
-  console.log(graphValue2.length);
-};
+export default createHomeList

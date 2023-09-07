@@ -1,15 +1,30 @@
 import DefaultAvtIcon from "../icons/default-avt-icon";
-import GlobalIcon from "../icons/global-icon";
 import HamburgerIcon from "../icons/hamburger-icon";
-import { rightOfHeader1 as style } from "../styles/mainStyle";
+import MenuPopUp from "./menuPopUp";
+import { toggleIsMenuOn } from "../reducer/header1Slice";
+import { useDispatch, useSelector } from "react-redux";
+import GreetingText from "./greeting";
+import Avt from "./avt";
+import MenuPopUp2 from "./menuPopUp2";
 
 export default function RightofHeader1() {
+  const dispatch = useDispatch();
+  const isLogged = useSelector((s) => s.accSlice.isLogged);
+  const handleOnClick = () => {
+    dispatch(toggleIsMenuOn());
+  };
   return (
-    <div className={style.container}>
-      <GlobalIcon />
-      <div className={style.div1}>
+    <div className={`w-c100 flex items-center justify-end gap-4 relative`}>
+      <GreetingText />
+      <div
+        className={` flex pl-c12 gap-c12 items-center 
+    border-1 border1-gray rounded-full w-c77 h-c42 relative cursor-pointer
+    `}
+        onClick={handleOnClick}
+      >
         <HamburgerIcon />
-        <DefaultAvtIcon />
+        {isLogged ? <Avt/> : <DefaultAvtIcon />}
+        {isLogged ? <MenuPopUp2/> : <MenuPopUp />}
       </div>
     </div>
   );

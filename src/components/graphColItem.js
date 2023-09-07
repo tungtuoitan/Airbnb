@@ -7,10 +7,7 @@ export default function GraphCol({ height }) {
   const graphFake = useSelector((state) => state.filterSlice.graphFake);
   const placeType = useSelector((state) => state.filterSlice.filter.placeType);
 
-
-
   const biggestAmount = useCreateBiggestAmount();
-
   const leftSliderValue = useSelector(
     (state) => state.filterSlice.leftSliderValue
   );

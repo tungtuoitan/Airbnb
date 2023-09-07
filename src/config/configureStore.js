@@ -12,6 +12,8 @@ import accSliceReducer from "../reducer/accSlice";
 import inboxSlice from '../reducer/inboxSlice'
 import inboxSliceReducer from "../reducer/inboxSlice";
 import filterSliceReducer from "../reducer/filterSlice";
+import header1SliceReducer from "../reducer/header1Slice";
+import wishSliceReducer from "../reducer/wishSlice";
 
 const rooooootReducer = combineReducers({
   root: rootReducer,
@@ -25,7 +27,9 @@ const rooooootReducer = combineReducers({
   loginSlice:loginSliceReducer,
   accSlice:accSliceReducer,
   inboxSlice:inboxSliceReducer,
-  filterSlice:filterSliceReducer
+  filterSlice:filterSliceReducer,
+  header1Slice:header1SliceReducer,
+  wishSlice:wishSliceReducer,
 });
 const actionSanitizer = (action) => (
   action.type === 'FILE_DOWNLOAD_SUCCESS' && action.data ?

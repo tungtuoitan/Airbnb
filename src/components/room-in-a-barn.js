@@ -29,9 +29,9 @@ class RoomInABarn extends React.Component {
                   y1="17.16%"
                   y2="17.16%"
                 >
-                  <stop offset="0" stop-color="#e61e4d"></stop>
-                  <stop offset=".5" stop-color="#e31c5f"></stop>
-                  <stop offset="1" stop-color="#d70466"></stop>
+                  <stop offset="0" stopColor="#e61e4d"></stop>
+                  <stop offset=".5" stopColor="#e31c5f"></stop>
+                  <stop offset="1" stopColor="#d70466"></stop>
                 </linearGradient>
                 <path
                   fill="#fff"

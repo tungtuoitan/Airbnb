@@ -4,22 +4,31 @@ import homeImageArr from "../datas/home-images";
 import PrevButton from "./prev-button";
 import NextButton from "./next-button";
 import DotsSlide from "./dots-slide";
+import { useContext } from "react";
+import { IndexContext } from "../context/indexContext";
+import { homeList } from "../datas/homeListOriginal";
+import { ImgContainer } from "./imgContainer";
+// cái tội k dùng thư viện
 
-function Slider({ path }) {
+function Slider() {
+  // #khởi tạo
+  const i = useContext(IndexContext);
+  const imgArr = homeList[i].imgarr;
+
   const [left, setLeft] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
-
   let [isPrevBtnDisplay, setIsPrevBtnDisplay] = useState(false);
   let [isNextBtnDisplay, setIsNextBtnDisplay] = useState(true);
 
+  // #use effect
   useEffect(() => {
     if (currentIndex === 0) {
       setIsPrevBtnDisplay(false);
     } else {
       setIsPrevBtnDisplay(true);
     }
-    if (currentIndex === homeImageArr[0].length - 1) {
+    if (currentIndex === imgArr.length - 1) {
       setIsNextBtnDisplay(false);
     } else {
       setIsNextBtnDisplay(true);
@@ -37,17 +46,17 @@ function Slider({ path }) {
   let isEnableSwipe = true;
   let isWindowScrolling = [false];
 
-let timeoutId = null
+  let timeoutId = null;
   window.addEventListener("scroll", () => {
-      isWindowScrolling[0]= true
+    isWindowScrolling[0] = true;
 
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-      timeoutId = setTimeout(() => {
-        isWindowScrolling[0] = false
-      }, 200);
-    });
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => {
+      isWindowScrolling[0] = false;
+    }, 200);
+  });
 
   const goTemporary = () => {
     // chịu chết
@@ -73,7 +82,7 @@ let timeoutId = null
       return;
     }
     isEnableSwipe = false;
-    if (currentIndex === homeImageArr[0].length - 1) {
+    if (currentIndex === imgArr.length - 1) {
       isEnableSwipe = true;
       return;
     }
@@ -137,12 +146,8 @@ let timeoutId = null
     <div
       className="SLIDER_CONTAINER   relative h-full    "
       ref={sliderRef}
-      onMouseEnter={() => {
-        onMouseEnter();
-      }}
-      onMouseLeave={() => {
-        onMouseLeave();
-      }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <PrevButton
         onClick={(e) => {
@@ -159,23 +164,8 @@ let timeoutId = null
         isHovering={isHovering}
         isNextBtnDisplay={isNextBtnDisplay}
       />
-        <div
-          className="IMGS_CONTAINTER     flex      w-full h-full transition-margin relative"
-          ref={containerRef}
-          style={{ marginLeft: `${left}px` }}
-        >
-          
-          {homeImageArr[0].map((item, index) => {
-            return (
-              <img
-              
-                src={item}
-                key={index}
-                className="m-0     max-w-full max-h-full object-cover w-full h-full "
-              />
-            );
-          })}
-        </div>
+
+      <ImgContainer ref={containerRef} imgArr={imgArr} left={left} />
     </div>
   );
 }

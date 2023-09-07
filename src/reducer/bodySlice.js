@@ -4,6 +4,7 @@ const bodySlice = createSlice({
   name: "bodySlice",
   initialState: {
     displayItems: 20,
+    isTotalPrice: false,
   },
   reducers: {
     increaseDisplayItems: (state) => {
@@ -11,8 +12,11 @@ const bodySlice = createSlice({
         state.displayItems += 20;
       }
     },
+    setIsTotalPrice:(state,action)=>{
+      state.isTotalPrice=!state.isTotalPrice
+    }
   },
 });
-export const { increaseDisplayItems } = bodySlice.actions;
+export const { increaseDisplayItems,setIsTotalPrice } = bodySlice.actions;
 const bodySliceReducer = bodySlice.reducer;
 export default bodySliceReducer;

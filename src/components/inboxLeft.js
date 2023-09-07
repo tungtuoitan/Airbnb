@@ -9,7 +9,7 @@ export default function InboxLeft() {
   const isMessOn = useSelector((state) => state.inboxSlice.isMessOn);
   return (
     <div
-      className={`w-full  h-full relative px-6 || 
+      className={`w-full   h-full relative px-6 || 
     || border-r-c1 border-solid border-gray-300
     ${isMessOn ? "max-w-c388" : ""}`}
     >

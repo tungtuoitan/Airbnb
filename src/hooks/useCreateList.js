@@ -14,9 +14,8 @@ import { filterWithBooking } from "../function/filterWithBooking";
 export default function useCreateList() {
   const filter = useSelector((state) => state.filterSlice.filter);
 
-  let hlByPlaceType = filterWidthTypePlace(filter, homeList);
-  let hlByPrice = filterWithPriceRange(filter, hlByPlaceType);
-
+  const hlByPlaceType = filterWidthTypePlace(filter, homeList);
+  const hlByPrice = filterWithPriceRange(filter, hlByPlaceType);
   const hlByBeds = filterWithBeds(filter, hlByPrice);
   const hlByBedrooms = filterWithBedrooms(filter, hlByBeds);
   const hlByBathrooms = filterWithBathrooms(filter, hlByBedrooms);

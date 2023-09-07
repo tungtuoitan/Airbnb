@@ -4,7 +4,7 @@ const filterSlice = createSlice({
   name: " filterSlice",
   initialState: {
     // #
-    isFilterOn: true,
+    isFilterOn: false,
     zRandom: Math.random(),
 
     //# Filter Info
