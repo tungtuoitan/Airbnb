@@ -1,136 +1,139 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 
-const resetWho = (state)=>{
-  let itemArr = [state.adults,state.children,state.infants,state.pets]
-  state.who=''
-  for(let i =0;i<itemArr.length;i++){
-    if(itemArr[i].amount!==0){
-      itemArr[i].text = itemArr[i].amount + ' ' + itemArr[i].type + ', '
-    } else{
-      itemArr[i].text = ''
+const resetWho = (state) => {
+  let itemArr = [state.adults, state.children, state.infants, state.pets];
+  state.who = "";
+  for (let i = 0; i < itemArr.length; i++) {
+    if (itemArr[i].amount !== 0) {
+      itemArr[i].text = itemArr[i].amount + " " + itemArr[i].type + ", ";
+
+
+    } else {
+      itemArr[i].text = "";
     }
-    state.who += itemArr[i].text
+
+    state.who += itemArr[i].text;
   }
-  state.who = state.who.slice(0,state.who.length-2)
-  if(state.who===''){
-    state.who= 'Add guests'
+  state.who = state.who.slice(0, state.who.length - 2);
+  if (state.who === "") {
+    state.who = "Add guests";
   }
-}
+};
 const whoComingSlice = createSlice({
   name: "whoComingSlice",
   initialState: {
     adults: {
-      type:'Adults',
-      note:'Age 13 or above',
+      type: "Adults",
+      note: "Age 13 or above",
       limit: 8,
-      amount:0,
-      text:''
+      amount: 1,
+      text: "",
     },
     children: {
-      type:'Children',
-      note:'Age 2-12',
+      type: "Children",
+      note: "Age 2-12",
       limit: 6,
-      amount:0,
-      text:''
+      amount: 0,
+      text: "",
     },
     infants: {
-      type:'Infants',
-      note:'Under 2',
+      type: "Infants",
+      note: "Under 2",
       limit: 4,
-      amount:0,
-      text:''
+      amount: 0,
+      text: "",
     },
     pets: {
-      type:'Pets',
-      note:'',
+      type: "Pets",
+      note: "",
       limit: 2,
-      amount:0,
-      text:''
+      amount: 0,
+      text: "",
     },
-    who:'Add guests'
-    
+    who: "Add guests",
   },
   reducers: {
-    updateWho: (state)=>{
-      
-      
+    updateWho: (state) => {
       // if(state.adults)
-
     },
-    resetAllOfWho: (state)=>{
-      state.adults.amount = 0
-      state.children.amount = 0
-      state.infants.amount = 0
-      state.pets.amount = 0
-      state.who = 'Add guests'
+    resetAllOfWho: (state) => {
+      state.adults.amount = 0;
+      state.children.amount = 0;
+      state.infants.amount = 0;
+      state.pets.amount = 0;
+      state.who = "Add guests";
     },
     increaseAdults: (state) => {
-      if(state.adults.amount>=state.adults.limit){return}
+      if (state.adults.amount >= state.adults.limit) {
+        return;
+      }
       state.adults.amount += 1;
-      resetWho(state)
+      resetWho(state);
     },
     decreaseAdults: (state) => {
-      if(state.adults.amount<=0 ||
-        state.adults.amount===1 && state.children.amount!==0 ||
-        state.adults.amount===1 && state.infants.amount!==0 ||
-        state.adults.amount===1 && state.infants.amount!==0
-        ){return}
-
+      if (state.adults.amount <= 1) {
+        return;
+      }
 
       state.adults.amount -= 1;
-      resetWho(state)
-
+      resetWho(state);
     },
     increaseChildrens: (state) => {
-      if(state.children.amount>=state.children.limit){return}
-      state.children.amount += 1;
-      if (state.adults.amount===0){
-        state.adults.amount=1
+      if (state.children.amount >= state.children.limit) {
+        return;
       }
-      resetWho(state)
-
+      state.children.amount += 1;
+      if (state.adults.amount === 0) {
+        state.adults.amount = 1;
+      }
+      resetWho(state);
     },
     decreaseChildrens: (state) => {
-      if(state.children.amount<=0){return}
+      if (state.children.amount <= 0) {
+        return;
+      }
 
       state.children.amount -= 1;
-      resetWho(state)
-
+      resetWho(state);
     },
 
     increaseInfants: (state) => {
-      if(state.infants.amount>=state.infants.limit){return}
+      if (state.infants.amount >= state.infants.limit) {
+        return;
+      }
 
       state.infants.amount += 1;
-      if (state.adults.amount===0){
-        state.adults.amount=1
+      if (state.adults.amount === 0) {
+        state.adults.amount = 1;
       }
-      resetWho(state)
-
+      resetWho(state);
     },
     decreaseInfants: (state) => {
-      if(state.infants.amount<=0){return}
+      if (state.infants.amount <= 0) {
+        return;
+      }
 
       state.infants.amount -= 1;
-      resetWho(state)
-
+      resetWho(state);
     },
     increasePets: (state) => {
-      if(state.pets.amount>=state.pets.limit){return}
+      if (state.pets.amount >= state.pets.limit) {
+        return;
+      }
 
       state.pets.amount += 1;
-      if (state.adults.amount===0){
-        state.adults.amount=1
+      if (state.adults.amount === 0) {
+        state.adults.amount = 1;
       }
-      resetWho(state)
-
+      resetWho(state);
     },
     decreasePets: (state) => {
-      if(state.pets<=0){return}
+      if (state.pets.amount <= 0) {
+        return;
+      }
 
-      state.pets -= 1;
-      resetWho(state)
-
+      state.pets.amount -= 1;
+      resetWho(state);
     },
   },
 });

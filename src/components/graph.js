@@ -1,4 +1,4 @@
-import useResizeForGraph from "./useResizeForGraph";
+import useResizeForGraph from '../hooks/useResizeForGraph'
 import GraphColItem from "./graphColItem";
 import { useDispatch,useSelector } from "react-redux";
 

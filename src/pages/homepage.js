@@ -20,10 +20,10 @@ function HomePage() {
 
       <div>
         <Body />
-        {/* <Footer />
+        <Footer />
         <DivBonus2/>
         <SearchPopUpMoblie />
-        <MenuBarSmartf /> */}
+        <MenuBarSmartf />
         <Filter/>
 
       </div>

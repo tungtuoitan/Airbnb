@@ -1,7 +1,9 @@
 import titleAndLink from "../datas/in-footer";
 
-
-export default function FooterSection2 ({ type }) {
+export default function FooterSection2({ type }) {
+  const handleOnClick = () => {
+    alert("Xin lỗi, máy chủ đang bảo chì");
+  };
   return (
     <section className="text-left border-b-c1 border-solid border-lgrayd py-6  ">
       <h3 className="font-size14 font-semibold color222 mb-c13">
@@ -10,8 +12,12 @@ export default function FooterSection2 ({ type }) {
       <ul className="grid gap-y-c12 9:grid-cols-3  11:block">
         {titleAndLink[type].map((item, index) => {
           return (
-            <li className="font-size14 color222 text-left " key={index}>
-              <a href={item[1]}>{item[0]} </a>
+            <li
+              className="font-size14 color222 text-left cursor-pointer "
+              onClick={handleOnClick}
+              key={index}
+            >
+              <a>{item[0]} </a>
             </li>
           );
         })}

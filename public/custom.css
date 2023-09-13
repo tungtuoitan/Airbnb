@@ -1,7 +1,6 @@
 .color-pink-main {
   background: linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%);
 }
-
 .main-gradient {
   background: linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%);
 }
@@ -169,10 +168,8 @@
 }
 .heart-icon-2 {
   display: block;
-  fill: none;
   height: 16px;
   width: 16px;
-  stroke: currentcolor;
   stroke-width: 2;
   overflow: visible;
 }
@@ -616,10 +613,10 @@
   height: calc((100%));
 }
 .first-gradient {
-  background: linear-gradient(to right, white 50%, rgb(247, 247, 247));
+  background: linear-gradient(to right, white 50%, rgba(0, 0, 0, 0.1));
 }
 .last-gradient {
-  background: linear-gradient(to left, white 50%, rgb(247, 247, 247));
+  background: linear-gradient(to left, white 50%,rgba(0, 0, 0, 0.1));
 }
 .bg-gray247 {
   background: rgb(247, 247, 247);
@@ -791,4 +788,10 @@ input[type="checkbox"]:checked::before {
   .hoverOn11:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
+}
+.box-shadow-u12{
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+}
+.zmax4{
+  z-index: 10000000000004;
 }

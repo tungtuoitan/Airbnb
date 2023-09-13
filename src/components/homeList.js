@@ -1,20 +1,25 @@
 import React from "react";
 import Item from "../components/item";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { homeList } from "../datas/homeListOriginal";
 import { IndexContext } from "../context/indexContext";
 import useCreateList from "../hooks/useCreateList";
+import { setCurrentHomeId } from "../reducer/roomsSlice";
 
 export default function HomeList() {
+  const dispatch = useDispatch();
   const displayItems = useSelector((state) => state.bodySlice.displayItems);
-  const currentHomeList = useCreateList().currentHomeList
+  const currentHomeList = useCreateList().currentHomeList;
+  const handleOnClick = (index) => {
+    dispatch(setCurrentHomeId(index));
+  };
   return (
     <>
       {currentHomeList.slice(0, displayItems).map((item, index) => {
         return (
           <div className="ITEM_CONTAINERR  max-w-full  " key={item.id}>
-            <Link to="/rooms" target="">
+            <Link to={`/rooms`} target="" onClick={() => handleOnClick(index)}>
               <IndexContext.Provider value={index}>
                 <Item />
               </IndexContext.Provider>

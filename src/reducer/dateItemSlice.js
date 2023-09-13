@@ -10,8 +10,9 @@ const dateItemSlice = createSlice({
       month: today.month,
       year: today.year,
     }, // là cái date khi user nhấn prev / next, chứ k phải time trực tuyến
+    
     whereText: 'Add dates'
-  },
+  },  
   reducers: {
     pickDate: (state, action) => {
       let { firstDate, lastDate } = state;

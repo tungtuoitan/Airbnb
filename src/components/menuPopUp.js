@@ -7,7 +7,7 @@ export default function MenuPopUp() {
 
   return (
     <div
-      className={`bg-white  || py-2 absolute top-12 right-0  w-60
+      className={`bg-white  || py-2 absolute top-12 right-0  w-60 z1000
       || box-shadow-u8 || rounded-2xl text-sm
       ${isMenuOn ? "" : "hidden"}`}
     >

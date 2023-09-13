@@ -1,11 +1,15 @@
 import XCreaseBtn, { dPathIncreaseIcon, dPathDecreaseIcon } from "./xCreaseBtn";
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
-export default function WhoComingItem({ item,handleDecrease,handleIncrease,  haveBottomLine }) {
+export default function WhoComingItem(props) {
+  const { item, handleDecrease, handleIncrease, haveBottomLine } = props;
 
-  const childrenAmount = useSelector(state=>state.whoComing.children.amount)
-  const infantsAmount = useSelector(state=>state.whoComing.infants.amount)
-  const petsAmount = useSelector(state=>state.whoComing.pets.amount)
+  const adultsAmount = useSelector((state) => state.whoComing.adults.amount);
+  const childrenAmount = useSelector(
+    (state) => state.whoComing.children.amount
+  );
+  const infantsAmount = useSelector((state) => state.whoComing.infants.amount);
+  const petsAmount = useSelector((state) => state.whoComing.pets.amount);
 
   return (
     <div
@@ -18,16 +22,15 @@ export default function WhoComingItem({ item,handleDecrease,handleIncrease,  hav
     >
       <div className="LEFT   ">
         <p className="text-base color222 font-bold text-left">{item.type}</p>
-        <p className="text-sm color-gray7 font-medium text-left mt-c2">{item.note}</p>
+        <p className="text-sm color-gray7 font-medium text-left mt-c2">
+          {item.note}
+        </p>
       </div>
       <div className="RIGHT   flex items-center gap-c14">
         <XCreaseBtn
           dPath={dPathDecreaseIcon}
-          cantClick={item.amount <= 0 || 
-            item.amount===1 && childrenAmount !==0 || 
-            item.amount===1 && infantsAmount !==0 ||  
-            item.amount===1 && petsAmount !==0 
-
+          cantClick={
+            item.amount <= 0 || (item.type === "Adults" && item.amount === 1)
           }
           onClick={handleDecrease}
         />

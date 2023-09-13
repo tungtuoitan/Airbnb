@@ -8,7 +8,7 @@ const wishSlice = createSlice({
   reducers: {
     setWishId: (state, action) => {
       if (state.wishIdArr.includes(action.payload)) {
-        state.wishIdArr.pop(action.payload);
+        state.wishIdArr = state.wishIdArr.filter(item => item !==action.payload);
       } else {
         state.wishIdArr.push(action.payload);
       }
