@@ -1196,6 +1196,10 @@ video {
   margin-bottom: -4px;
 }
 
+.mb-c-80 {
+  margin-bottom: -80px;
+}
+
 .mb-c0 {
   margin-bottom: 0px;
 }
@@ -1310,6 +1314,10 @@ video {
 
 .ml-c-4 {
   margin-left: -4px;
+}
+
+.ml-c100 {
+  margin-left: 100px;
 }
 
 .ml-c2 {
@@ -2414,12 +2422,20 @@ video {
   overflow: hidden;
 }
 
+.overflow-clip {
+  overflow: clip;
+}
+
 .overflow-visible {
   overflow: visible;
 }
 
 .overflow-scroll {
   overflow: scroll;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
 }
 
 .overflow-y-auto {
@@ -2432,6 +2448,10 @@ video {
 
 .overflow-y-hidden {
   overflow-y: hidden;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
 }
 
 .overflow-x-scroll {

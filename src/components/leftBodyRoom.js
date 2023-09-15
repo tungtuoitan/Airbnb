@@ -39,7 +39,7 @@ export default function LeftBodyRoom() {
   }, []);
   
   return (
-    <div className="  w-full relative pr-c60  "
+    <div className="  w-full relative   "
     style={{width:`${width*2}px`}}>
       <GoodPrice />
       <TextAboutOwner />

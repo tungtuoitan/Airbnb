@@ -10,7 +10,7 @@ import RightBodyRoom from "../components/rightBodyRoom";
 
 export default function RoomPage() {
   return (
-    <div className="overflow-x-hiddenx   ">
+    <div className="overflow-clip   ">
       <Header1a />
       <SliderOnMobile />
       <TitleContainer />
@@ -19,5 +19,6 @@ export default function RoomPage() {
       <MeetYourHostContainer />
       <FooterOnRoom />
     </div>
+    
   );
 }

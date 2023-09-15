@@ -1,35 +1,22 @@
 import ItemOnBar from "./itemOnBar";
 import { useState, useRef, useEffect } from "react";
+import { useDispatch,useSelector } from "react-redux";
+import { setIsBarOn } from "../reducer/roomsSlice";
 
 export default function RoomBodyBar() {
-  const [isOn, setIsOn] = useState(false);
+  const isOn = useSelector(s=>s.roomSlice.isBarOn)
+  const dispatch = useDispatch()
   const [focusOn, setFocusOn] = useState(0);
 
-  const contRef = useRef(null);
-  useEffect(() => {
-    const handleResize = () => {
-      if (contRef.current) {
-        if (contRef.current.offsetTop !== 0) {
-          setIsOn(true);
-        } else {
-          setIsOn(false);
-        }
-      }
-    };
-    handleResize();
-    window.addEventListener("scroll", handleResize);
-    return () => {
-      window.removeEventListener("scroll", handleResize);
-    };
-  }, []);
+  
 
   return (
     <div
-      ref={contRef}
-      className={`w-screen  bg-white overflow-hidden
-      sticky top-0 absolute hidden 7:block 13:flex  justify-center 
-      7:px-10 11:px-20 13:px-0  zmax3
-      ${isOn ? "h-20 border-b-c1 border-solid border-gray-300" : "h-0"}`}
+     
+      className={`w-full mb-c-80  bg-white overflow-hidden
+       top-0 fixed hidden 7:block 13:flex  justify-center 
+      7:px-10 11:px-20 13:px-0  zmax3 h-20 border-b-c1 border-solid border-gray-300
+      ${isOn ? "" : "7:hidden 13:hidden"}`}
     >
       <div className="flex gap-6 justify-start items-center h-full 13:w-c1120 ">
         <ItemOnBar

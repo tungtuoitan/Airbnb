@@ -10,6 +10,7 @@ const roomSlice = createSlice({
     isAmenlitiesOn: false,
     isNotiOn:false,
     isSticked:false,
+    isBarOn:false,
   },
   reducers: {
     setCurrentSliceIndex: (state, action) => {
@@ -42,6 +43,9 @@ const roomSlice = createSlice({
     },
     setIsSticked: (state,action)=>{
       state.isSticked = action.payload
+    },
+    setIsBarOn: (state,action)=>{
+      state.isBarOn = action.payload
     }
   },
 });
@@ -51,7 +55,8 @@ export const {
   setIsDescOn,
   setIsAmenlitiesOn,
   setIsNotiOn,
-  setIsSticked
+  setIsSticked,
+  setIsBarOn
 } = roomSlice.actions;
 const roomSliceReducer = roomSlice.reducer;
 export default roomSliceReducer;

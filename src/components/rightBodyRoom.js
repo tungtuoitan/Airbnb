@@ -27,8 +27,8 @@ export default function RightBodyRoom() {
   return (
     <div
       ref={rightRef}
-      className={`right-0x  w-full w-4 shrink-0  
-      hidden 7:block sticky top-10  mt-12 mb-10 border1 `}
+      className={`right-0  w-full w-4 shrink-0  
+      hidden 7:block relative  mt-12 mb-10  `}
       style={{ width: `${width}px` }}
     >
       <StickyBill />
