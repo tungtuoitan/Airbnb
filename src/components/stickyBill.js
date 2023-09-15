@@ -13,11 +13,11 @@ export default function StickyBill() {
     <div ref={refBill}
       className="w-full  bg-white rounded-xl 
         border-c1 border-solid border-gray-300
-        sticky top-c120 p-6 box-shadow-u12  "
+        sticky top-c120x top-4 p-6 box-shadow-u12"
     >
       <FirstPartOfBill />
       <MainInfo />
-      <XBtn />
+      <XBtn />  
       {totalNights === "?" ? <></> : <FinalPriceCalculate />}
     </div>
   );

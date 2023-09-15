@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div
-      className={`App  ${
+      className={`App   ${
         isConfirmOpen || isFinishOpen ? "overflow-hidden" : ""
       }`}
     >
