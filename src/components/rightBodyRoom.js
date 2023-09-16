@@ -27,7 +27,7 @@ export default function RightBodyRoom() {
   return (
     <div
       ref={rightRef}
-      className={`right-0  w-full w-4 shrink-0  
+      className={`right-0 ml-c60 w-full w-4 shrink-0  
       hidden 7:block relative  mt-12 mb-10  `}
       style={{ width: `${width}px` }}
     >

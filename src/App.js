@@ -27,10 +27,10 @@ function App() {
         {/* <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<Login />} /> */}
 
-        {/* <Route path="/trips" element={<Trips />} />
+        {/* <Route path="/trips" element={<Trips />} /> */}
         <Route path="/wishlists" element={<Wishlists />} />
-        <Route path="/inbox" element={<Inbox />} />
-        <Route path="/account-settings" element={<AccountSettings />} /> */}
+        {/* <Route path="/inbox" element={<Inbox />} /> */}
+        {/* <Route path="/account-settings" element={<AccountSettings />} /> */}
 
         <Route path="/rooms" element={<RoomPage />} />
         {/* <Route path="*" element={<NoMatch />} /> */}

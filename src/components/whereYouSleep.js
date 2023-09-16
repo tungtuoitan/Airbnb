@@ -13,15 +13,27 @@ export default function () {
         className=" pt-4 w-full flex justify-between gap-2 pb-8 
          "
       >
-        {totalBeds <= 2 ? (
+        {totalBeds < 2 ? (
+          <>
           <SingleBed />
-        ) : totalBeds > 2 && totalBeds <= 4 ? (
+          <div className="opacity-0 w-full">xxx</div>
+          </>
+        ) 
+        : totalBeds === 2 && totalBeds <= 4 ? (
+          <><SingleBed /><SingleBed /></>
+        ) 
+        : totalBeds > 2 && totalBeds <= 4 ? (
+          <>
           <DoubleBed />
-        ) : (
+          <div className="opacity-0 w-full">xxx</div>
+          </>
+        ) 
+        : (
           <>
             <SingleBed />
             <DoubleBed />
           </>
+         
         )}
       </div>
     </div>

@@ -8,8 +8,6 @@ export default function RoomBodyBar() {
   const dispatch = useDispatch()
   const [focusOn, setFocusOn] = useState(0);
 
-  
-
   return (
     <div
      
@@ -34,14 +32,14 @@ export default function RoomBodyBar() {
         <ItemOnBar
           focusOn={focusOn}
           setFocusOn={setFocusOn}
-          title="Reviews"
-          offset={0}
+          title="Who's Coming"
+          offset={-80}
         />
         <ItemOnBar
           focusOn={focusOn}
           setFocusOn={setFocusOn}
-          title="Location"
-          offset={0}
+          title="About Your Host"
+          offset={-78}
         />
       </div>
     </div>

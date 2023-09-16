@@ -6,10 +6,11 @@ export default function NotiContainer() {
   const isNotiOn = useSelector((s) => s.roomSlice.isNotiOn);
   return (
     <div
-      className={`w-full h-full 7:p-10 
-      7:flex justify-center items-center 
-      || fixed top-0 left-0 zmax3 bg-black/50 overflow-hidden overscroll-contain
+      className={`w-full h-full 7:p-10 px-6
+      flex justify-center items-center 
+      fixed top-0 left-0 zmax4 bg-black/50 overflow-none
       ${isNotiOn ? "" : "pointer-events-none opacity-0"}`}
+      
     >
       <NotiPopUp/>
     </div>

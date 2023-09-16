@@ -5,7 +5,7 @@ export default function Price2() {
   return (
     <p className="text-black222 text-left whitespace-nowrap ">
       <span className="text-base font-semibold">$ {priceOneNight}</span>{" "}
-      <span className="text-light text-sm"> nights</span>
+      <span className="text-light text-sm"> night</span>
     </p>
   );
 }

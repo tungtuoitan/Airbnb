@@ -1,7 +1,7 @@
 import LogoIcon from "../icons/logo-icons";
 import Header1Mobile from "./header1-mobile";
 import RightofHeader1 from "./right-header1";
-import SearchBoxLaptop from "./searchBoxLaptop";
+import SearchSmall from './searchSmall'
 
 export default function Header1a() {
   return (
@@ -12,7 +12,7 @@ export default function Header1a() {
           "
         >
           <LogoIcon />
-          <SearchBoxLaptop />
+          <SearchSmall />
           <RightofHeader1 />
         </div>
       </div>

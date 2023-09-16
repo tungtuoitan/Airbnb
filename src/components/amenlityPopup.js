@@ -7,7 +7,7 @@ export default function AmenlityPopUp() {
   return (
     <div
       className="POPUP_FILTER || bg-white w-full max-w-c780 h-calc-u2 
-        ||  absolute bottom-0 7:relative 7:bottom-auto
+        ||  absolute bottom-0 7:relative 7:bottom-auto overscroll-contain
         || rounded-t-xl 7:rounded-xl overflow-hidden "
     >
       <div

@@ -14,7 +14,7 @@ export default function MeetYourHost() {
   return (
     <div name='meetYourHost' className="bg-unknown-grayx  w-full pt-7 
     border-t-c1 border-solid border-gray-300">
-      <TitleOnRoom title="Meet your host" />
+      <TitleOnRoom title="About your host" />
       <div className=" 7:grid grid-cols-2 gap-c60">
         <div>
           <HostPopUp />

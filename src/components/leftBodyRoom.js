@@ -47,8 +47,7 @@ export default function LeftBodyRoom() {
       <ShortDesc TextArr={TextAboutArr[0]} />
       <WhereYouSleep />
       <ShortAmenlities />
-      <WhosComingPart />
-      <WhosComingLaptop />
+      <WhosComingPart/>
       <XNightsInXUI />
       
     </div>

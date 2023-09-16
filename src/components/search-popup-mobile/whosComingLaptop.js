@@ -11,7 +11,7 @@ import { Link } from "react-scroll";
 export default function WhosComingLaptop() {
   return (
     <div name='whosComing'
-      className="hidden 11:block  bg-white  overflow-hidden w-full
+      className=" bg-white  overflow-hidden w-full
      pt-8 pb-10 mb-8  zmax4 border-b-c1 border-solid border-gray-300"
     >
       <TitleOnRoom title={`Who's coming?`} />

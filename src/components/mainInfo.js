@@ -13,7 +13,7 @@ export default function MainInfo() {
         spy={true}
         smooth={true}
         duration={500}
-        offset={40}
+        offset={-100}
         className="border-b-c1 border-solid border-gray-300
       grid grid-cols-2"
       >

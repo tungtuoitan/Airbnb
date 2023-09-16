@@ -7,7 +7,7 @@ import ThreeDotsIcon from "./threeDotsIcon";
 export default function WishPage() {
   return (
     <div>
-      <div className="hidden 7:block sticky top-0">
+      <div className="hidden 7:block sticky top-0 bg-white zmax3">
         <HeaderLoginLaptop />
       </div>
       <div

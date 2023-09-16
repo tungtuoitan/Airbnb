@@ -13,6 +13,8 @@ const wishSlice = createSlice({
         state.wishIdArr.push(action.payload);
       }
     },
+    setWishId2: (state,action)=>{
+    }
   },
 });
 export const { setWishId } = wishSlice.actions;

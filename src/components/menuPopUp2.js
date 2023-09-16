@@ -12,11 +12,11 @@ export default function MenuPopUp2() {
       || box-shadow-u8 || rounded-2xl text-sm
       ${isMenuOn ? "" : "hidden"}`}
     >
+      <MenuItem2 content={"Wishlists"} />
       <MenuItem2 content={"Messages"} />
       <MenuItem2 content={"Trips"} />
-      <MenuItem2 content={"Wishlists"} />
       <div className='w-full h-c1 bg-gray-200'></div>
-      <MenuItem2 content={"Account"} />
+      {/* <MenuItem2 content={"Account"} /> */}
       <MenuItem2 content={"Help Center"} />
       <MenuItem2 content={"Log out"} />
     </div>

@@ -795,3 +795,22 @@ input[type="checkbox"]:checked::before {
 .zmax4{
   z-index: 10000000000004;
 }
+@media (min-width:350px) {
+  
+  .text350{
+    font-size:16px !important;
+  }
+}
+.leading-80{
+  line-height: 80px;
+}
+@media (min-width:745px) {
+  .width-custom{
+    width:calc(100% - 80px)
+  }
+}
+@media(min-width:1400px){
+  .width-custom{
+    width:calc(100% - 160px)
+  }
+}

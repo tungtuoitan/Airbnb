@@ -20,7 +20,7 @@ export default function XBtn() {
       spy={true}
       smooth={true}
       duration={500}
-      offset={40}
+      offset={-100}
       onClick={handleOnClick}
     >
       <button
