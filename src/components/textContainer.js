@@ -2,19 +2,19 @@ import BackBtn from "./backBtn";
 import BackBtn2 from "./xBtn2";
 import SearchBig from "./searchBig";
 import XBtn2 from "./xBtn2";
+import { useDispatch, useSelector } from "react-redux";
+import TextX from "./textX";
 
 export default function TextContainer() {
+  const isSearchBigOn = useSelector((s) => s.searchSlice.isSearchBigOn);
+
   return (
-    <div className="  flex justify-center gap-4 items-center">
-      <div className="  justify-center items-center shrink-0 mt-0 ">
-        <span
-          className="text-base font-bold text-black222 mt-c60 
-        underline decoration-2 underline-offset-4 main-color"
-        >
-          Where you want to go? 
-        </span>
-      </div>
-          <XBtn2 />
+    <div
+      className={`flex justify-center gap-4 items-center transition-all
+    ${isSearchBigOn ? "  h-full mt-2 mb-6" : " h-c1 opacity-0  "}`}
+    >
+      <TextX content={'Where you want to go?'}/>
+      <XBtn2 />
     </div>
   );
 }

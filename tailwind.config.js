@@ -292,6 +292,7 @@ module.exports = {
       },
       minWidth: {
         c700: "700px",
+        c660: "660px",
         c105: "105px",
 
       },

@@ -15,7 +15,7 @@ export default function XBtn2() {
     bg-gray-300x border-c1 border-solid border-gray-300 rounded-full`}
       onClick={handleOnClick}
     >
-      <i class="fa-solid fa-xmark text-black222"></i>
+      <i className="fa-solid fa-xmark text-black222"></i>
     </div>
   );
 }

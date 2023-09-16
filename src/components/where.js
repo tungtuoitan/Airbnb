@@ -10,7 +10,7 @@ export default function Where() {
         <div className="flex justify-start text-black222 font-bold leading-4">
           Where
         </div>
-        <input className="outline-0 w-full" placeholder="Search destinations" />
+        <input className="outline-0 w-full bg-transparent" placeholder="Search destinations" />
       </div>
     </div>
   );

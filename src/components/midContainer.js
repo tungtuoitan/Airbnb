@@ -1,20 +1,17 @@
 import TextContainer from "./textContainer";
 import SearchBig from "./searchBig";
-import SearchSmall from "./searchSmall";
+import SearchBox from "./searchBox";
 import { useDispatch, useSelector } from "react-redux";
+import { setIsSearchBigOn } from "../reducer/searchSlice";
 
 export default function MidContainer() {
-  const dispatch = useDispatch()
-  const isSearchBigOn = useSelector((s) => s.searchSlice.isSearchBigOn);
   return (
-    <div>
-      {isSearchBigOn ? (
-        <>
-          <TextContainer />
-        </>
-      ) : (
-        <SearchSmall />
-      )}
+    <div
+      className={` h-full flex  items-center flex-col pt-4 w-full 
+       absolute top-0 left-0 `}
+    >
+      <TextContainer />
+      <SearchBox />
     </div>
   );
 }

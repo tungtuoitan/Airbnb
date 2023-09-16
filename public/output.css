@@ -2080,6 +2080,10 @@ video {
   width: 20px;
 }
 
+.w-c200 {
+  width: 200px;
+}
+
 .w-c260 {
   width: 260px;
 }
@@ -2158,6 +2162,10 @@ video {
 
 .min-w-c105 {
   min-width: 105px;
+}
+
+.min-w-c660 {
+  min-width: 660px;
 }
 
 .min-w-c700 {
@@ -3652,6 +3660,10 @@ video {
   padding-top: 15px;
 }
 
+.pt-c17 {
+  padding-top: 17px;
+}
+
 .pt-c18 {
   padding-top: 18px;
 }
@@ -3670,6 +3682,10 @@ video {
 
 .pt-c3 {
   padding-top: 3px;
+}
+
+.pt-c32 {
+  padding-top: 32px;
 }
 
 .pt-c36 {
