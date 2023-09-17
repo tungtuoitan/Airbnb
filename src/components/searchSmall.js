@@ -10,7 +10,7 @@ export default function SearchSmall() {
   return (
     <div
       className={`inline-flex  justify-center items-center
-         text-sm font-semibold color222  `}
+         text-sm font-semibold color222    `}
       onClick={handleOnClick}
     >
       <InnerSearchSmall />

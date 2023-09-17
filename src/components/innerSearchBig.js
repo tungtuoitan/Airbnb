@@ -8,12 +8,10 @@ import Where from "./where";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function InnerSearchBig() {
-  const isSearchBigOn = useSelector((s) => s.searchSlice.isSearchBigOn);
   return (
     <>
       <Where />
       <CheckIn />
-      <CheckOut />
       <Who />
     </>
   );

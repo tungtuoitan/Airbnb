@@ -1,3 +1,4 @@
+import { getLastDayOfMonth } from "./checkRealDate";
 var today = new Date();
 let year0 = today.getFullYear();
 let month0 = today.getMonth();
@@ -6,13 +7,18 @@ let get5ArrOfMonth = (y, m) => {
   let dateOfMonth = Array.from({ length: 42 }, () => ".");
   let Day1Index = new Date(y, m, 1).getDay();
   dateOfMonth[Day1Index] = 1;
+
   for (let i = Day1Index; i < 42; i++) {
     dateOfMonth[i] = i - (Day1Index - 1);
-    if (dateOfMonth[i] > 31) {
+    if (
+      dateOfMonth[i] > 31 ||
+      i - (Day1Index - 1) > getLastDayOfMonth(m+1, y) 
+    ) {
+      
       dateOfMonth[i] = ".";
     }
   }
-
+  
   return [
     dateOfMonth.slice(0, 7),
     dateOfMonth.slice(7, 14),

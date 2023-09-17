@@ -12,7 +12,8 @@ export default function NavBar2A() {
       <button onClick={() => dispatch(goPrevMonth())}>
         <i
           className={`fa-solid fa-angle-right fa-rotate-180
-            ${currentMonth.month === today.month ? "opacity-30" : ""}`}
+            ${currentMonth.month === today.month &&
+              currentMonth.year === today.year ? "opacity-30" : ""}`}
         ></i>
       </button>
       <div className="font-base font-bold color222">

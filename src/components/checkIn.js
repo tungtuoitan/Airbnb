@@ -1,23 +1,78 @@
-import { truncateText } from "../function/makeTextShorter";
+import { useDispatch, useSelector } from "react-redux";
+import fakeData from "../datas/fake-data";
+import { setCurrentPopUp } from "../reducer/searchSlice";
+import { resetFirstDate } from "../reducer/dateItemSlice";
+import { useEffect } from "react";
 
 export default function CheckIn() {
+  const firstDate = useSelector((s) => s.dateItemSlice.firstDate);
+  const lastDate = useSelector((s) => s.dateItemSlice.lastDate);
+  const currentPopUp = useSelector((s) => s.searchSlice.currentPopUp);
+  const dispatch = useDispatch();
+
+  const handleOnClick = () => {
+      dispatch(setCurrentPopUp("when"));
+  };
+
+  let firstDateText =
+    firstDate.length === 0
+      ? "Add dates"
+      : fakeData.monthShortNames[firstDate[1]].slice(0, 3) + " " + firstDate[0];
+
+  let lastDateText =
+    lastDate.length === 0
+      ? "Add dates"
+      : fakeData.monthShortNames[lastDate[1]].slice(0, 3) + " " + lastDate[0];
+
   return (
     <div
-      className="h-full text-c12   flex-none  
-    w-full text-left flex justify-start items-center
-    col-start-4 col-end-5"
+      className={`h-full text-c12   flex-none  
+      w-full text-left flex justify-start items-center
+      rounded-full overflow-visible flex col-start-4 col-end-6
+      
+      ${currentPopUp === "when" ? `bg-white box-shadow-u14 zmax3` : ""}
+      ${
+        currentPopUp === ""
+          ? "hover:bg-gray-200"
+          : currentPopUp === "where" || currentPopUp === "who"
+          ? "hover:bg-gray-300"
+          : ""
+      }`}
+      onClick={handleOnClick}
     >
-      <div
-        className="border-r-c1 border-solid border-gray-300 w-full
-        "
-      >
-          <div
-            className="text-center text-black222 font-bold 
-      leading-4 whitespace-nowrap "
-          >
-            Check in
-          </div>
-          <p className="whitespace-nowrap text-center text-gray-400">Add dates</p>
+      <div className=" w-full  pl-c20 border-r-1 border-solid border-gray-300">
+        <div
+          className="text-center text-black222 font-bold leading-4 whitespace-nowrap
+         "
+        >
+          Check in
+        </div>
+        <p
+          className={`whitespace-nowrap text-center 
+          ${
+            firstDateText === "Add dates"
+              ? "text-gray-400"
+              : "font-black text-black222 text-sm mb-c-1"
+          }`}
+        >
+          {firstDateText}
+        </p>
+      </div>
+
+      <div className=" w-full pr-c20 border-r-1 border-solid border-gray-300">
+        <div className="text-center text-black222 font-semibold leading-4 whitespace-nowrap  ">
+          Check out
+        </div>
+        <p
+          className={`whitespace-nowrap text-center 
+          ${
+            lastDateText === "Add dates"
+              ? "text-gray-400"
+              : "font-black text-black222 text-sm mb-c-1"
+          }`}
+        >
+          {lastDateText}
+        </p>
       </div>
     </div>
   );

@@ -814,3 +814,22 @@ input[type="checkbox"]:checked::before {
     width:calc(100% - 160px)
   }
 }
+.c-template{
+  grid-template-columns: auto auto auto;
+}
+@media (min-width:800px) {
+  .c-template{
+    grid-template-columns: auto auto auto;
+  }
+  
+}
+.box-shadow-u13{
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 8px 16px rgba(0,0,0,0.15)
+}
+
+.box-shadow-u14{
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.border-trans:hover{
+  border-color: transparent;
+}

@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { pickDate } from "../reducer/dateItemSlice";
 import { monthYearContext } from "./monthYearContext";
 import { today } from "../function/timeForCalendar";
+import { setCurrentPopUp } from "../reducer/searchSlice";
 
 function DateItem({ item, available }) {
   let isSearchPopUpOpen = useSelector((state) => state.isSearchPopUpOpen);
@@ -24,23 +25,35 @@ function DateItem({ item, available }) {
   const dateArr = [item, monthYear.month, monthYear.year];
 
   // logic of callendar
-  const firstDays = firstDate[0] + firstDate[1] * 40 + firstDate[2] * 365;
-  const lastDays = lastDate[0] + lastDate[1] * 40 + lastDate[2] * 365;
-  const currentDays = item + dateArr[1] * 40 + dateArr[2] * 365;
-  const todayDays = today.date + today.month * 40 + today.year * 365;
+  const firstDays =
+    firstDate[0] + (firstDate[1] + 1) * 40 + firstDate[2] * 3650;
+  const lastDays = lastDate[0] + (lastDate[1] + 1) * 40 + lastDate[2] * 3650;
+  const currentDays = item + (dateArr[1] + 1) * 40 + dateArr[2] * 3650;
+  const todayDays = today.date + (today.month + 1) * 40 + today.year * 3650;
+  const [isClicked, setIsClicked] = useState(false);
+  useEffect(() => {
+    if (firstDate.length !== 0 && lastDate.length !== 0 && isClicked) {
+      dispatch(setCurrentPopUp("who"));
+    }
+    if (isClicked === true) {
+      setIsClicked(false);
+    }
+  }, [isClicked]);
 
   const handleOnClick = (item) => {
     if (currentDays > todayDays) {
+      setIsClicked(true);
       dispatch(pickDate(dateArr));
     }
   };
+
   useEffect(() => {
     const handleResize = () => {
       if (xRef.current) {
         setHeightDataItem(xRef.current.offsetWidth);
       }
     };
-    const handleResizeRAF = ()=> requestAnimationFrame(handleResize)
+    const handleResizeRAF = () => requestAnimationFrame(handleResize);
     handleResize();
     window.addEventListener("resize", handleResizeRAF);
     return () => {
@@ -65,8 +78,13 @@ function DateItem({ item, available }) {
             (item === lastDate[0] &&
               monthYear.month === lastDate[1] &&
               monthYear.year === lastDate[2])
-              ? ""
-              : "hover:border-c1 hover:border-solid hover:border-black222"
+              ? "border-trans"
+              : ""
+          }
+          ${
+            currentDays > todayDays
+              ? "hover:border-c1 hover:border-solid hover:border-black222"
+              : ""
           }
           }
           

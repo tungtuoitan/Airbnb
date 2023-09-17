@@ -1,14 +1,15 @@
 import WeekRow from "./week-row";
-import DatesRow from "./dates-row";
+
 import { monthYearContext } from "./monthYearContext";
 import { useSelector, useDispatch } from "react-redux";
 import { time } from "../function/timeForCalendar";
 import getMonthAndYear2 from "../function/getMonthAndYear2";
+import DatesRow from "./dates-row";
 
 export default function TableCalendarContainter2B() {
   const currentMonth = useSelector((state) => state.dateItemSlice.currentMonth);
   const { month2, year2 } = getMonthAndYear2(currentMonth);
-  const fiveArrs = time.get5ArrOfMonth(month2, year2);
+  const fiveArrs = time.get5ArrOfMonth(year2, month2);
   return (
     <div className="CALENDAR mt-c10 5:mt-c20 ">
       <WeekRow />

@@ -1,15 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-scroll";
 import { useEffect, useState } from "react";
+import { useCalculateTotalGuests } from "../hooks/useCalculateTotalGuest";
 
 export default function GuestPart() {
-  const whoComing = useSelector((s) => s.whoComing);
- 
-  let amount =
-    whoComing.adults.amount +
-    whoComing.children.amount +
-    whoComing.infants.amount +
-    whoComing.pets.amount;
+  const amount = useCalculateTotalGuests()
 
   return (
     <Link
