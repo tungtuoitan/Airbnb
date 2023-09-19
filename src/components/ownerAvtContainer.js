@@ -1,6 +1,7 @@
-import { useContext } from "react";
+import { useContext ,useEffect} from "react";
 import { IndexContext } from "../context/indexContext";
 import { homeList } from "../datas/homeListOriginal";
+
 
 export default function OwnerAvtContainer() {
     const i = useContext(IndexContext)

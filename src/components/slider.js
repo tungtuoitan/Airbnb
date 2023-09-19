@@ -58,10 +58,8 @@ function Slider() {
     }, 200);
   });
 
-  const goTemporary = () => {
-    // chịu chết
-  };
   const goPrev = (e) => {
+    e.preventDefault()
     if (isEnableSwipe === false || isWindowScrolling[0] === true) {
       return;
     }
@@ -78,6 +76,7 @@ function Slider() {
     setCurrentIndex(currentIndex - 1);
   };
   const goNext = (e) => {
+    e.preventDefault()
     if (isEnableSwipe === false || isWindowScrolling[0] === true) {
       return;
     }

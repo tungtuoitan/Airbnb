@@ -833,3 +833,40 @@ input[type="checkbox"]:checked::before {
 .border-trans:hover{
   border-color: transparent;
 }
+
+/* REACT-SLICK */
+.slick-slider{
+  height:100% !important;
+}
+
+
+.slick-list{
+  height:100% !important;
+}
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  height:100% !important }
+  .slick-slide div{
+    height:100% !important;
+  }
+  /* .slick-prev{
+    left:20px !important;
+    background:black !important;
+    color:white !important;
+    display: block !important;
+    z-index: 1000; 
+
+  }*/
+
+   .ul-dots{
+    width:6px;
+    display: flex;
+    /* justify-content: end; */
+    background-color: black;
+   }
+   .ul-dots button::before{
+    background-color: white;
+   }

@@ -1,11 +1,14 @@
 import React from "react";
-import Item from "../components/item";
+
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { homeList } from "../datas/homeListOriginal";
 import { IndexContext } from "../context/indexContext";
 import useCreateList from "../hooks/useCreateList";
 import { setCurrentHomeId } from "../reducer/roomsSlice";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import Loading from "./loading";
+import Item from "../components/item"
 
 export default function HomeList() {
   const dispatch = useDispatch();
@@ -21,7 +24,7 @@ export default function HomeList() {
           <div className="ITEM_CONTAINERR  max-w-full  " key={item.id}>
             <Link to={`/rooms`} target="" onClick={() => handleOnClick(index)}>
               <IndexContext.Provider value={index}>
-                <Item />
+                  <Item />
               </IndexContext.Provider>
             </Link>
           </div>

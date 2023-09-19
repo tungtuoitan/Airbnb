@@ -546,6 +546,7 @@ module.exports = {
         gray162: "rgb(162,162,162)",
         main: "#ff385c",
         white1: "#f7f7f7",
+        white2:'ffffffab',
       },
     },
   },

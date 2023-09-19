@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { setLeftSlider, setGraphWidth } from "../reducer/filterSlice";
+import { throttle } from "lodash";
 
 export default function useCreateHandleDragLeft() {
   const dispatch = useDispatch();
@@ -10,5 +11,5 @@ export default function useCreateHandleDragLeft() {
       const currentLeft = e.clientX - displacement - 16; // 16 = widthTarget(32) / 2
       dispatch(setLeftSlider(currentLeft));
     }
-  };
+  }
 }

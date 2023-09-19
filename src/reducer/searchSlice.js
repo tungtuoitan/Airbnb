@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const searchSlice = createSlice({
   name: "searchSlice",
   initialState: {
-    isSearchBigOn:true,
+    isSearchBigOn:false,
     currentPopUp: '',
   },
   reducers: {

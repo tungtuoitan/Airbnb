@@ -22,13 +22,14 @@ export default function ImgsOnSlider2 ({imgArr}){
         },
       };
     return(
-        <Slider className="max-h-xs " {...settings}>
+        <Slider className="max-h-xs"{...settings}>
         {imgArr.map((item, index) => {
           return (
             <img
               src={item}
               key={index}
-              className="w-full h-full object-cover bg-red-500 "
+              className="w-full h-full object-cover"
+              
             />
           );
         })}

@@ -8,11 +8,12 @@ export default function Icon7() {
   const dispatch = useDispatch();
   const wishIdArr = useSelector(s=>s.wishSlice.wishIdArr)
   const isAdded = wishIdArr.includes(i)
-  const handleOnClick = () => {
+  const handleOnClick = (e) => {
+    e.preventDefault()
     dispatch(setWishId(i));
   };
   return (
-    <div onClick={handleOnClick} className=" cursor-pointer pointer-events-auto">
+    <div  onClick={e=>handleOnClick(e)} className=" cursor-pointer pointer-events-auto">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 32"

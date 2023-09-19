@@ -15,7 +15,10 @@ export default function SearchBox() {
             ? `h-c65  w-full min-w-c660 max-w-c850  relative grid grid-cols-7`
             : `h-12 w-auto  shadow-searchbox `
         }
-        ${isSearchBigOn && currentPopUp==='' ? 'bg-white ':'bg-gray-200'}
+        
+        ${isSearchBigOn && currentPopUp==='' ? 'bg-white '
+      : isSearchBigOn && currentPopUp!=='' ? 'bg-gray-200' :'bg-white'}
+
         `}
     >
       {isSearchBigOn ? <InnerSearchBig /> : <SearchSmall />}

@@ -29,13 +29,13 @@ export default function LeftSlider() {
       ref={sliderRef}
       style={{ ...springs }}
       // onTouchStart={(e)=>handleOnTouchStart(e)}
-      onTouchMove={(e) => handleOnTouchMove(e)}
+      // onTouchMove={(e) => handleOnTouchMove(e)}
       onDragStart={(e) => handleOnDragStart(e)}
       onDrag={(e) => handleOnDrag(e)}
       //# isPress
-      onMouseDown={()=>dispatch(setIsPress([true,false]))}
-      onMouseUp={()=>dispatch(setIsPress([false,false]))}
-      onDragEnd={()=>dispatch(setIsPress([false,false]))}
+      // onMouseDown={()=>dispatch(setIsPress([true,false]))}
+      // onMouseUp={()=>dispatch(setIsPress([false,false]))}
+      // onDragEnd={()=>dispatch(setIsPress([false,false]))}
     />
   );
 }

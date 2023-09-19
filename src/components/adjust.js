@@ -8,7 +8,7 @@ export default function Adjust() {
   return (
     <div className="CONTAINER relative  " ref={contRef} 
     >
-      <Graph />
+      {/* <Graph /> */}
       <LeftSlider />
       <RightSlider />
 

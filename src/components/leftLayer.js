@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useSpring,animated } from "react-spring";
+
 export default function LeftLayer () {
   const graphWidth = useSelector((state) => state.filterSlice.graphWidth);
   const graphHeight = useSelector((state) => state.filterSlice.graphHeight);
