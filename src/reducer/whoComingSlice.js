@@ -57,7 +57,7 @@ const whoComingSlice = createSlice({
       // if(state.adults)
     },
     resetAllOfWho: (state) => {
-      state.adults.amount = 0;
+      state.adults.amount = 1;
       state.children.amount = 0;
       state.infants.amount = 0;
       state.pets.amount = 0;

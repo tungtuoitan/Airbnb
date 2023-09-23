@@ -10,9 +10,11 @@ import { filterWithEssentials } from "../function/filterWithEssentials";
 import { filterWithFeatures } from "../function/filterWithFeatures";
 import { filterWithLocation } from "../function/filterWithLocation";
 import { filterWithBooking } from "../function/filterWithBooking";
+import { shuffleNTimes } from "../function/shuffleArray";
 
 export default function useCreateList() {
   const filter = useSelector((state) => state.filterSlice.filter);
+  const nTimesShuffle = useSelector((s) => s.bodySlice.nTimesShuffle);
 
   const hlByPlaceType = filterWidthTypePlace(filter, homeList);
   const hlByPrice = filterWithPriceRange(filter, hlByPlaceType);
@@ -21,10 +23,10 @@ export default function useCreateList() {
   const hlByBathrooms = filterWithBathrooms(filter, hlByBedrooms);
   const hlByPropertyType = filterWithPropertyType(filter, hlByBathrooms);
   const hlByEssentials = filterWithEssentials(filter, hlByPropertyType);
-  const hlByFeature = filterWithFeatures(filter,hlByEssentials)
-  const hlByLocation = filterWithLocation(filter,hlByFeature)
-  const hlByBooking = filterWithBooking(filter,hlByLocation)
-  const currentHomeList = hlByBooking;
+  const hlByFeature = filterWithFeatures(filter, hlByEssentials);
+  const hlByLocation = filterWithLocation(filter, hlByFeature);
+  const hlByBooking = filterWithBooking(filter, hlByLocation);
+  const currentHomeList = shuffleNTimes(nTimesShuffle, hlByBooking);
 
   return {
     homeListByTypePlace: hlByPlaceType,

@@ -16,8 +16,8 @@ export default function DestinationItem2({ imgSrc, name }) {
 
   return (
     <div
-      className={`inline-flex flex-col gap-2 items-start w-full h-full 
-    flex-0-0-auto scroll-snap-align-start cursor-pointer
+      className={`inline-flex flex-col gap-2 items-start w-full h-full  
+    flex-0-0-auto scroll-snap-align-start cursor-pointer 
     `}
       onClick={handleOnClick}
     >

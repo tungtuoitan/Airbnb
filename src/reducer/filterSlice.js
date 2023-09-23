@@ -55,7 +55,7 @@ const filterSlice = createSlice({
 
     // ## 2
     leftSliderValue: 0,
-    rightSliderValue: 100,
+    rightSliderValue: 99,
     // #
     isPress: [false, false],
     displacement: 0,
@@ -80,8 +80,8 @@ const filterSlice = createSlice({
     },
   },
   reducers: {
-    setIsFilterOn : (state,action )=>{
-      state.isFilterOn = !state.isFilterOn
+    setIsFilterOn: (state, action) => {
+      state.isFilterOn = !state.isFilterOn;
     },
     // # place type
     setPlaceType: (state, action) => {
@@ -118,6 +118,12 @@ const filterSlice = createSlice({
         state.rightSliderValue = action.payload;
       }
     },
+    setLeftValue: (state, action) => {
+      state.leftSliderValue = action.payload;
+    },
+    setRightValue: (state, action) => {
+      state.rightSliderValue = action.payload;
+    },
     setLeftPrice: (state, action) => {
       state.filter.leftPrice = action.payload;
     },
@@ -139,7 +145,6 @@ const filterSlice = createSlice({
     },
     // ##
     setPropertyType: (state, action) => {
-      
       state.filter.propertyType = action.payload;
     },
     // #
@@ -167,9 +172,9 @@ const filterSlice = createSlice({
           !state.filter.bookingOptions.selfCheckIn;
       }
     },
-    setFilterDefault:(state,action)=>{
-      state.filter = {...filterDefault}
-    }
+    setFilterDefault: (state, action) => {
+      state.filter = { ...filterDefault };
+    },
   },
 });
 export const {
@@ -177,6 +182,8 @@ export const {
   setPlaceType,
   setLeftSlider,
   setRightSlider,
+  setLeftValue,
+  setRightValue,
   setLeftPrice,
   setRightPrice,
   setIsPress,

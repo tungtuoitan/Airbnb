@@ -11,12 +11,12 @@ const loginSlice = createSlice({
     isFinishOpen: false,
     isLastNameFocus: false,
     userInfo: {
-      firstName: "",
-      lastName: "", 
+      firstName: "G",
+      lastName: "",
       birthdate: "",
-      email: "", 
-      phoneNumber:'',
-      isCheckedReceive:false
+      email: "",
+      phoneNumber: "",
+      isCheckedReceive: false,
     },
   },
   reducers: {
@@ -45,10 +45,9 @@ const loginSlice = createSlice({
     },
     setFirstName: (state, action) => {
       state.userInfo.firstName = action.payload;
-
     },
     setLastName: (state, action) => {
-      state.userInfo.lastName =action.payload;
+      state.userInfo.lastName = action.payload;
     },
     setBirthdate: (state, action) => {
       state.userInfo.birthdate = action.payload;
@@ -56,16 +55,33 @@ const loginSlice = createSlice({
     setEmail: (state, action) => {
       state.userInfo.email = action.payload;
     },
-    setIsLastNameFocus: (state,action)=>{
-       state.isLastNameFocus = action.payload
+    setIsLastNameFocus: (state, action) => {
+      state.isLastNameFocus = action.payload;
     },
-    toggleIsCheckedReceive:(state,action)=>{
-      state.userInfo.isCheckedReceive = !state.userInfo.isCheckedReceive
-
-    }
+    toggleIsCheckedReceive: (state, action) => {
+      state.userInfo.isCheckedReceive = !state.userInfo.isCheckedReceive;
+    },
+    setDefaultLoginSlice: (state, action) => {
+      state.isConfirmOpen = false;
+      state.code = "";
+      state.threePhoneNumber = fakeData.threePhoneNumber[0][1];
+      state.country = fakeData.threePhoneNumber[0][0];
+      state.valueSelected = `${fakeData.threePhoneNumber[0][1]} ${fakeData.threePhoneNumber[0][0]} `;
+      state.isFinishOpen = false;
+      state.isLastNameFocus = false;
+      state.userInfo = {
+        firstName: "",
+        lastName: "",
+        birthdate: "",
+        email: "",
+        phoneNumber: "",
+        isCheckedReceive: false,
+      };
+    },
   },
 });
 export const {
+  setDefaultLoginSlice,
   toggleIsConfirmOpen,
   changeCode,
   setValueSelected,
@@ -76,7 +92,7 @@ export const {
   setEmail,
   changePhoneNumber,
   setIsLastNameFocus,
-  toggleIsCheckedReceive
+  toggleIsCheckedReceive,
 } = loginSlice.actions;
 const loginSliceReducer = loginSlice.reducer;
 export default loginSliceReducer;

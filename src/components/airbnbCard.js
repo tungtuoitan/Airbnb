@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import descImg from "../assets/youplace.jpg";
 
 export default function AirbnbCard() {
   return (
-    <div
+    <Link to='https://www.airbnb.com.vn/host/homes' target='_blank'
       className="text-black222 || flex justify-between 
     || p-6 mt-6 rounded-xl box-shadow-u9 
     || border-c1 border-solid border-gray-300" 
@@ -19,6 +20,6 @@ export default function AirbnbCard() {
         </p>
       </div>
       <img src={descImg} className="object-none" />  
-    </div>
+    </Link>
   );
 }

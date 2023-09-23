@@ -24,15 +24,15 @@ export default function DestinationItemsByKeyword() {
           return (
             <li
               key={index}
-              className="flex justify-start flex items-center gap-4 cursor-pointer
-          mb-4"
+              className="flex justify-start flex items-center gap-4 cursor-pointer pr-4
+          mb-4 hover:bg-gray-200 hover:rounded-xl "
               onClick={() => {
                 handleOnClick(item);
               }}
             >
               <div
                 className="bg-gray235 w-12 h-12 rounded-xl flex justify-center items-center
-            "
+                "
               >
                 <Icon6 />
               </div>

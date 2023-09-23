@@ -5,7 +5,7 @@ import MenuBarSmartf from "../components/menu-bar-smartf";
 
 export default function AccountSettings (){
     return(
-        <div>this is account settings
+        <div>
             <MobileProfile/>
             <MenuBarSmartf/>
         </div>

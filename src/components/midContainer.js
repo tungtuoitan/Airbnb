@@ -15,7 +15,7 @@ export default function MidContainer() {
   return (
     <div
       className={` h-full flex  items-center flex-col pt-4 w-full
-       absolute top-0 left-0 overflow-visible `}
+       absolute top-0 left-0 overflow-visible trans`}
     >
       <TextContainer />
       <SearchBox />

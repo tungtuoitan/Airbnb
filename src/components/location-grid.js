@@ -14,9 +14,7 @@ function LocationGrid() {
             <H2Footer />
             <div className="NAVBAR-CONTAINER     w-full relative  9: ">
               <PrevBtnOnFooter />
-
               <NavBarFooter />
-
               <NextBtnOnFooter />
             </div>
 

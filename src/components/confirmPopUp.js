@@ -4,18 +4,29 @@ import InputConfirm from "./inputConfirm";
 import ContinueBtn from "./continueBtn";
 import EnterTheCode from "./enterTheCode";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleIsConfirmOpen,toggleIsFinishOpen } from "../reducer/loginSlice";
+import { setBirthdate, setEmail, setFirstName, setLastName, toggleIsConfirmOpen,toggleIsFinishOpen } from "../reducer/loginSlice";
+import { toggleIsLogged } from "../reducer/accSlice";
 
 export default function ConfirmPopUp() {
   const code = useSelector((state) => state.loginSlice.code);
   const dispatch = useDispatch();
   const handleOnClick = () => {
     dispatch(toggleIsConfirmOpen());
+    
   };
   const handleOnClickContinue = () => {
     if (code.length === 6) {
       dispatch(toggleIsConfirmOpen());
-      dispatch(toggleIsFinishOpen())
+      if(window.location.pathname==='/sign-up'){
+        dispatch(toggleIsFinishOpen())
+      }else if(window.location.pathname==='/login'){
+        dispatch(toggleIsLogged())
+        dispatch(setFirstName('Wick'))
+        dispatch(setLastName('John'))
+        dispatch(setEmail('johnwick@gmail.com'))
+        dispatch(setBirthdate('10/12/1999'))
+      }
+      
     }
   };
   

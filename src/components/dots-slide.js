@@ -8,7 +8,7 @@ function DotsSlide ({imgArr,currentIndex}){
             return (
               <div key={index}
                 className={`w-c6 h-c6  rounded-full ${
-                  index === currentIndex ? "bg-white" : "bg-gray-unknown"
+                  index === currentIndex ? "bg-white" : "bg-white/70"
                 } `}
               ></div>
             );

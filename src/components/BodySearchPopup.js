@@ -5,7 +5,7 @@ import WhosComing from "./search-popup-mobile/whos-coming";
 export default function BodySearchPopUp() {
   const style = {
     container:
-      "containerN      bg-fb px-c12 pt-c11  h-calc-133  overflow-y-scroll w-full     ",
+      "  bg-fb px-c12 pt-c11  h-calc-133 overflow-y-scroll   overscroll-contain w-full     ",
     main: "flex justify-between items-center  flex flex-col gap-c12 pb-c16",
   };
   return (

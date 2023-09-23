@@ -23,7 +23,7 @@ export default function GraphCol({ height }) {
         const indexOfLeftCol = (leftSliderValue / width0).toFixed(0);
         const indexOfRightCol = (rightSliderValue / width0).toFixed(0);
 
-        let isBlack = index >= indexOfLeftCol && index < indexOfRightCol;
+        let isBlack = index >= indexOfLeftCol && index < indexOfRightCol -2; // 2 là số từ trên trời rơi xuống, để điều chỉnh UI 
 
         const width = `calc( 100% / ${homeAmountByPrice.length} )`;
         //#

@@ -4,6 +4,7 @@ import InSearchBtn from "./inSearchBtn";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsFilterOn } from "../../reducer/filterSlice";
 import {Link} from 'react-router-dom'
+import { setDisplayingIndex } from "../../reducer/header2Slice";
 
 export default function ShowXPlace() {
   const dispatch = useDispatch();
@@ -17,7 +18,10 @@ export default function ShowXPlace() {
   const handleOnClick = () => {
     if (currentHomeList.length !== 0) {
       dispatch(setIsFilterOn())
+      window.scrollTo({top:0,behavior:'smooth'})
+      dispatch(setDisplayingIndex(999));
     }
+    
   };
   return (
     <Link to ='/'

@@ -5,8 +5,8 @@ import ShowMoreBtn from "./showmore-btn.js";
 import { useDispatch, useSelector } from "react-redux";
 import { showMore } from "../reducer/footerSlice.js";
 
-export default function LocationShortList (){
-    const dispatch = useDispatch();
+export default function LocationShortList() {
+  const dispatch = useDispatch();
   const displayingIndex = useSelector(
     (state) => state.footerSlice.displayingIndex
   );
@@ -19,25 +19,23 @@ export default function LocationShortList (){
     dispatch(showMore());
   };
 
-
-    return (<>
-    {isShortList === true
-                ? locationTypeArr[displayingIndex].locationList
-                    .slice(0, numberOnShortList)
-                    .map((item, index) => {
-                      return <LocationItem item={item} key={index} />;
-                    })
-                : locationTypeArr[displayingIndex].locationList.map(
-                    (item, index) => {
-                      return <LocationItem item={item} key = {index} />;
-                    }
-                  )}
-              {/* button SHOW MORE */}
-              {isShortList === true ? (
-                <ShowMoreBtn onClickShowMore={onClickShowMore} />
-              ) : (
-                <></>
-              )}
-    
-    </>)
+  return (
+    <>
+      {isShortList === true
+        ? locationTypeArr[displayingIndex].locationList
+            .slice(0, numberOnShortList)
+            .map((item, index) => {
+              return <LocationItem item={item} key={index} />;
+            })
+        : locationTypeArr[displayingIndex].locationList.map((item, index) => {
+            return <LocationItem item={item} key={index} />;
+          })}
+      {/* button SHOW MORE */}
+      {isShortList === true ? (
+        <ShowMoreBtn onClickShowMore={onClickShowMore} />
+      ) : (
+        <></>
+      )}
+    </>
+  );
 }

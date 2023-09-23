@@ -1,4 +1,4 @@
 export default function Loading() {
-    return <p><i>Loading...</i></p>;
+    return <p className="italic"><i>Loading...</i></p>;
   }
   

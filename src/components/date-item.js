@@ -10,7 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { pickDate } from "../reducer/dateItemSlice";
 import { monthYearContext } from "./monthYearContext";
 import { today } from "../function/timeForCalendar";
-import { setCurrentPopUp } from "../reducer/searchSlice";
+import { setCurrentPopUp, setIsFirstTimeOfWho } from "../reducer/searchSlice";
 
 function DateItem({ item, available }) {
   let isSearchPopUpOpen = useSelector((state) => state.isSearchPopUpOpen);
@@ -34,6 +34,7 @@ function DateItem({ item, available }) {
   useEffect(() => {
     if (firstDate.length !== 0 && lastDate.length !== 0 && isClicked) {
       dispatch(setCurrentPopUp("who"));
+      dispatch(setIsFirstTimeOfWho(false))
     }
     if (isClicked === true) {
       setIsClicked(false);

@@ -23,9 +23,9 @@ export default function WishItems() {
                 <div className="absolute right-4 top-4">
                   <HeartBtn2 item={item}/>
                 </div>
-                <WishItem i={item} key={index} />;
+                <WishItem i={item} key={index} />
               </div>
-            );
+            )
           })}
         </>
       )}

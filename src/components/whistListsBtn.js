@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setLogInFrom } from "../reducer/accSlice";
 
 
 export default function WhistlistBtn() {
+  const dispatch = useDispatch()
+  const handleOnClick = ()=>{
+    dispatch(setLogInFrom('/wishlists'))
+  }
   const path = window.location.pathname
   return (
-    <Link to='/wishlists' className=" flex items-center flex-col gap-c3  mt-c12 mb-2 w-1/5">
+    <Link to='/wishlists' className=" flex items-center flex-col gap-c3  mt-c12 mb-2 w-1/5"
+    onClick={handleOnClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 32"

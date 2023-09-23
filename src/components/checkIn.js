@@ -8,6 +8,7 @@ export default function CheckIn() {
   const firstDate = useSelector((s) => s.dateItemSlice.firstDate);
   const lastDate = useSelector((s) => s.dateItemSlice.lastDate);
   const currentPopUp = useSelector((s) => s.searchSlice.currentPopUp);
+  const isSearchBigOn = useSelector((s) => s.searchSlice.isSearchBigOn);
   const dispatch = useDispatch();
 
   const handleOnClick = () => {
@@ -29,6 +30,7 @@ export default function CheckIn() {
       className={`h-full text-c12   flex-none  
       w-full text-left flex justify-start items-center
       rounded-full overflow-visible flex col-start-4 col-end-6
+      ${isSearchBigOn ? 'text-c12':'text-c1'}
       
       ${currentPopUp === "when" ? `bg-white box-shadow-u14 zmax3` : ""}
       ${
@@ -40,7 +42,8 @@ export default function CheckIn() {
       }`}
       onClick={handleOnClick}
     >
-      <div className=" w-full  pl-c20 border-r-1 border-solid border-gray-300">
+      <div className={` pl-c20 border-r-1 border-solid border-gray-300 
+      ${isSearchBigOn ? 'w-full':'w-c1'}`}>
         <div
           className="text-center text-black222 font-bold leading-4 whitespace-nowrap
          "
@@ -52,14 +55,15 @@ export default function CheckIn() {
           ${
             firstDateText === "Add dates"
               ? "text-gray-400"
-              : "font-black text-black222 text-sm mb-c-1"
+              : "font-black text-black222 text-smx mb-c-1"
           }`}
         >
           {firstDateText}
         </p>
       </div>
 
-      <div className=" w-full pr-c20 border-r-1 border-solid border-gray-300">
+      <div className={` pr-c20 border-r-1 border-solid border-gray-300 
+      ${isSearchBigOn ? 'w-full':'w-c1'}`}>
         <div className="text-center text-black222 font-semibold leading-4 whitespace-nowrap  ">
           Check out
         </div>

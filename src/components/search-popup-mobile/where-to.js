@@ -22,7 +22,7 @@ export default function WhereTo() {
  
 
   return isWhereToOpen ? (
-    <div className="WHERE_TO  relative overflow-hidden w-full bg-white p-6 rounded-3xl box-shadow-whereto">
+     <div className="WHERE_TO  relative overflow-hidden w-full bg-white p-6 rounded-3xl box-shadow-whereto">
       <WhereToTitle />
       <DivBonus3 />
       <InputWhereTo  />

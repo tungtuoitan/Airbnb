@@ -17,8 +17,9 @@ export default function Where() {
   };
   return (
     <div
-      className={`flex justify-center items-start flex-col text-c12
+      className={`flex justify-center items-start flex-col trans-when
       w-full pl-10 col-start-1 col-end-4 relative rounded-full 
+      ${isSearchBigOn ? 'text-c12':'text-c1'}
       ${currentPopUp === "where" ? `bg-white  box-shadow-u14 zmax3` : ""}
       ${
         currentPopUp === ""
@@ -27,6 +28,7 @@ export default function Where() {
           ? "hover:bg-gray-300"
           : ""
       }`}
+      
       onClick={handleOnClick}
     >
       <div className="border-r-c1 border-solid border-gray-300 w-full">

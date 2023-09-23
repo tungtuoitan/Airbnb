@@ -9,23 +9,24 @@ import SearchPopUpMoblie from "../components/search-popup-mobile";
 import DivBonus1 from "../components/divBonus1";
 import DivBonus2 from "../components/divBonus2";
 import Filter from "../components/filter";
+import { useConsoleLog } from "../hooks/useConsoleLog";
 
 function HomePage() {
-  
+  useConsoleLog();
+
   return (
     <div>
       <Header1 />
       <DivBonus1 />
-      <Header2  />
+      <Header2 />
 
       <div>
         <Body />
         <Footer />
-        <DivBonus2/>
+        <DivBonus2 />
         <SearchPopUpMoblie />
         <MenuBarSmartf />
-        <Filter/>
-
+        <Filter />
       </div>
     </div>
   );

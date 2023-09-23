@@ -14,7 +14,7 @@ export default function SwitchUI2({ownerValue }) {
       <div
         className="WHITE_CIRCLE 
       bg-white w-7 h-7 rounded-full m-c2
-      flex justify-center items-center  "
+      flex justify-center items-center transition-all "
       >
         <MiniTickIcon ownerValue={ownerValue} />
       </div>

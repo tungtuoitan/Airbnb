@@ -11,7 +11,7 @@ export default function TableCalendarContainter() {
     <div className="CALENDAR ">
       <WeekRow />
 
-      <div className=" h-40   overflow-y-auto  y-mandatory snap-start pb-c4 ">
+      <div className=" h-40   overflow-y-auto overscroll-contain  y-mandatory snap-start pb-c4 ">
         <table className="w-full ">
           <tbody className="w-full  ">
             <monthYearContext.Provider

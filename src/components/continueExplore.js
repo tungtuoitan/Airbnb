@@ -1,10 +1,16 @@
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import {increaseDisplayItems} from '../reducer/bodySlice'
-
+import useCreateList from "../hooks/useCreateList";
 export default function ContinueExplore() {
+  const displayItems = useSelector(s=>s.bodySlice.displayItems)
+  const totalItems = useCreateList().currentHomeList.length
 
     const dispatch = useDispatch()
-    const handleOnClick = ()=>{dispatch(increaseDisplayItems())}
+    const handleOnClick = ()=>{
+      if(displayItems<totalItems){
+
+        dispatch(increaseDisplayItems())}
+      }
   return (
     <div className="CONTINUE  color222  pt-14">
       <p className="font-bold font-size18 mb-4 text-center ">
@@ -12,7 +18,8 @@ export default function ContinueExplore() {
       </p>
       <button
         onClick={handleOnClick}
-        className="border-1 bg-222 text-white px-c24 py-c12 border-black rounded-md font-semibold text-base hover:bg-black "
+        className={` text-white px-c24 py-c12 rounded-md font-semibold text-base   whitespace-nowrap
+        ${displayItems > totalItems ? 'bg-black/50':'bg-222 hover:bg-black border-1  border-black '}`}
       >
         Show more
       </button>

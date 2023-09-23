@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import Trips from "./pages/trips";
 import Inbox from "./pages/inbox";
 import AccountSettings from "./pages/accountSettings";
+import SignUp from "./pages/signUp";
 
 function App() {
   const isConfirmOpen = useSelector((state) => state.loginSlice.isConfirmOpen);
@@ -24,10 +25,10 @@ function App() {
     >
       <Routes>
         <Route path="/" index element={<HomePage />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/sign-up" element={<Login />} />
 
-        <Route path="/trips" element={<Trips />} />
+      <Route path="/trips" element={<Trips />} />
         <Route path="/wishlists" element={<Wishlists />} />
         <Route path="/inbox" element={<Inbox />} />
         <Route path="/account-settings" element={<AccountSettings />} />

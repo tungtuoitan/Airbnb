@@ -1,4 +1,11 @@
+import { useContext } from "react"
+import { useDispatch,useSelector } from "react-redux"
+import { IndexContext } from "../context/indexContext"
+import { checkIsLaptop } from "../function/checkIsLaptop"
+
 function NextButton2({ onClick, isHovering }) {
+  const i = useContext(IndexContext)
+  const hoveringIndex = useSelector(s=>s.bodySlice.hoveringIndex)
     const onClickk =(e)=>{
         e.preventDefault()
         onClick()
@@ -8,7 +15,8 @@ function NextButton2({ onClick, isHovering }) {
         className={`NEXT_BTN absolute  bg-white-u1 w-8 h-8 
         hover:border-c1 hover:border-solid  hover:border-white  hover:bg-white
         rounded-full  right-c12 y-center box-shadow-u2  z100
-       ${isHovering === true ? "" : "hidden"}`}
+       ${isHovering && i===hoveringIndex ? "" : "hidden"}
+       ${checkIsLaptop()?'':'hidden'}`}
         onClick={e=>onClickk(e)}
       >
         <i

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const wishSlice = createSlice({
   name: "wishSlice",
   initialState: {
-    wishIdArr: [0,1,2,3,4,5],
+    wishIdArr: [],
   },
   reducers: {
     setWishId: (state, action) => {

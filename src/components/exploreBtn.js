@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 export default function ExploreBtn() {
   const path = window.location.pathname;
+  const handleOnClick = ()=>{
+    window.scrollTo({top:0,behavior:'smooth'})
+  }
 
   return (
-    <Link to="/" className=" flex items-center flex-col gap-c3 mt-c12 mt-2 w-1/5">
+    <Link to="/" className=" flex items-center flex-col gap-c3 mt-c12 mt-2 w-1/5"
+    onClick={handleOnClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 32"

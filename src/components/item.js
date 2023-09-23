@@ -1,7 +1,5 @@
 import ImgGroup from "./imgGroup";
 import TextGroup from "./textGroup";
-// const ImgGroup = lazy(() => import("./imgGroup"));
-// const TextGroup = lazy(() => import("./textGroup"));
 import { lazy, Suspense } from "react";
 import { isElementInViewport } from "../function/checkIfItemInViewPort";
 import { useRef, useEffect, useState } from "react";

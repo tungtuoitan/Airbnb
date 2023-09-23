@@ -9,7 +9,7 @@ import AccessibilityFeatures from "./accessibilityFeatures";
 
 export default function FilterBody() {
   return (
-    <div className="pb-c80">
+    <div className="pb-c80 overflow-y-scrollx overscroll-contain">
       <TypeOfPlace />
       <PriceRange />
       <BedsAndBathrooms />

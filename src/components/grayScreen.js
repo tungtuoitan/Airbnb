@@ -1,5 +1,5 @@
 import { useDispatch,useSelector } from "react-redux"
-import { setIsSearchBigOn } from "../reducer/searchSlice"
+import { setCurrentPopUp, setIsSearchBigOn } from "../reducer/searchSlice"
 
 
 export default function GrayScreen(){
@@ -7,11 +7,12 @@ export default function GrayScreen(){
     const dispatch = useDispatch()
     const handleOnClick =  ()=>{
       dispatch(setIsSearchBigOn())
+      dispatch(setCurrentPopUp(''))
     }
     return(
         <div className={`w-full h-screen bg-black/50 
-        fixed top-40 left-0 z1000x
-        ${isSearchBigOn ? '':'hidden'}`}
+        fixed left-0 z1000 trans-gray 
+        ${isSearchBigOn ? 'top-40 ':'opacity-0 top-20 pointer-events-none'}`}
         onClick={handleOnClick}></div>
     )
 }

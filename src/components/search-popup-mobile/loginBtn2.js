@@ -9,7 +9,7 @@ export default function LoginBtn2() {
   }
   return (
     <Link
-      to={'/login'}
+      to={'/sign-up'}
       className=" main-gradient || w-c92 h-12 || rounded-lg 
       || flex justify-center items-center "
       onClick={handleOnClick}

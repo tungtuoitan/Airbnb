@@ -1,6 +1,6 @@
 export default function DidntGetCode() {
   const handleOnClick=()=>{
-    alert('Xin lỗi, Máy chủ đang bảo chì')
+    alert('Xin lỗi, máy chủ đang bảo chì, vui lòng thử lại sau!')
   }
   return (
     <p className="text-left mt-4 ">

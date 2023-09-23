@@ -13,7 +13,7 @@ export const filterDefault= {
     amenities: {
       essentials: [
         false,
-        true,
+        false,
         false,
         false,
         false,

@@ -19,7 +19,7 @@ export default function useListenScroll() {
         dispatch(showLeftArrow())
 
       }
-      if (scrollLeft === widthOfEndScroll) {
+      if (scrollLeft > widthOfEndScroll - 5) { // số 5 từ trên trời rơi xuống
         dispatch(hideRightArrow())
       } else {
         dispatch(showRightArrow())

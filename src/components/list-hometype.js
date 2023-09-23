@@ -1,12 +1,23 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setDisplayingIndex } from "../reducer/header2Slice.js";
 import hometypeArr from "../datas/home-types.js";
+import { setNTimesShuffle } from "../reducer/bodySlice.js";
+import { setFilterDefault,setLeftValue,setRightValue } from "../reducer/filterSlice.js";
 
 export default function ListHomeType() {
   const dispatch = useDispatch();
   const displayingIndex = useSelector((state) => state.header2.displayingIndex);
+  const graphWidth = useSelector(state=>state.filterSlice.graphWidth)
   const handleOnClick = (index) => {
     dispatch(setDisplayingIndex(index));
+    dispatch(setNTimesShuffle());
+      dispatch(setFilterDefault())
+      dispatch(setRightValue(graphWidth))
+      dispatch(setLeftValue(0))
+    window.scrollTo({top:0,behavior:'smooth'})
+    console.log(
+      "data mẫu có hạn, xin quý dị thông cảm!"
+    );
   };
 
   return (
@@ -15,8 +26,12 @@ export default function ListHomeType() {
         return (
           <div
             key={item.id}
-            onClick={()=>{handleOnClick(index)}}
-            className={` ITEM    cursor-pointer pt-c15 pb-c11 7:pt-c18 7:pb-c14 inline-flex flex-col items-center   ${
+            onClick={() => {
+              handleOnClick(index);
+            }}
+            className={`border-bottom-hover cursor-pointer pt-c15 pb-c11 7:pt-c18 7:pb-c14 
+            inline-flex flex-col items-center   
+            ${
               index === displayingIndex ? "color222 border-bottom-unknown" : ""
             }  `}
           >

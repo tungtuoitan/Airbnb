@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   increaseAdults,
   decreaseAdults,
-} from "../../reducer/whoComingSlice";
+} from "../../reducer/whoComingSlice"; 
 
 export default function AdultsComming() {
   const adults = useSelector((state) => state.whoComing.adults);

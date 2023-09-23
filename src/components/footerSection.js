@@ -9,7 +9,7 @@ export default function FooterSection ({ type }) {
         {titleAndLink[type].map((item, index) => {
           return (
             <li className="font-size14 color222 text-left " key={index}>
-              <a href={item[1]}>{item[0]} </a>
+              <a href={item[1]} target="='_blank">{item[0]} </a>
             </li>
           );
         })}

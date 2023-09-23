@@ -5,6 +5,7 @@ const searchSlice = createSlice({
   initialState: {
     isSearchBigOn:false,
     currentPopUp: '',
+    isFirstTimeofWho:true,
   },
   reducers: {
     setIsSearchBigOn:(state,action)=>{
@@ -13,9 +14,12 @@ const searchSlice = createSlice({
     setCurrentPopUp:(state,action)=>{
       state.currentPopUp = action.payload
   },
+  setIsFirstTimeOfWho:(state,action)=>{
+    state.isFirstTimeofWho = false
+  }
    
   },
 });
-export const {setIsSearchBigOn,setCurrentPopUp  } = searchSlice.actions;
+export const {setIsSearchBigOn,setCurrentPopUp ,setIsFirstTimeOfWho } = searchSlice.actions;
 const searchSliceReducer = searchSlice.reducer;
 export default searchSliceReducer;

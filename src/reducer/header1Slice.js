@@ -10,12 +10,12 @@ const header1Slice = createSlice({
     setCurrentChoice: (state, action) => {
       state.currentChoice = action.payload;
     },
-    toggleIsMenuOn: (state) => {
-      state.isMenuOn = !state.isMenuOn;
+    setIsMenuOn: (state,action) => {
+      state.isMenuOn = action.payload;
     },
   },
 });
-export const {  setCurrentChoice, toggleIsMenuOn } =
+export const {  setCurrentChoice, setIsMenuOn } =
   header1Slice.actions;
 const header1SliceReducer = header1Slice.reducer;
 export default header1SliceReducer;

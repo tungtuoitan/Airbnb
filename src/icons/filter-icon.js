@@ -9,8 +9,8 @@ export default function FilterIcon() {
         focusable="false"
         style={{
           display: "block",
-          height: "14px",
-          width: "14px",
+          height: "16px",
+          width: "16px",
           fill: "currentcolor",
         }}
       >

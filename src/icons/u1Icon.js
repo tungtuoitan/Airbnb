@@ -1,6 +1,16 @@
+import { useDispatch } from "react-redux";
+import { setIsFilterOn } from "../reducer/filterSlice";
+
 export default function U1Icon() {
+  const dispatch = useDispatch()
+  const handleOnClick = ()=>{
+    dispatch(setIsFilterOn())
+  }
+
   return (
-    <div className=" w-9 h-9 rounded-full  flex justify-center align items-center mr-c12 border-1   ">
+    <div 
+    onClick={handleOnClick}
+    className=" w-9 h-9 rounded-full  flex justify-center align items-center mr-c12 border-1   ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"

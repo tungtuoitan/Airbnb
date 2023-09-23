@@ -11,7 +11,7 @@ export default function InboxLeft() {
     <div
       className={`w-full   h-full relative px-6 || 
     || border-r-c1 border-solid border-gray-300
-    ${isMessOn ? "max-w-c388" : ""}`}
+    ${isMessOn && window.innerWidth>= 550 ? "max-w-c388x" : ""}`}
     >
       <InboxBar1 />
       <InboxBar2 />

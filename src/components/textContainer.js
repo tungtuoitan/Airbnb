@@ -10,8 +10,8 @@ export default function TextContainer() {
 
   return (
     <div
-      className={`flex justify-center gap-4 items-center transition-all
-    ${isSearchBigOn ? "  h-full mt-2 mb-6" : " h-c1 opacity-0  "}`}
+      className={`flex justify-center gap-4 items-center trans-text
+    ${isSearchBigOn ? "text-base  h-full mt-2 mb-6 " : "text-c1 h-c1 opacity-0 pointer-events-none   "}`}
     >
       <TextX content={'Where you want to go?'}/>
       <XBtn2 />

@@ -11,7 +11,7 @@ export default function WherePopUpLaptop(){
     
     return(
         <div className=" bg-white mt-4 w-full max-w-c850 
-        rounded-3xl zmax px-8 9:px-10 pt-10 pb-6 overscroll-contain
+        rounded-3xl zmax px-8 9:px-10 pt-c60 pb-6 overscroll-contain
          flex justify-between relative box-shadow-u13  "
         >
             <DestinationItemsByKeyword/>

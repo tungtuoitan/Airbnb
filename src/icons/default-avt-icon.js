@@ -8,7 +8,6 @@ export default function DefaultAvtIcon (){
     role="presentation"
     focusable="false"
     style={{
-      border: '1px solid red',
       display: "block",
       height: "30px",
       width: "30px",

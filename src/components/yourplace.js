@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Account from "./account";
 import AccountIcon from "./accountIcon";
 import AirbnbCard from "./airbnbCard";

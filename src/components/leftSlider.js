@@ -10,12 +10,14 @@ import { setIsPress } from '../reducer/filterSlice';
 
 export default function LeftSlider() {
   const dispatch = useDispatch()
-  //#
-  
   const isPress = useSelector(state=>state.filterSlice.isPress)
   let handleOnTouchMove = useCreateHandleTouchMoveLeft()
   const handleOnDrag = useCreateHandleDragLeft();
   const springs = useCreateLeftSpring();
+
+ 
+
+
   const [handleOnTouchStart,sliderRef] = useCreateHandleTouchStart()
 
   return (
@@ -28,14 +30,14 @@ export default function LeftSlider() {
       draggable
       ref={sliderRef}
       style={{ ...springs }}
-      // onTouchStart={(e)=>handleOnTouchStart(e)}
-      // onTouchMove={(e) => handleOnTouchMove(e)}
+      onTouchStart={(e)=>handleOnTouchStart(e)}
+      onTouchMove={(e) => handleOnTouchMove(e)}
       onDragStart={(e) => handleOnDragStart(e)}
       onDrag={(e) => handleOnDrag(e)}
       //# isPress
-      // onMouseDown={()=>dispatch(setIsPress([true,false]))}
-      // onMouseUp={()=>dispatch(setIsPress([false,false]))}
-      // onDragEnd={()=>dispatch(setIsPress([false,false]))}
+      onMouseDown={()=>dispatch(setIsPress([true,false]))}
+      onMouseUp={()=>dispatch(setIsPress([false,false]))}
+      onDragEnd={()=>dispatch(setIsPress([false,false]))}
     />
   );
 }

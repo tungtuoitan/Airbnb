@@ -6,6 +6,7 @@ export default function MenuItemUI2({ content, path, target }) {
   const dispatch = useDispatch();
   const handleOnClick = () => {
     if (content === "Log out") dispatch(toggleIsLogged());
+    window.scrollTo(0,0)
   };
   return (
     <Link

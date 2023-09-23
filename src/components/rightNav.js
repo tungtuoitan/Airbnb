@@ -1,10 +1,14 @@
 import { useSelector } from "react-redux";
 import ArrowRight from "./arrowRight";
 import FilterBtnContainer from "./filterBtnContainer";
+import TotalPrice from "./total-price";
 
 export default function RightNav() {
   const rightArrowDisplay = useSelector(
     (state) => state.header2Nav.rightArrowDisplay
+  );
+  const widthScreen = useSelector(
+    (state) => state.header2Nav.widthScreen
   );
   return (
     <div
@@ -16,7 +20,8 @@ export default function RightNav() {
               }`}
     >
       <ArrowRight rightArrowDisplay={rightArrowDisplay} />
-      <FilterBtnContainer />
+      {widthScreen <1640 ? (<FilterBtnContainer />): <></>}
+      
     </div>
   );
 }

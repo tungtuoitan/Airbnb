@@ -8,17 +8,18 @@ export default function SearchPopUpMoblie() {
     (state) => state.root.isSearchPopUpOpen
   );
   const style = {
-    container:
-      "CONTAINER    7:hidden  w-full h-screen bg-f7 zmax2 overflow-hidden transition-u2 ",
+    container:`7:hidden   w-full h-screen bg-f7 zmax2 overflow-hidden transition-u2x
+    overscroll-contain   `,
   };
 
   return (
     <div
       className={
         style.container +
-        (isSearchPopUpOpen === true
-          ? " opacity-100 top-0 fixed"
-          : " opacity-0 hidden top--200 ")
+        (isSearchPopUpOpen
+          ? " top-0 fixed transition-u2"
+          : " opacity fixed  hiddenx hp1 ")
+          
       }
     >
       <TopBar />

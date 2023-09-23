@@ -14,7 +14,7 @@ export default function XBtn2() {
     <div
       className={` w-c32 h-c32 || flex justify-center items-center
     text-black222 cursor-pointer hover:bg-gray-200
-    bg-gray-300x border-c1 border-solid border-gray-300 rounded-full`}
+    bg-gray-300x border-c1 border-solid border-gray-300 rounded-full zmax3`}
       onClick={handleOnClick}
     >
       <i className="fa-solid fa-xmark text-black222"></i>

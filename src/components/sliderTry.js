@@ -8,19 +8,43 @@ import PrevButton2 from "./prevBtn2";
 import NextButton2 from "./nextBtn2";
 import { useState } from "react";
 import DotsSlide from "./dots-slide";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useDispatch, useSelector } from "react-redux";
+import { shuffleNTimes } from "../function/shuffleArray";
+import useCreateList from "../hooks/useCreateList";
+import { setIsHoverItem, setHoveringIndex } from "../reducer/bodySlice";
+import { checkIsLaptop } from "../function/checkIsLaptop";
+import useUpdatePrice from "../hooks/useUpdatePrice";
+import { useUpdateWidth } from "../hooks/useUpdateWidth";
 
-export default function SliderTry({ width }) {
+export default function SliderTry() {
+  const itemWidth = useSelector(s=>s.bodySlice.itemWidth)
+  const dispatch = useDispatch();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovering, setIsHovering] = useState(false);
+  const isHovering = useSelector((s) => s.bodySlice.isHoverItem);
+  const isLaptop = useSelector((s) => s.bodySlice.isLaptop);
+
+  const i = useContext(IndexContext);
   const handleOnMouseMove = () => {
-    setIsHovering(true);
+    if (isLaptop) {
+      dispatch(setIsHoverItem(true));
+      dispatch(setHoveringIndex(i));
+    }
   };
   const handleOnMouseLeave = () => {
-    setIsHovering(false);
+    if (isLaptop) {
+      dispatch(setIsHoverItem(false));
+      dispatch(setHoveringIndex(i));
+    }
   };
-  const i = useContext(IndexContext);
-  const imgArr = homeList[i].imgarr;
+  const currentHomeList = useCreateList().currentHomeList;
+  let index;
+  for (let j = 0; j < currentHomeList.length; j++) {
+    if (currentHomeList[j].id === i) {
+      index = j;
+      break;
+    }
+  }
+  const imgArr = currentHomeList[index].imgarr;
   const settings = {
     dots: true,
     infinite: true,
@@ -45,8 +69,8 @@ export default function SliderTry({ width }) {
   };
   return (
     <div
-      className=" relative"
-      style={{ width: width + "px", height: width + "px" }}
+      className=" relative "
+      style={{ width: itemWidth + "px", height: itemWidth + "px" }}
       onMouseMove={handleOnMouseMove}
       onMouseLeave={handleOnMouseLeave}
     >
@@ -56,7 +80,7 @@ export default function SliderTry({ width }) {
             <img
               src={item}
               key={index}
-              className="m-0 max-w-full w-full h-full max-h-full object-cover  "
+              className="XXX m-0 max-w-full w-full h-full max-h-full object-cover   "
             />
           );
         })}
