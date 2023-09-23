@@ -13,7 +13,6 @@ export default function WishlistsContainer() {
         {/* <EditBar /> */}
         <WishlistsTitle />
         <WishItems />
-        <DiscoverBtn/>
 
       </div>
   );

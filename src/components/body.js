@@ -11,7 +11,6 @@ function Body() {
       className={`px-6 pb-10 7:px-10 14:px-20    h-full mt-6  7:mt-0 
         `}
     >
-     
       <GridContainer />
       <ContinueExplore />
     </div>

@@ -10,7 +10,7 @@ export default function WishItems() {
   return (
     <div
       className={`items  grid  7:grid-cols-3 11:grid-cols-4 
-      gap-x-6 gap-y-c12 7:gap-y-6  11:gap-y-c30
+      gap-x-6 gap-y-c12 7:gap-y-6  11:gap-y-c30 trans-wish
       ${wishIdArr.length === 0 ? "" : "grid-cols-2"}`}
     >
       {wishIdArr.length === 0 ? (
@@ -19,7 +19,7 @@ export default function WishItems() {
         <>
           {wishIdArr.map((item, index) => {
             return (
-              <div className="relative" key={index}>
+              <div className="relative trans-wish" key={index}>
                 <div className="absolute right-4 top-4">
                   <HeartBtn2 item={item}/>
                 </div>

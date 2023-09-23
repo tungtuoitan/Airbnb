@@ -11,14 +11,15 @@ const roomSlice = createSlice({
     isNotiOn:false,
     isSticked:false,
     isBarOn:false,
+    isConfirmRequestOn:false
   },
   reducers: {
     setCurrentSliceIndex: (state, action) => {
       if (action.payload === "left") {
-        if (state.currentSliceIndex >= state.imgTotal) {
+        if (state.currentSliceIndex >= state.imgTotal -1) {
           state.currentSliceIndex = 0;
         } else {
-          state.currentSliceIndex += 1;
+          state.currentSliceIndex += 1; 
         }
       }
       if (action.payload === "right") {
@@ -46,13 +47,17 @@ const roomSlice = createSlice({
     },
     setIsBarOn: (state,action)=>{
       state.isBarOn = action.payload
+    },
+    setConfirmRequestOn: (state,action)=>{
+      state.isConfirmRequestOn = !state.isConfirmRequestOn
     }
   },
-});
+}); 
 export const {
   setCurrentSliceIndex,
   setCurrentHomeId,
   setIsDescOn,
+  setConfirmRequestOn,
   setIsAmenlitiesOn,
   setIsNotiOn,
   setIsSticked,

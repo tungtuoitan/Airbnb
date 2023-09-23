@@ -11,9 +11,8 @@ export default function GridContainer() {
     <div
       className="grid-homepage   w-full  h-auto  overflow-x-hiddenx  "
     >
-      <div className="  gap-x-6  grid-containerprice w-full hidden 7:grid">
+      <div className="  gap-x-6  grid-containerprice w-full hidden 7:grid ">
         <TotalPrice />
-        {isScreen16 ? (<FilterBtn2/>):<></>}
       </div>
       <HomeList />
     </div>

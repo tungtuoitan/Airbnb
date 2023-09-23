@@ -10,7 +10,8 @@ export default function FilterBtn() {
   return (
     <button
       className="FILTER  bg-white  flex justify-center 
-    items-center gap-2 p-4 pr-c18 w-22 h-12 border-1 rounded-xl 
+    items-center gap-2 p-4 pr-c18 w-22 h-12  
+    rounded-xl border-c1 border-gray-300 border-solid
    "
       onClick={handleOnClick}
     >

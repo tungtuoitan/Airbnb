@@ -7,7 +7,7 @@ export default function NotiPopUp() {
       className={`bg-white  overflow-auto  w-full
       7:absolute 7:bottom-0 7:relative 7:bottom-auto
     rounded-t-xl rounded-b-xl 7:rounded-xl p-6 text-center 
-    11:pb-10
+    11:pb-10 zmax4
     `}
     >
       <p className="font-bold text-base 7:text-c22 7:mt-10 mb-4 

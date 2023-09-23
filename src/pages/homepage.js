@@ -23,7 +23,6 @@ function HomePage() {
       <div>
         <Body />
         <Footer />
-        <DivBonus2 />
         <SearchPopUpMoblie />
         <MenuBarSmartf />
         <Filter />

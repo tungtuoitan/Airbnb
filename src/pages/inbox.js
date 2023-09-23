@@ -4,7 +4,7 @@ import MenuBarSmartf from "../components/menu-bar-smartf";
 
 export default function Inbox() {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <HeaderLoginLaptop />
       <InputBody />
       <MenuBarSmartf />

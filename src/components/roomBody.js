@@ -43,7 +43,7 @@ export default function BodyRoom() {
       <div className="flex w-screen justify-center   ">
         <div 
           className="w-full px-6 7:px-10 11:px-20 13:px-0 
-          relative 13:w-c1120 flex justify-between "
+          relative 13:w-c1120 flex justify-between  "
         >
           <LeftBodyRoom />
           <RightBodyRoom />

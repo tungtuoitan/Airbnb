@@ -6,8 +6,7 @@ const HometypeBar = React.forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className={`HOME_TYPE_BAR header2    
-      relative   overflow-x-scroll  hometypebar-container 
+      className={`header2 relative   overflow-x-scroll  hometypebar-container 
     `}
     >
       <div

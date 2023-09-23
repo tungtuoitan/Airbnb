@@ -19,7 +19,7 @@ export default function Emty2(){
         };
       },[]);
 
-    return <div className={`h-full 7:w-c82
-    ${widthScreen >=1640 ? 'hidden':''}`}></div>
+    return <div className={`h-full bg-black
+    ${widthScreen >=1640 ? 'emty2':'7:w-c82'}`}></div>
     
 }

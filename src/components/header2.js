@@ -10,7 +10,7 @@ function Header2() {
 
   return (
     <div
-      className={`HEADER_2     sticky top-0  bg-white z1000 
+      className={`sticky top-0  bg-white z1000 
     ${
       isScrollTop0 === true && window.innerWidth >= 745
         ? ""
@@ -20,8 +20,7 @@ function Header2() {
     >
       <Emty />
       <div
-        className=" CONTAINER_ROOT    
-      relative  7:pr-10 pl-0 7:pl-10 14:px-20 box-border    "
+        className="relative  7:pr-10 pl-0 7:pl-10 14:px-20 box-border    "
       >
         <Header2Nav />
         <HometypeBar ref={ref} />

@@ -24,7 +24,7 @@ export default function LeftBodyRoom() {
       if (window.innerWidth / 3.5 > 360) {
         setWidth(360);
       } else if (window.innerWidth / 3.5 < 230) {
-        setWidth(230);
+        setWidth(window.innerWidth/2);
       } else {
         setWidth(window.innerWidth / 3.5);
       }
