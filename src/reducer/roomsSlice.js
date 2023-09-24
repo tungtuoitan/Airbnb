@@ -11,7 +11,10 @@ const roomSlice = createSlice({
     isNotiOn:false,
     isSticked:false,
     isBarOn:false,
-    isConfirmRequestOn:false
+    isConfirmRequestOn:false,
+    isShowFullImgOn:false,
+    isDisplay1By1:false,
+    isBtnInViewPort:false,
   },
   reducers: {
     setCurrentSliceIndex: (state, action) => {
@@ -24,11 +27,14 @@ const roomSlice = createSlice({
       }
       if (action.payload === "right") {
         if (state.currentSliceIndex === 0) {
-          state.currentSliceIndex = state.imgTotal;
+          state.currentSliceIndex = state.imgTotal - 1;
         } else {
           state.currentSliceIndex -= 1;
         }
       }
+    },
+    setCurrentSliceIndexByIndex: (state,action)=>{
+      state.currentSliceIndex = action.payload
     },
     setCurrentHomeId: (state, action) => {
       state.currentHomeId = action.payload;
@@ -50,18 +56,31 @@ const roomSlice = createSlice({
     },
     setConfirmRequestOn: (state,action)=>{
       state.isConfirmRequestOn = !state.isConfirmRequestOn
+    },
+    setIsShowFullImgOn:(state,action)=>{
+      state.isShowFullImgOn= !state.isShowFullImgOn
+    },
+    setIsDisplay1By1:(state,action)=>{
+      state.isDisplay1By1= !state.isDisplay1By1
+    },
+    setIsBtnOnViewPort:(state,action)=>{
+      state.isBtnInViewPort = action.payload
     }
   },
 }); 
 export const {
   setCurrentSliceIndex,
+  setIsBtnOnViewPort,
+  setIsDisplay1By1,
   setCurrentHomeId,
   setIsDescOn,
   setConfirmRequestOn,
   setIsAmenlitiesOn,
   setIsNotiOn,
   setIsSticked,
-  setIsBarOn
+  setIsBarOn,
+  setIsShowFullImgOn,
+  setCurrentSliceIndexByIndex,
 } = roomSlice.actions;
 const roomSliceReducer = roomSlice.reducer;
 export default roomSliceReducer;

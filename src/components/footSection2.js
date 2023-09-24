@@ -2,7 +2,7 @@ import titleAndLink from "../datas/in-footer";
 
 export default function FooterSection2({ type }) {
   const handleOnClick = () => {
-    alert("Xin lỗi, máy chủ đang bảo chì, vui lòng thử lại sau!");
+    alert("Xin lỗi, tính năng này đang được bảo chì, vui lòng thử lại sau!");
   };
   return (
     <section className="text-left border-b-c1 border-solid border-lgrayd py-6  ">

@@ -1,6 +1,6 @@
 export default function TripsFooter() {
   return (
-    <div className="mt-6  || text-black222">
+    <div className="mt-10 mb-10 || text-black222">
       <p className="text-c14  ">
         Can't find your reservation here?
         <a

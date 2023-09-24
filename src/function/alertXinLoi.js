@@ -1,4 +1,4 @@
 
 export const alertXinLoi =()=>{
-    alert('Xin lỗi, máy chủ đang bảo chì!')
+    alert('Xin lỗi, tính năng này đang được bảo chì!')
 }

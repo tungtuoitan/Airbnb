@@ -44,7 +44,7 @@ export default function LeftBodyRoom() {
       <GoodPrice />
       <TextAboutOwner />
       <SomeThingsAboutHome />
-      <ShortDesc TextArr={TextAboutArr[0]} />
+      < ShortDesc TextArr={TextAboutArr[0]} />
       <WhereYouSleep />
       <ShortAmenlities />
       <WhosComingPart/>

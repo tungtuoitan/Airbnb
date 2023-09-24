@@ -143,7 +143,7 @@
 }
 @media (min-width:745px) {
   .trip-item{
-    max-width:calc(50% - 12px);
+    /* max-width:calc(50% - 12px); */
     border:1px solid rgb(201, 201, 201);
     border-radius:10px;
     padding-left:16px;
@@ -151,10 +151,47 @@
     margin-right:16px;
   }
 }
-@media (min-width:1440px) {
+/* @media (min-width:1440px) {
   .trip-item{
     max-width:calc(33% - 24px);
   }
+} */
+.show-full-img{
+  transition:top 0.3s ease;
+}.bottom-0{
+  bottom:0;
+}
+.body-show-full{
+  width:calc(100vw);
+  transition: opacity 1s;
+  transition-timing-function: cubic-bezier(1, 0.02, 1, -0.15)
+}
+.hover-filter:hover{
+  filter:brightness(90%)
+
+}
+.opacity0{
+  opacity:0;
+
+}
+@media (min-width:745px) {
+  
+  .body-show-full{
+    width:calc(100vw - 240px);
+    position:relative;
+    left:50%;
+    transform: translateX(-50%);
+    
+  }
+}
+@media (min-width:950px) {
+  
+  .body-show-full{
+    width:640px;
+  }
+}
+.top-1000{
+  top:1000px;
 }
 .star-letter {
   height: 12px;
@@ -182,6 +219,15 @@
   stroke-width: 4;
   overflow: visible;
 }
+.unknown-icon-2b {
+  display: block;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: white;
+  stroke-width: 2;
+  overflow: visible;
+}
 .unknown-icon-2 {
   display: block;
   fill: none;
@@ -196,6 +242,51 @@
   height: 16px;
   width: 16px;
   stroke-width: 2;
+  overflow: visible;
+}
+
+.slick-trackkk{
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.imggg-slider3{
+  width: 100vw!important;
+  
+}
+.prev-btn3{
+  left: -50px !important;
+}
+.next-btn3{
+  right:-50px !important;
+}
+@media (min-width:640px) {
+  .slick-trackkk{
+    /* max-width:calc(100% - 40px); */
+    max-height:70vh;
+  }
+  .imggg-slider3{
+    width:auto !important;
+  }
+  .black-top-bar{
+    height:14vh;
+  }
+  
+}
+@media (min-width:745px) {
+  .slick-trackkk{
+    width: calc(100vw - 200px) !important;
+  }
+  
+}
+.heart-icon-2b {
+  display: block;
+  height: 16px;
+  width: 16px;
+  stroke-width: 2;
+  
   overflow: visible;
 }
 .font-size26 {
@@ -222,6 +313,9 @@
 }
 .font-size22 {
   font-size: 22px;
+}
+.react-photo-album--photo:hover{
+  filter:brightness(90%)
 }
 .font-size12 {
   font-size: 12px;
@@ -828,6 +922,9 @@ input[type="checkbox"]:checked::before {
 .h-calc-u2 {
   height: calc(100vh - 10px);
 }
+.bottom-c1000{
+  bottom:-1000px;
+}
 @media (min-width: 745px) {
   .h-calc-u2 {
     height: calc((100vh - 80px));
@@ -847,6 +944,9 @@ input[type="checkbox"]:checked::before {
 }
 .box-shadow-u10 {
   box-shadow: inset 0 2px 8px black;
+}
+.wish{
+  height:calc((100vh - 80px));
 }
 .bg-img-u1 {
   background-image: linear-gradient(

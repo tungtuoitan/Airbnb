@@ -26,7 +26,6 @@ export const useUpdateWidth = () => {
       } else if (window.innerWidth < 1640) {
         dispatch(setItemWidth((window.innerWidth - 80 * 2 - 24 * 3) / 4));
       } else if (window.innerWidth < 1880) {
-        console.log(window.innerWidth -80 -80 )
         dispatch(setItemWidth((window.innerWidth - 80 * 2 - 24 * 4 -15) / 5)); //15 là width scrollbar
       } else {
         dispatch(setItemWidth((window.innerWidth - 80 * 2 - 24 * 5) / 6));

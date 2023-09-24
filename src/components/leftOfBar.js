@@ -8,7 +8,8 @@ export default function LeftOfBar(){
     return(
         <div className="9:flex justify-between items-center">
         <Price2 />
-        <TextRating2 />
+        <TextRatingAndReview/>
+       
       </div>
     )
 }

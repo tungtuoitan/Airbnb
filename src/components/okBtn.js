@@ -7,6 +7,7 @@ export default function Oktn() {
   const dispatch = useDispatch();
   const handleOnClick = () => {
     dispatch(setIsNotiOn());
+    window.scrollTo({top:0})
   };
   return (
     <Link to ='/trips'

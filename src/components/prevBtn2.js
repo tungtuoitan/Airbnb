@@ -12,14 +12,14 @@ function PrevButton2({ onClick,isHovering }) {
         onClick()
     }
   return (
-    <button
+    <button name="prev-btn"
     className={`PREV_BTN absolute  bg-white-u1 hover:bg-white w-8 h-8 rounded-full z100 pl-c2 left-c12 y-center box-shadow-u2
      ${isHovering && i ===hoveringIndex ? "" : "hidden"}
      ${checkIsLaptop()? '':'hidden'} 
      ` }
     onClick={e=>onClickk(e)}
     >
-      <i
+      <i name='prev-btn'
         className="fa-solid fa-angle-left fa-sm"
         style={{ color: "#222222", marginRight: "4px",marginTop:'5px' }}
       ></i>

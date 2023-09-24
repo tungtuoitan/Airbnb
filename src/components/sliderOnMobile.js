@@ -1,4 +1,5 @@
 import InvisibleBar from "./invisibleBar";
+import ShowFullImg from "./showFullImg";
 
 import Slider2 from "./slider2";
 

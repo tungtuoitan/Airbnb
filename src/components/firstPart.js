@@ -1,14 +1,26 @@
 import { useSelector, useDispatch } from "react-redux";
 import useCreateList from "../hooks/useCreateList";
-import { unstable_createMuiStrictModeTheme } from "@mui/material";
 import TextA from "./textA";
 import TextAmini from "./textAmini";
 import fakeData from "../datas/fake-data";
+import { truncateText } from "../function/makeTextShorter";
+import {useState,useEffect} from 'react'
 
 export default function FirstPart() {
   const currentHomeList = useCreateList().currentHomeList;
   const currentHomeId = useSelector((s) => s.roomSlice.currentHomeId);
   const curHome = currentHomeList[currentHomeId];
+  const [widthScreen,setWidthScreen ] = useState(window.innerWidth)
+  useEffect(()=>{
+    const handleResize = () => {
+      setWidthScreen(window.innerWidth)
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  },[])
   return (
     <div
       className="w-full  flex  gap-4 mt-6 pb-6
@@ -19,7 +31,9 @@ export default function FirstPart() {
         <div className="text-left">
           <p className="text-gray-400 text-c12">{curHome.property_type}</p>
           <p className="text-c14 text-black22 ">
-            {curHome.name} - {fakeData.descAboutHomeArr[currentHomeId]}
+            {curHome.name} - { widthScreen <=400 
+            ? truncateText(fakeData.descAboutHomeArr[currentHomeId],40)
+          : fakeData.descAboutHomeArr[currentHomeId]} 
           </p>
         </div>
         <TextAmini />

@@ -15,7 +15,7 @@ export default function FullDesc() {
     <div
       name="container"
       className={`w-full h-full 7:p-10 
-      7:flex justify-center items-center 
+      7:flex justify-center items-center transition-all
       || fixed top-0 left-0 zmax3 bg-black/50 overscroll-contain 
       ${isDescOn ? "" : "pointer-events-none opacity-0"}`}
       onClick={(e) => handleOnClick(e)}

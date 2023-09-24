@@ -6,8 +6,6 @@ import { useEffect } from "react";
 import { useDispatch, useSeletor } from "react-redux";
 import { useUpdateScreenWidth, useUpdateWidth } from "../hooks/useUpdateWidth";
 
-
-
 export default function ImgGroup() {
   
 

@@ -34,6 +34,7 @@ export default function RequiredBtn() {
     dispatch(setIsNotiOn());
     dispatch(setConfirmRequestOn());
     dispatch(addTrip(currentTrip));
+    
   };
 
   return (

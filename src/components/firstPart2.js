@@ -11,7 +11,7 @@ export default function FirstPart2({ item, index }) {
   const curHome = currentHomeList[item.homeIndex];
   
   return (
-    <div key={index} className="trip-item w-full  flex  gap-4 mb-6">
+    <div className="trip-item w-full  flex  gap-4 mb-6">
       <img className="rounded-lg w-c126 h-c104" src={`${curHome.imgarr[0]}`} />
       <div className=" h-c104 flex flex-col justify-between ">
         <div>

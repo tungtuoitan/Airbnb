@@ -16,15 +16,18 @@ export default function HomeList() {
   const dispatch = useDispatch();
   const displayItems = useSelector((state) => state.bodySlice.displayItems);
   const currentHomeList = useCreateList().currentHomeList;
-   useUpdateWidth()
+  useUpdateWidth();
 
   const handleOnClick = (e, index) => {
-    if (e.target.getAttribute("name") !== "heart") {
+    if (e.target.getAttribute("name") !== "heart" &&
+    e.target.getAttribute("name") !== "prev-btn" &&
+    e.target.getAttribute("name") !== "next-btn"
+    ) {
       dispatch(setCurrentHomeId(index));
       document.documentElement.scrollTop = "0px";
     }
   };
-  
+
   return (
     <>
       {currentHomeList.slice(0, displayItems).map((item, index) => {
