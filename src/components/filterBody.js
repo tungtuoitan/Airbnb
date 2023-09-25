@@ -11,7 +11,7 @@ export default function FilterBody() {
   return (
     <div className="pb-c80 overflow-y-scrollx overscroll-contain">
       <TypeOfPlace />
-      <PriceRange />
+      <PriceRange /> 
       <BedsAndBathrooms />
       <PropertyType />
       <Amenities />

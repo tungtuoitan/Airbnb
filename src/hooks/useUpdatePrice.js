@@ -19,7 +19,7 @@ export default function useUpdatePrice() {
   const indexOfLeftCol = (leftSliderValue / width0).toFixed(0);
   const indexOfRightCol = (rightSliderValue / width0).toFixed(0);
   useEffect(() => {
-    dispatch(setLeftPrice(indexOfLeftCol * 25 + 50));
-    dispatch(setRightPrice(indexOfRightCol * 25 + 50));
+    dispatch(setLeftPrice(indexOfLeftCol * 5 + 10));
+    dispatch(setRightPrice(indexOfRightCol * 5 + 10));
   }, [leftSliderValue, rightSliderValue]);
 }

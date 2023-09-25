@@ -17,6 +17,7 @@ import wishSliceReducer from "../reducer/wishSlice";
 import roomSliceReducer from "../reducer/roomsSlice";
 import searchSliceReducer from "../reducer/searchSlice";
 import tripsSliceReducer from "../reducer/tripsSlice";
+import filterSlice2Reducer from "../reducer/filterSlice2";
 
 const rooooootReducer = combineReducers({
   root: rootReducer,
@@ -36,6 +37,7 @@ const rooooootReducer = combineReducers({
   roomSlice:roomSliceReducer,
   searchSlice:searchSliceReducer,
   tripsSlice:tripsSliceReducer,
+  filterSlice2:filterSlice2Reducer,
 });
 const actionSanitizer = (action) => (
   action.type === 'FILE_DOWNLOAD_SUCCESS' && action.data ?

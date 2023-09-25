@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { actionChangeWhere } from "../actions/action";
 import { setNTimesShuffle } from "../reducer/bodySlice";
+import { setFilterDefault } from "../reducer/filterSlice";
+import { setFilterDefault2 } from "../reducer/filterSlice2";
 export default function LocationItem({ item }) {
   const dispatch = useDispatch();
   const handleOnClick = () => {
@@ -10,6 +12,8 @@ export default function LocationItem({ item }) {
     });
     dispatch(actionChangeWhere(item.location));
     dispatch(setNTimesShuffle())
+    dispatch(setFilterDefault())
+    dispatch(setFilterDefault2())
   };
   return (
     <li

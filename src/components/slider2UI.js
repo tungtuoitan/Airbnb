@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import { forwardRef } from "react";
 import ImgsOnSlider2 from "./imgOnSlider2";
+import createHomeList from "../function/createHomeList";
 
 export const Slider2UI = forwardRef((props,ref)=> {
     const {height,imgArr,currentSliceIndex} = props
@@ -16,7 +17,7 @@ export const Slider2UI = forwardRef((props,ref)=> {
         className="absolute bottom-4 right-2 bg-black/50 rounded-sm z1000
         text-c11 text-white font-bold py-c6 px-4 "
       >
-        <span>{currentSliceIndex + 1}</span> / {imgArr.length}
+        <span>{currentSliceIndex+1}</span> / {imgArr.length}
       </div>
       <ImgsOnSlider2 imgArr={imgArr}/>
     </div>

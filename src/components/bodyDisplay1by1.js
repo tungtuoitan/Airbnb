@@ -27,7 +27,10 @@ export default function Slider3() {
   });
   const currentHomeList = useCreateList().currentHomeList;
   const currentRoom = currentHomeList[currentHomeId];
-  const imgArr = currentRoom.imgarr;
+  let imgArr = currentRoom.imgarr;
+  for(let i = 0 ;i<imgArr.length;i++ ){
+    imgArr[i]= './images/homes_hd' + imgArr[i].slice((imgArr[i].length-8),imgArr[i].length)
+  }
 
   return (
     <Slider3UI

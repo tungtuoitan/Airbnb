@@ -12,7 +12,9 @@ export default function PlaceTypeItem({ type, price, isMid }) {
     <div
       className={`CONTAINER || py-4 px-2 w-full max-w-calc-u3 || cursor-pointer
     ${placeType === type ? "bg-black222 box-shadow-u10 bg-img-u1" : "bg-white"}
-    ${isMid ? "border-l-c1 border-r-c1 border-solid border-gray-200" : ""} `}
+    ${isMid ? "border-l-c1 border-r-c1 border-solid border-gray-200" : ""}
+    ${type==='Any type' ? 'rounded-l-xl':''}
+    ${type==='Entire home' ? 'rounded-r-xl':''} `}
       onClick={handleOnClick}
     >
       <div className="INNER || flex flex-col items-center w-full ">

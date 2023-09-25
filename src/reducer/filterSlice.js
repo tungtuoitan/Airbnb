@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { filterDefault } from "../datas/filterDefault";
+
 const filterSlice = createSlice({
   name: " filterSlice",
   initialState: {
@@ -11,7 +12,7 @@ const filterSlice = createSlice({
     filter: {
       placeType: "Any type",
       leftPrice: 0,
-      rightPrice: 1300,
+      rightPrice: 275,
       //
       amountBeds: "Any",
       amountBedrooms: "Any",

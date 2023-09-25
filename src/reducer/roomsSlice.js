@@ -5,7 +5,7 @@ const roomSlice = createSlice({
   initialState: {
     currentHomeId: 0,
     currentSliceIndex: 0,
-    imgTotal: 4,
+    imgTotal: 5,
     isDescOn: false,
     isAmenlitiesOn: false,
     isNotiOn:false,
@@ -20,6 +20,7 @@ const roomSlice = createSlice({
     setCurrentSliceIndex: (state, action) => {
       if (action.payload === "left") {
         if (state.currentSliceIndex >= state.imgTotal -1) {
+          console.log(state.currentSliceIndex,state.imgTotal,0)
           state.currentSliceIndex = 0;
         } else {
           state.currentSliceIndex += 1; 

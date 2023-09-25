@@ -10,7 +10,8 @@ import FormLoginContainer from "../components/formLoginContainer";
 import FbBtn from "../components/fbBtn";
 import MainSignUp from "../components/mainSignUp";
 export default function SignUp() {
-  console.log('Xin nhập đủ 10 số bất kì ')
+  console.clear()
+  console.log('PHONE NUMBER: Xin nhập đủ 10 số bất kì ')
   return (
     <div className=" w-full h-screen ">
       <div className="XXX relative   ">

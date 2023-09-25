@@ -21,7 +21,7 @@ export default function RightNav() {
       <ArrowRight rightArrowDisplay={rightArrowDisplay} />
       {/* {widthScreen <1640 ? (<FilterBtnContainer />): <></>} */}
       <FilterBtnContainer />
-      <div className="bg-white h-full hidden 16:flex items-center">
+      <div className="bg-white  h-full hidden 16:flex items-center">
         <TotalPrice2 />
       </div>
     </div>

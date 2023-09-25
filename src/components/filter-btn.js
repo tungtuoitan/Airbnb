@@ -12,6 +12,7 @@ export default function FilterBtn() {
       className="FILTER  bg-white  flex justify-center 
     items-center gap-2 p-4 pr-c18 w-22 h-12  
     rounded-xl border-c1 border-gray-300 border-solid
+    hover:border-black222
    "
       onClick={handleOnClick}
     >

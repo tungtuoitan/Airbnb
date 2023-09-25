@@ -5,6 +5,7 @@ import useCreateList from "../hooks/useCreateList";
 import { useRef, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Slider2UI } from "./slider2UI";
+import createHomeList from "../function/createHomeList";
 
 export default function Slider2() {
   const currentSliceIndex = useSelector((s) => s.roomSlice.currentSliceIndex);

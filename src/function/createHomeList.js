@@ -1,8 +1,8 @@
-import { v4 as uuidv4 } from "uuid";
+ import { v4 as uuidv4 } from "uuid";
 import { faker } from "@faker-js/faker";
 import fakeData from "../datas/fake-data";
-import owners from "../datas/owners";
-import homeImageArr from "../datas/home-images";
+import {owners} from "../datas/owners";
+import {homeImageArr} from "../datas/home-images";
 import homeData from "../datas/homeData";
 
 let i = -1;

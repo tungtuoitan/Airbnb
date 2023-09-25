@@ -13,7 +13,7 @@ export default function  TotalPrice2 () {
   }
     return (
       <div className="totalprice  cursor-pointer  hidden   w-c220 
-      border-gray-300 border-1 border-solid    
+      border-gray-300 border-1 border-solid    hover:border-black222
       16:rounded-xl text-c15 16:text-c14 bg-white
       16:flex justify-between items-center px-4 h-c48   16:py-0 ml-4 "
       onClick={handleOnClick}>

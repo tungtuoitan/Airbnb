@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setLogInFrom } from "../../reducer/accSlice";
+import {setFilterDefault} from '../../reducer/filterSlice'
 
 export default function DiscoverBtn() {
+  const dispatch = useDispatch()
   const handleOnClick = ()=>{
      window.scrollTo(0, 0);
+     dispatch(setFilterDefault())
+
   }
   return (
     <Link

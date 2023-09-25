@@ -9,8 +9,8 @@ export default function WishItems() {
 
   return (
     <div
-      className={`items  grid  7:grid-cols-3 11:grid-cols-4 
-      gap-x-6 gap-y-c12 7:gap-y-6  11:gap-y-c30 trans-wish
+      className={`items  grid  7:grid-cols-3 11:grid-cols-4 16:grid-cols-5
+      gap-x-6 gap-y-c12 7:gap-y-6  11:gap-y-c30 trans-wish 
       ${wishIdArr.length === 0 ? "" : "grid-cols-2"}`}
     >
       {wishIdArr.length === 0 ? (

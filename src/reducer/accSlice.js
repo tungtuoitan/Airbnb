@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const accSlice = createSlice({
   name: "accSlice",
   initialState: {
-    isLogged: true,
+    isLogged: false   ,
     logInFrom: ''
   },
   reducers: {
@@ -13,8 +13,6 @@ const accSlice = createSlice({
     setLogInFrom : (state,action)=>{
       state.logInFrom = action.payload
     }
-   
-    
   },
 });
 export const { toggleIsLogged,setLogInFrom } = accSlice.actions;

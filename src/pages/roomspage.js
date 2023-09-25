@@ -9,6 +9,7 @@ import MeetYourHostContainer from "../components/meetYourHostContainer";
 import ConfirmRequest from "../components/confirmRequest";
 import {useState,useRef} from 'react'
 import ShowFullImg from "../components/showFullImg";
+import createHomeList from "../function/createHomeList";
 
 export default function RoomPage() {
   return (

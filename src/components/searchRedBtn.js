@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { setIsSearchBigOn, setCurrentPopUp } from "../reducer/searchSlice";
 import { setNTimesShuffle } from "../reducer/bodySlice";
 import { setDisplayingIndex } from "../reducer/header2Slice";
+import { setFilterDefault } from "../reducer/filterSlice";
+import { setFilterDefault2 } from "../reducer/filterSlice2";
 
 export default function SearchRedBtn() {
   const currentPopUp = useSelector((s) => s.searchSlice.currentPopUp);
@@ -16,6 +18,8 @@ export default function SearchRedBtn() {
       );
     }
     dispatch(setNTimesShuffle());
+    dispatch(setFilterDefault())
+    dispatch(setFilterDefault2())
     dispatch(setCurrentPopUp(""));
     dispatch(setIsSearchBigOn(false));
     dispatch(setDisplayingIndex(999))

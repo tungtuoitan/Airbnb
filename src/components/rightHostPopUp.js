@@ -7,7 +7,7 @@ export default function RightHostPopUp() {
     <div className="w-full text-left   ">
       <div className=" border-b-1 pb-c12 color222 border-solid border-gray-400">
         <p className="weight-800  font-size22 leading-7 ">
-          {owner.account.reviews.length}
+          {owner.account.reviews}
         </p>
         <p className="font-semibold font-size10 ">Reviews</p>
       </div>

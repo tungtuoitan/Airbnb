@@ -5,23 +5,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { setIsFilterOn } from "../../reducer/filterSlice";
 import {Link} from 'react-router-dom'
 import { setDisplayingIndex } from "../../reducer/header2Slice";
+import { setUpdateFilter2, setUpdateFilterSlice2 } from "../../reducer/filterSlice2";
 
 export default function ShowXPlace() {
   const dispatch = useDispatch();
-  const currentHomeList = useCreateList().currentHomeList;
+  const homeListForShowXBtn = useCreateList().homeListForShowXBtn;
+  const filter = useSelector(s=>s.filterSlice.filter)
   
   const content =
-    currentHomeList.length === 0
+    homeListForShowXBtn.length === 0
       ? "No exact matches"
-      : `Show ${currentHomeList.length} place`;
+      : `Show ${homeListForShowXBtn.length} place`;
 
   const handleOnClick = () => {
-    if (currentHomeList.length !== 0) {
+    if (homeListForShowXBtn.length !== 0) {
       dispatch(setIsFilterOn())
       window.scrollTo({top:0,behavior:'smooth'})
       dispatch(setDisplayingIndex(999));
+      dispatch(setUpdateFilter2(filter))
     }
-    
   };
   return (
     <Link to ='/'

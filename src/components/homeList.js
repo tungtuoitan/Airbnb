@@ -16,7 +16,6 @@ export default function HomeList() {
   const dispatch = useDispatch();
   const displayItems = useSelector((state) => state.bodySlice.displayItems);
   const currentHomeList = useCreateList().currentHomeList;
-  useUpdateWidth();
 
   const handleOnClick = (e, index) => {
     if (e.target.getAttribute("name") !== "heart" &&
@@ -27,12 +26,14 @@ export default function HomeList() {
       document.documentElement.scrollTop = "0px";
     }
   };
+  
 
   return (
     <>
       {currentHomeList.slice(0, displayItems).map((item, index) => {
         return (
-          <div className="ITEM_CONTAINERR  max-w-full  " key={item.id}>
+          <div className=" 16:border-c1 border-solid border-transparent max-w-full  " 
+          key={item.id}>
             <Link
               to={`/rooms`}
               target=""

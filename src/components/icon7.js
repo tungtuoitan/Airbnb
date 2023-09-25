@@ -19,7 +19,7 @@ export default function Icon7() {
     if (isLogged) {
       dispatch(setWishId(i));
     } else {
-      window.location.href = "/login";
+      window.location.href = "/sign-up";
     }
   };
   const handleMouseEnterLeave = () => {

@@ -3,6 +3,7 @@ import { setDisplayingIndex } from "../reducer/header2Slice.js";
 import hometypeArr from "../datas/home-types.js";
 import { setNTimesShuffle } from "../reducer/bodySlice.js";
 import { setFilterDefault,setLeftValue,setRightValue } from "../reducer/filterSlice.js";
+import { setFilterDefault2 } from "../reducer/filterSlice2.js";
 
 export default function ListHomeType() {
   const dispatch = useDispatch();
@@ -12,11 +13,13 @@ export default function ListHomeType() {
     dispatch(setDisplayingIndex(index));
     dispatch(setNTimesShuffle());
       dispatch(setFilterDefault())
+      dispatch(setFilterDefault2())
       dispatch(setRightValue(graphWidth))
       dispatch(setLeftValue(0))
     window.scrollTo({top:0,behavior:'smooth'})
+    console.clear()
     console.log(
-      "data mẫu có hạn, xin quý dị thông cảm!"
+      "NOTE: data mẫu có hạn, xin quý dị thông cảm!"
     );
   };
 

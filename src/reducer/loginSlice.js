@@ -11,7 +11,7 @@ const loginSlice = createSlice({
     isFinishOpen: false,
     isLastNameFocus: false,
     userInfo: {
-      firstName: "G",
+      firstName: "",
       lastName: "",
       birthdate: "",
       email: "",

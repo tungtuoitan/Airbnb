@@ -13,10 +13,10 @@ export default function FinishSigningUp() {
 
   }
   const runConsole = ()=>{
-    console.log('FIRSTNAME: bất kì kí tự a-z')
-    console.log('LASTNAME: bất kì kí tự a-z')
-    console.log('BIRTHDATE: 9/9/9999')
-    console.log('EMAIL: abc@gmail.com')
+    console.clear()
+    console.log('FIRSTNAME/LASTNAME: bất kì kí tự a-z')
+    console.log('BIRTHDATE_________: 9/9/9999')
+    console.log('EMAIL_____________: abc@gmail.com')
 
 
   }

@@ -5,6 +5,8 @@ import InSearchBtn2 from "./inSearchBtn2";
 import { setNTimesShuffle } from "../../reducer/bodySlice";
 import { shuffleArray } from "../../function/shuffleArray";
 import { setDisplayingIndex } from "../../reducer/header2Slice";
+import { setFilterDefault } from "../../reducer/filterSlice";
+import { setFilterDefault2 } from "../../reducer/filterSlice2";
 
 export default function () {
   const dispatch = useDispatch();
@@ -13,6 +15,8 @@ export default function () {
     dispatch(setNTimesShuffle())
     dispatch(actionSearchPopUp());
     dispatch(setDisplayingIndex(999))
+    dispatch(setFilterDefault())
+    dispatch(setFilterDefault2())
     window.scrollTo(0,0)
     if(nTimesShuffle===1){
       alert(

@@ -10,10 +10,12 @@ import DivBonus1 from "../components/divBonus1";
 import DivBonus2 from "../components/divBonus2";
 import Filter from "../components/filter";
 import { useConsoleLog } from "../hooks/useConsoleLog";
+import PopUpFilter from "../components/popupFilter";
+import createHomeList from "../function/createHomeList";
+import { createTheme } from "@mui/material";
 
 function HomePage() {
   useConsoleLog();
-
   return (
     <div>
       <Header1 />
