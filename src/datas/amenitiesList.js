@@ -1,0 +1,27 @@
+export const amenities = {
+  essentials: [
+    "Wifi",
+    "Kitchen",
+    "Washer",
+    "Dryer",
+    "Air conditioning",
+    "Heating",
+    "Dedicated workspace",
+    "TV",
+    "Hair dryer",
+    "Iron",
+  ],
+  features: [
+    "Pool",
+    "Hot tub",
+    "Free parking",
+    "EV charger",
+    "Crib",
+    "Gym",
+    "BBQ grill",
+    "Breakfast",
+    "Indoor fireplace",
+    "Smoking allowed",
+  ],
+  location: ["Beachfront", "Waterfront"],
+};

@@ -1,0 +1,30 @@
+/* .slick-dots{
+    display: block;
+    position: absolute;
+    bottom: 10px;
+}
+.slick-dots li button::before{
+    color:white;
+}
+.slick-active button::before{
+    opacity:1;
+    color:white !important;
+}
+
+.slick-prev{
+    position: absolute;
+    left:10px;
+    z-index: 10;
+}
+.slick-prev::before{
+    display:block;
+    height: 32px !important;
+    width:32px !important;
+    background-color: black;
+
+}
+
+.set-topcenter{
+    top:50%;
+    transform: translate(50%,-50%)
+} */
