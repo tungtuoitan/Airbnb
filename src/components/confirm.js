@@ -18,3 +18,4 @@ export default function Confirm() {
     </div>
   );
 }
+// react-use-gesture slider-moon styled-components swiper uuidv4 web-vitals @mui/lab eslint faker redux-devtools-extension string-replace-loader tailwindcss-debug-screens
