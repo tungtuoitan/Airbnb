@@ -3,7 +3,6 @@ import FilterBottomBar from "./search-popup-mobile/filterBottomBar";
 import FilterBody from "./filterBody";
 import { useSelector } from "react-redux";
 import useCreateList from "../hooks/useCreateList";
-import {useState, useEffect} from 'react'
 
 export default function PopUpFilter() {
   const isFilterOn = useSelector((s) => s.filterSlice.isFilterOn);
@@ -12,15 +11,10 @@ export default function PopUpFilter() {
     console.log("Vì data mẫu có hạn, xin vui lòng không filter nhiều");
   }
 
-  useEffect(() => {
-    console.log("priceBox.currentHomeList: ",currentHomeList)
-
-  }, [currentHomeList])
-
   return (
     <div
       className={`bg-white w-full h-calc-u2 w-calc-u2  max-w-c780 zmax3 relative rounded-t-xl 7:rounded-xl overflow-hidden 
-      ${true ? "trans-pop" : "mb--1000"}`}
+      ${isFilterOn ? "trans-pop" : "mb--1000"}`}
     >
       <div
         className="w-full  h-calc-u2 overflow-auto overscroll-contain relative "

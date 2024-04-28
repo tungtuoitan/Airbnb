@@ -1,6 +1,5 @@
-import { useContext ,useEffect} from "react";
+import { useContext } from "react";
 import { IndexContext } from "../context/indexContext";
-import { homeList } from "../datas/homeListOriginal";
 import useCreateList from "../hooks/useCreateList";
 
 

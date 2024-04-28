@@ -1,4 +1,4 @@
-import { useDispatch,useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import useCreateList from "./useCreateList"
 
 export const  useGetCurrentHome = ()=>{

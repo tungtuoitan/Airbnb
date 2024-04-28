@@ -126,10 +126,10 @@ const filterSlice = createSlice({
       state.rightSliderValue = action.payload;
     },
     setLeftPrice: (state, action) => {
-      state.filter.leftPrice = action.payload;
+      if(action.payload > 0) state.filter.leftPrice = action.payload;
     },
     setRightPrice: (state, action) => {
-      state.filter.rightPrice = action.payload;
+      if(action.payload > 0) state.filter.rightPrice = action.payload;
     },
     setIsPress: (state, action) => {
       state.isPress = action.payload;

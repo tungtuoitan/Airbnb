@@ -11,28 +11,31 @@ import { filterWithFeatures } from "../function/filterWithFeatures";
 import { filterWithLocation } from "../function/filterWithLocation";
 import { filterWithBooking } from "../function/filterWithBooking";
 import { shuffleNTimes } from "../function/shuffleArray";
-import createHomeList from "../function/createHomeList";
+import {useMemo} from "react"
 
 export default function useCreateList() {
-  const filter = useSelector((state) => state.filterSlice.filter);
   const filter2 = useSelector((state) => state.filterSlice2.filter);
   const nTimesShuffle = useSelector((s) => s.bodySlice.nTimesShuffle);
+  const dependences = [
+    filter2.placeType,
+    filter2.leftPrice,
+    filter2.rightPrice,
+    filter2.amountBeds,
+    filter2.amountBedrooms,
+    filter2.amountBathrooms,
+    filter2.bookingOptions,
+    filter2.propertyType,
+    ...filter2.amenities.essentials,
+    ...filter2.amenities.features,
+    ...filter2.amenities.location,
+    filter2.isDisplayFull,
+    filter2.bookingOptions.instantBook,
+    filter2.bookingOptions.selfCheckIn,
+    nTimesShuffle
+  ]
 
-console.log("useCreateList runned")
-  // const hlByPlaceType = filterWidthTypePlace(filter, homeList);
-  //#
-  const hlByPlaceType = filterWidthTypePlace(filter, homeList);
-  const hlByPrice = filterWithPriceRange(filter, hlByPlaceType);
-  const hlByBeds = filterWithBeds(filter, hlByPrice);
-  const hlByBedrooms = filterWithBedrooms(filter, hlByBeds);
-  const hlByBathrooms = filterWithBathrooms(filter, hlByBedrooms);
-  const hlByPropertyType = filterWithPropertyType(filter, hlByBathrooms);
-  const hlByEssentials = filterWithEssentials(filter, hlByPropertyType);
-  const hlByFeature = filterWithFeatures(filter, hlByEssentials);
-  const hlByLocation = filterWithLocation(filter, hlByFeature);
-  const hlByBooking = filterWithBooking(filter, hlByLocation);
-  const currentHomeList = shuffleNTimes(nTimesShuffle, hlByBooking);
-  
+  const currentHomeList2 = useMemo(() => {
+  console.log("useCreateList runned", Math.floor(Math.random()*9))
   const hlByPlaceType2 = filterWidthTypePlace(filter2, homeList);
   const hlByPrice2 = filterWithPriceRange(filter2, hlByPlaceType2);
   const hlByBeds2 = filterWithBeds(filter2, hlByPrice2);
@@ -44,9 +47,11 @@ console.log("useCreateList runned")
   const hlByLocation2 = filterWithLocation(filter2, hlByFeature2);
   const hlByBooking2 = filterWithBooking(filter2, hlByLocation2);
   const currentHomeList2 = shuffleNTimes(nTimesShuffle, hlByBooking2);
+  return currentHomeList2
+
+}, dependences)
+  
   return {
-    homeListByTypePlace: hlByPlaceType2,
     currentHomeList: currentHomeList2,
-    homeListForShowXBtn: currentHomeList
   };
 }

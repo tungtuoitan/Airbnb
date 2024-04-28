@@ -1,6 +1,5 @@
 import useCreateList from "../hooks/useCreateList";
 import {
-  setCurrentSliceIndex,
   setCurrentSliceIndexByIndex,
   setIsDisplay1By1,
 } from "../reducer/roomsSlice";

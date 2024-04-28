@@ -7,17 +7,12 @@ import { Provider } from "react-redux";
 import store from "./config/configureStore";
 
 
-const handleRender = () => {
-  console.log("vừa render nè!")
-}
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <Profiler id="abcde" onRender={handleRender}>
-          <App />
-        </Profiler>
+        <App />
       </Provider>
     </BrowserRouter>
    </React.StrictMode>

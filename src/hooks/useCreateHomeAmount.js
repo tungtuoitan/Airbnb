@@ -1,7 +1,7 @@
-import useCreateList from "./useCreateList";
+import useCreateListByTypePlace from "./useCreateListByTypePlace";
 
 export default function useCreateHomeAmount() {
-  const list = useCreateList().homeListByTypePlace;
+  const list = useCreateListByTypePlace().homeListByTypePlace;
   const homeAmount = Array.from({ length: 50 }, () => 0);
   for (let i = 0; i < list.length; i++) {
     const indexPrice = list[i].priceOneNight / 5;

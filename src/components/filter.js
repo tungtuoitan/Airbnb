@@ -7,9 +7,9 @@ export default function Filter() {
     <div
       className={`XXX w-full h-full 7:p-10 flex justify-center items-end 7:items-center 
       fixed top-0 left-0 zmax3
-      ${true ? 'bg-black/50':'pointer-events-none  bg-transparent '}`}
+      ${isFilterOn ? 'bg-black/50':'pointer-events-none  bg-transparent '}`}
     >
-      <PopUpFilter />
+    <PopUpFilter />
     </div>
   );
 }

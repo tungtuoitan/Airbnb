@@ -1,7 +1,5 @@
 
 import ClearAll2 from "./clearAll2";
-import ClearAllBtn from "./clearAllBtn";
-import SearchBtn from "./searchBtn";
 import ShowXPlace from "./showXPlace";
 
 export default function FilterBottomBar () {

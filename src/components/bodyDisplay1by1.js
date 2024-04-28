@@ -3,8 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import useCreateList from "../hooks/useCreateList";
 import { useRef, useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Slider2UI } from "./slider2UI";
+import { useSelector } from "react-redux";
 import { Slider3UI } from "./slider3UI";
 
 export default function Slider3() {

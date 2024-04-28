@@ -12,10 +12,10 @@ export default function ListHomeType() {
   const handleOnClick = (index) => {
     dispatch(setDisplayingIndex(index));
     dispatch(setNTimesShuffle());
-      dispatch(setFilterDefault())
-      dispatch(setFilterDefault2())
-      dispatch(setRightValue(graphWidth))
-      dispatch(setLeftValue(0))
+    dispatch(setFilterDefault())
+    dispatch(setFilterDefault2())
+    dispatch(setRightValue(graphWidth))
+    dispatch(setLeftValue(0))
     window.scrollTo({top:0,behavior:'smooth'})
     console.clear()
     console.log(
