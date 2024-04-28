@@ -3,10 +3,9 @@ import HamburgerIcon from "../icons/hamburger-icon";
 import MenuPopUp from "./menuPopUp";
 import { setIsMenuOn } from "../reducer/header1Slice";
 import { useDispatch, useSelector } from "react-redux";
-import GreetingText from "./greeting";
 import Avt from "./avt";
 import MenuPopUp2 from "./menuPopUp2";
-import { useState, useRef, useEffect } from "react";
+import { useRef } from "react";
 import GreetingText2 from "./greeting2";
 
 export default function RightofHeader1a() {

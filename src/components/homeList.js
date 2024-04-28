@@ -1,16 +1,10 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { homeList } from "../datas/homeListOriginal";
 import { IndexContext } from "../context/indexContext";
 import useCreateList from "../hooks/useCreateList";
 import { setCurrentHomeId } from "../reducer/roomsSlice";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import Loading from "./loading";
 import Item from "../components/item";
-import { shuffleNTimes } from "../function/shuffleArray";
-import { useUpdateWidth } from "../hooks/useUpdateWidth";
 
 export default function HomeList() {
   const dispatch = useDispatch();

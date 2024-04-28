@@ -1,27 +1,29 @@
 import HeaderFilter from "./HeaderFilter";
 import FilterBottomBar from "./search-popup-mobile/filterBottomBar";
-import HeaderPopUp from "./headerPopUp";
 import FilterBody from "./filterBody";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import useCreateList from "../hooks/useCreateList";
+import {useState, useEffect} from 'react'
 
 export default function PopUpFilter() {
-  const widthScreen = useSelector((s) => s.header2Nav.widthScreen);
   const isFilterOn = useSelector((s) => s.filterSlice.isFilterOn);
   const currentHomeList = useCreateList().currentHomeList;
   if (currentHomeList.length < 12 && currentHomeList.length > 3) {
     console.log("Vì data mẫu có hạn, xin vui lòng không filter nhiều");
   }
 
+  useEffect(() => {
+    console.log("priceBox.currentHomeList: ",currentHomeList)
+
+  }, [currentHomeList])
+
   return (
     <div
-      className={`xxxx bg-white w-full h-calc-u2 w-calc-u2  max-w-c780 zmax3
-      relative rounded-t-xl 7:rounded-xl overflow-hidden 
-      ${isFilterOn ? "trans-pop" : "mb--1000"}`}
+      className={`bg-white w-full h-calc-u2 w-calc-u2  max-w-c780 zmax3 relative rounded-t-xl 7:rounded-xl overflow-hidden 
+      ${true ? "trans-pop" : "mb--1000"}`}
     >
       <div
-        className="w-full  h-calc-u2 
-            overflow-auto overscroll-contain relative "
+        className="w-full  h-calc-u2 overflow-auto overscroll-contain relative "
       >
         <HeaderFilter title="Filters" />
         <FilterBody />

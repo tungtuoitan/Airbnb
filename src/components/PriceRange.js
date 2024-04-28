@@ -1,8 +1,10 @@
 import Adjust from "./adjust";
 import TitleOnFilter from "./titleOnFilter";
 import ControlByNumber from "./controlByNumber";
+import { useSelector } from "react-redux";
 
 export default function PriceRange() {
+  const isFilterOn = useSelector(s=>s.filterSlice.isFilterOn)
   return (
     <div className="px-6 ">
       <div
@@ -10,7 +12,7 @@ export default function PriceRange() {
       "
       >
         <TitleOnFilter title="Price range" />
-        <Adjust />
+        {isFilterOn ? <Adjust/> : <></>}
         <ControlByNumber />
       </div>
     </div>

@@ -1,12 +1,9 @@
 import LogoIcon from "../icons/logo-icons";
-import GrayScreen from "./grayScreen";
-import Header1Mobile from "./header1-mobile";
 import RightofHeader1 from "./right-header1";
-import SearchBig from "./searchBig";
 import MidContainer from "./midContainer";
-import SearchBox from "./searchBox";
-import { useDispatch, useSelector } from "react-redux";
-import XBtn2 from "./xBtn2";
+import { useSelector } from "react-redux";
+import {lazy, Suspense} from 'react'
+const GrayScreen = lazy(() => import("./grayScreen"))
 
 export default function Header1Laptop() {
   const isSearchBigOn = useSelector((s) => s.searchSlice.isSearchBigOn);
@@ -17,14 +14,15 @@ export default function Header1Laptop() {
     >
       <div
         className={`w-full xwidth-custom h-20 items-center  
-        hidden 7:flex  justify-between relative
-        `}
+        hidden 7:flex  justify-between relative`}
       >
         <LogoIcon />
         <MidContainer />
         <RightofHeader1 />
       </div>
-      <GrayScreen />
+      <Suspense>
+        <GrayScreen />
+      </Suspense>
     </div>
   );
 }

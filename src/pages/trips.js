@@ -1,5 +1,4 @@
 import Footer2 from "../components/footer2";
-import Header1a from "../components/header1a";
 import HeaderLoginLaptop from "../components/headerLoginLaptop";
 import MenuBarSmartf from "../components/menu-bar-smartf";
 import TripsBody from "../components/tripsBody";
@@ -22,7 +21,8 @@ export default function Trips() {
         <TripsFooter />
       </div>
       <Footer2 />
-      <MenuBarSmartf />
+      {window.innerWidth < 750 ? <MenuBarSmartf /> : <></>}
+      
     </div>
   );
 }

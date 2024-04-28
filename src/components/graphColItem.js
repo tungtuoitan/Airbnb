@@ -1,13 +1,13 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import useCreateHomeAmount from "../hooks/useCreateHomeAmount";
-import useCreateBiggestAmount from "../hooks/useCreateBiggestAmount";
+// import useCreateBiggestAmount from "../hooks/useCreateBiggestAmount";
 
 export default function GraphCol({ height }) {
   const graphWidth = useSelector((state) => state.filterSlice.graphWidth);
   const graphFake = useSelector((state) => state.filterSlice.graphFake);
   const placeType = useSelector((state) => state.filterSlice.filter.placeType);
 
-  const biggestAmount = useCreateBiggestAmount();
+  // const biggestAmount = useCreateBiggestAmount();
   const leftSliderValue = useSelector(
     (state) => state.filterSlice.leftSliderValue
   );

@@ -13,6 +13,7 @@
     "react-lazy-load-image-component": "^1.6.0",
     "react-photo-album": "^2.3.0",
     "react-router-dom": "^6.14.2",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
     "react-slider": "^2.0.6",
     "react-spring": "^9.7.2",
@@ -26,7 +27,8 @@
     "eject": "react-scripts eject",
     "homepage": "https://tungtuoitan.github.io/Airbnb",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "analyze": "source-map-explorer build/static/js/main.*"
   },
   "eslintConfig": {
     "extends": []
@@ -52,6 +54,7 @@
     "react-redux": "^8.1.2",
     "react-scroll": "^1.8.9",
     "redux": "^4.2.1",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }

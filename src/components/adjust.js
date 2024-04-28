@@ -1,6 +1,4 @@
 import Graph from "./graph";
-import LeftSlider from "./leftSlider";
-import RightSlider from "./rightSlider";
 import useListenResizeForPriceRange from "../hooks/useListenResizeForPriceRange";
 import ReactSlider from "react-slider";
 import { useState } from "react";

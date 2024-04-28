@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { homeList } from "../datas/homeListOriginal";
 import { filterWidthTypePlace } from "../function/filterWithTypePlace";
 import { filterWithPriceRange } from "../function/filterWithPriceRange";
@@ -18,7 +18,7 @@ export default function useCreateList() {
   const filter2 = useSelector((state) => state.filterSlice2.filter);
   const nTimesShuffle = useSelector((s) => s.bodySlice.nTimesShuffle);
 
-
+console.log("useCreateList runned")
   // const hlByPlaceType = filterWidthTypePlace(filter, homeList);
   //#
   const hlByPlaceType = filterWidthTypePlace(filter, homeList);

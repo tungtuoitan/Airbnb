@@ -1,22 +1,18 @@
-import React, { Component, useEffect } from "react";
+import React, {memo} from "react";
 import Slider from "react-slick";
 import { useContext } from "react";
 import { IndexContext } from "../context/indexContext";
-import { homeList } from "../datas/homeListOriginal";
 import "./slider.css";
 import PrevButton2 from "./prevBtn2";
 import NextButton2 from "./nextBtn2";
 import { useState } from "react";
 import DotsSlide from "./dots-slide";
 import { useDispatch, useSelector } from "react-redux";
-import { shuffleNTimes } from "../function/shuffleArray";
 import useCreateList from "../hooks/useCreateList";
 import { setIsHoverItem, setHoveringIndex } from "../reducer/bodySlice";
-import { checkIsLaptop } from "../function/checkIsLaptop";
-import useUpdatePrice from "../hooks/useUpdatePrice";
-import { useUpdateWidth } from "../hooks/useUpdateWidth";
 
-export default function SliderTry() {
+
+ function SliderTry() {
   const itemWidth = useSelector(s=>s.bodySlice.itemWidth)
   const dispatch = useDispatch();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -89,3 +85,5 @@ export default function SliderTry() {
     </div>
   );
 }
+
+export default SliderTry

@@ -1,8 +1,5 @@
 import ImgGroup from "./imgGroup";
 import TextGroup from "./textGroup";
-import { lazy, Suspense } from "react";
-import { isElementInViewport } from "../function/checkIfItemInViewPort";
-import { useRef, useEffect, useState } from "react";
 import { useCustomLazyLoading } from "../hooks/useCustomLazyLoading";
 
 export default function Item() {

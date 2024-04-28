@@ -1,6 +1,6 @@
 import useResizeForGraph from '../hooks/useResizeForGraph'
 import GraphColItem from "./graphColItem";
-import { useDispatch,useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 export default function Graph() {
   const ulRef  = useResizeForGraph();

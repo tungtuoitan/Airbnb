@@ -1,19 +1,18 @@
-import React, { useRef, useState } from "react";
-// import Slider from "./slider";
+import React, {lazy, Suspense} from "react";
 import InvisibleLayer from "./invisible-layer";
-import SliderTry from "./sliderTry";
-import { useEffect } from "react";
-import { useDispatch, useSeletor } from "react-redux";
-import { useUpdateScreenWidth, useUpdateWidth } from "../hooks/useUpdateWidth";
+import ImgFirst from "./imgFirst"
+
+const SliderTry = lazy(() => import("./sliderTry"))
 
 export default function ImgGroup() {
   
-
   return (
     <div
       className="aspect-square  relative rounded-xl overflow-hidden mb-c14  w-full    "
     >
-      <SliderTry  />
+      <Suspense fallback={<ImgFirst/>}>
+        <SliderTry  />
+      </Suspense>
       <InvisibleLayer />
     </div>
   );

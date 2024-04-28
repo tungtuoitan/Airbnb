@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { actionSearchPopUp } from "../actions/action";
 import U1Icon from "../icons/u1Icon";
 import SearchIcon3 from "../icons/searchIcon3";

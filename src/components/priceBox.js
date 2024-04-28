@@ -1,18 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
-import useCreateHomeAmount from "../hooks/useCreateHomeAmount";
 
 export default function PriceBox({ title, value }) {
-  const graphWidth = useSelector((state) => state.filterSlice.graphWidth);
-  const leftSliderValue = useSelector(
-    (state) => state.filterSlice.leftSliderValue
-  );
-  const rightSliderValue = useSelector(
-    (state) => state.filterSlice.rightSliderValue
-  );
 
-  const homeAmountByPrice = useCreateHomeAmount()
-  const width0 = (graphWidth - 32) / homeAmountByPrice.length; // là width của 1 col
-  const indexOfLeftCol = (leftSliderValue / width0).toFixed(2) - 1
 
   return (
     <div

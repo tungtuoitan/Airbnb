@@ -7,7 +7,6 @@ function NextButton2({ onClick, isHovering }) {
   const i = useContext(IndexContext)
   const hoveringIndex = useSelector(s=>s.bodySlice.hoveringIndex)
     const onClickk =(e)=>{
-      console.log(0)
         e.preventDefault()
         onClick()
     }

@@ -1,13 +1,11 @@
+import { useSelector } from "react-redux";
 import "./styles/App.css";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/homepage";
 import RoomPage from "./pages/roomspage";
 import Login from "./pages/login";
 import Wishlists from "./pages/wishlists";
-import WishPage from "./components/wishPage";
 import NoMatch from "./components/noMatch";
-import Confirm from "./components/confirm";
-import { useSelector } from "react-redux";
 import Trips from "./pages/trips";
 import Inbox from "./pages/inbox";
 import AccountSettings from "./pages/accountSettings";

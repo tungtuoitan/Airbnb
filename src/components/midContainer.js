@@ -1,12 +1,9 @@
 import TextContainer from "./textContainer";
-import SearchBig from "./searchBig";
 import SearchBox from "./searchBox";
-import { useDispatch, useSelector } from "react-redux";
-import { setIsSearchBigOn } from "../reducer/searchSlice";
+import { useSelector } from "react-redux";
 import WherePopUpLaptop from "./wherePopUpLaptop";
 import WhenPopUpLaptop from "./whenPopUpLaptop";
 import WhoPopUpLaptop from "./whoPopUpLaptop";
-import SearchRedBtn3 from "./searchRedBtn3";
 
 export default function MidContainer() {
   const currentPopUp = useSelector((s) => s.searchSlice.currentPopUp);
