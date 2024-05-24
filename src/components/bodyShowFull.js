@@ -1,4 +1,3 @@
-import useCreateList from "../hooks/useCreateList";
 import {
   setCurrentSliceIndexByIndex,
   setIsDisplay1By1,
@@ -8,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function BodyShowFull() {
   const currentHomeId = useSelector((s) => s.roomSlice.currentHomeId);
-  const currentHomeList = useCreateList().currentHomeList;
+  const currentHomeList = useSelector((s) => s.bodySlice.currentList);
   const curHome = currentHomeList[currentHomeId];
   const dispatch = useDispatch();
   const handleOnClick = () => {
@@ -17,8 +16,7 @@ export default function BodyShowFull() {
   };
 
   return (
-    <div className="overflow-x-hidden overflow-y-auto 
-    w-full h-full overscroll-contain   ">
+    <div className="overflow-x-hidden overflow-y-auto w-full h-full overscroll-contain   ">
       <div className={`body-show-full   w-full pb-c164 `}>
         <div>
           <img

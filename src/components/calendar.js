@@ -11,13 +11,11 @@ import fakeData from '../datas/fake-data'
 //       return
 //     }else{
 //       this.blackCircle+=1
-//       console.log('blackCircle: ',this.blackCircle)
 //     }
 
 //   },
 //   decrease: ()=>{
 //     this.blackCircle-=1
-//     console.log('blackCircle: ',this.blackCircle)
 //   },
 // }
 

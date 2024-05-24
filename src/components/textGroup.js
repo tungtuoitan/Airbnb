@@ -3,7 +3,6 @@ import StarIcon from "./starIcon";
 import { homeList } from "../datas/homeListOriginal";
 import { useContext } from "react";
 import { IndexContext } from "../context/indexContext";
-import useCreateList from "../hooks/useCreateList";
 import dateItemSliceReducer, { pickLastDate } from "../reducer/dateItemSlice";
 import fakeData from "../datas/fake-data";
 import { useSelector } from "react-redux";
@@ -14,7 +13,7 @@ export default function TextGroup() {
   const lastDate = useSelector((s) => s.dateItemSlice.lastDate);
   const isTotalPrice = useSelector((s) => s.bodySlice.isTotalPrice);
 
-  const currentHomeList = useCreateList().currentHomeList;
+  const currentHomeList = useSelector((s) => s.bodySlice.currentList);
   let index;
   for (let j = 0; j < currentHomeList.length; j++) {
     if (currentHomeList[j].id === i) {

@@ -10,15 +10,12 @@ export default function MidContainer() {
   const isSearchBigOn = useSelector((s) => s.searchSlice.isSearchBigOn);
 
   return (
-    <div
-      className={` h-full flex  items-center flex-col pt-4 w-full
-       absolute top-0 left-0 overflow-visible trans`}
-    >
+    <div className="h-full flex  items-center flex-col pt-4 w-full absolute top-0 left-0 overflow-visible trans">
       <TextContainer />
       <SearchBox />
-      {currentPopUp === "where" && isSearchBigOn ? <WherePopUpLaptop /> : <></>}
-      {currentPopUp === "when" && isSearchBigOn ? <WhenPopUpLaptop /> : <></>}
-      {currentPopUp === "who" && isSearchBigOn ? <WhoPopUpLaptop /> : <></>}
+      {currentPopUp === "where" && isSearchBigOn && <WherePopUpLaptop />}
+      {currentPopUp === "when" && isSearchBigOn && <WhenPopUpLaptop />}
+      {currentPopUp === "who" && isSearchBigOn && <WhoPopUpLaptop />}
     </div>
   );
 }

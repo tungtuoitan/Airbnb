@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 
 export default function LogoIcon() {
-  const handleOnclick = ()=>{
+  const handleOnclick = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
-    
-  }
+  };
   return (
-    <Link to="/" className="cursor-pointer zmax2 "
-    onClick={handleOnclick}>
+    <Link to="/" className="cursor-pointer zmax2 " onClick={handleOnclick}>
       <div className="w-c102">
         <svg
           width="32"

@@ -1,13 +1,11 @@
-import { useSelector, useDispatch } from "react-redux";
-import useCreateList from "../hooks/useCreateList";
-import TextA from "./textA";
+import { useSelector } from "react-redux";
 import TextAmini from "./textAmini";
 import fakeData from "../datas/fake-data";
 import { truncateText } from "../function/makeTextShorter";
 import {useState,useEffect} from 'react'
 
 export default function FirstPart() {
-  const currentHomeList = useCreateList().currentHomeList;
+  const currentHomeList = useSelector((s) => s.bodySlice.currentList);
   const currentHomeId = useSelector((s) => s.roomSlice.currentHomeId);
   const curHome = currentHomeList[currentHomeId];
   const [widthScreen,setWidthScreen ] = useState(window.innerWidth)

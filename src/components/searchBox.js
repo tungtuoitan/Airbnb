@@ -1,7 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
-import InnerSearchBig from "./innerSearchBig";
+import { useSelector } from "react-redux";
 import SearchSmall from "./searchSmall";
-import InnerSearchSmall from "./innerSearchSmall";
+import { lazy, Suspense } from "react";
+const InnerSearchBig = lazy(() => import("./innerSearchBig"));
 
 export default function SearchBox() {
   const isSearchBigOn = useSelector((s) => s.searchSlice.isSearchBigOn);
@@ -9,9 +9,7 @@ export default function SearchBox() {
 
   return (
     <div
-      className={`rounded-full border-c1 border-gray-300 border-solid 
-      cursor-pointer flex-none zmax 
-       trans-box  overflow-hiddenx flex flex-col justify-center items-center
+      className={`rounded-full border-c1 border-gray-300 border-solid cursor-pointer flex-none zmax trans-box  overflow-hiddenx flex flex-col justify-center items-center
         ${
           isSearchBigOn
             ? `h-c65  w-full min-w-c660 max-w-c850  relative `
@@ -25,11 +23,12 @@ export default function SearchBox() {
             ? "bg-gray-200"
             : "bg-white"
         }
-
-        `}
+      `}
     >
-      <InnerSearchBig/>
-      <SearchSmall/>
+      <Suspense>
+        <InnerSearchBig />
+      </Suspense>
+      <SearchSmall />
     </div>
   );
 }

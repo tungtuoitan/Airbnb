@@ -1,24 +1,22 @@
-import React, {memo} from "react";
+import React from "react";
 import Slider from "react-slick";
 import { useContext } from "react";
 import { IndexContext } from "../context/indexContext";
-import "./slider.css";
+// import "./slider.css";
 import PrevButton2 from "./prevBtn2";
 import NextButton2 from "./nextBtn2";
 import { useState } from "react";
 import DotsSlide from "./dots-slide";
 import { useDispatch, useSelector } from "react-redux";
-import useCreateList from "../hooks/useCreateList";
 import { setIsHoverItem, setHoveringIndex } from "../reducer/bodySlice";
 
-
- function SliderTry() {
-  const itemWidth = useSelector(s=>s.bodySlice.itemWidth)
+function SliderTry() {
+  const itemWidth = useSelector((s) => s.bodySlice.itemWidth);
+  const currentHomeList = useSelector((s) => s.bodySlice.currentList);
   const dispatch = useDispatch();
   const [currentIndex, setCurrentIndex] = useState(0);
   const isHovering = useSelector((s) => s.bodySlice.isHoverItem);
   const isLaptop = useSelector((s) => s.bodySlice.isLaptop);
-
   const i = useContext(IndexContext);
   const handleOnMouseMove = () => {
     if (isLaptop) {
@@ -32,7 +30,6 @@ import { setIsHoverItem, setHoveringIndex } from "../reducer/bodySlice";
       dispatch(setHoveringIndex(i));
     }
   };
-  const currentHomeList = useCreateList().currentHomeList;
   let index;
   for (let j = 0; j < currentHomeList.length; j++) {
     if (currentHomeList[j].id === i) {
@@ -63,6 +60,7 @@ import { setIsHoverItem, setHoveringIndex } from "../reducer/bodySlice";
       setCurrentIndex(nextI);
     },
   };
+
   return (
     <div
       className=" relative "
@@ -86,4 +84,4 @@ import { setIsHoverItem, setHoveringIndex } from "../reducer/bodySlice";
   );
 }
 
-export default SliderTry
+export default React.memo(SliderTry);

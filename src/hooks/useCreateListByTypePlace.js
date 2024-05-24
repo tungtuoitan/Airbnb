@@ -6,7 +6,6 @@ import { useMemo } from "react";
 export default function useCreateListByTypePlace() {
   const filter2 = useSelector((state) => state.filterSlice2.filter);
 
-  
   const dependences = [
     filter2.placeType,
     filter2.leftPrice,
@@ -22,13 +21,9 @@ export default function useCreateListByTypePlace() {
     filter2.bookingOptions.instantBook,
     filter2.bookingOptions.selfCheckIn,
   ];
-  
+
   const hlByPlaceType2 = useMemo(
-    () => { 
-      console.log(dependences)
-      console.log("useCreateListByTypePlace runned",Math.floor(Math.random()*9));
-      return filterWidthTypePlace(filter2, homeList)
-    },
+    () => filterWidthTypePlace(filter2, homeList),
     dependences
   );
   return {

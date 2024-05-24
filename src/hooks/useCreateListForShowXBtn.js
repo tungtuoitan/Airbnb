@@ -32,9 +32,7 @@ export default function useCreateListForShowXBtn() {
     filter.bookingOptions.selfCheckIn,
     nTimesShuffle,
   ];
-  console.log(dependences)
-
-  console.log("useCreateListForShowXBtn runned");
+  
   const currentHomeList = useMemo(() => {
     const hlByPlaceType = filterWidthTypePlace(filter, homeList);
     const hlByPrice = filterWithPriceRange(filter, hlByPlaceType);

@@ -1,5 +1,4 @@
 import BookContainer from "./bookContainer";
-import OwnerAvtContainer from "./ownerAvtContainer";
 
 export default function Book() {
   return (

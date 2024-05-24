@@ -1,4 +1,7 @@
+import React from "react";
 
-export default function EmtyDiv(){
-    return <div className="opacity-0">2</div>
+function EmtyDiv() {
+  return <div className="opacity-0">2</div>;
 }
+
+export default React.memo(EmtyDiv);

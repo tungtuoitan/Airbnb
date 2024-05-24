@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from "react-redux";
-import useCreateList from "../hooks/useCreateList";
 import { unstable_createMuiStrictModeTheme } from "@mui/material";
 import TextA from "./textA";
 import TextAmini from "./textAmini";
@@ -7,7 +6,7 @@ import { indexOf } from "lodash";
 import fakeData from "../datas/fake-data";
 
 export default function FirstPart2({ item, index }) {
-  const currentHomeList = useCreateList().currentHomeList;
+  const currentHomeList = useSelector((s) => s.bodySlice.currentList);
   const curHome = currentHomeList[item.homeIndex];
   
   return (

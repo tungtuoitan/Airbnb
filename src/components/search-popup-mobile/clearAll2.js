@@ -1,15 +1,18 @@
-import { useDispatch,useSelector } from "react-redux";
-import { setFilterDefault,setLeftValue,setRightValue } from "../../reducer/filterSlice";
-import useSetRightSliderFirstTime from "../../hooks/useSetSliderRightFirstTime";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  setFilterDefault,
+  setLeftValue,
+  setRightValue,
+} from "../../reducer/filterSlice";
 
 export default function ClearAll2() {
-  const graphWidth = useSelector(state=>state.filterSlice.graphWidth)
+  const graphWidth = useSelector((state) => state.filterSlice.graphWidth);
 
   const dispatch = useDispatch();
   const handleClearAll = () => {
-    dispatch(setFilterDefault())
-    dispatch(setRightValue(graphWidth))
-    dispatch(setLeftValue(0))
+    dispatch(setFilterDefault());
+    dispatch(setRightValue(graphWidth));
+    dispatch(setLeftValue(0));
   };
 
   return (

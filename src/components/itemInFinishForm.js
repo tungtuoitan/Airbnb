@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function ItemInFinishForm({ content, value, actionCreator }) {
   const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef(null);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
     inputRef.current.focus();
   }, [isFocused]);
@@ -14,9 +14,8 @@ export default function ItemInFinishForm({ content, value, actionCreator }) {
   };
   const handleOnChange = (e) => {
     const regex = /^[A-Za-z ]+$/;
-    console.log(value)
     if (regex.test(e.target.value)) {
-      dispatch(actionCreator(e.target.value))
+      dispatch(actionCreator(e.target.value));
     }
   };
 

@@ -8,22 +8,21 @@ const roomSlice = createSlice({
     imgTotal: 5,
     isDescOn: false,
     isAmenlitiesOn: false,
-    isNotiOn:false,
-    isSticked:false,
-    isBarOn:false,
-    isConfirmRequestOn:false,
-    isShowFullImgOn:false,
-    isDisplay1By1:false,
-    isBtnInViewPort:false,
+    isNotiOn: false,
+    isSticked: false,
+    isBarOn: false,
+    isConfirmRequestOn: false,
+    isShowFullImgOn: false,
+    isDisplay1By1: false,
+    isBtnInViewPort: false,
   },
   reducers: {
     setCurrentSliceIndex: (state, action) => {
       if (action.payload === "left") {
-        if (state.currentSliceIndex >= state.imgTotal -1) {
-          console.log(state.currentSliceIndex,state.imgTotal,0)
+        if (state.currentSliceIndex >= state.imgTotal - 1) {
           state.currentSliceIndex = 0;
         } else {
-          state.currentSliceIndex += 1; 
+          state.currentSliceIndex += 1;
         }
       }
       if (action.payload === "right") {
@@ -34,8 +33,8 @@ const roomSlice = createSlice({
         }
       }
     },
-    setCurrentSliceIndexByIndex: (state,action)=>{
-      state.currentSliceIndex = action.payload
+    setCurrentSliceIndexByIndex: (state, action) => {
+      state.currentSliceIndex = action.payload;
     },
     setCurrentHomeId: (state, action) => {
       state.currentHomeId = action.payload;
@@ -46,29 +45,29 @@ const roomSlice = createSlice({
     setIsAmenlitiesOn: (state, action) => {
       state.isAmenlitiesOn = !state.isAmenlitiesOn;
     },
-    setIsNotiOn : (state,action)=>{
+    setIsNotiOn: (state, action) => {
       state.isNotiOn = !state.isNotiOn;
     },
-    setIsSticked: (state,action)=>{
-      state.isSticked = action.payload
+    setIsSticked: (state, action) => {
+      state.isSticked = action.payload;
     },
-    setIsBarOn: (state,action)=>{
-      state.isBarOn = action.payload
+    setIsBarOn: (state, action) => {
+      state.isBarOn = action.payload;
     },
-    setConfirmRequestOn: (state,action)=>{
-      state.isConfirmRequestOn = !state.isConfirmRequestOn
+    setConfirmRequestOn: (state, action) => {
+      state.isConfirmRequestOn = !state.isConfirmRequestOn;
     },
-    setIsShowFullImgOn:(state,action)=>{
-      state.isShowFullImgOn= !state.isShowFullImgOn
+    setIsShowFullImgOn: (state, action) => {
+      state.isShowFullImgOn = !state.isShowFullImgOn;
     },
-    setIsDisplay1By1:(state,action)=>{
-      state.isDisplay1By1= !state.isDisplay1By1
+    setIsDisplay1By1: (state, action) => {
+      state.isDisplay1By1 = !state.isDisplay1By1;
     },
-    setIsBtnOnViewPort:(state,action)=>{
-      state.isBtnInViewPort = action.payload
-    }
+    setIsBtnOnViewPort: (state, action) => {
+      state.isBtnInViewPort = action.payload;
+    },
   },
-}); 
+});
 export const {
   setCurrentSliceIndex,
   setIsBtnOnViewPort,

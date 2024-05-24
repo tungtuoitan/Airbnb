@@ -6,7 +6,7 @@ import { useUpdateWidth } from "../hooks/useUpdateWidth";
 
 export default function GridContainer() {
   const contRef = useRef(null);
-    useUpdateWidth(contRef);
+  useUpdateWidth(contRef);
 
   return (
     <div

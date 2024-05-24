@@ -1,21 +1,21 @@
-import useCreateList from "../hooks/useCreateList";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useRef, useState, useEffect } from "react";
 import { ImgsOnLaptopUI } from "./imgsOnLaptopUI";
 
 export default function ImgsOnLaptop() {
   const [height, setHeight] = useState(5);
   const contRef = useRef(null);
+  const handleResize = () => {
+    //# khi > 1130
+    if (contRef.current && window.innerWidth >= 1130) {
+      setHeight(window.innerHeight / 4);
+      //# khi screen < 1130
+    } else if (contRef.current && window.innerWidth < 1130) {
+      setHeight(contRef.current.offsetWidth / 4);
+    }
+  };
+
   useEffect(() => {
-    const handleResize = () => {
-      //# khi > 1130
-      if (contRef.current && window.innerWidth >= 1130) {
-        setHeight(window.innerHeight / 4);
-        //# khi screen < 1130
-      } else if (contRef.current && window.innerWidth < 1130) {
-        setHeight(contRef.current.offsetWidth / 4);
-      }
-    };
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
@@ -24,7 +24,7 @@ export default function ImgsOnLaptop() {
   }, []);
 
   const currentHomeId = useSelector((s) => s.roomSlice.currentHomeId);
-  const currentHomeList = useCreateList().currentHomeList;
+  const currentHomeList = useSelector((s) => s.bodySlice.currentList);
   const currentRoom = currentHomeList[currentHomeId];
   const imgArr = currentRoom.imgarr;
 

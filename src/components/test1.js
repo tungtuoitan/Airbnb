@@ -10,8 +10,6 @@ export default function Test1() {
 //     (state) => state.filterSlice.leftSliderValue
 //   );
 //   const handleCheck = (e) => {
-//     // console.log(window.getComputedStyle(e.target).getPropertyValue('cursor'))
-//     console.log(e.defaultPrevented, event.defaultPrevented);
 //   };
   // const springs = useSpring({
   //   from: { x: 0 },

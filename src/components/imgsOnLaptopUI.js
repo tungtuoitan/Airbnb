@@ -5,25 +5,23 @@ import { setIsShowFullImgOn } from "../reducer/roomsSlice";
 
 export const ImgsOnLaptopUI = forwardRef((props, ref) => {
   const dispatch = useDispatch();
-  const handleOnClick = () => {
-    dispatch(setIsShowFullImgOn());
-  };
+  const handleOnClick = () => dispatch(setIsShowFullImgOn());
   const { height, imgArr } = props;
+
   return (
     <div
       name="Photos"
-      className="hidden 7:block px-10 11:px-20 7:pt-6 11:flex justify-center
-    cursor-pointer "
+      className="hidden 7:block px-10 11:px-20 7:pt-6 11:flex justify-center cursor-pointer "
     >
       <div
-        onClick={handleOnClick}
-        className="7:grid grid-cols-4 rounded-xl overflow-hidden gap-2 11:w-c1120
-        relative "
         ref={ref}
+        onClick={handleOnClick}
+        className="7:grid grid-cols-4 rounded-xl overflow-hidden gap-2 11:w-c1120 relative "
       >
         {imgArr.map((item, index) => {
           return (
-            <img name={`${index}`}
+            <img
+              name={`${index}`}
               src={item}
               key={index}
               style={{ height: `${height}px` }}

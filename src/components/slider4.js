@@ -10,20 +10,19 @@ import { useState } from "react";
 import DotsSlide from "./dots-slide";
 import { useDispatch, useSelector } from "react-redux";
 import { shuffleNTimes } from "../function/shuffleArray";
-import useCreateList from "../hooks/useCreateList";
 import { setIsHoverItem, setHoveringIndex } from "../reducer/bodySlice";
 import { checkIsLaptop } from "../function/checkIsLaptop";
 import useUpdatePrice from "../hooks/useUpdatePrice";
 import { useUpdateWidth } from "../hooks/useUpdateWidth";
 
 export default function Slider4() {
-  const itemWidth = useSelector(s=>s.bodySlice.itemWidth)
+  const itemWidth = useSelector((s) => s.bodySlice.itemWidth);
   const dispatch = useDispatch();
   const [currentIndex, setCurrentIndex] = useState(0);
   const isHovering = useSelector((s) => s.bodySlice.isHoverItem);
   const isLaptop = useSelector((s) => s.bodySlice.isLaptop);
 
-  const i = useSelector(s=>s.roomSlice.currentHomeId)
+  const i = useSelector((s) => s.roomSlice.currentHomeId);
   const handleOnMouseMove = () => {
     if (isLaptop) {
       dispatch(setIsHoverItem(true));
@@ -36,9 +35,8 @@ export default function Slider4() {
       dispatch(setHoveringIndex(i));
     }
   };
-  const currentHomeList = useCreateList().currentHomeList;
+  const currentHomeList = useSelector((s) => s.bodySlice.currentList);
 
-  
   const imgArr = currentHomeList[i].imgarr;
   const settings = {
     dots: true,

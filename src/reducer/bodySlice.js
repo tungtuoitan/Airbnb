@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { checkIsLaptop } from "../function/checkIsLaptop";
+import { homeList } from "../datas/homeListOriginal";
 
 const bodySlice = createSlice({
   name: "bodySlice",
@@ -11,6 +12,7 @@ const bodySlice = createSlice({
     hoveringIndex: 999,
     isLaptop: checkIsLaptop(),
     itemWidth: 0,
+    currentList: homeList
   },
   reducers: {
     increaseDisplayItems: (state) => {
@@ -35,6 +37,9 @@ const bodySlice = createSlice({
     setItemWidth: (state, action) => {
       state.itemWidth = action.payload;
     },
+    setCurrentList: (state, action) => {
+      state.currentList = action.payload;
+    },
   },
 });
 export const {
@@ -44,6 +49,7 @@ export const {
   setNTimesShuffle,
   setIsHoverItem,
   setHoveringIndex,
+  setCurrentList
 } = bodySlice.actions;
 const bodySliceReducer = bodySlice.reducer;
 export default bodySliceReducer;

@@ -1,6 +1,5 @@
 import PhotoAlbum from "react-photo-album";
 import { useDispatch, useSelector } from "react-redux";
-import useCreateList from "../hooks/useCreateList";
 import { useGetImageInfo } from "../hooks/useGetImageInfo";
 import { setCurrentSliceIndexByIndex, setIsDisplay1By1 } from "../reducer/roomsSlice";
 
@@ -9,11 +8,10 @@ export default function Gallery() {
   const handleOnClick = ({index})=>{
     dispatch(setIsDisplay1By1())
     dispatch(setCurrentSliceIndexByIndex(index+1))
-    console.log(index)
   }
     let photos =[]
     const currentHomeId = useSelector(s=>s.roomSlice.currentHomeId)
-    const currentHomeList = useCreateList().currentHomeList
+    const currentHomeList = useSelector((s) => s.bodySlice.currentList)
     const curHome = currentHomeList[currentHomeId]
     for(let i = 1;i< curHome.imgarr.length;i++){
         const info = useGetImageInfo(curHome.imgarr[i])

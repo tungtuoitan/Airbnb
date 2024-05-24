@@ -1,4 +1,3 @@
-import useCreateList from "../hooks/useCreateList";
 import { useState, useRef, useEffect } from "react";
 import WishItemInfo from "./wishItemName";
 import { Link } from "react-router-dom";
@@ -7,7 +6,7 @@ import { setCurrentHomeId } from "../reducer/roomsSlice";
 
 export default function WishItem({ i }) {
   const dispatch = useDispatch();
-  const currentHomeList = useCreateList().currentHomeList;
+  const currentHomeList = useSelector((s) => s.bodySlice.currentList);
   const currentHome = currentHomeList[i];
   const [height, setHeight] = useState(0);
   const contRef = useRef(null);
@@ -36,9 +35,7 @@ export default function WishItem({ i }) {
       onClick={handleOnClick}
     >
       <div
-        className="IMG_CONTAINER  rounded-c077  w-full h-c112 
-    overflow-hidden p-c3 7:p-c5 bg-white  box-shadow-u6 mb-c4  
-    h-full "
+        className="IMG_CONTAINER  rounded-c077  w-full h-c112 overflow-hidden p-c3 7:p-c5 bg-white  box-shadow-u6 mb-c4 h-full"
         style={{ height: `${height}px` }}
       >
         <img

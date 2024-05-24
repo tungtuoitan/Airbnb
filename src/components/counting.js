@@ -1,9 +1,8 @@
-import { useDispatch, useSelector } from "react-redux";
-import useCreateList from "../hooks/useCreateList";
+import { useSelector } from "react-redux";
 
 export default function Counting() {
   const currentSliceIndex = useSelector((s) => s.roomSlice.currentSliceIndex);
-  const currentHomeList = useCreateList().currentHomeList;
+  const currentHomeList = useSelector((s) => s.bodySlice.currentList);
   const currentHomeId = useSelector((s) => s.roomSlice.currentHomeId);
   const imgArr = currentHomeList[currentHomeId].imgarr;
 

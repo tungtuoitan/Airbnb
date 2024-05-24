@@ -1,20 +1,20 @@
+import React, { lazy, Suspense } from "react";
 import ImgGroup from "./imgGroup";
-import TextGroup from "./textGroup";
-import { useCustomLazyLoading } from "../hooks/useCustomLazyLoading";
+import TextGroupFallBackack from "./textGroupFallback";
+const TextGroup = lazy(() => import("./textGroup"));
 
-export default function Item() {
-  const {isInViewPort,contRef}= useCustomLazyLoading()
+function Item() {
+
   return (
-    <div ref={contRef} className="  max-w-full 16:border-c1x border-solidx border-transparentx   ">
-      {isInViewPort ? (
-          <>
-            <ImgGroup />
-            <TextGroup />
-          </>
-          
-      ) : (
-        <div className=" w-full h-full opacity-50">Loading ...</div>
-      )}
+    <div className="max-w-full 16:border-c1x border-solidx border-transparentx   ">
+      <>
+        <ImgGroup />
+        <Suspense fallback={<TextGroupFallBackack />}>
+          <TextGroup />
+        </Suspense>
+      </>
     </div>
   );
 }
+
+export default React.memo(Item);

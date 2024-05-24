@@ -1,3 +1,4 @@
+import React from 'react'
 
 function DotsSlide ({imgArr,currentIndex}){
 
@@ -19,4 +20,4 @@ function DotsSlide ({imgArr,currentIndex}){
     )
 }
 
-export default DotsSlide
+export default React.memo(DotsSlide)
