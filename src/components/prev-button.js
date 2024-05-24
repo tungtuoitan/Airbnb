@@ -9,7 +9,7 @@ function PrevButton({ onClick, isPrevBtnDisplay,isHovering }) {
     onClick={onClick}
     >
       <i
-        class="fa-solid fa-angle-left fa-sm"
+        className="fa-solid fa-angle-left fa-sm"
         style={{ color: "#222222", marginRight: "4px",marginTop:'5px' }}
       ></i>
     </button>

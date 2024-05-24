@@ -1,25 +1,39 @@
 import React from "react";
+import Switch from "./switch";
+import { useDispatch,useSelector } from "react-redux";
+import { setIsTotalPrice } from "../reducer/bodySlice";
+import Switch2 from "./switch2";
+import Switch3 from "./switch3";
 
-class TotalPrice extends React.Component {
-  render() {
+export default function  TotalPrice () {
+  const widthScreen = useSelector(s=>s.header2Nav.widthScreen)
+  const dispatch = useDispatch()
+  const handleOnClick = ()=>{
+    dispatch(setIsTotalPrice())
+  }
     return (
-      <div className="totalprice    7:w-full border-gray-300 border-1 border-solid    rounded-xl text-c15 flex justify-between items-center  p-4 ">
-        <div className=" 7:flex gap-c12">
-          <p className="manrope-700  color222 text-left mb-c-3 ">
+      <div className="  cursor-pointer  7:w-full border-gray-300 border-1 border-solid    
+      rounded-xl 16:rounded-lg text-c15 16:text-c14
+      flex justify-between items-center  px-4 py-4 16:px-8
+      totalprice 16:py-0 16:h-c50 "
+      onClick={handleOnClick}>
+        <div className=" 7:flex gap-c12 pb-c1">
+          <p className="manrope-700  color222 text-left  pt-c1 ">
             Display total price
           </p>
           <div className="hidden 7:block w-c1 h-full bg-gray-300 text-transparent  ">
             .
           </div>
-          <p className="text-gray7 text-left leading-5 mt-c2 ">Incude all fees, before taxes</p>
+          <p className="text-gray7 text-left leading-5 mt-c2 16:mt-c1 ">{
+            widthScreen>=1640 ? `Incude all fees, before taxes, on average around 10%`
+            :'Incude all fees, before taxes'
+          }
+          </p>
         </div>
-        <div className="bg-gray-B0 w-12 h-8 rounded-2xl flex justify-start ">
-          <div className="bg-white w-7 h-7 rounded-full m-c2  "></div>
-        </div>
+        {widthScreen >=1640 ? (<Switch3/>):(<Switch2/>)}
+        
       </div>
 
     );
   }
-}
 
-export default TotalPrice;
