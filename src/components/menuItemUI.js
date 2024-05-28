@@ -5,7 +5,7 @@ export default function MenuItemUI({ content, path, target }) {
   const dispatch = useDispatch()
   const handleOnClick = ()=>{
     if(content==='Sign up' ||content==='Log in'){
-      dispatch(setLogInFrom('/'))
+      dispatch(setLogInFrom('/Airbnb'))
     }
     window.scrollTo(0,0)
 

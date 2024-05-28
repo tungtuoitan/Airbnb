@@ -27,7 +27,7 @@ export default function () {
 
   return (
     <Link
-      to="/"
+      to="/Airbnb"
       className=" main-gradient w-32 h-12 rounded-lg border1 flex justify-center 
       items-center"
       onClick={handleSearch}

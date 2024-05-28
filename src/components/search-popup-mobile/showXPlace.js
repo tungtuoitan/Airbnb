@@ -27,7 +27,7 @@ export default function ShowXPlace() {
   };
   return (
     <Link
-      to="/"
+      to="/Airbnb"
       className=" bg-black222 h-12 px-c24 flex justify-center items-center rounded-lg"
       onClick={handleOnClick}
     >

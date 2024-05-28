@@ -10,7 +10,7 @@ export default function Oktn() {
     window.scrollTo({top:0})
   };
   return (
-    <Link to ='/trips'
+    <Link to ='/Airbnb/trips'
       className={`BUTTON ||  w-full  py-c12 mt-6 ||  flex justify-center items-center
         || weight-800 text-white || rounded-md  cursor-pointer  color-pink-main`}
       onClick={handleOnClick}

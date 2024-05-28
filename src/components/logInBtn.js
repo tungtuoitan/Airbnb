@@ -11,7 +11,7 @@ export default function LogInBtn() {
   }
   return (
     <Link className=" flex items-center flex-col gap-c3  mt-c12 mb-2 w-1/5" 
-    to={isLogged ? '/account-settings':'/sign-up'}
+    to={isLogged ? '/Airbnb/account-settings':'/Airbnb/sign-up'}
     onClick={handleOnClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"

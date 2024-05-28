@@ -8,7 +8,7 @@ export default function LogoIcon() {
     });
   };
   return (
-    <Link to="/" className="cursor-pointer zmax2 " onClick={handleOnclick}>
+    <Link to="/Airbnb" className="cursor-pointer zmax2 " onClick={handleOnclick}>
       <div className="w-c102">
         <svg
           width="32"

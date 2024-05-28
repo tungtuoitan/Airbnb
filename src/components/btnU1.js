@@ -6,7 +6,7 @@ export default function BtnU1({name}) {
   return (
     <Link
     onClick={handleOnClick}
-      to="/"
+      to="/Airbnb"
       className="flex justify-center items-center 
 || rounded-lg border-black222 border-solid border-c1 
 || font-bold text-black text-base

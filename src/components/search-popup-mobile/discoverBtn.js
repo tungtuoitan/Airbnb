@@ -12,7 +12,7 @@ export default function DiscoverBtn() {
   }
   return (
     <Link
-      to={'/'}
+      to={'/Airbnb'}
       className=" main-gradient || w-c150 h-12 || rounded-lg 
       || flex justify-center items-center "
       onClick={handleOnClick}

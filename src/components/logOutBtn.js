@@ -11,7 +11,7 @@ export default function LogOutBtn() {
     dispatch(setDefaultLoginSlice())
   }
   return (
-    <Link to='/'
+    <Link to='/Airbnb'
     onClick = {handleOnClick}
       className="border-c1 border-solid border-black222 
       || w-full h-12 || relative 

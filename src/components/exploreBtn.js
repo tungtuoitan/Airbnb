@@ -6,7 +6,7 @@ export default function ExploreBtn() {
   }
 
   return (
-    <Link to="/" className=" flex items-center flex-col gap-c3 mt-c12 mt-2 w-1/5"
+    <Link to="/Airbnb" className=" flex items-center flex-col gap-c3 mt-c12 mt-2 w-1/5"
     onClick={handleOnClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"

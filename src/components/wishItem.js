@@ -29,7 +29,7 @@ export default function WishItem({ i }) {
 
   return (
     <Link
-      to="/rooms"
+      to="/Airbnb/rooms"
       className="item h-full "
       ref={contRef}
       onClick={handleOnClick}

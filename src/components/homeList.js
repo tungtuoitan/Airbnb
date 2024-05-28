@@ -30,7 +30,7 @@ export default function HomeList() {
             key={item.id}
           >
             <Link
-              to={`/rooms`}
+              to={`/Airbnb/rooms`}
               target=""
               onClick={(e) => handleOnClick(e, index)}
             >

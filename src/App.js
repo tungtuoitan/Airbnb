@@ -22,16 +22,16 @@ function App() {
       }`}
     >
       <Routes>
-        <Route path="/" index element={<HomePage />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/Airbnb/" index element={<HomePage />} />
+        <Route path="/Airbnb/sign-up" element={<SignUp />} />
+        <Route path="/Airbnb/login" element={<Login />} />
 
-        <Route path="/trips" element={<Trips />} />
-        <Route path="/wishlists" element={<Wishlists />} />
-        <Route path="/inbox" element={<Inbox />} />
-        <Route path="/account-settings" element={<AccountSettings />} />
+        <Route path="/Airbnb/trips" element={<Trips />} />
+        <Route path="/Airbnb/wishlists" element={<Wishlists />} />
+        <Route path="/Airbnb/inbox" element={<Inbox />} />
+        <Route path="/Airbnb/account-settings" element={<AccountSettings />} />
 
-        <Route path="/rooms" element={<RoomPage />} />
+        <Route path="/Airbnb/rooms" element={<RoomPage />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function BackIcon() {
   return (
-    <Link to='/'
+    <Link to='/Airbnb'
       className=" w-8 h-8 rounded-full 
             bg-white flex justify-center items-center gap-2 box-shadow-u2 "
     >
