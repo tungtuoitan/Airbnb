@@ -20,7 +20,7 @@ export default function BodyShowFull() {
       <div className={`body-show-full   w-full pb-c164 `}>
         <div>
           <img
-            src={`${curHome.imgarr[0]}`}
+            src={`${curHome.imgarr[0].replace("Airbnb/", "")}`}
             className="w-full mb-2 hover-filter cursor-pointer"
             onClick={handleOnClick}
           />

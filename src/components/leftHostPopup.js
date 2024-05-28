@@ -12,7 +12,7 @@ export default function LeftHostPopUp(){
               <TickShieldIcon/>
             </div>
             <div className="square-104 rounded-full overflow-hidden  ">
-              <img className="max" src={owner.avatar} />
+              <img className="max" src={owner.avatar.replace("Airbnb/","")} />
             </div>
           </div>
           <div className="text-center">

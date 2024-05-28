@@ -21,11 +21,11 @@ export default function WishItems() {
             return (
               <div className="relative trans-wish" key={index}>
                 <div className="absolute right-4 top-4">
-                  <HeartBtn2 item={item}/>
+                  <HeartBtn2 item={item} />
                 </div>
                 <WishItem i={item} key={index} />
               </div>
-            )
+            );
           })}
         </>
       )}

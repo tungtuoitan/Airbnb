@@ -1,7 +1,7 @@
 {
-  "homepage": "https://tungtuoitan.github.io/Airbnb",
   "name": "airbnb",
   "version": "0.1.0",
+  "homepage": "/Airbnb",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",

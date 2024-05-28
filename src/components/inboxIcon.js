@@ -1,6 +1,6 @@
 
 export default function InboxIcon() {
-    const path = window.location.pathname
+    const path = window.location.pathname.replace("/Airbnb", "")
    
 
   return (

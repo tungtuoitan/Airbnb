@@ -1,5 +1,5 @@
 export default function TripsIcon() {
-  const path = window.location.pathname
+  const path = window.location.pathname.replace("/Airbnb", "")
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

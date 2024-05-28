@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 export default function ExploreBtn() {
-  const path = window.location.pathname;
+  const path = window.location.pathname.replace("/Airbnb", "");
   const handleOnClick = ()=>{
     window.scrollTo({top:0,behavior:'smooth'})
   }

@@ -6,7 +6,7 @@ const x =
     "property_type": "hotel",
     "placeType": "Entire home",
     "imgarr": [
-        "./images/homes/c1.jpg"
+        "Airbnb/images/homes/c1.jpg"
     ],
     "owner": {
         "id": "1c6f696b-3770-4aa2-b613-8e82dda86f53",

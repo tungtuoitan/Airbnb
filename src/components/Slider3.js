@@ -29,8 +29,8 @@ export default function Slider3() {
   let imgArr = [...currentRoom.imgarr];
   for (let i = 0; i < imgArr.length; i++) {
     imgArr[i] =
-      "./images/homes_hd" +
-      imgArr[i].slice(imgArr[i].length - 8, imgArr[i].length);
+    "./images/homes_hd" +
+    imgArr[i].slice(imgArr[i].length - 8, imgArr[i].length);
   }
 
   return (

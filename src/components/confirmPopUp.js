@@ -17,9 +17,9 @@ export default function ConfirmPopUp() {
   const handleOnClickContinue = () => {
     if (code.length === 6) {
       dispatch(toggleIsConfirmOpen());
-      if(window.location.pathname==='/sign-up'){
+      if(window.location.pathname.replace("/Airbnb", "")==='/sign-up'){
         dispatch(toggleIsFinishOpen())
-      }else if(window.location.pathname==='/login'){
+      }else if(window.location.pathname.replace("/Airbnb", "")==='/login'){
         dispatch(toggleIsLogged())
         dispatch(setFirstName('Wick'))
         dispatch(setLastName('John'))

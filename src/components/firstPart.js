@@ -21,10 +21,9 @@ export default function FirstPart() {
   },[])
   return (
     <div
-      className="w-full  flex  gap-4 mt-6 pb-6
-    border-b-c1 border-solid border-gray-300"
+      className="w-full  flex  gap-4 mt-6 pb-6 border-b-c1 border-solid border-gray-300"
     >
-      <img className="rounded-lg w-c126 h-c104" src={`${curHome.imgarr[0]}`} />
+      <img className="rounded-lg w-c126 h-c104" src={`${curHome.imgarr[0].replace("Airbnb/","")}`} />
       <div className=" h-c104 flex flex-col justify-between ">
         <div className="text-left">
           <p className="text-gray-400 text-c12">{curHome.property_type}</p>

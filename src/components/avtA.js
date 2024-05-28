@@ -15,7 +15,7 @@ export default function AvtA() {
       className="  relative w-12 h-12 7:w-c56 7:h-c56  cursor-pointer"
     >
       <div className=" w-12 h-12 7:w-c56 7:h-c56 rounded-full object-cover overflow-hidden ">
-        <img src={owner.avatar}></img>
+        <img src={owner.avatar.replace("Airbnb/","")}></img>
       </div>
       <SuperHostIcon />
     </Link>

@@ -8,9 +8,9 @@ export default function HeaderLoginPopUp() {
     bg-white || h-16 || border-b-c1 border-solid border-lgray`}
     >
       <span className="text-base weight-800 color222 ">
-        {window.location.pathname === "/login" && checkIsLaptop()
+        {window.location.pathname.replace("/Airbnb", "") === "/login" && checkIsLaptop()
           ? "Log in"
-          : window.location.pathname === "/sign-up" && !checkIsLaptop()
+          : window.location.pathname.replace("/Airbnb", "") === "/sign-up" && !checkIsLaptop()
           ? "Login or Sign up"
           : "Sign up"}
       </span>

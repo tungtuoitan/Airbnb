@@ -4,11 +4,11 @@ export default function ThreeItemsShowFull() {
       <div>
         <div className="mb-2">
 
-        <img src="./images/homes/a1.webp" />
+        <img src="Airbnb/images/homes/a1.webp" />
         </div>
         <div className="grid grid-cols-2 gap-2 mb-2">
-          <img src="./images/homes/a1.webp" />
-          <img src="./images/homes/a1.webp" />
+          <img src="Airbnb/images/homes/a1.webp" />
+          <img src="Airbnb/images/homes/a1.webp" />
         </div>
       </div>
     </div>

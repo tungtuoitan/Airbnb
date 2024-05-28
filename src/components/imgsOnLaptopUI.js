@@ -22,7 +22,7 @@ export const ImgsOnLaptopUI = forwardRef((props, ref) => {
           return (
             <img
               name={`${index}`}
-              src={item}
+              src={item.replace("Airbnb/", "")}
               key={index}
               style={{ height: `${height}px` }}
               className={` object-cover min-h-full min-w-full hover-filter   ${

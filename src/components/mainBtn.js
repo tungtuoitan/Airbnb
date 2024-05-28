@@ -10,9 +10,9 @@ export default function MainBtn({ content }) {
   const isEnable = useToggleBtn();
 
   // useEffect(()=>{
-  //   if(window.location.pathname==='/sign-up' ){
+  //   if(window.location.pathname.replace("/Airbnb", "")==='/sign-up' ){
   //     dispatch(setLogInFrom('/'))
-  //   }else if(window.location.pathname==='/wishlists'){
+  //   }else if(window.location.pathname.replace("/Airbnb", "")==='/wishlists'){
   //     dispatch(setLogInFrom('/wishlists'))
   //   }
   // },[])

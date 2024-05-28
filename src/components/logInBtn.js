@@ -4,7 +4,7 @@ import { setLogInFrom } from '../reducer/accSlice';
 
 export default function LogInBtn() {
   const dispatch = useDispatch()
-  const path = window.location.pathname
+  const path = window.location.pathname.replace("/Airbnb", "")
   const isLogged = useSelector(state=>state.accSlice.isLogged)
   const handleOnClick = ()=>{
     dispatch(setLogInFrom('/'))

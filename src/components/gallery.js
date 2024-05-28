@@ -15,6 +15,7 @@ export default function Gallery() {
     const curHome = currentHomeList[currentHomeId]
     for(let i = 1;i< curHome.imgarr.length;i++){
         const info = useGetImageInfo(curHome.imgarr[i])
+        info.src = info.src.replace("Airbnb/", "")
         photos.push(info)
     }
   return (

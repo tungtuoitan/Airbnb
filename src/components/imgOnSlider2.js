@@ -31,7 +31,7 @@ export default function ImgsOnSlider2({ imgArr }) {
       {imgArr.map((item, index) => {
         return (
           <img
-            src={item}
+            src={item.replace("Airbnb/", "")}
             key={index}
             className="w-full h-full object-cover"
             onClick={handleOnClick}

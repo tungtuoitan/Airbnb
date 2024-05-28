@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import WishItemInfo from "./wishItemName";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setCurrentHomeId } from "../reducer/roomsSlice";
 
 export default function WishItem({ i }) {
@@ -39,7 +39,7 @@ export default function WishItem({ i }) {
         style={{ height: `${height}px` }}
       >
         <img
-          src={currentHome.imgarr[0]}
+          src={currentHome.imgarr[0].replace("Airbnb/","")}
           className=" min-h-full min-w-full object-cover rounded-xl 7:rounded-c070"
         />
       </div>
