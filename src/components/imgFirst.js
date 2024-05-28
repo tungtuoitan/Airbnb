@@ -19,13 +19,14 @@ export default function ImgFirst() {
   }
   const imgArr = currentHomeList[index].imgarr;
 
+const lastChar = window.location.href[window.location.href.length -1 ]
   return (
     <div
       className="relative"
       style={{ width: itemWidth + "px", height: itemWidth + "px" }}
     >
       <img
-        src={imgArr[0]}
+        src={lastChar === "/" ? imgArr[0].replace("Airbnb/",'') : imgArr[0] }
         className="XXX m-0 max-w-full w-full h-full max-h-full object-cover   "
       />
       <DotsSlide imgArr={imgArr} currentIndex={0} />

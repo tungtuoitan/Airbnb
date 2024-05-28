@@ -61,6 +61,8 @@ function SliderTry() {
     },
   };
 
+  const lastChar = window.location.href[window.location.href.length - 1];
+
   return (
     <div
       className=" relative "
@@ -72,7 +74,7 @@ function SliderTry() {
         {imgArr.map((item, index) => {
           return (
             <img
-              src={item}
+              src={lastChar === "/" ? item.replace("Airbnb/", "") : item}
               key={index}
               className="XXX m-0 max-w-full w-full h-full max-h-full object-cover   "
             />

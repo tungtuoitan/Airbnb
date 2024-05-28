@@ -27,6 +27,7 @@ export default function ListHomeType() {
     dispatch(setCurrentList(getCurrentHomeList2(filter2, nTimesShuffle)));
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const lastChar = window.location.href[window.location.href.length -1 ]
 
   return (
     <>
@@ -46,7 +47,7 @@ export default function ListHomeType() {
                       `}
           >
             <img
-              src={item.path}
+              src={lastChar ==="/" ? item.path.replace("Airbnb/","") : item.path}
               className={`w-6 h-6  ${
                 index === displayingIndex ? "opacity-100 " : "opacity-60"
               }`}
